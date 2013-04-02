@@ -1,6 +1,7 @@
 *{
    margin:0px;
    padding:0px;
+   border:none;
    /*border: 1px solid white;*/
 } 
 
@@ -10,7 +11,7 @@ body{
    font-size: 0.6em;
    font-family:Arial, Helvetica, sans-serif;
    text-align: center;
-   color:#FFF;
+   color:#FFFFFF;
    background: url("../images/background.jpg") repeat center top #060606;
 }
 
@@ -26,22 +27,21 @@ body{
    position: relative;
    vertical-align: bottom;
    width: 70%;
-   min-width:650px;
 }
 
-/*text*/
 #head-content{
 	width:85%;
 	margin:5px;
 	margin-left:auto;
 	margin-right:auto;
 }
-#head-content h1,#head-content h2{
+
+h1, h2 {
 	margin:2%;
 	padding: 5px;
 }
 
-#head-content .Story{
+.Story{
 	width: 80%;
 	margin-left:auto;
 	margin-right: auto;
@@ -63,17 +63,15 @@ a{
 
 #contact{
 	border: 5px outset white;
-    padding: 3px;
-	margin-right: 5%;	
-	margin-bottom:10px;
+	border-radius: 5px;
+    padding: 3px;	
+	margin:10px 5% 10px auto;
 	float:right;
 	width: 200px;
-	overflow:auto;
 	position: relative;
 	top: -80px;
+	overflow:auto;
     vertical-align:center;
-	margin-top: margin-bottom: 20px;
-
 	font-size: 15px;
 	text-align: center;
 	font-weight:bold;
@@ -82,7 +80,6 @@ a{
 
 #contact:hover{
     text-decoration:underline;
-    /*border-style:inset;    */
 }
 
 	
@@ -90,8 +87,10 @@ a{
    width: 25%;
    margin-top: 8px;
    margin-left: 5%;
-   margin-right: 5px;
+   margin-right: auto;
+   margin-bottom: 8px;
    position:relative;
+   overflow: hidden;
    top: -35px;
 }
 
@@ -99,16 +98,14 @@ a{
 	float: right;
 	width:20%;
 	margin-right:8%;
-	border: 5px outset #AAA;
-	border-radius:10px;	
+	border: 5px outset #AAAAAA;
+	border-radius:12px;	
 	overflow: hidden;
 }
 
 .scIcon img{
 	width: 100%;
-	position:relative;
-	vertical-align:middle;
-	border: 0;
+	vertical-align:middle
 }
 
 .scIcon:hover{
