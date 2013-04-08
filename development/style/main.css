@@ -1,0 +1,123 @@
+*{
+   margin:0px;
+   padding:0px;
+   border:none;
+   /*border: 1px solid white;*/
+} 
+
+body{
+   width:1000px;
+   margin: 5px  auto;
+   font-size: 0.6em;
+   font-family:Arial, Helvetica, sans-serif;
+   text-align: center;
+   color:#FFFFFF;
+   background: url("../images/background.jpg") repeat center top #060606;
+}
+
+#wrapper{
+   background-color: #060606;
+   width: 100%;
+   padding:20px 5px;
+   border-radius:15px;
+}
+
+#logo img{
+   display: inline;
+   position: relative;
+   vertical-align: bottom;
+   width: 70%;
+}
+
+#head-content{
+	width:85%;
+	margin:5px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h1, h2 {
+	margin:2%;
+	padding: 5px;
+}
+
+.Story{
+	width: 80%;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+#signed{
+	width: 45%;
+	margin-left:auto;
+	margin-right:auto;
+	position: relative;
+	top: 30px;
+	
+}
+
+a{
+   color:inherit;
+   text-decoration:none;
+}
+
+#contact{
+	border: 5px outset white;
+	border-radius: 5px;
+    padding: 3px;	
+	margin:10px 5% 10px auto;
+	float:right;
+	width: 200px;
+	position: relative;
+	top: -80px;
+	overflow:auto;
+    vertical-align:center;
+	font-size: 15px;
+	text-align: center;
+	font-weight:bold;
+}
+
+
+#contact:hover{
+    text-decoration:underline;
+}
+
+	
+#social-media-icons{
+   width: 25%;
+   margin-top: 8px;
+   margin-left: 5%;
+   margin-right: auto;
+   margin-bottom: 8px;
+   position:relative;
+   overflow: hidden;
+   top: -35px;
+}
+
+.scIcon{
+	float: right;
+	width:20%;
+	margin-right:8%;
+	border: 5px outset #AAAAAA;
+	border-radius:12px;	
+	overflow: hidden;
+}
+
+.scIcon img{
+	width: 100%;
+	vertical-align:middle
+}
+
+.scIcon:hover{
+	border-style:inset;
+}
+
+#keywords{
+	visibility: hidden;
+	width:50%;
+	margin-left: auto; 
+	margin-right: auto;
+	
+}
+
+
