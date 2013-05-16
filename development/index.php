@@ -3,14 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Test pagina</title>
-<link rel="stylesheet" type="text/css" href="style/test.css" title="style" />	
+<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
+<link rel="stylesheet" type="text/css" href="style/header.css" title="style" /> 
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+
 </head>
 
 <body>
 <!-- include the header of the page -->
 <?php include 'header.html'; ?>
-<hr />
+
+
 <div id="wrapper">
+	<hr />
 	<h1> Welkom op de testpagina</h1>
 </div>
 
