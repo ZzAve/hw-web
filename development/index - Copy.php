@@ -3,9 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Standaard pagina</title>
-<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-
-<link rel="stylesheet" type="text/css" href="styly/footer.css" title="style" />
+<link rel="stylesheet" type="text/css" href="style/main - Copy.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 </head>
 
@@ -30,9 +28,11 @@
          	<p>dikke praat hier!</p>
         </div>
     </div>
+    
+    
 </div>
 
-
+<!-- include the header of the page -->
 <?php include 'footer.html'; ?>
 
 

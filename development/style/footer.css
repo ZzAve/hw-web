@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+#footer #disclaimer{
+	color:black;
+	width: 100%;
+	background-color: white;
+	font-size: 14px;
+	padding: 5px;
+	font-weight: bold;
+}
