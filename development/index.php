@@ -14,7 +14,7 @@
 <!-- include the header of the page -->
 <?php include 'header.html'; ?>
 
-<div id="middle">
+<div id="middle"> <div id="content">
 	<div id="showBubble"></div>
     
     <div class="bubble">
@@ -30,7 +30,7 @@
          	<p>dikke praat hier!</p>
         </div>
     </div>
-</div>
+</div></div>
 
 
 <?php include 'footer.html'; ?>
