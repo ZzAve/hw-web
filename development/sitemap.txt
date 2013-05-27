@@ -1,0 +1,22 @@
+HOME
+ Welkom heten
+ Biografie vd band . BOEK ONS BOEK ONS
+ Meest recente nieuws items
+ 	
+
+NIEUWS
+  nieuws item -> mensen kunnen reageren met facebook
+  facebook-feed (recent activity)
+MEDIA
+  Linkjes VIDEO FOTO AUDIO
+  
+  VIDEO 
+    youtube filmpjes met korte uitleg (allemaal embedded)
+  FOTO
+    foto album
+  AUDIO
+    soundcloud linkjes
+
+CONTACT
+  Contact met ons opnemen?
+  contactformulier
