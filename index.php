@@ -45,6 +45,8 @@
         </a></span>
     </div>  
 
+	<iframe id="timer" src="http://free.timeanddate.com/countdown/i3nca77v/n16/cf12/cm0/cu4/ct0/cs1/ca0/co1/cr0/ss0/cacf00/cpcf00/pct/tcfff/fs100/szw448/szh189/tatLancering%20nieuwe%20website/tacf00/tptLancering%20nieuwe%20website/tpcf00/iso2013-06-03T18:00:00/pa5" frameborder="0"></iframe>
+    
     <div id="keywords">
     	<span> Keywords: Homemade Water, band, music, cover, coverband, dutch, nederlands, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis</span>
     </div>  

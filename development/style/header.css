@@ -1,27 +1,44 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; }
+body {Background: black;}
+	
+* {border: 1px solid white;}
+
+
+/* Logo positioning */
+
+#logo {
+	margin-left:400px}
+
 /* Menu positioning */
 
+#whiteline {
+	background: url("../images/herhalingpatroon5_03_06.PNG") repeat-x;
+	height: 32px;
+    clear: both;
+	width: 100%;
+	position:relative;
+	z-index: 1}
+	
 #menu, #menu ul {
     list-style: none;
     padding: 0;
-}
-#menu {
-    float: left;
-    clear: both;
-	margin-top: 210px;
-}
+	margin-left:30px;}
+
 #menu > li{ 
     float: left;
+	margin-left: 50px;
 }
 #menu li a {
     display: block;
     height: 2em;
-    line-height: 2em;
+    line-height: 2.5em;
     padding: 0 1.5em;
     text-decoration: none;
 }
 #menu ul {
     position: absolute;
     display: none;
+	margin-left:0px;
     z-index: 999;
 }
 #menu ul li a {
@@ -31,20 +48,20 @@
     display: block;
 }
 
+	
 /* Menu coloring and styling */
 /* Main menu
 ------------------------------------------*/
 #menu {
     font-family: Arial;
-    font-size: 12px;
-    background: #2f8be8;
+    font-size: 14px;
 }
 #menu > li > a {
-    color: #fff;
+    color: #000;
     font-weight: bold;
 }
 #menu > li:hover > a {
-    background: #f09d28;
+    color: rgba(255,255,255,0.8);
     color: #000;
 }
  
@@ -52,15 +69,23 @@
 /* Submenu
 ------------------------------------------*/
 #menu ul {
-    background: #f09d28;
+    background: rgba(255,255,255,0.8);
+	padding-top: 10px;
+	vertical-align:middle;
 }
+
+#menu ul li{
+	content-align:middle;
+}
+
 #menu ul li a {
     color: #000;
 }
 #menu ul li:hover a {
-    background: #ffc97c;
+    background: rgba(255,255,255,0.8);
 }
 
 #menu > li.highlight > a{
     color: #A04B33;
 }
+
