@@ -5,7 +5,7 @@
 <title>Standaard pagina</title>
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
 
-<link rel="stylesheet" type="text/css" href="styly/footer.css" title="style" />
+<link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 </head>
 
@@ -14,7 +14,7 @@
 <!-- include the header of the page -->
 <?php include 'header.html'; ?>
 
-<div id="middle"> <div id="content">
+<div id="middle"> 
 	<div id="showBubble"></div>
     
     <div class="bubble">
@@ -30,7 +30,7 @@
          	<p>dikke praat hier!</p>
         </div>
     </div>
-</div></div>
+</div>
 
 
 <?php include 'footer.html'; ?>
