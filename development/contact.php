@@ -14,6 +14,8 @@
 
 <?php include 'header.html'; ?>
 <div id="middle">
+
+<div class="bubble"> <div class="typable">
 <?php
 // mail contact form
 $error=false;
@@ -71,7 +73,9 @@ if( isset($_REQUEST['name']) ){
 	<p>Bericht</p><textarea name="bericht" rows="6" cols="25" <?= $error ?"value=\"$message\"" : NULL ?>></textarea><br />
 	<input type="submit" value="Send"><input type="reset" value="Clear">
 </form>
-</div>
+
+</div></div>
+</div> <!-- end div middle -->
 
 <?php include 'footer.html' ?>
 
