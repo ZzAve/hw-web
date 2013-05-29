@@ -4,9 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Standaard pagina</title>
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-
-<link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style/index.css" title="style" />
+
 </head>
 
 <body>

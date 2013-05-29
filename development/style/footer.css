@@ -33,7 +33,7 @@
 	display: inline-block;
 	margin-right:8%	;
 	transform:rotate(-7deg);
-	-ms-transform:rotate(7deg); /* IE 9 */
+	-ms-transform:rotate(-7deg); /* IE 9 */
 	-webkit-transform:rotate(-7deg); /* Safari and Chrome */ 	
 }
 
@@ -45,7 +45,7 @@
 	border:none;
 }
 
-.icons:hover{
+#social-media-icons ul .icons:hover{
 	transform:rotate(7deg);
 	-ms-transform:rotate(7deg); /* IE 9 */
 	-webkit-transform:rotate(7deg); /* Safari and Chrome */
