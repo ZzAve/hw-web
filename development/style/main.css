@@ -41,7 +41,9 @@ body,html{
 
 #content-bar{
 	background: url("../images/sidebar.png") repeat-y top left #362F2F;
-	width:630px;
+	width:40%;
+	min-width:630px;
+	max-width:1000px;
 	height:auto;
 	position:relative;
 	
@@ -58,3 +60,18 @@ body,html{
 	padding-right:50px;
 }
 
+ul{
+	list-style:circle;
+	list-style-position:inside;
+}
+
+h1{
+	margin:10px 0;
+}
+
+h2{}
+
+p{
+	margin-top:10px;
+	margin-bottom:10px;
+}

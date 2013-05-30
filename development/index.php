@@ -16,12 +16,18 @@
 	<?php include 'header.html'; ?>
 
 	<div id="content"> 
-         <h1> Welkom op de site van Homemade Water</h1>
-         <p> De hippe, frisse en vooral toffe pop/rock-coverband die maar wat een feestje maakt! En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. </p>
-                  <p> De hippe, frisse en vooral toffe pop/rock-coverband die maar wat een feestje maakt! En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. </p>
-                           <p> De hippe, frisse en vooral toffe pop/rock-coverband die maar wat een feestje maakt! En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. </p>
-                                    <p> De hippe, frisse en vooral toffe pop/rock-coverband die maar wat een feestje maakt! En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. </p>
-                                             <p> De hippe, frisse en vooral toffe pop/rock-coverband die maar wat een feestje maakt! En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. En dan nog wat Lorum Ipsum. </p>
+         <h1> Welkom op de site van Homemade Water!</h1>
+         <h2> Homemade Water is een frisse pop-rock(cover)band die naam begint te krijgen Delft en de rest van Nederland. Homemade Water brengt een strakke en gevarieerde set bekendere rock- en pop-nummers en enkele eigen nummers. Met deze set zijn al vele zalen, cafés en sociëteiten op de kop gezet, warrbij de temperatuur regelmatig boven het kookpunt is uitgestegen!.</h2>
+         
+         <p> Op onze site kunt u terecht voor al het moois dat Homemade Water de wereld te bieden heeft. Zo kunt u ons laatste nieuws bekijken, onze unieke sound beluisteren, maar u kunt een aantal optreden herleven met uniek beeld- en videomateriaal. Mocht u contact willen opnemen, schroom dan vooral niet.</p>
+         <p> Homemade Water bestaat uit vijf technische studenten met passie voor muziek:</p>
+         <ul>
+         	<li>Zanger Laurens Mensink</li>
+            <li>Gitarist Andrea Forzoni</li>
+            <li>Toetseniste Eline Burger</li>
+            <li>Bassist Jan Moos Meijer</li>
+            <li>Drummert Julius van Dis</li>            
+         </ul>
          <img alt:"awesome picture" src="images/logo.jpg" />    
     </div>
 
