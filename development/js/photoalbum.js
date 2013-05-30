@@ -23,8 +23,8 @@ $(function() {
 function imageClick(source) {
 
 	var path = source.src.replace("_thumb","");
-	var photo = $('#showPhoto');
-	photo.html("<img src=\""+path+"\" />");
+	var photo = $('#showPhoto img');
+	photo.attr('src',path);
 
 	var pos = photo.position();
 	//scrollTo(pos.top, pos.left);
