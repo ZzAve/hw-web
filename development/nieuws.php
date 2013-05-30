@@ -13,25 +13,25 @@
 
 <body>
 
-
-<?php include 'header.html'; ?>
-<div id="middle">
-	
-    <div class="bubble">
-        <div class="typable">
-            <div class="newsitem">
-                <img src"" alt="datum" title="datum" />
-                <h2>  news item header</h2>
-                <img src="" alt="item pic" title="item title" />
-                        <p> Nieuws item blaat</p>
-			</div>
-       </div>            
-    </div>
-       
-</div> <!-- end div middle -->
+<div id="content-bar">
+	<?php include 'header.html'; ?>
+    <div id="content">
+        
+        <div class="bubble">
+            <div class="typable">
+                <div class="newsitem">
+                    <img src"" alt="datum" title="datum" />
+                    <h2>  news item header</h2>
+                    <img src="" alt="item pic" title="item title" />
+                            <p> Nieuws item blaat</p>
+                </div>
+           </div>            
+        </div>
+           
+    </div> <!-- end div content -->
 
 <?php include 'footer.html' ?>
-
+</div> <!-- end content-bar -->
 </body>
 
 

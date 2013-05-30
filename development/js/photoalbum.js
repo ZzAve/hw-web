@@ -21,14 +21,11 @@ $(function() {
 });
 
 function imageClick(source) {
-	alert(source);
-	path = source.src.replace("_thumb","")
-	alert(path);
-	photo = $('#showPhoto img');
-	photo.html("hallo!");
-	
-	photo.src=path;
-	alert(photo.src);
+
+	var path = source.src.replace("_thumb","");
+	var photo = $('#showPhoto');
+	photo.html("<img src=\""+path+"\" />");
+
 	var pos = photo.position();
-	scrollTo(pos.top, pos.left);
+	//scrollTo(pos.top, pos.left);
 }
