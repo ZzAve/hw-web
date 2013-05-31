@@ -35,8 +35,9 @@
            
     </div> <!-- end div content -->
 
-<?php include 'footer.html' ?>
+	<?php include 'footer.html' ?>
 </div> <!-- end content-bar -->
+
 </body>
 
 

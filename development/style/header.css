@@ -72,11 +72,6 @@
 #menu ul {
     background: rgba(255,255,255,0.8);
 	padding-top: 10px;
-	vertical-align:middle;
-}
-
-#menu ul li{
-	content-align:middle;
 }
 
 #menu ul li a {
@@ -86,7 +81,7 @@
     background: rgba(255,255,255,0.8);
 }
 
-#menu > li.highlight > a{
+#menu > li.highlight > a, #menu ul li.highlight a{
     color: #A04B33;
 }
 

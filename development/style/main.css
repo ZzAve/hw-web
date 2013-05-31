@@ -40,20 +40,19 @@ body,html{
 
 
 #content-bar{
-	background: url("../images/sidebar.png") repeat-y top left #362F2F;
-	width:40%;
-	min-width:630px;
-	max-width:1000px;
+	background-color:#362F2F;	
+	width:630px;
 	height:auto;
 	min-height:100%;
 	position:relative;
-	
-	z-index:0;
+	z-index:50;
 	margin-left:150px;
 	margin-right:auto;
 }	
 #content{
-	position:relative;
+	background: url("../images/sidebar.png") repeat-y top left transparent;
+	margin-left:-10px;
+	margin-right:-10px;
 	overflow:auto;
 	padding-bottom:120px;
 	padding-top: 240px;

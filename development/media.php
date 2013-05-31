@@ -15,20 +15,7 @@
 <div id="content-bar">
 	<?php include 'header.html'; ?>
     <div id="content">
-        <!-- audio -->
-            <h1> Zet die speakers maar vol open, want hier kan je de unieke sound van Homemade Water terughoren!</h1>
-            <!-- Give it Back - Haarlem -->
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></iframe>
-            
-            <!-- First demo -->
-            <iframe width="100%" height="166" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79363524&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></iframe>
-            
-       <!-- video -->  
-           <h1> Hier een video of twee om een indruk te krijgen wat we doen </h1> 
-           <!-- ... -->
-           <iframe width="420" height="315" src="http://www.youtube.com/embed/MWqYy2H6I8E" frameborder="0" allowfullscreen></iframe>
-           
-           <iframe width="420" height="315" src="http://www.youtube-nocookie.com/embed/IBmy2bErdWM" frameborder="0" allowfullscreen></iframe>
+        
             
             
         <!-- foto -->

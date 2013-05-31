@@ -9,9 +9,17 @@ $(document).ready(function(){
 $(document).ready(function(){
 	var str=location.href.toLowerCase();
 	$("#menu li a").each(function() {
-	if (str.indexOf(this.href.toLowerCase()) > -1) {
-	    $("li.highlight").removeClass("highlight");
-	$(this).parent().addClass("highlight");
-	}
-  });
-})
+		if (str.indexOf(this.href.toLowerCase()) > -1) {
+			$("li.highlight").removeClass("highlight");
+			$(this).parent().addClass("highlight");
+		}
+  	});
+});
+
+$(document).ready(function(){
+	$("#menu li ul").each(function() {
+		if ($(this).has('li.highlight').length != 0 ){
+			$(this).parent().addClass("highlight");
+		}
+	});
+});
