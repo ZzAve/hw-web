@@ -1,13 +1,20 @@
-/* Logo positioning */
+/* Logo and golfbeweging positioning */
+#golfbeweging {
+	position: absolute;
+	margin-left: 689px;
+	margin-top: 138px;
+	z-index:2;
+} 
 
 #logo {
-	margin-left:400px}
+	margin-left:400px;
+	}
 
 /* Menu positioning */
 
 #whiteline {
-	background: url("../images/herhalingpatroon5_03_06.png") repeat-x;
-	height: 32px;
+	background: url("../images/herhaling-header-en-footer.PNG") repeat-x;
+	height: 50px;
     clear: both;
 	width: 100%;
 	position:relative;
@@ -48,7 +55,7 @@
 ------------------------------------------*/
 #menu {
     font-family: Arial;
-    font-size: 14px;
+    font-size: 16px;
 }
 #menu > li > a {
     color: #000;
