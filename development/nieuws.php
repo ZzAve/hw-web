@@ -16,16 +16,21 @@
 <div id="content-bar">
 	<?php include 'header.html'; ?>
     <div id="content">
+		<h1> Aanschouw hier het laatste nieuws omtrent het reilen en zeilen van Homemade Water</h1>        
+        <div class="newsitem">
+            <div class="date"><label> 3 </label><span> JUN</span></div>
+            <h2>  Laurens neemt deel aan DBSSW!</h2>
+            <img src="./images/logo.jpg" alt="item pic" title="item title" />
+                    <p> Trots als een pauw mag Laurens meedoen aan de beste singer- songwriter van Nederland. Vet Leuk. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. v</p>
+        </div>
         
-        <div class="bubble">
-            <div class="typable">
                 <div class="newsitem">
-                    <img src"" alt="datum" title="datum" />
-                    <h2>  news item header</h2>
-                    <img src="" alt="item pic" title="item title" />
-                            <p> Nieuws item blaat</p>
-                </div>
-           </div>            
+            <div class="date"><label> 3 </label><span> JUN</span></div>
+            <h2>  Laurens neemt deel aan DBSSW!</h2>
+            <img src="./images/logo.jpg" alt="item pic" title="item title" />
+                    <p> Trots als een pauw mag Laurens meedoen aan de beste singer- songwriter van Nederland. Vet Leuk. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. Blaaat. Meer Lorum Ipsum enzo. Blaaat. </p>
+        </div>
+        
         </div>
            
     </div> <!-- end div content -->

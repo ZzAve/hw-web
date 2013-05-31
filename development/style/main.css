@@ -10,10 +10,10 @@ body,html{
     min-height: 100%; /* ie6 ignores min-height completely */
     height: 100%;
 	position:relative;
-	font-family:"Arial Black", Gadget, sans-serif;
-	font-size: 1em;
+	background: url("../images/background.jpg")  fixed no-repeat top left #000000;
+	font-family:Arial, Gadget, sans-serif;
+	font-size: 0.9em;
 	color: #CCC;
-	background: url("../images/IMG_2431.jpg")  fixed no-repeat top center #000000;
 }
 
 #header{
@@ -41,8 +41,11 @@ body,html{
 
 #content-bar{
 	background: url("../images/sidebar.png") repeat-y top left #362F2F;
-	width:630px;
+	width:40%;
+	min-width:630px;
+	max-width:1000px;
 	height:auto;
+	min-height:100%;
 	position:relative;
 	
 	z-index:0;
@@ -53,8 +56,26 @@ body,html{
 	position:relative;
 	overflow:auto;
 	padding-bottom:120px;
-	padding-top: 250px;
+	padding-top: 240px;
 	padding-left: 50px;
 	padding-right:50px;
 }
 
+ul{
+	margin-left:20px;
+	font-weight:bold;
+	list-style:disc;
+	list-style-position:inside;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:10px 0;
+}
+
+h2{ 
+	}
+
+p{
+	margin-top:10px;
+	margin-bottom:10px;
+}
