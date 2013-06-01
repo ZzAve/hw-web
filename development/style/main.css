@@ -39,7 +39,7 @@ body,html{
 
 #content-bar{
 	background-color:#362F2F;	
-	width:630px;
+	width:800px;
 	height:auto;
 	min-height:100%;
 	position:relative;
@@ -49,14 +49,27 @@ body,html{
 }
 	
 #content{
-	background: url("../images/sidebar.png") repeat-y top left transparent;
-	margin-left:-10px;
-	margin-right:-10px;
 	overflow:auto;
 	padding-bottom:120px;
 	padding-top: 240px;
 	padding-left: 50px;
 	padding-right:50px;
+}
+
+#sidebar-right, #sidebar-left{
+	background:url("../images/sidebar.png") repeat-y top left transparent;
+	position:absolute;
+	width:20px;
+	height:100%;
+	top:0;
+}
+
+#sidebar-left{
+	left:-10px;
+}
+
+#sidebar-right{
+	right:-10px;
 }
 
 ul{

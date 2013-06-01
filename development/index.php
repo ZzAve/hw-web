@@ -38,7 +38,9 @@
          </ul>
        
     </div>
-
+	<div id="sidebar-left"></div>
+    <div id="sidebar-right"></div>
+    
 	<?php include 'footer.html'; ?>	
 </div>
 
