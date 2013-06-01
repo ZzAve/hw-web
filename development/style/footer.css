@@ -2,11 +2,17 @@
 /* CSS Document */
 
 #footer{
-	background: url("../images/herhaling-header-en-footer.PNG") repeat-x top left black;
-	color:  #009;
+	background-color:#000;
+	color:  #8d8d8d;
 }
 
-
+#footer-bar{
+	background: url("../images/herhaling-header-en-footer.png") repeat-x top left transparent;
+	position:absolute;
+	top:-10px; left:0;
+	height:40px;
+	width:100%;	
+}
 #social-media-icons{
    float:left;
    width: 25%;
@@ -53,6 +59,9 @@
 
 
 #copyright {
+	position:relative;
+	top:20px;
+	z-index:10;
 	width:70%;
 	margin-left:30%;
 	height:57px;
@@ -60,6 +69,7 @@
 }
 
 #copyright ul{
+	height:100%;
 	list-style:none;		
 }
 #copyright ul >li {

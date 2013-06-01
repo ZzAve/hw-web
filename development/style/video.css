@@ -1,7 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+#showVideo iframe{
+	position: relative;
+	z-index:1;	
+}
 
 #videoList{
 	float:right;

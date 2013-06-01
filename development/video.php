@@ -33,7 +33,8 @@
            </div>
            
            <div id="showVideo">
-	           <iframe width="420" height="315" src="http://www.youtube.com/embed/MWqYy2H6I8E" frameborder="0" allowfullscreen></iframe>
+         	  <iframe title="YouTube video player" width="420" height="315" src="http://www.youtube.com/embed/MWqYy2H6I8E?wmode=transparent" frameborder="0" wmode="Opaque">
+
            </div>
            
     </div> <!-- end div content -->

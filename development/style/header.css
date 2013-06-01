@@ -1,4 +1,10 @@
 /* Logo and golfbeweging positioning */
+
+#top{
+	background:#000;
+	padding-bottom:30px;
+}
+
 #golfbeweging {
 	position: absolute;
 	margin-left: 689px;
@@ -13,11 +19,12 @@
 /* Menu positioning */
 
 #whiteline {
-	background: url("../images/herhaling-header-en-footer.PNG") repeat-x;
+	background: url("../images/herhaling-header-en-footer.png") repeat-x;
 	height: 50px;
     clear: both;
 	width: 100%;
 	position:relative;
+	top:-30px;
 	z-index: 1}
 	
 #menu, #menu ul {
