@@ -15,30 +15,26 @@
 
 <div id="content-bar">
 	<?php include 'header.html'; ?>
-    <div id="content">
-		 
-              
+    <div id="content">   
            <h1> Hier een video of twee om een indruk te krijgen wat we doen </h1> 
            
-       
-           
            <div id="videoList">
-                <div class="video">
+               <div class="video">
                     <img src="./images/logo.jpg" alt="video_logo" title="video_logo" onclick=playVideo("http://www.youtube-nocookie.com/embed/IBmy2bErdWM") />
                </div>
                
                <div class="video">
-                <img src="./images/logo.jpg" alt="video2" title="video_logo" onclick=playVideo("http://www.youtube.com/embed/MWqYy2H6I8E") />
+                	<img src="./images/logo.jpg" alt="video2" title="video_logo" onclick=playVideo("http://www.youtube.com/embed/MWqYy2H6I8E") />
                </div>
-           </div>
+           </div> <!-- end videoList div -->
            
            <div id="showVideo">
-         	  <iframe title="YouTube video player" width="420" height="315" src="http://www.youtube.com/embed/MWqYy2H6I8E?wmode=transparent" frameborder="0" wmode="Opaque">
-
+         		<iframe title="YouTube video player" width="420" height="315" src="http://www.youtube.com/embed/MWqYy2H6I8E?wmode=transparent" frameborder="0" wmode="Opaque"></iframe>
            </div>
            
     </div> <!-- end div content -->
-
+	<div id="sidebar-left"></div>
+    <div id="sidebar-right"></div>
 	<?php include 'footer.html' ?>
 </div> <!-- end content-bar -->
 

@@ -51,7 +51,7 @@ body,html{
 #content{
 	overflow:auto;
 	padding-bottom:120px;
-	padding-top: 240px;
+	padding-top: 250px;
 	padding-left: 50px;
 	padding-right:50px;
 }
@@ -87,3 +87,5 @@ p{
 	margin-top:10px;
 	margin-bottom:10px;
 }
+
+a{ color: inherit;}

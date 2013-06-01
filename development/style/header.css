@@ -20,11 +20,11 @@
 
 #whiteline {
 	background: url("../images/herhaling-header-en-footer.png") repeat-x;
-	height: 50px;
+	height: 40px;
     clear: both;
 	width: 100%;
-	position:relative;
-	top:-30px;
+	position:absolute;
+	top:200px;
 	z-index: 1}
 	
 #menu, #menu ul {

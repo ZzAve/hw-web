@@ -30,7 +30,8 @@
            
            
     </div> <!-- end div content -->
-
+	<div id="sidebar-left"></div>
+    <div id="sidebar-right"></div>
 	<?php include 'footer.html' ?>
 </div> <!-- end content-bar -->
 
