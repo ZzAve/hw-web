@@ -9,41 +9,43 @@
 #footer-bar{
 	background: url("../images/herhaling-header-en-footer.png") repeat-x top left transparent;
 	position:absolute;
+	z-index:10;
 	top:-10px; left:0;
 	height:40px;
 	width:100%;	
 }
 #social-media-icons{
    float:left;
-   width: 25%;
-   max-width:500px;
+   width: 180px;
    height: 50%;
    margin-top: 8px;
-   margin-left: 5%;
+   margin-left: 175px;
    margin-right: auto;
    margin-bottom: 8px;
    position: relative;
-   bottom: 20%;
+   z-index:9;
+   bottom: 53%;
 }
 
 #social-media-icons ul{
+  margin:0;
   height:100%;
   min-height:100%;
   max-height:100%;	
 }
 
-#social-media-icons ul .icons{
+#social-media-icons li{
 	max-height:100%;
 	height:100%;
-	width:20%;
+	width:22%;
 	display: inline-block;
-	margin-right:8%	;
-	transform:rotate(-7deg);
-	-ms-transform:rotate(-7deg); /* IE 9 */
-	-webkit-transform:rotate(-7deg); /* Safari and Chrome */ 	
+	margin-right:2px;
+	/*transform:rotate(-7deg);
+	/*-ms-transform:rotate(-7deg); /* IE 9 */
+	/*-webkit-transform:rotate(-7deg); /* Safari and Chrome */ 	
 }
 
-#social-media-icons .icons img{
+#social-media-icons li img{
 	max-height: 100%;
 	height:100%;
 	max-width:100%;
@@ -51,19 +53,49 @@
 	border:none;
 }
 
-#social-media-icons ul .icons:hover{
-	transform:rotate(7deg);
-	-ms-transform:rotate(7deg); /* IE 9 */
-	-webkit-transform:rotate(7deg); /* Safari and Chrome */
+#social-media-icons ul li:hover{
+	bottom:10px;
+}
+
+#fb{
+	position:relative;
+	bottom:5px;
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+
+#sc{
+	position:relative;
+	bottom:2px;
+	transform:rotate(2deg);
+	-ms-transform:rotate(2deg); /* IE 9 */
+	-webkit-transform:rotate(2deg); /* Safari and Chrome */
+}
+#sc:hover{
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+
+
+#yt{
+	position:relative;
+}
+#yt:hover{
+	transform:rotate(2deg);
+	-ms-transform:rotate(2deg); /* IE 9 */
+	-webkit-transform:rotate(2deg); /* Safari and Chrome */
 }
 
 
 #copyright {
-	position:relative;
-	top:20px;
+	width:100%;
+	min-width:1000px;
+	position:absolute;
+	top:35px;
+	left: 220px;
 	z-index:10;
-	width:70%;
-	margin-left:30%;
 	height:57px;
 	padding:3px;
 }
@@ -74,7 +106,11 @@
 }
 #copyright ul >li {
 	float:left;
-	margin-right:50px;
+	margin-right:75px;
 	width: auto;;
 	overflow:auto;
+}
+
+#copyright a{
+	color:inherit;	
 }
