@@ -56,20 +56,28 @@ body,html{
 	padding-right:50px;
 }
 
-#sidebar-right, #sidebar-left{
-	background:url("../images/sidebar.png") repeat-y top left transparent;
+#sidebar-left{
+	background:url("../images/enkele-streep-verticaal_01.png") repeat-y top left transparent;
 	position:absolute;
-	width:20px;
+	width:50px;
+	height:100%;
+	top:0;
+}
+
+#sidebar-right {
+	background:url("../images/enkele-streep-verticaal-rechts_03.png") repeat-y top left transparent;
+	position:absolute;
+	width:50px;
 	height:100%;
 	top:0;
 }
 
 #sidebar-left{
-	left:-10px;
+	left:-22px;
 }
 
 #sidebar-right{
-	right:-10px;
+	right:-35px;
 }
 
 ul{
