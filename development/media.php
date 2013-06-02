@@ -11,9 +11,8 @@
 </head>
 
 <body>
-
+<?php include 'header.html'; ?>	
 <div id="content-bar">
-	<?php include 'header.html'; ?>
     <div id="content">
             <h1> Media enzo ...</h1>
         <p> Dit is de toegangspoort voor een hemelse genotservaring. Het ene medium zal u nog meer verbluffen dan het ander. Kies hieronder uw favoriet, of kies een van de submenu's vanuit de menubalk.
@@ -28,8 +27,9 @@
     </div> <!-- end div content -->
     <div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
-    <?php include 'footer.html' ?>
+ 
 </div> <!-- end content-bar -->
+<?php include 'footer.html' ?>
 </body>
 
 

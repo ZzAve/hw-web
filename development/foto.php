@@ -6,17 +6,16 @@
 <!-- standard style and javascript -->
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-
+<script type="text/javascript" src="js/main.js"></script>
 <!-- page specific style and javascript -->
 <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
 <script type="text/javascript" src="js/photoalbum.js"></script>
 </head>
 
 <body>
-<div id="content-bar">
-    <!-- include the header of the page -->
-    <?php include 'header.html'; ?>
-    
+<!-- include the header of the page -->
+<?php include 'header.html'; ?>
+<div id="content-bar">  
       <div id="content">
       
           <div id="gallery">
@@ -56,8 +55,9 @@
      <div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
     
-    <?php include 'footer.html'; ?>
+   
 </div> <!-- end content-bar -->
+<?php include 'footer.html'; ?>
 
 </body>
 </html>

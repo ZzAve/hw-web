@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-
+<script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="style/nieuws.css" title="style" />
 <script type="text/javascript" src="./js/validate.js"></script>
 
@@ -12,9 +12,9 @@
 </head>
 
 <body>
-
+<?php include 'header.html'; ?>
 <div id="content-bar">
-	<?php include 'header.html'; ?>
+
     <div id="content">
 		<h1> Aanschouw hier het laatste nieuws omtrent het reilen en zeilen van Homemade Water</h1> 
         <h6> Om op de hoogte te blijven van ons laatste nieuws verwijzen wij u ook door naar onze <a href="www.facebook.com/HomemadeWater">facebook pagina</a></h6>       
@@ -35,9 +35,9 @@
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
-	<?php include 'footer.html' ?>
-</div> <!-- end content-bar -->
 
+</div> <!-- end content-bar -->
+<?php include 'footer.html' ?>
 </body>
 
 

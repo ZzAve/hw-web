@@ -13,6 +13,7 @@
 } 
 
 #logo {
+	position:relative;
 	margin-left:400px;
 	}
 
@@ -26,7 +27,11 @@
 	position:absolute;
 	top:200px;
 	z-index: 1}
-	
+
+#menu{
+	position:relative;
+}
+
 #menu, #menu ul {
     list-style: none;
     padding: 0;
@@ -89,6 +94,6 @@
 }
 
 #menu > li.highlight > a, #menu ul li.highlight a{
-    color: #362F2F;
+    color: #00C;
 }
 

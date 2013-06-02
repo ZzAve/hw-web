@@ -19,10 +19,9 @@
 </head>
 
 <body>
-<div id="content-bar">
 <!-- include the header of the page -->
-	<?php include 'header.html'; ?>
-
+<?php include 'header.html'; ?>
+<div id="content-bar">
 	<div id="content"> 
          <h1> Welkom op de site van Homemade Water!</h1>
          <h3> Homemade Water is een frisse pop-rock(cover)band die naam begint te krijgen Delft en de rest van Nederland. Homemade Water brengt een strakke en gevarieerde set bekendere rock- en pop-nummers en enkele eigen nummers. Met deze set zijn al vele zalen, cafés en sociëteiten op de kop gezet, warrbij de temperatuur regelmatig boven het kookpunt is uitgestegen!.</h3>            
@@ -41,9 +40,9 @@
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
     
-	<?php include 'footer.html'; ?>	
-</div>
 
+</div> <!-- end content-bar div -->
+<?php include 'footer.html'; ?>	
 
 </body>
 </html>

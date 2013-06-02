@@ -12,9 +12,8 @@
 </head>
 
 <body>
-
+<?php include 'header.html'; ?>
 <div id="content-bar">
-	<?php include 'header.html'; ?>
     <div id="content">
 		 
         <h1> Zet die speakers maar vol open, want hier kan je de unieke sound van Homemade Water terughoren!</h1>
@@ -32,9 +31,9 @@
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
-	<?php include 'footer.html' ?>
-</div> <!-- end content-bar -->
 
+</div> <!-- end content-bar -->
+<?php include 'footer.html' ?>
 </body>
 
 

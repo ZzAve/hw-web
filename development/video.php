@@ -12,9 +12,9 @@
 </head>
 
 <body>
+<?php include 'header.html'; ?>
 
 <div id="content-bar">
-	<?php include 'header.html'; ?>
     <div id="content">   
            <h1> Hier een video of twee om een indruk te krijgen wat we doen </h1> 
            
@@ -35,8 +35,8 @@
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
-	<?php include 'footer.html' ?>
 </div> <!-- end content-bar -->
+<?php include 'footer.html' ?>
 
 </body>
 
