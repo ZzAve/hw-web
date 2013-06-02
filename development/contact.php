@@ -61,27 +61,35 @@
     } else {
         // if no form was send to this page, allow people to fill in the contactform
     ?>
-    <p> Hallo, je kan nu het contactformulier invullen</p>
+    <br />
+    <p1> Voor boekingsaanvragen of informatie, kunt u het onderstaande contactformulier invullen.<br /> 
+    Wij nemen dan zo snel mogelijk contact met uw op!</p1><br /> <br />
     <?php } ?>
     
     <!-- The contact form -->
     <form name="contact_form" enctype="multipart/form-data" onsubmit="return validate()" action="./contact.php" method="POST">
         <p>Naam</p> <input type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  >
         <p>E-mail</p> <input type="text" name="email" <?= $error ?"value=\"$email\"" : NULL ?> >
-        <p>Telefoon (optional)</p> <input type="text" name="phone" <?= $error ?"value=\"$phone\"" : NULL ?>>
-        <br />
+        <p>Telefoon (optioneel)</p> <input type="text" name="phone"/>
+        <!-- <br />
         <p>Aard van contact</p>
         <select name="type" size="1">
         <option value="booking">Boeking</option>
         <option value="info">Informatie</option>
         <option value="anders">Anders</option>
         </select>
-        <br />
+        <br /> -->
         
-        <p>Bericht</p><textarea name="bericht" rows="6" cols="25" <?= $error ?"value=\"$message\"" : NULL ?>></textarea><br />
+        <p>Bericht</p><textarea name="bericht" rows="10" cols="50" <?= $error ?"value=\"$message\"" : NULL ?>></textarea><br />
         <input type="submit" value="Send"><input type="reset" value="Clear">
     </form>
+    <br />
+    <!-- copy email -->
     
+    <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Kopie verzenden naar uw eigen mail</label>
+    <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" />
+   
+    <!-- for programming: if checkbox is filled in, process copy e-mail.-->
     
     </div> <!-- end div content -->
     <div id="sidebar-left"></div>
