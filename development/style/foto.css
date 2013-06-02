@@ -19,6 +19,24 @@
 	max-height:100%;
 }
 
+#album-list {
+	display:inline;
+}
+
+#album-list li {
+	text-align:center;
+	list-style: none;
+	float: left;
+	margin-right:20px;
+	width:150px;
+}
+
+#album-list li img {
+	width:100%;
+	list-style: none;
+}
+	
+	
 /*
 #thumbs-box{
 	position:relative;
