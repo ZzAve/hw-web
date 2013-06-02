@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-
+<script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
 
 
@@ -22,7 +22,7 @@
             <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=false"></iframe>
             
             <!-- First demo -->
-            <iframe width="100%" height="166" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79363524&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79363524&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></iframe>
 		</div>        
       
            

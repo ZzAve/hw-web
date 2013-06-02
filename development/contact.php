@@ -10,6 +10,7 @@
 
 <!--  Scripts  --> 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="./js/validate.js"></script>
 
 
@@ -19,7 +20,7 @@
 
 
 <body>
-<?php include 'footer.html'; ?>	
+<?php include 'header.html'; ?>	
 <div id="content-bar">
     <div id="content">
     
