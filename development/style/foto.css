@@ -1,6 +1,7 @@
 /* Foto stylesheet */
 @charset "utf-8";
 /* CSS Document */
+/*
 #gallery{
 	width:100%;
 	height:100%;
@@ -18,7 +19,7 @@
 	height:100%;
 	max-height:100%;
 }
-
+*/
 #album-list {
 	display:inline;
 }
@@ -29,6 +30,7 @@
 	float: left;
 	margin-right:20px;
 	width:150px;
+	margin-top:30px;
 }
 
 #album-list li img {
@@ -36,8 +38,30 @@
 	list-style: none;
 }
 	
-	
-/*
+#photolist{
+	float:right;
+	position:relative;
+	width:100px;
+	height:300px;
+	overflow:hidden;
+}
+
+#thumbs-one-album {
+	position:absolute;
+	height:100%;
+}
+
+#thumbs-one-album li {
+	list-style: none;
+	width:100%;
+	margin-top:10px;
+}	
+
+#thumbs-one-album li img {
+	width:100%;
+	list-style: none;
+}
+
 #thumbs-box{
 	position:relative;
 	width:70%;
