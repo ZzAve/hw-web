@@ -2,15 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
-
-
-<title>Untitled Document</title>
-</head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
 <link href="images/shortIcon.jpg" rel="shortcut icon" />
 <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende! ">
@@ -18,7 +9,17 @@
 <meta name="author" content="Homemade Water">
 <meta name="publisher" content="Homemade Water" />
 <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-<title>Homemade Water</title>
+<title>Homemade Water - Audio</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
+
+
+</head>
+
 <body>
 <?php include 'header.html'; ?>
 <div id="content-bar">

@@ -29,9 +29,9 @@ function sendCopy($title,$mail,$number ="",$msg){
 <meta name="author" content="Homemade Water">
 <meta name="publisher" content="Homemade Water" />
 <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-<title>Homemade Water</title>
+<title>Homemade Water - Contact</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>contactformulier</title>
+
 
 
 

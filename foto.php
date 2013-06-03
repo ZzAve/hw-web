@@ -39,9 +39,9 @@ function album_present(){
 <meta name="author" content="Homemade Water">
 <meta name="publisher" content="Homemade Water" />
 <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-<title>Homemade Water</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Photo page</title>
+
+<title>Homemade Water - Foto</title>
+
 <!-- standard style and javascript -->
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
