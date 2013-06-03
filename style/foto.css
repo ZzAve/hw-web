@@ -84,8 +84,10 @@
 
 #thumbs-one-album li img {
 	width:100%;
-	border:1px solid grey;
+	border:1px solid grey;	
+	cursor:pointer;
 }
+
 
 #up, #down{
 	position:absolute;
