@@ -89,8 +89,13 @@ function sendCopy($title,$mail,$number ="",$msg){
     } else {
         // if no form was send to this page, allow people to fill in the contactform
     ?>
+<<<<<<< HEAD
  
     <p> Voor boekingsaanvragen of informatie, kunt u het onderstaande contactformulier invullen. Wij nemen dan zo snel mogelijk contact met uw op!</p>
+=======
+    <br />
+    <p1> Meer info? Wilt u ons boeken of om een andere reden contact opnemen? Geen probleem. Gebruik onderstaand formulier of mail naar info@homemadewater.nl. U krijgt zo spoedig mogelijk antwoord. </p1><br /> <br />
+>>>>>>> c801a3279a9489334caa7f45846f46d336128681
     <?php } ?>
     
     <!-- The contact form -->

@@ -2,6 +2,9 @@
 $album_folder="images/albums/";
 $all_albums=glob($album_folder."*",GLOB_ONLYDIR);
 
+/*
+* Function album_present() checks whether a GET request is send to this page, concerning a photo album. If so it checks whether that photo albums exist. If not, or no request was send, it returns NULL. If an album is present it returns the name of the album.
+*/
 function album_present(){
 	global $album_folder; // make use of variable $album_folder as instantiated globally
 	global $all_albums;		// idem for $all_albums
@@ -55,28 +58,27 @@ function album_present(){
             <?php 
 			$album_presence = album_present();
 			if ($album_presence != NULL) {
-				echo "album \"".$album_presence."\" exists";
-			?>
+				//echo "album \"".$album_presence."\" exists";
+				?>
             	<div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="./images/album_alpha/Gig_Plankenkoorts_25042013_14.jpg" title="Awesome foto"/>   
+                    <!-- <img src="./images/album_alpha/Gig_Plankenkoorts_25042013_14.jpg" title="Awesome foto"/>   
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
                     <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->
-                </div>
-                    
+                </div> 
+                   
 				<div id="photolist">
-                	<ul id="thumbs">
+                	<ul id="thumbs-one-album">
 						<?php //get all photo
                         $curdir=getcwd();
                         chdir($album_folder.$album_presence);
                         $photolist = glob("*_thumb.jpg");
-						print_r($photolist);
                         chdir($curdir);
                         foreach ($photolist as $photo){
 							$length = strlen($photo);
                             $photo_descr = substr($photo,0,$length-10);
                             ?>
-                            <li> <img src="<?=$album_folder.$album_presence."/".$photo?>" alt="<?=$photo_descr?>"/> foto_description of <?=$photo_descr?> </li>	
+                            <li> <img src="<?=$album_folder.$album_presence."/".$photo?>" alt="<?=$photo_descr?>"/> </li>	
                             <?php
                         }
                         ?>
@@ -85,7 +87,6 @@ function album_present(){
 			
 			<?php
 			}else { 
-				echo "album does not exist";
 				?>
                 
                 <!-- Say hi to people on the page -->
@@ -97,8 +98,11 @@ function album_present(){
                     // Show photo-albums in an unordered list (<ul> ... </ul>)
                     foreach ($all_albums as $photo_album){
                         // show a thumbnail and description
-                        ?>
-                        <li> <img src="<?=$photo_album?>_thumb.jpg" alt="<?=$photo_album ?>" title="<?=$photo_album ?>" /> album_description of <?=$photo_album?> </li>	
+                        $album_name  = substr(strrchr($photo_album,"/"),1);
+						//$album_name = substr($photo_album,0,$index);
+						?>
+                      	
+                        <li> <img src="<?=$photo_album?>_thumb.jpg" alt="<?=$photo_album ?>" title="<?=$photo_album ?>" /> <?=$album_name?> </li>	
                     <?php
                     }
                 
@@ -117,14 +121,10 @@ function album_present(){
 </div> <!-- end content-bar -->
 <?php include 'footer.html'; ?>
 
-</body>
-</html>
-
-
 <!-- old code for album -->
 <!-- the list with all the thumbnails
 <div id="thumbs-box">
-    <div id="thumbs-box-overflow">
+    <div id="thumbs-box-overflow"
         <ul id="thumbs">
         <?php 	
             // get all photos of a certain album and put those into listitems
@@ -144,8 +144,13 @@ function album_present(){
             
         ?>	
         </ul>    
-    </div> <!-- end thumbs-box-overflow 
+    </div> <!-- end thumbs-box-overflow
     <div id="prev"></div>
     <div id="next"></div>	
 </div> <!-- end thumbs-box div -->
 <!-- end old code for album -->
+
+</body>
+</html>
+
+
