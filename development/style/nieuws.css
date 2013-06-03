@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+#content h4 {
+	margin-bottom:8px}
+	
 .newsitem{
 	width:95%;
 	height:auto;
