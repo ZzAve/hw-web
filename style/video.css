@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#showVideo{
+	width: 420px;
+}
+
+#showVideo iframe{
+	position: relative;
+	z-index:1;	
+}
+
+#videoList{
+	padding-top:40px;
+	float:right;
+	clear:right;
+	width:300px;
+}
+
+
+.video{
+	min-height: 100px;
+	height:auto;
+	width:100%;	
+	margin-bottom:10px;
+}
+
+.video p{
+	visibility:hidden;
+	position:absolute;
+}
+
+.video h2{
+	margin-top:0;
+	padding-top:10px;	
+}
+
+.video img{
+	float:left;
+	margin-right:10px;
+	cursor:pointer;
+	height:100px;
+}

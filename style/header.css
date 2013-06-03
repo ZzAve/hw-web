@@ -1,0 +1,104 @@
+/* Logo and golfbeweging positioning */
+
+#top{
+	background:#000;
+	padding-bottom:30px;
+}
+
+#golfbeweging {
+	position: absolute;
+	margin-left: 689px;
+	margin-top: 138px;
+	z-index:2;
+} 
+
+#logo {
+	position:relative;
+	margin-left:400px;
+	}
+
+/* Menu positioning */
+
+#whiteline {
+	background: url("../images/herhaling-header-en-footer.png") repeat-x;
+	height: 40px;
+    clear: both;
+	width: 100%;
+	position:absolute;
+	top:200px;
+	z-index: 1}
+
+#menu{
+	position:relative;
+}
+
+#menu, #menu ul {
+    list-style: none;
+    padding: 0;
+	margin-left:30px;}
+
+#menu > li{ 
+    float: left;
+	margin-left: 50px;
+}
+#menu li a {
+    display: block;
+    height: 2em;
+    line-height: 2.5em;
+    padding: 0 1.5em;
+    text-decoration: none;
+}
+#menu ul {
+    position: absolute;
+    display: none;
+	margin-left:0px;
+    z-index: 999;
+}
+#menu ul li a {
+    width: 80px;
+}
+#menu li:hover ul.noJS {
+    display: block;
+}
+
+	
+/* Menu coloring and styling */
+/* Main menu
+------------------------------------------*/
+#menu {
+    font-family: Arial;
+    font-size: 16px;
+}
+#menu > li > a {
+    color: #000;
+    font-weight: bold;
+}
+#menu > li:hover > a {
+    color: rgba(255,255,255,0.8);
+    color: #000;
+}
+ 
+
+/* Submenu
+------------------------------------------*/
+#menu ul {
+    background: white;
+opacity: .80; /* standard: ff gt 1.5, opera, safari */
+ms-filter: "alpha(opacity=80)"; /* ie 8 */
+filter: alpha(opacity=80); /* ie lt 7 */
+khtml-opacity: .80; /* safari 1.x */
+moz-opacity: .80; /* ff lt 1.5, netscape */
+
+}
+
+#menu ul li a {
+    color: #000;
+}
+#menu ul li:hover a {
+    background: rgba(255,255,255,0.8);
+}
+
+#menu > li.highlight > a, #menu ul li.highlight a{
+    color: #00C;
+}
+

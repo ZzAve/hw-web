@@ -1,0 +1,155 @@
+/* Foto stylesheet */
+@charset "utf-8";
+/* CSS Document */
+
+
+#gallery{
+	width:100%;
+	height:auto;
+	max-height:100%;
+	overflow:auto;
+}
+
+/* overall page */
+#album-list {
+	display:inline;
+	list-style: none;
+}
+
+#album-list li {
+	text-align:center;
+	float: left;
+	width:150px;
+	margin-right:20px;
+	margin-top:30px;
+}
+
+#album-list li img {
+	width:100%;
+}
+
+/* album page */
+#showPhoto{ 
+	height:400px;
+	width:70%;
+	margin-left: 5%;
+	margin-right:23%;
+	margin-top:20px;
+	overflow:visible;
+}
+
+#showPhoto img{
+	display: block;
+	margin: 0px auto;
+	border-radius:20px;
+	height:auto;
+	max-height:100%;
+	width:auto;
+	max-width:100%;
+
+}
+
+#photolist-overflow{
+	float:right;
+	position:relative;
+	width:100px;
+	height:355px;
+	margin-right: 50px;
+	margin-top:20px;
+	border: 3px outset white;
+	border-radius:2px;
+	z-index:1;
+}
+	
+#photolist{
+	background-color:black;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+#thumbs-one-album {
+	margin:0;
+	position:absolute;
+	height:auto;
+	width:100%;
+}
+
+#thumbs-one-album li {
+	list-style: none;
+	width:100%;
+	margin-top:10px;
+}	
+
+#thumbs-one-album li img {
+	width:100%;
+	border:1px solid grey;
+}
+
+#up, #down{
+	position:absolute;
+	cursor:pointer;
+	width:50px;
+	height:50px;
+	background-color: rgba(256,256,256,0.5);
+	left:25px;
+	border-radius:25px;
+}
+#up:hover, #next:down{
+	background-color: rgba(256,256,256,0.8)
+}
+#down{
+	bottom:-25px;
+}
+#up{
+	top:-25px;
+}
+
+/*
+#thumbs-box{
+	position:relative;
+	width:70%;
+	height: 75px;
+	max-height:75px;
+	max-width: 1500px;
+	margin:20px auto;
+}
+
+#thumbs-box-overflow{
+	position:relative;
+	overflow:hidden;	
+	height:100%;
+	width:100%
+
+}
+
+#thumbs {
+	position:absolute;
+	width:99999px;
+	list-style:none;
+}
+#thumbs li{
+	display:inline-block;
+	float:left;
+	clear:right;
+	height:100%;
+	max-height:100%;
+	padding:0 8px;
+	position:relative;
+}
+
+#thumbs li img{
+	cursor:pointer;
+	max-height:100%;
+	height:100%;
+	width:100%;
+	max-width:100%;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	border: 1px solid white;
+
+}
+
+*/

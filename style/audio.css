@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+#audioList{
+	height:auto;
+	/*margin-left: 10px;
+	margin-right:10px;*/
+}
+
+#audioList iframe{
+	margin-top:10px;
+	margin-bottom:10px;	
+}
+
+#audioList div{
+	margin-top:30px;
+	background-color: rgba(0,0,0,0.3);
+	border-radius:10px;
+	padding:20px;
+}
+
+#audioList p{
+	font-size:1.2em;
+}

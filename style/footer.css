@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+#footer{
+	background-color:#000;
+	color:  #8d8d8d;
+}
+
+#footer-bar{
+	background: url("../images/herhaling-header-en-footer.png") repeat-x top left transparent;
+	position:absolute;
+	z-index:10;
+	top:-10px; left:0;
+	height:40px;
+	width:100%;	
+}
+#social-media-icons{
+   float:left;
+   width: 180px;
+   height: 50%;
+   margin-top: 8px;
+   margin-left: 175px;
+   margin-right: auto;
+   margin-bottom: 8px;
+   position: relative;
+   z-index:9;
+   bottom: 53%;
+}
+
+#social-media-icons ul{
+  height:100%;
+  min-height:100%;
+  max-height:100%;
+  margin-left:20px	
+}
+
+#social-media-icons li{
+	max-height:100%;
+	height:100%;
+	width:22%;
+	display: inline-block;
+	margin-right:10px;
+	/*transform:rotate(-7deg);
+	/*-ms-transform:rotate(-7deg); /* IE 9 */
+	/*-webkit-transform:rotate(-7deg); /* Safari and Chrome */ 	
+}
+
+#social-media-icons li img{
+	max-height: 100%;
+	height:100%;
+	max-width:120%;
+	vertical-align:middle;
+	border:none;
+}
+
+#social-media-icons ul li:hover{
+	bottom:10px;
+}
+
+#fb{
+	position:relative;
+	bottom:5px;
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+
+#sc{
+	position:relative;
+	bottom:2px;
+	transform:rotate(2deg);
+	-ms-transform:rotate(2deg); /* IE 9 */
+	-webkit-transform:rotate(2deg); /* Safari and Chrome */
+}
+#sc:hover{
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+
+
+#yt{
+	position:relative;
+}
+#yt:hover{
+	transform:rotate(2deg);
+	-ms-transform:rotate(2deg); /* IE 9 */
+	-webkit-transform:rotate(2deg); /* Safari and Chrome */
+}
+
+
+#copyright {
+	width:100%;
+	min-width:1000px;
+	position:absolute;
+	margin-top:35px;
+	margin-left: 160px;
+	z-index:10;
+	height:30px;
+	padding:3px;
+}
+
+#copyright ul{
+	height:100%;
+	list-style:none;		
+}
+#copyright ul >li {
+	float:left;
+	margin-right:120px;
+	width: auto;;
+	overflow:auto;
+}
+
+#copyright a{
+	color:inherit;	
+}

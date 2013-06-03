@@ -1,132 +1,104 @@
 *{
-   margin:0px;
-   padding:0px;
-   border:none;
-   /*border: 1px solid white;*/
-} 
-
-body{
-   width:1000px;
-   margin: 5px  auto;
-   font-size: 0.6em;
-   font-family:Arial, Helvetica, sans-serif;
-   text-align: center;
-   color:#FFFFFF;
-   background: url("../images/IMG_6309.JPG") no-repeat center top #060606;
-}
-
-#wrapper{
-   background-color: #060606;
-   width: 100%;
-   padding:20px 5px;
-   border-radius:15px;
-}
-
-#logo img{
-   display: inline;
-   position: relative;
-   vertical-align: bottom;
-   width: 70%;
-}
-
-#head-content{
-	width:85%;
-	margin:5px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-h1, h2 {
-	margin:2%;
-	padding: 5px;
-}
-
-.Story{
-	width: 80%;
-	margin-left:auto;
-	margin-right: auto;
-}
-
-#signed{
-	width: 45%;
-	margin-left:auto;
-	margin-right:auto;
-	position: relative;
-	top: 30px;
-	
-}
-
-a{
-   color:inherit;
-   text-decoration:none;
-}
-
-#contact{
-	border: 5px outset white;
-	border-radius: 5px;
-    padding: 3px;	
-	margin:10px 5% 10px auto;
-	float:right;
-	width: 200px;
-	position: relative;
-	top: -80px;
-	overflow:auto;
-    vertical-align:center;
-	font-size: 15px;
-	text-align: center;
-	font-weight:bold;
+ 	margin:0;
+	padding:0;
+	/*border: 1px solid #FF3;*/
 }
 
 
-#contact:hover{
-    text-decoration:underline;
-}
-
-	
-#social-media-icons{
-   width: 25%;
-   margin-top: 8px;
-   margin-left: 5%;
-   margin-right: auto;
-   margin-bottom: 8px;
-   position:relative;
-   overflow: hidden;
-   top: -35px;
-}
-
-.scIcon{
-	float: right;
-	width:20%;
-	margin-right:8%;
-	border: 5px outset #AAAAAA;
-	border-radius:12px;	
-	overflow: hidden;
-}
-
-.scIcon img{
-	width: 100%;
-	vertical-align:middle
-}
-
-.scIcon:hover{
-	border-style:inset;
-}
-
-#keywords{
-	visibility: hidden;
-	width:50%;
-	margin-left: auto; 
-	margin-right: auto;
-	
-}
-
-iframe {
+body,html{
+    min-height: 100%; /* ie6 ignores min-height completely */
+    height: 100%;
+	width:auto;
+	min-width:100%;	
 	position:relative;
-	left: 130px;
-    display: block;
-    width: 337px;
-    height: 87px;
-    margin: 0 auto;
-    border: 0;
+	background: url("../images/achtergrondDSB5.jpg")  fixed no-repeat top left #000000;
+	font-family:Arial, Gadget, sans-serif;
+	font-size: 0.9em;
+	color: #CCC;
+
+}
+
+#header, #footer{
+	width:auto;
+	min-width:100%;	
+}
+
+#header{
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:100;
+}
+
+#header #logo{
+	height:200px;
+}
+
+#footer{
+	height: 75px;
+	position:fixed;
+	z-index:100;
+	bottom: 0;
+	left:0;
+}
+
+#content-bar{
+	background-color:#362F2F;	
+	width:800px;
+	height:auto;
+	min-height:100%;
+	position:relative;
+	z-index:50;
+	margin-left:150px;
+	margin-right:auto;
 }
 	
+#content{
+	overflow:auto;
+	padding-bottom:120px;
+	padding-top: 270px;
+	padding-left: 30px;
+	padding-right:30px;
+}
+
+#sidebar-left{
+	background:url("../images/enkele-streep-verticaal_01.png") repeat-y top left transparent;
+	position:absolute;
+	width:50px;
+	height:100%;
+	top:0;
+}
+
+#sidebar-right {
+	background:url("../images/enkele-streep-verticaal-rechts_03.png") repeat-y top left transparent;
+	position:absolute;
+	width:50px;
+	height:100%;
+	top:0;
+}
+
+#sidebar-left{
+	left:-22px;
+}
+
+#sidebar-right{
+	right:-35px;
+}
+
+ul{
+	margin-left:20px;
+	font-weight:bold;
+	list-style:disc;
+	list-style-position:inside;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:10px 0;
+}
+
+p{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+a{ color: inherit;}
