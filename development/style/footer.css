@@ -94,7 +94,7 @@
 	min-width:1000px;
 	position:absolute;
 	margin-top:35px;
-	margin-left: 220px;
+	margin-left: 160px;
 	z-index:10;
 	height:30px;
 	padding:3px;
@@ -106,7 +106,7 @@
 }
 #copyright ul >li {
 	float:left;
-	margin-right:75px;
+	margin-right:120px;
 	width: auto;;
 	overflow:auto;
 }

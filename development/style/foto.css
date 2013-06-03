@@ -31,9 +31,9 @@
 /* album page */
 #showPhoto{ 
 	height:400px;
-	width:75%;
+	width:70%;
 	margin-left: 5%;
-	margin-right:20%;
+	margin-right:23%;
 	margin-top:20px;
 	overflow:visible;
 }
@@ -44,6 +44,8 @@
 	border-radius:20px;
 	height:100%;
 	max-height:100%;
+	width:auto%;
+	max-width:100%;
 }
 
 #photolist-overflow{
