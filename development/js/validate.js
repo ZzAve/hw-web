@@ -5,6 +5,7 @@ function validate_email(email){
 function validate_number(number){
 	var numPattern = /\d{8,15}/
 	return numPattern.test(number);
+	
 }
 function stripTags(input){
 	return input.replace(/<\/?[^>]+(>|$)/g, "").replace(/^\s*/, "").replace(/\s*$/, "");
@@ -24,12 +25,12 @@ function validate()
 		doc.email.focus();
 		return false;
 	}
-	if(!validate_number(doc.phone.value))
+	/*if(!validate_number(doc.phone.value))
 	{
 		alert("Vul a.u.b. een geldig telefoonnummer in (0-9)");
 		doc.phone.focus();
 		return false;
-	}
+	}*/
 
 	if(stripTags(doc.bericht.value) == '')
 	{
