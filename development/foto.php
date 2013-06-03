@@ -87,7 +87,7 @@ function album_present(){
                    </div>
                  </div>
                  <div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="images/albums/DSB/DSB4_thumb.jpg" title="Awesome foto"/>   
+                    <img src="images/logo.jpg" title="Awesome foto"/>   
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
                     <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->

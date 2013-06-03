@@ -9,7 +9,7 @@
 <meta name="author" content="Homemade Water">
 <meta name="publisher" content="Homemade Water" />
 <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-<title>Homemade Water</title>
+<title>Homemade Water - Video</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -17,7 +17,6 @@
 <link rel="stylesheet" type="text/css" href="style/video.css" title="style" />
 <script type="text/javascript" src="js/video.js"></script>
 
-<title>Untitled Document</title>
 </head>
 
 <body>
@@ -30,14 +29,14 @@
            
            <div id="videoList">
                <div class="video">
-                    <img src="./images/logo.jpg" alt="video_logo" title="video_logo"  />
+                    <img src="./images/give_it_back.jpg" alt="give_it_back" title="Give It Back"  />
                     <a href="http://www.youtube.com/embed/IBmy2bErdWM"></a> 
                     <h2> Give it Back - Live @ De Storing, Haarlem </h2>
                     <p> 14/02/2013 Het valentijnsoptreden van Homemade Water vond plaats in cafe De Storing in Haarlem. Hier werd zo ook de eerste versie van 'Give It Back' gespeeld, het tweede zelfgeschreven nummer. <br /><br  /> Credits voor de video gaan naar Elisabeth van Lent.</p>
                </div>
                
                <div class="video">
-                	<img src="./images/logo.jpg" alt="video2" title="video_logo" />
+                	<img src="./images/dsb_optreden.jpg" alt="dsb_optreden" title="DSB compilatie - Zomer 2012" />
                     <a href="http://www.youtube.com/embed/MWqYy2H6I8E"></a>
 					<h2> Compilatievideo - Live optreden @ DSB, Delft </h2>
                     <p> 6/07/2012 Het einde van het collegejaar werd flink gevierd tijdens het jaarlijkse eindfeest van studentenvereniging DSB. Homemade Water maakte hier haar debuut en knalde meteen de hele zaal weg. Lekker! <br /><br  /> Credits voor de video gaan naar Thomas Mensink. </p>

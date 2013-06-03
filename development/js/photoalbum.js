@@ -1,7 +1,9 @@
 $(function() {
-var c=0;
+	
+	
+	var c=0;
 
-	if($('#thumbs-one-album') != null){
+	if($('#thumbs-one-album') != null){		
 		heightdiv = $('#photolist').height(); // get height of showing div
 		imgN = $('#thumbs-one-album li').length; // get total number of photos in album
 	}
