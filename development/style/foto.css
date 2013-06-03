@@ -84,7 +84,7 @@
 
 #thumbs-one-album li img {
 	width:100%;
-	list-style: none;
+	border:1px solid grey;
 }
 
 #up, #down{
