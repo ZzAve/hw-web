@@ -24,13 +24,13 @@
 <div id="content-bar">
     <div id="content">
 		 
-        <h1> Zet die speakers maar vol open, want hier kan je de unieke sound van Homemade Water terughoren!</h1>
+        <h1> Zet die speakers maar vol open om de unieke sound van Homemade Water terug te horen!</h1>
         <div id="audioList">
         	<div>
                 <h2> Give it Back @ de Storing Haarlem </h2>
                 <!-- Give it Back - Haarlem -->
                 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true">  </iframe>
-                <p>Hier is de eerste versie van het eigen nummer "Give it Back", gespeeld tijdens het valentijnsoptreden dit jaar in de Storing, Haarlem.  </p> <br /> 
+                <p>De eerste versie van het eigen nummer "Give it Back", gespeeld tijdens het valentijnsoptreden dit jaar in de Storing, Haarlem.  </p> <br /> 
             </div>
          
          	<div>
