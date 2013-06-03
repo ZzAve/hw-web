@@ -16,20 +16,30 @@
 
 <div id="content-bar">
     <div id="content">   
-           <h1> Hier een video of twee om een indruk te krijgen wat we doen </h1> 
+           <h1> De afdeling beeld en geluid </h1> 
+           <h3> Kijk hier nog eens terug naar de beelden van Homemade Water, en wellicht spot je jezelf wel!</h3>
            
            <div id="videoList">
                <div class="video">
-                    <img src="./images/logo.jpg" alt="video_logo" title="video_logo" onclick=playVideo("http://www.youtube-nocookie.com/embed/IBmy2bErdWM") />
+                    <img src="./images/logo.jpg" alt="video_logo" title="video_logo"  />
+                    <a href="http://www.youtube.com/embed/IBmy2bErdWM"></a> 
+                    <h2> Give it Back - Live @ De Storing, Haarlem </h2>
+                    <p> 14/02/2013 Het valentijnsoptreden van Homemade Water vond plaats in cafe De Storing in Haarlem. Hier werd zo ook de eerste versie van 'Give It Back' gespeeld, het tweede zelfgeschreven nummer. <br /><br  /> Credits voor de video gaan naar Elisabeth van Lent.</p>
                </div>
                
                <div class="video">
-                	<img src="./images/logo.jpg" alt="video2" title="video_logo" onclick=playVideo("http://www.youtube.com/embed/MWqYy2H6I8E") />
+                	<img src="./images/logo.jpg" alt="video2" title="video_logo" />
+                    <a href="http://www.youtube.com/embed/MWqYy2H6I8E"></a>
+					<h2> Compilatievideo - Live optreden @ DSB, Delft </h2>
+                    <p> 6/07/2012 Het einde van het collegejaar werd flink gevierd tijdens het jaarlijkse eindfeest van studentenvereniging DSB. Homemade Water maakte hier haar debuut en knalde meteen de hele zaal weg. Lekker! <br /><br  /> Credits voor de video gaan naar Thomas Mensink. </p>
                </div>
            </div> <!-- end videoList div -->
            
            <div id="showVideo">
-         		<iframe title="YouTube video player" width="420" height="315" src="http://www.youtube.com/embed/MWqYy2H6I8E?wmode=transparent" frameborder="0" wmode="Opaque"></iframe>
+         		<iframe title="YouTube video player" width="420" height="315" src="http://www.youtube.com/embed/IBmy2bErdWM?wmode=transparent" frameborder="0" wmode="Opaque"></iframe>
+                <h2> Give it Back - Live @ De Storing, Haarlem </h2>
+                <p> 14/02/2013 Het valentijnsoptreden van Homemade Water vond plaats in cafe De Storing in Haarlem. Hier werd zo ook de eerste versie van 'Give It Back' gespeeld, het tweede zelfgeschreven nummer. <br /><br  /> Credits voor de video gaan naar Elisabeth van Lent.</p>
+                
            </div>
            
     </div> <!-- end div content -->
