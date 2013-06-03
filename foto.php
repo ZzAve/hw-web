@@ -49,9 +49,11 @@ function album_present(){
 <!-- page specific style and javascript -->
 <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
 <script type="text/javascript" src="js/photoalbum.js"></script>
+<?php include_once("analyticstracking.php") ?>
 </head>
 
 <body>
+
 <!-- include the header of the page -->
 <?php include 'header.html'; ?>
 <div id="content-bar">  

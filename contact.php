@@ -43,10 +43,12 @@ function sendCopy($title,$mail,$number ="",$msg){
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="./js/validate.js"></script>
+<?php include_once("analyticstracking.php") ?>
 </head>
 
 
 <body>
+
 <?php include 'header.html'; ?>	
 <div id="content-bar">
     <div id="content">

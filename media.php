@@ -17,11 +17,10 @@
 <script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="style/media.css" title="style" />
 
-<title>Untitled Document</title>
-
-
+<?php include_once("analyticstracking.php") ?>
 </head>
 <body>
+
 <?php include 'header.html'; ?>	
 <div id="content-bar">
     <div id="content">

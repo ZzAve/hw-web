@@ -18,8 +18,10 @@
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="style/nieuws.css" title="style" />
     <script type="text/javascript" src="./js/validate.js"></script>
+    <?php include_once("analyticstracking.php") ?>
 </head>
 <body>
+
 <?php include 'header.html'; ?>
 <div id="content-bar">
 
