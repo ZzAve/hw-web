@@ -1,15 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<link rel="stylesheet" type="text/css" href="style/nieuws.css" title="style" />
-<script type="text/javascript" src="./js/validate.js"></script>
-
-<title>Untitled Document</title>
-</head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
 <link href="images/shortIcon.jpg" rel="shortcut icon" />
@@ -18,7 +10,13 @@
 <meta name="author" content="Homemade Water">
 <meta name="publisher" content="Homemade Water" />
 <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-<title>Homemade Water</title>
+
+<title>Homemade Water - Nieuws</title>
+<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="style/nieuws.css" title="style" />
+<script type="text/javascript" src="./js/validate.js"></script>
 <body>
 <?php include 'header.html'; ?>
 <div id="content-bar">
@@ -45,7 +43,6 @@
         <div class="newsitem">
             <div class="date"><label> 4 </label><span> MEI</span></div>
             	<h2>  Voorronde van The Clash of the Coverbands </h2>
-
             	<img src="images/albums/1e ronde Clash of the Coverbands @ P3/Clash_Purmerend_1.jpg" alt="Foto voorronde Clash" title="Homemade Water is door de voorrondes van Clash of the Coverbands!" />
                 <p> Nadat we ons hadden ingeschreven voor The Clash of the Coverbands, een Benelux competitie voor coverbands, kregen we te horen dat we uit 1500 bands waren geselecteerd om deel te nemen aan de regionale voorronde bij Poppodium P3 in Purmerend! Dus hop, daar gingen we met z'n allen en onze instrumenten met het openbaar vervoer. </p>
                 <p>Onze eerste tegenstanders waren wel aardig, maar na het optreden van de sterke band 'de Ideale Schoonzoons', die een grote fan share hadden meegenomen, moesten we toch even slikken. Zelf hadden we helaas helemaal geen supporters meegenomen maar het lukte ons om de supporters van onze concurrerende band los te laten gaan met een geslaagd optreden! </p>
