@@ -16,15 +16,27 @@
 <div id="content-bar">
     <div id="content">
 		 
-        <h1> Zet die speakers maar vol open, want hier kan je de unieke sound van Homemade Water terughoren!</h1> <br />
+        <h1> Zet die speakers maar vol open, want hier kan je de unieke sound van Homemade Water terughoren!</h1>
         <div id="audioList">
-            <!-- Give it Back - Haarlem -->
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true">  </iframe>
- <h3> Give it Back @ de Storing Haarlem </h3> <h4>Live opgenomen de eerste versie van ons eigen nummer "Give it Back" </h4> <br /> 
+        	<div>
+                <h2> Give it Back @ de Storing Haarlem </h2>
+                <!-- Give it Back - Haarlem -->
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true">  </iframe>
+                <p>Hier is de eerste versie van het eigen nummer "Give it Back", gespeeld tijdens het valentijnsoptreden dit jaar in de Storing, Haarlem.  </p> <br /> 
+            </div>
          
-            <!-- First demo -->
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79363524&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></iframe>
- <h3> Eerste demomix van Homemadewater </h3> <h4>In November 2012 hebben wij binnen korte tijd onze eerste demomix mogen opnemen, de nummers die voorbij komen zijn achtereenvolgens: Dance with somebody - Mando Diao, I'm just me - Homemade Water, I shot the sheriff - Eric Clapton, seven nation army - the White Stripes.  </h4> <br />
+         	<div>
+                <h2> Eerste demomix van Homemadewater </h2>
+                <!-- First demo -->
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79363524&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></iframe>
+                <p> In januari 2013 heeft Homemade Water binnen korte tijd haar eerste demomix mogen opnemen op het Cultuurcentrum van de TU Delft. Dit nummer geeft een goede impressie van hetgeen wat er van de band verwacht kan worden tijdens optredens. De nummers die voorbij komen zijn achtereenvolgens: </p>
+                <ul>
+                    <li>Dance with somebody - Mando Diao,</li>
+                    <li> I'm just me - Homemade Water,</li>
+                    <li> I shot the sheriff - Eric Clapton, en</li>
+                    <li> Seven Nation Army - The White Stripes </li>
+                </ul> 
+            </div>
 		</div>        
       
            
