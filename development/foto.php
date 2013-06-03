@@ -60,8 +60,11 @@ function album_present(){
 			if ($album_presence != NULL) {
 				//echo "album \"".$album_presence."\" exists";
 				?>
-            	<div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <!-- <img src="./images/album_alpha/Gig_Plankenkoorts_25042013_14.jpg" title="Awesome foto"/>   
+                
+                
+            	<div id= "tekst-album"><a> foto-album:  <?=$album_name?> </a> </div>
+                <div id="showPhoto"> <!-- div that can be used to "pop up" -->
+                    <img src="images/albums/DSB/DSB4_thumb.jpg" title="Awesome foto"/>   
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
                     <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->
@@ -101,8 +104,8 @@ function album_present(){
                         $album_name  = substr(strrchr($photo_album,"/"),1);
 						//$album_name = substr($photo_album,0,$index);
 						?>
-                      	
-                        <li> <img src="<?=$photo_album?>_thumb.jpg" alt="<?=$photo_album ?>" title="<?=$photo_album ?>" /> <?=$album_name?> </li>	
+                      	<li> <a href="./foto.php?album=<?=$album_name
+?>"><img src="<?=$photo_album?>_thumb.jpg" alt="<?=$photo_album ?>" title="<?=$photo_album ?>" /></a> <?=$album_name?> </li>
                     <?php
                     }
                 
