@@ -22,8 +22,8 @@
 	margin-left:55px;
 	margin-right:10px;
 	margin-bottom:10px;
-	height:100px;
-	width:100px;
+	height:auto;
+	width:250px;
 	border-radius:4px;
 }
 
@@ -61,5 +61,6 @@
 .newsitem p{
 	margin-top:20px;
 	margin-left:50px;
+	font-size:1.2em;
 
 }
