@@ -98,8 +98,8 @@ function album_present(){
 				?>
                 
                 <!-- Say hi to people on the page -->
-                <h1> De foto pagina </h1>
-                <h3> De plek waarop je kan zien hoe Homemade Water haar feestje bouwt </h3>
+                <h1> Fotoalbums </h1>
+                <h3> Om een beeld te krijgen van een feestje met Homemade Water! </h3>
                 
                 <ul id="album-list">
 					<?php
