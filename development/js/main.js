@@ -1,7 +1,7 @@
 // JavaScript Document
 
 // Link events to a function
-$(document).ready(replaceFooter);
+window.onload = replaceFooter;
 window.onresize = replaceFooter;
 
 
