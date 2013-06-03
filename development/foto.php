@@ -49,44 +49,40 @@ function album_present(){
       <div id="content">
       
           <div id="gallery">
-          	<!-- two possibilities:
-          		1. Show albums (if no album selected)
-                2. Show selected album 
-            -->
-            <!-- check whether album is selected AND whether this album exists!
-            -->
             <?php 
 			$album_presence = album_present();
 			if ($album_presence != NULL) {
 				//echo "album \"".$album_presence."\" exists";
 				?>
+            	<h1> Fotoalbum:  <?= $album_presence?> </h1>
                 
-                
-            	<div id= "tekst-album"><a> foto-album:  <?=$album_name?> </a> </div>
-                <div id="showPhoto"> <!-- div that can be used to "pop up" -->
+                <div id="photolist-overflow">   
+                    <div id="up"></div>
+                    <div id="down"></div>
+                    <div id="photolist">
+                        <ul id="thumbs-one-album">
+                            <?php //get all photo
+                            $curdir=getcwd();
+                            chdir($album_folder.$album_presence);
+                            $photolist = glob("*_thumb.jpg");
+                            chdir($curdir);
+                            foreach ($photolist as $photo){
+                                $length = strlen($photo);
+                                $photo_descr = substr($photo,0,$length-10);
+                                ?>
+                                <li> <img src="<?=$album_folder.$album_presence."/".$photo?>" alt="<?=$photo_descr?>"/> </li>	
+                                <?php
+                            }
+                            ?>
+                        </ul>
+                   </div>
+                 </div>
+                 <div id="showPhoto"> <!-- div that can be used to "pop up" -->
                     <img src="images/albums/DSB/DSB4_thumb.jpg" title="Awesome foto"/>   
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
                     <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->
                 </div> 
-                   
-				<div id="photolist">
-                	<ul id="thumbs-one-album">
-						<?php //get all photo
-                        $curdir=getcwd();
-                        chdir($album_folder.$album_presence);
-                        $photolist = glob("*_thumb.jpg");
-                        chdir($curdir);
-                        foreach ($photolist as $photo){
-							$length = strlen($photo);
-                            $photo_descr = substr($photo,0,$length-10);
-                            ?>
-                            <li> <img src="<?=$album_folder.$album_presence."/".$photo?>" alt="<?=$photo_descr?>"/> </li>	
-                            <?php
-                        }
-                        ?>
-                	</ul>
-                </div>
 			
 			<?php
 			}else { 
