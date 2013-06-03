@@ -90,7 +90,8 @@ function sendCopy($title,$mail,$number ="",$msg){
         // if no form was send to this page, allow people to fill in the contactform
     ?>
 
-    <p> Meer info? Wilt u ons boeken of om een andere reden contact opnemen? Geen probleem. Gebruik onderstaand formulier of mail naar info@homemadewater.nl. U krijgt zo spoedig mogelijk antwoord. </p>
+
+    <p> Meer info? Wilt u ons boeken of om een andere reden contact opnemen? Geen probleem. Gebruik onderstaand formulier of mail naar <a href="mailto:info@homemadewater.nl">info@homemadewater.nl</a>. U krijgt zo spoedig mogelijk antwoord. </p>
 
     <?php } ?>
     
