@@ -37,7 +37,7 @@
             <li>Drummer Julius van Dis</li>            
          </ul>
 		
-         <h4> Kijk op onze site eens rond, en vergeet niet om ons te liken op facebook (zie het icoontje onderaan deze pagina)</h4>       
+         <h4> Nieuwsgierig geworden? check onze media en laatste nieuws! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</h4>       
     </div>
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>

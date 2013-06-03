@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,7 +10,15 @@
 
 <title>Untitled Document</title>
 </head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
+<link href="images/shortIcon.jpg" rel="shortcut icon" />
+<meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende! ">
+<meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis">
+<meta name="author" content="Homemade Water">
+<meta name="publisher" content="Homemade Water" />
+<meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
+<title>Homemade Water</title>
 <body>
 <?php include 'header.html'; ?>
 <div id="content-bar">
@@ -36,7 +44,7 @@
         <div class="newsitem">
             <div class="date"><label> 4 </label><span> MEI</span></div>
             	<h2>  Voorronde van The Clash of the Coverbands </h2>
-            	<img src="images/albums/1e ronde Clash of the Coverbands @ P3/901027_212162885574412_403616290_o.jpg" alt="item pic" title="item title" />
+            	<img src="images/albums/1e ronde Clash of the Coverbands @ P3_thumb.jpg" alt="item pic" title="item title" />
                 <p> Nadat we ons hadden ingeschreven voor The Clash of the Coverbands, een Benelux competitie voor coverbands, kregen we te horen dat we uit 1500 bands waren geselecteerd om deel te nemen aan de regionale voorronde bij Poppodium P3 in Purmerend! Dus hop, daar gingen we met z'n allen en onze instrumenten met het openbaar vervoer. Onze eerste tegenstanders waren wel aardig, maar na het optreden van de sterke band 'de Ideale Schoonzoons', die een grote fan share hadden meegenomen, moesten we toch even slikken. Zelf hadden we helaas helemaal geen supporters meegenomen maar het lukte ons om de supporters van onze concurrerende band los te laten gaan met een geslaagd optreden! Voor dit optreden werden we beloond met de jury prijs en bekroond tot "beste band van de avond"! Het uitgebreide jury verslag valt <a href="http://www.theclashofthecoverbands.com/show/verslagen/item,671,Voorronde-Regio-West-2013.html"> HIER</a> te lezen.
 De volgende ronde vindt plaats ergens in September in het Paard van Troje in Den Haag (iets dichter bij huis)! Nog (maar) 150 bands te verslaan en we worden de beste band van de Benelux ;)! </p>
         </div>
