@@ -24,18 +24,20 @@
 <div id="content-bar">
 	<div id="content"> 
          <h1> Welkom op de site van Homemade Water!</h1>
-         <h3> Homemade Water is een frisse pop-rock(cover)band die naam begint te krijgen Delft en de rest van Nederland. Homemade Water brengt een strakke en gevarieerde set bekendere rock- en pop-nummers en enkele eigen nummers. Met deze set zijn al vele zalen, cafés en sociëteiten op de kop gezet, warrbij de temperatuur regelmatig boven het kookpunt is uitgestegen!.</h3>            
+         <h3> Homemade Water is een frisse pop-rock(cover)band die naam begint te krijgen Delft en de rest van Nederland. Homemade Water brengt een strakke en gevarieerde set bekendere rock- en popnummers en enkele eigen nummers. Met deze set zijn al vele zalen, cafés en sociëteiten op de kop gezet, warrbij de temperatuur regelmatig boven het kookpunt is uitgestegen!.</h3>            
          
        <!--  <p> Op onze site kunt u terecht voor al het moois dat Homemade Water de wereld te bieden heeft. Zo kunt u ons laatste nieuws bekijken, onze unieke sound beluisteren, maar u kunt een aantal optreden herleven met uniek beeld- en videomateriaal. Mocht u contact willen opnemen, schroom dan vooral niet.</p>-->
+
          <h3> Homemade Water bestaat uit vijf technische studenten met passie voor muziek:</h3>
          <ul>
          	<li>Zanger Laurens Mensink</li>
             <li>Gitarist Andrea Forzoni</li>
             <li>Toetseniste Eline Burger</li>
             <li>Bassist Jan Moos Meijer</li>
-            <li>Drummert Julius van Dis</li>            
+            <li>Drummer Julius van Dis</li>            
          </ul>
-       
+		
+         <h4> Kijk op onze site eens rond, en vergeet niet om ons te liken op facebook (zie het icoontje onderaan deze pagina)</h4>       
     </div>
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>

@@ -1,23 +1,22 @@
 $(function() {
+var c=0;
+
+	if($('#thumbs-one-album') != null){
+		heightdiv = $('#photolist').height(); // get height of showing div
+		heightTot = $('#thumbs-one-album').height(); // get total height of list with photo's
+		imgN = $('#thumbs-one-album li').length; // get total number of photos in album
+	}
 	
-	var tb_width = $('#thumbs-box').width();
-	var imgN = $('#thumbs li').length;
-	var c = 0;
-
+	
 	$("#prev, #next").click(function() {
-		var myID = this.id=="next" ? c++ : c--;
-		
-		if (c===-1){
-			c=0;
-		}else if (c>= imgN/5 + 2) {
-			c--;
-		} else { 
-		$("#thumbs").stop(true,true).animate({left: -c*0.5*tb_width},500);
-		}
-		$('#add').html("c= "+c);
+		(this.id=="next") ? c++ : c--;  // if click on prev or next, change c
+		var relShift = 0.7;
+		var cmax = (relShift*heightTot/heightdiv );		
+		c = (c === -1) ? 0 : c%cmax;
+		$("#thumbs-one-album").stop(true,true).animate({top: -c*relShift*heightdiv},500);
+
 	});
-
-
+	
 });
 
 function imageClick(source) {

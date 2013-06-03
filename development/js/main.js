@@ -23,7 +23,7 @@ function replaceFooter(){
 	var footer = document.getElementById("footer");
 	var contentbar = document.getElementById("content-bar");
 	
-	var minHeight=600;
+	var minHeight=700;
 	if ( bodie.clientHeight < minHeight ){
 		var footerStart = contentbar.clientHeight;
 		var footerHeight = footer.clientHeight;
