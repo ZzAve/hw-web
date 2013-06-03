@@ -10,10 +10,10 @@
 
 #showPhoto{ 
 	height:50%;
-	max-height:350px;
 	width:70%;
 	float: left;
 	margin-left: 20px;
+	margin-top:20px;
 }
 
 #showPhoto img{
@@ -50,6 +50,7 @@
 	height:355px;
 	overflow:hidden;
 	margin-right: 50px;
+	margin-top:20px;
 }
 
 #thumbs-one-album {
