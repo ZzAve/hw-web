@@ -12,7 +12,7 @@ $(function() {
 	$("#up, #down").click(function() {
 		var heightTot = $('#thumbs-one-album').height(); // get total height of list with photo's
 		(this.id=="down") ? c++ : c--;  // if click on prev or next, change c
-		var relShift = 0.7;
+		var relShift = 0.9;
 		var cmax = Math.ceil((1/relShift * heightTot/heightdiv ));	
 		(c === -1) ? c=cmax-1 : c=c%cmax;
 		$("#thumbs-one-album").animate({top: -c*relShift*heightdiv},500);

@@ -9,7 +9,7 @@ window.onresize = replaceFooter;
 $(window).scroll(function(){
   $('#menu').css('left',-$(window).scrollLeft());
   $('#logo').css('left',-$(window).scrollLeft());
-  $('#golfbeweging').css('left',-$(window).scrollLeft());
+  $('#tapsplash').css('left',-$(window).scrollLeft());
   $('#copyright').css('left',-$(window).scrollLeft());
   $('#social-media-icons').css('left',-$(window).scrollLeft());
 

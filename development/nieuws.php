@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -28,6 +28,8 @@
     <div id="content">
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h4> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h4>   <br />
+        
+        <object data='data:application/x-silverlight-2,' type='application/x-silverlight-2' width='620' height='350'><param name='source' value='http://embed.player.omroep.nl/sle/ugslplayer.xap'/><param name='enablehtmlaccess' value='true'/><param name='initParams' value='version=sl.1.9.9,episodeID=VARA_101322962,playlistEnabled=no,playMode=pause,volume=100,seekTime=00:35:55,subtitlesEnabled=false' /><embed source='http://embed.player.omroep.nl/sle/ugslplayer.xap' type='application/x-silverlight-2' enablehtmlaccess='true' width='620' height='350' seekTime='00:35:55' initParams='version=sl.1.9.9,episodeID=VARA_101322962,playlistEnabled=no,playMode=pause,volume=100,seekTime=00:35:55,subtitlesEnabled=false'><a href='http://go.microsoft.com/fwlink/?LinkID=124807' style='text-decoration: none;'><img src='http://embed.player.omroep.nl/sle/downloadsilverlight.jpg' alt='Get Microsoft Silverlight' style='border-style: none'/></a> </embed> </object>
         
        <div class="newsitem">
             <div class="date"><label> 3 </label><span> JUN</span></div>

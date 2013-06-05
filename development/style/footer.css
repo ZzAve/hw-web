@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
+/* CSS Document for the footer*/
 
 #footer{
 	background-color:#000;
@@ -7,7 +7,7 @@
 }
 
 #footer-bar{
-	background: url("../images/herhaling-header-en-footer.png") repeat-x top left transparent;
+	background: url("../images/bar_head_and_foot.png") repeat-x top left transparent;
 	position:absolute;
 	z-index:10;
 	top:-10px; left:0;
@@ -48,7 +48,7 @@
 #social-media-icons li img{
 	max-height: 100%;
 	height:100%;
-	max-width:120%;
+	max-width:100%;
 	vertical-align:middle;
 	border:none;
 }
@@ -78,7 +78,6 @@
 	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
 }
 
-
 #yt{
 	position:relative;
 }
@@ -90,13 +89,11 @@
 
 
 #copyright {
-	width:100%;
-	min-width:1000px;
+	width:auto;
+	height:auto;
 	position:absolute;
 	margin-top:35px;
-	margin-left: 160px;
-	z-index:10;
-	height:30px;
+	margin-left: 100px;
 	padding:3px;
 }
 
@@ -106,11 +103,7 @@
 }
 #copyright ul >li {
 	float:left;
-	margin-right:120px;
-	width: auto;;
-	overflow:auto;
-}
-
-#copyright a{
-	color:inherit;	
+	margin-right:60px;
+	margin-left:60px;
+	width:auto;;
 }
