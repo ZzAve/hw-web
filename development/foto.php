@@ -28,33 +28,37 @@ function album_present(){
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:fb="http://ogp.me/ns/fb#"
+      lang="nl" xml:lang="nl">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
-<link href="images/shortIcon.jpg" rel="shortcut icon" />
-<meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende! ">
-<meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis">
-<meta name="author" content="Homemade Water">
-<meta name="publisher" content="Homemade Water" />
-<meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
+    <link href="images/shortIcon.jpg" rel="shortcut icon" />
+    <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
+    <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
+    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende!"/>
+    <meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
+    <meta name="author" content="Homemade Water" />
+    <meta name="publisher" content="Homemade Water" />
+    <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
 
-<title>Homemade Water - Foto</title>
-
-<!-- standard style and javascript -->
-<link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<!-- page specific style and javascript -->
-<link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
-<script type="text/javascript" src="js/photoalbum.js"></script>
-<?php include_once("analyticstracking.php") ?>
+    <title>Homemade Water - Foto's</title>
+    
+    <!-- standard style and javascript -->
+    <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- page specific style and javascript -->
+    <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
+    <script type="text/javascript" src="js/photoalbum.js"></script>
+    <?php include_once("analyticstracking.php") ?>
 </head>
 
 <body>
-
-<!-- include the header of the page -->
+<?php include_once("facebookjssdk.php");?>
 <?php include 'header.html'; ?>
 <div id="content-bar">  
       <div id="content">
@@ -89,7 +93,8 @@ function album_present(){
                    </div>
                  </div>
                  <div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="images/logo.jpg" title="Awesome foto"/>   
+                    <img src="images/logo.jpg" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Dit fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
+                    <span class="hidden"> Loading . . . </span>
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
                     <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->
@@ -130,35 +135,6 @@ function album_present(){
    
 </div> <!-- end content-bar -->
 <?php include 'footer.html'; ?>
-
-<!-- old code for album -->
-<!-- the list with all the thumbnails
-<div id="thumbs-box">
-    <div id="thumbs-box-overflow"
-        <ul id="thumbs">
-        <?php 	
-            // get all photos of a certain album and put those into listitems
-            $newdir="images/album_alpha/";
-            $curdir=getcwd(); //get current directory
-            chdir($newdir); // make folder with images the current directory
-            $itemlist = glob("*_thumb.jpg"); // get all jpg files of the current folder
-            natsort($itemlist); // sort the items as 1 2 10 20, instead of 1 10 2 20
-            chdir($curdir); // return to the old(/starting) directory    
-            // loop through the list of files and do something with it
-            foreach( $itemlist as $file){ 
-                ?> 
-                <li> <img id="<?=$file?>" src="<?=$newdir.$file?>" alt="<?=$file?>" onclick="imageClick(this)"/></li>
-            <?php
-            }
-
-            
-        ?>	
-        </ul>    
-    </div> <!-- end thumbs-box-overflow
-    <div id="prev"></div>
-    <div id="next"></div>	
-</div> <!-- end thumbs-box div -->
-<!-- end old code for album -->
 
 </body>
 </html>

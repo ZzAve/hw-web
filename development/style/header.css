@@ -6,6 +6,10 @@
 	padding-bottom:30px;
 }
 
+#logo{
+	height:200px;
+}
+
 	
 /* Logo and tapsplash positioning */
 #tapsplash {
@@ -28,7 +32,8 @@
 	width: 100%;
 	position:absolute;
 	top:200px;
-	z-index: 1}
+	z-index: 10;
+}
 
 #menu{
 	position:relative;

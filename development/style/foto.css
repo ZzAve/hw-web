@@ -21,7 +21,8 @@
 	float: left;
 	width:150px;
 	margin-right:20px;
-	margin-top:30px;
+	margin-top:20px;
+	margin-bottom:20px;
 }
 
 #album-list li img {
@@ -30,6 +31,7 @@
 
 /* album page */
 #showPhoto{ 
+	position:relative;
 	height:400px;
 	width:70%;
 	margin-left: 5%;
@@ -47,6 +49,16 @@
 	width:auto;
 	max-width:100%;
 
+}
+
+#showPhoto span{
+	position: absolute;	
+	width:100%;
+	top:30%;
+	text-align:center;
+	vertical-align:middle;
+	font-size:1.3em;
+	font-weight:bold;
 }
 
 #photolist-overflow{

@@ -35,3 +35,20 @@ function replaceFooter(){
 		footer.removeAttribute("style");
 	}			
 }
+
+$(document).ready( function() {
+    // create xhtml strict friendly iframe for all Soundcloud embed players
+    $('a.iframeSC').each(
+        function (i) {
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "'  frameborder='0' scrolling='no'></iframe>");
+        }
+    );
+	
+	// create xhtml strict friendly iframe for all Youtube embed players
+	$('a.iframeYT').each(
+        function (i) {
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "'  frameborder='0' scrolling='no' title='Youtube video player' wmode='Opaque'></iframe>");
+        }
+    );
+	
+});
