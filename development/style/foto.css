@@ -12,17 +12,15 @@
 
 /* overall page */
 #album-list {
-	display:inline;
 	list-style: none;
 }
 
 #album-list li {
+	display:inline-block;
+	vertical-align:top;
 	text-align:center;
-	float: left;
 	width:150px;
-	margin-right:20px;
-	margin-top:20px;
-	margin-bottom:20px;
+	margin: 20px 10px;
 }
 
 #album-list li img {
@@ -44,8 +42,9 @@
 	display: block;
 	margin: 0px auto;
 	border-radius:20px;
+	border: 2px solid #322F32;
 	height:auto;
-	max-height:100%;
+	max-height:95%;
 	width:auto;
 	max-width:100%;
 
@@ -125,50 +124,3 @@
 	top:-25px;
 }
 
-/*
-#thumbs-box{
-	position:relative;
-	width:70%;
-	height: 75px;
-	max-height:75px;
-	max-width: 1500px;
-	margin:20px auto;
-}
-
-#thumbs-box-overflow{
-	position:relative;
-	overflow:hidden;	
-	height:100%;
-	width:100%
-
-}
-
-#thumbs {
-	position:absolute;
-	width:99999px;
-	list-style:none;
-}
-#thumbs li{
-	display:inline-block;
-	float:left;
-	clear:right;
-	height:100%;
-	max-height:100%;
-	padding:0 8px;
-	position:relative;
-}
-
-#thumbs li img{
-	cursor:pointer;
-	max-height:100%;
-	height:100%;
-	width:100%;
-	max-width:100%;
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	border: 1px solid white;
-
-}
-
-*/

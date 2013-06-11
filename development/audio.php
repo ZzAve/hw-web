@@ -1,34 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:fb="http://ogp.me/ns/fb#"
-      lang="nl" xml:lang="nl">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
-    <link href="images/shortIcon.jpg" rel="shortcut icon" />
-    <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
-    <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
-    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende!"/>
-    <meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
-    <meta name="author" content="Homemade Water" />
-    <meta name="publisher" content="Homemade Water" />
-    <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-
-    <title>Homemade Water - Audio</title>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
-    
-    <?php include_once("analyticstracking.php") ?>
-</head>
-
-<body>
-<?php include_once("facebookjssdk.php");?>
-<?php include 'header.html'; ?>
+<?php include 'header.php'; ?>
 <div id="content-bar">
     <div id="content">
 		 

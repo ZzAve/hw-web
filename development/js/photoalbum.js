@@ -31,7 +31,7 @@ function replaceImage(image){
 	image.style.opacity = photo.css('opacity');
 	photo.replaceWith(image);
 	var photo =	$('#showPhoto img');
-	photo.fadeTo(300,1,function() { $('#showPhoto span').addClass('hidden')});
+	photo.fadeTo(500,1,function() { $('#showPhoto span').addClass('hidden')});
 	//var pos = photo.position();
 	//scrollTo(pos.top, pos.left);
 }

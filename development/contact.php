@@ -1,12 +1,14 @@
 <?php 
 // mail contact form
-$error=false;
+$error=false; // set error and 'am i mailed'-variables to standard value false
 $mailed=false;
+
 if( isset($_REQUEST['name']) ){
-	global $error;
+	global $error; // make use of global defined variables
 	global $mailed;
 	
 	$mailed=true;
+	
 	// if e-mail sheet is filled in, process e-mail.
 	$name = strip_tags($_REQUEST['name']);
 	$email = trim(strip_tags($_REQUEST['email']));
@@ -14,7 +16,7 @@ if( isset($_REQUEST['name']) ){
 	$subject = strip_tags($_REQUEST['subject']);
 	$message = wordwrap(strip_tags($_REQUEST['bericht']),70); // strip message of any html tags and wrap lines that are longer than 70 characters
 
-	require_once("mail.php");
+	require_once("mail.php"); // mail.php contains a function sendMail that requires the necessary information to send an e-mail.
 	$worked = sendMail($name,$email,$phone,$subject,$message,0);
 	$error=!$worked;
 	if(isset($_REQUEST['checkbox-send-copy'])){
@@ -26,38 +28,8 @@ if( isset($_REQUEST['name']) ){
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:fb="http://ogp.me/ns/fb#"
-      lang="nl" xml:lang="nl">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- <base href="www.homemadewater.nl/development" target="_blank" /> -->
-    <link href="images/shortIcon.jpg" rel="shortcut icon" />
-    <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
-    <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
-    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende!"/>
-    <meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
-    <meta name="author" content="Homemade Water" />
-    <meta name="publisher" content="Homemade Water" />
-    <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-	<title>Homemade Water - Contact</title>
-
-    <!--  Standard links and scripts  -->  
-    <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <?php include_once("analyticstracking.php") ?>
-    
-    <!--  Document specific links and scripts  --> 
-   <script type="text/javascript" src="./js/validate.js"></script>
-   <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />
-</head>
-
-<body>
-<?php include_once("facebookjssdk.php");?>
-<?php include 'header.html'; ?>	
+<?php include 'header.php'; ?>	
 <div id="content-bar">
     <div id="content">
         <h1> Neem contact met ons op</h1>
@@ -99,6 +71,10 @@ if( isset($_REQUEST['name']) ){
 
 </div> <!-- end content-bar -->
 <?php include 'footer.html'; ?>
+
+<!--  Document specific scripts  --> 
+<script type="text/javascript" src="./js/validate.js"></script>
+
 </body>
 
 </html>

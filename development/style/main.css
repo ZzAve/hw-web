@@ -12,7 +12,8 @@ body,html{
 	min-width:100%;	
 	position:relative;
 	background: url("../images/backgrounds/achtergrondDSB5.jpg")  fixed no-repeat top left #000000;
-	font-family: "Baskerville Old Face", Arial, Gadget, sans-serif;
+	/*font-family: "Baskerville Old Face", Arial, Gadget, sans-serif;*/
+	font-family:'Average Sans','Josefin Slab', Arial, Gadget, serif;
 	font-size: 1em;
 	color: #CCC;
 
@@ -104,6 +105,7 @@ h3 {
 
 p{
 	margin:10px auto;
+	line-height:120%;
 }
 
 a{ color: inherit;}
