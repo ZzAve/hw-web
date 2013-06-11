@@ -36,12 +36,11 @@
 }
 
 #social-media-icons ul li:first-child{
-	width:80px;
-	overflow-hidden;		
+	width:80px;		
+	overflow:hidden;
 }
 #social-media-icons li{
 	max-height:100%;
-	height:auto;
 	width:auto;
 	display: inline-block;
 	margin-right:10px;
@@ -59,13 +58,19 @@
 }
 
 #social-media-icons ul li:hover{
-	bottom:10px;
+	bottom:8px;
 }
 
 #fb-like .fb_iframe_widget iframe{
-	bottom:0px !important;	
+	/*bottom:0px !important;*/
 }
 
+#fb-like{
+	height:50%;
+	padding-bottom:20px;
+	height:40px;
+	vertical-align:bottom;
+}
 
 #fb{
 	bottom:5px;
