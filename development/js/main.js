@@ -14,7 +14,6 @@ $(window).scroll(function(){
   $('#social-media-icons').css('left',-$(window).scrollLeft());
 
   $('#footer').css('right',-$(window).scrollLeft());
-  
 });
 
 
