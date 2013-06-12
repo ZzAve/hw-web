@@ -2,9 +2,17 @@ window.onload = function() {
 	$('#menu').find('> li').hover(function(){
         	$(this).find('ul')
         	.removeClass('noJS')
-        	.stop(true, true).slideToggle('fast');
-    	});
+        	.stop(true,true).slideDown('fast');
+    	}, function () {
+        	$(this).find('ul').stop(true,true).slideUp('fast');	
+		});
 };
+
+$('#nav li').hover(function(){
+  $(this).children('ul').slideDown();
+}, function() {
+  $(this).children('ul').slideUp();
+});
 
 $(document).ready(function(){
 	var str=location.href.toLowerCase();
