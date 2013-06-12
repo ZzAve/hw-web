@@ -5,6 +5,8 @@
       lang="nl" xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="last-modified" content="2013-06-12" />
+    <meta http-equiv="content-language" content="nl" />
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
@@ -13,7 +15,7 @@
     <meta name="author" content="Homemade Water" />
     <meta name="publisher" content="Homemade Water" />
     <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-   
+
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />

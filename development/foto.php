@@ -1,9 +1,14 @@
-<?php // state global variables and functions
+<?php 
+// state global variables and functions
 $album_folder="images/albums/";
 $all_albums=glob($album_folder."*",GLOB_ONLYDIR);
+usort($all_albums, create_function('$a,$b', 'return filemtime($a) - filemtime($b);'));
 
 /*
-* Function album_present() checks whether a GET request is send to this page, concerning a photo album. If so it checks whether that photo albums exist. If not, or no request was send, it returns NULL. If an album is present it returns the name of the album.
+* Function album_present() checks whether a GET request is send to this page, 
+* concerning a photo album. If so it checks whether that photo albums exist. 
+* If not, or no request was send, it returns NULL. If an album is present it 
+* returns the name of the album.
 */
 function album_present(){
 	global $album_folder; // make use of variable $album_folder as instantiated globally
@@ -26,16 +31,16 @@ function album_present(){
 	}
 } // end function album_present
 
-?>
 
-<?php include 'header.php'; ?>
+include 'header.php'; 
+?>
 
 <div id="content-bar">  
       <div id="content">
       
           <div id="gallery">
             <?php 
-			$album_presence = album_present();
+			$album_presence = album_present(); // return album name if album is requested AND exists, NULL otherwise
 			if ($album_presence != NULL) {
 				//echo "album \"".$album_presence."\" exists";
 				?>
@@ -84,13 +89,11 @@ function album_present(){
                     foreach ($all_albums as $photo_album){
                         // show a thumbnail and description
                         $album_name  = substr(strrchr($photo_album,"/"),1);
-						//$album_name = substr($photo_album,0,$index);
 						?>
                       	<li> <a href="./foto.php?album=<?=$album_name
 ?>"><img src="<?=$photo_album?>_thumb.jpg" alt="<?=$photo_album ?>" title="<?=$photo_album ?>" /></a> <?=$album_name?> </li>
                     <?php
-                    }
-                
+                    } 
 				?>
 				</ul> <!--  end thumbnail list of photo albums -->
                 <?php
@@ -99,11 +102,11 @@ function album_present(){
             
          </div> <!-- end gallery div -->
      </div>
+     
      <div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
-    
-   
+     <div id="sidebar-right"></div>   
 </div> <!-- end content-bar -->
+
 <?php include 'footer.html'; ?>
 
 <!-- page specific scripts -->
