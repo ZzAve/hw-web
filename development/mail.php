@@ -11,6 +11,8 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 		
 	if($copy==1){
 		$formcontent .= "<p><em>Dit is een kopie van uw bericht verstuurd vanaf <a href=\"www.homemadewater.nl/contact.php\"> homemadewater.nl</a>. Dit bericht is automatisch gegenereerd.</em></p>";
+	} else {
+		$formcontent .= "<p> <em> Er heeft iemand een berichtje gestuurd via het contactformulier op de contactpagina van de Homemade Water site. Er is mogelijk een kopie van dit bericht naar de afzender gestuurd (<strong>meneer/mevrouw $from </strong>). Als lezer word je verzocht z.s.m. op dit bericht te reageren (zij het via mail of via telefoon). Alvast bedankt </em></p>";
 	}
 	
 	$formcontent.="			
@@ -43,7 +45,7 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 		
 	if($copy==1){
 		$formcontent.="		
-			<p margin-top=\"10px\"><em>Wij zullen zo snel mogelijk op u mail reageren. Kijk tot die tijd nog eens rond op onze site, onze facebookpagina of soundcloud.</em></p>";
+			<p margin-top=\"10px\"><em>Dankuwel voor uw interesse in Homemade Water. Wij zullen zo snel mogelijk op u mail reageren. Kijk tot die tijd nog eens rond op onze <a href=\"http://www.homemadewater.nl/index.php\">site</a>, <a href=\"http://facebook.com/HomemadeWater/\">onze facebookpagina</a> of <a href=\"http://www.soundcloud.com/homemade-water\"> soundcloud</a>.</em></p>";
 	}
 	
 	$formcontent.="	
@@ -53,7 +55,13 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 	
 	$mailheader  = "Return-Path: $mail \r\n";	
 	$mailheader .= "From:  Homemade Water <info@homemadewater.nl> \r\n";
-	$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";       
+	
+	if ($copy==1){
+		$mailheader .="Reply-To:$from <$mail> \r\n";
+	} else {
+		$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";
+	}
+	
 	$mailheader .= 'X-Mailer: PHP/' . phpversion()."\r\n";
 	// Always set content-type when sending HTML email
 	$mailheader .= "MIME-Version: 1.0" . "\r\n";
@@ -65,7 +73,6 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 	} else {
 		$receiver="info@homemadewater.nl";
 	}
-	
 	return mail($receiver,$topic,$formcontent,$mailheader);
 }
 ?>
