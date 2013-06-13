@@ -10,16 +10,16 @@ function changeVideo(event) {
 	var source = $(this);
 	// get all information from source
 	var a =	source.next('a').attr('href');
-	var h2 = source.parent().children('h2').html();
+	var h4 = source.parent().children('h4').html();
 	var p = source.parent().children('p').html();
 
-	// get targets (iframe h2 and p)
+	// get targets (iframe h3 and p)
 	var target = $('#showVideo iframe')[0];
-	var h2tar = $('#showVideo h2');
+	var h3tar = $('#showVideo h3');
 	var ptar = $('#showVideo p');
 
-	// change h2 and p	
-	h2tar.html(h2);
+	// change h3 and p	
+	h3tar.html(h4);
 	ptar.html(p);
 	
 	// change the src of the iframe

@@ -1,10 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-
-#content h4 {
-	margin-bottom:8px}
 	
-.newsitem{
+div.newsitem{
 	width:95%;
 	height:auto;
 	border-radius:10px;	
@@ -54,14 +51,19 @@
 	color:#011369;
 }
 
-.newsitem h2{
-		
+.newsitem p{
+	position:relative;
+	margin-top:20px;
+	margin-left:55px;
 }
 
-.newsitem p{
-	margin-top:20px;
-	margin-left:50px;
-	font-size:1.2em;
+.newsitem p:first-of-type:first-letter{
+	float:left;
+	line-height:0.8em;
+	font-size:300%;
+	font-weight:bold;
+	margin-right:5px;
+	padding-top:0.1em;
 }
 
 /*.newsitem .first{

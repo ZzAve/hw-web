@@ -1,11 +1,18 @@
-/* Logo and golfbeweging positioning */
+@charset "utf-8";
+/* CSS Document for the header*/
 
-#top{
+#header{
 	background:#000;
 	padding-bottom:30px;
 }
 
-#golfbeweging {
+#logo{
+	height:200px;
+}
+
+	
+/* Logo and tapsplash positioning */
+#tapsplash {
 	position: absolute;
 	margin-left: 689px;
 	margin-top: 138px;
@@ -18,15 +25,15 @@
 	}
 
 /* Menu positioning */
-
-#whiteline {
-	background: url("../images/herhaling-header-en-footer.png") repeat-x;
+#navbar {
+	background: url("../images/bar_head_and_foot.png") repeat-x top left;
 	height: 40px;
     clear: both;
 	width: 100%;
 	position:absolute;
 	top:200px;
-	z-index: 1}
+	z-index: 10;
+}
 
 #menu{
 	position:relative;
@@ -83,11 +90,7 @@
 ------------------------------------------*/
 #menu ul {
     background: white;
-opacity: .80; /* standard: ff gt 1.5, opera, safari */
-ms-filter: "alpha(opacity=80)"; /* ie 8 */
-filter: alpha(opacity=80); /* ie lt 7 */
-khtml-opacity: .80; /* safari 1.x */
-moz-opacity: .80; /* ff lt 1.5, netscape */
+	opacity: .80; /* standard: ff gt 1.5, opera, safari */
 
 }
 

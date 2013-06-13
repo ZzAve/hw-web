@@ -13,16 +13,18 @@ function stripTags(input){
 
 function validate()
 {
-	var doc = document.contact_form;
-	if(stripTags(doc.name.value) == '')
+	var doc = $("#contact_form");
+	var name = $('#contact_form input[name="name"]');
+	if(stripTags( name.val() ) == '')
 	{
 		alert("Vul a.u.b. een naam in.");
-		doc.name.focus();
+		name.focus();
 		return false;
 	}
-	if(!validate_email(stripTags(doc.email.value))){
+	var email = $('#contact_form input[name="email"]');
+	if(!validate_email(stripTags( email.val() ))){
 		alert("Vul a.u.b. een geldig e-mail adres in");
-		doc.email.focus();
+		email.focus();
 		return false;
 	}
 	/*if(!validate_number(doc.phone.value))
@@ -31,11 +33,19 @@ function validate()
 		doc.phone.focus();
 		return false;
 	}*/
-
-	if(stripTags(doc.bericht.value) == '')
+	var subj = $('#contact_form input[name="subject"]');
+	if(stripTags(subj.val()) == '')
+	{
+		alert("Vul a.u.b. een onderwerp in");
+		subj.focus();
+		return false;
+	}
+	
+	var bericht = $('#contact_form textarea[name="bericht"]');
+	if(stripTags(bericht.val()) == '')
 	{
 		alert("Vul a.u.b. een bericht in");
-		doc.bericht.focus();
+		bericht.focus();
 		return false;
 	}
 	return  true;
