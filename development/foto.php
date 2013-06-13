@@ -2,7 +2,7 @@
 // state global variables and functions
 $album_folder="images/albums/";
 $all_albums=glob($album_folder."*",GLOB_ONLYDIR);
-usort($all_albums, create_function('$a,$b', 'return filemtime($a) - filemtime($b);'));
+usort($all_albums, create_function('$a,$b', 'return filemtime($b) - filemtime($a);'));
 
 /*
 * Function album_present() checks whether a GET request is send to this page, 

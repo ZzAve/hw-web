@@ -15,7 +15,7 @@ if( isset($_REQUEST['name']) ){
 	$phone = isset($_REQUEST['phone']) ? strip_tags($_REQUEST['phone']) : "";  // shorthand if statement
 	$subject = strip_tags($_REQUEST['subject']);
 	$message = wordwrap(strip_tags($_REQUEST['bericht']),70); // strip message of any html tags and wrap lines that are longer than 70 characters
-
+	$message = str_replace("\n","<br />\n",$message); // ensure linebreaks are shown in message
 	require_once("mail.php"); // mail.php contains a function sendMail that requires the necessary information to send an e-mail.
 	$worked = sendMail($name,$email,$phone,$subject,$message,0);
 	$error=!$worked;
@@ -29,7 +29,7 @@ if( isset($_REQUEST['name']) ){
 ?>
 
 
-<?php include 'header.php'; ?>	
+<?php require_once 'header.php'; ?>	
 <div id="content-bar">
     <div id="content">
         <h1> Neem contact met ons op</h1>
@@ -62,7 +62,7 @@ if( isset($_REQUEST['name']) ){
             <p> Onderwerp <br /><input type="text" name="subject"/> </p>
             <p>Bericht <br /><textarea name="bericht" rows="10" cols="58" <?= $error ?"value=\"$message\"" : NULL ?>></textarea></p>
             <p><input type="submit" value="Versturen" /><input type="reset" value="Wissen" />
-            <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Kopie verzenden naar uw eigen mail</label> <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : NULL ?> /> </p>
+            <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Kopie versturen naar uw eigen mail?</label> <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> /> </p>
         </form>
     
     </div> <!-- end div content -->
@@ -70,7 +70,7 @@ if( isset($_REQUEST['name']) ){
     <div id="sidebar-right"></div>
 
 </div> <!-- end content-bar -->
-<?php include 'footer.html'; ?>
+<?php require_once 'footer.html'; ?>
 
 <!--  Document specific scripts  --> 
 <script type="text/javascript" src="./js/validate.js"></script>
