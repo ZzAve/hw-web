@@ -3,12 +3,13 @@
 
 
 #showVideo{
-	width: 420px;
+	width: auto;
+	height:auto;
 }
 
 #showVideo iframe{
-	position: relative;
-	z-index:1;	
+	width: 420px;
+	height:319px;
 }
 
 #videoList{

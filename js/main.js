@@ -9,12 +9,11 @@ window.onresize = replaceFooter;
 $(window).scroll(function(){
   $('#menu').css('left',-$(window).scrollLeft());
   $('#logo').css('left',-$(window).scrollLeft());
-  $('#golfbeweging').css('left',-$(window).scrollLeft());
+  $('#tapsplash').css('left',-$(window).scrollLeft());
   $('#copyright').css('left',-$(window).scrollLeft());
   $('#social-media-icons').css('left',-$(window).scrollLeft());
 
   $('#footer').css('right',-$(window).scrollLeft());
-  
 });
 
 
@@ -35,3 +34,20 @@ function replaceFooter(){
 		footer.removeAttribute("style");
 	}			
 }
+
+$(document).ready( function() {
+    // create xhtml strict friendly iframe for all Soundcloud embed players
+    $('a.iframeSC').each(
+        function (i) {
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "'  frameborder='0' scrolling='no'></iframe>");
+        }
+    );
+	
+	// create xhtml strict friendly iframe for all Youtube embed players
+	$('a.iframeYT').each(
+        function (i) {
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "'  frameborder='0' scrolling='no' title='Youtube video player' wmode='Opaque'></iframe>");
+        }
+    );
+	
+});

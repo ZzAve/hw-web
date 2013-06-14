@@ -1,13 +1,14 @@
 @charset "utf-8";
-/* CSS Document */
+/* CSS Document for the footer*/
 
 #footer{
 	background-color:#000;
 	color:  #8d8d8d;
+	height: 75px;
 }
 
 #footer-bar{
-	background: url("../images/herhaling-header-en-footer.png") repeat-x top left transparent;
+	background: url("../images/bar_head_and_foot.png") repeat-x top left transparent;
 	position:absolute;
 	z-index:10;
 	top:-10px; left:0;
@@ -16,14 +17,14 @@
 }
 #social-media-icons{
    float:left;
-   width: 180px;
+   width: 300px;
    height: 50%;
    margin-top: 8px;
-   margin-left: 175px;
+   margin-left: 50px;
    margin-right: auto;
    margin-bottom: 8px;
    position: relative;
-   z-index:9;
+   z-index:9; /* show below the footer-bar */
    bottom: 53%;
 }
 
@@ -31,42 +32,57 @@
   height:100%;
   min-height:100%;
   max-height:100%;
-  margin-left:20px	
+  margin-left:0;
 }
 
+#social-media-icons ul li:first-child{
+	width:80px;		
+}
 #social-media-icons li{
 	max-height:100%;
-	height:100%;
-	width:22%;
+	width:14%;
 	display: inline-block;
 	margin-right:10px;
-	/*transform:rotate(-7deg);
-	/*-ms-transform:rotate(-7deg); /* IE 9 */
-	/*-webkit-transform:rotate(-7deg); /* Safari and Chrome */ 	
+	position:relative;
+	vertical-align:top;
 }
 
 #social-media-icons li img{
 	max-height: 100%;
 	height:100%;
-	max-width:120%;
+	max-width:100%;
 	vertical-align:middle;
 	border:none;
+	border-radius:4px;
 }
 
 #social-media-icons ul li:hover{
-	bottom:10px;
+	bottom:8px;
+}
+
+
+#fb-like{
+	height:20px;
+	padding-bottom:20px;
+
+}
+#fb-like .fb_iframe_widget iframe{
+	bottom:0px !important;
 }
 
 #fb{
-	position:relative;
 	bottom:5px;
 	transform:rotate(-2deg);
 	-ms-transform:rotate(-2deg); /* IE 9 */
 	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
 }
+#fb:hover{
+	transform:rotate(1deg);
+	-ms-transform:rotate(1deg); /* IE 9 */
+	-webkit-transform:rotate(1deg); /* Safari and Chrome */	
+}
 
 #sc{
-	position:relative;
 	bottom:2px;
 	transform:rotate(2deg);
 	-ms-transform:rotate(2deg); /* IE 9 */
@@ -78,10 +94,6 @@
 	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
 }
 
-
-#yt{
-	position:relative;
-}
 #yt:hover{
 	transform:rotate(2deg);
 	-ms-transform:rotate(2deg); /* IE 9 */
@@ -90,27 +102,24 @@
 
 
 #copyright {
-	width:100%;
-	min-width:1000px;
 	position:absolute;
-	margin-top:35px;
-	margin-left: 160px;
-	z-index:10;
+	width:auto;
+	min-width:800px;
 	height:30px;
-	padding:3px;
+	margin-top:35px;
+	margin-left: 130px;
 }
 
 #copyright ul{
+	overflow:hidden;
 	height:100%;
-	list-style:none;		
+	list-style:none;	
+	margin-left:0;	
 }
 #copyright ul >li {
-	float:left;
-	margin-right:120px;
-	width: auto;;
-	overflow:auto;
-}
-
-#copyright a{
-	color:inherit;	
+	display:inline;
+	width:auto;
+	margin-right:40px;
+	margin-left:40px;
+	height:100%;
 }
