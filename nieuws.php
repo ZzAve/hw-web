@@ -23,9 +23,9 @@
             	<img src="images/poster_deKurk27-6.jpg" alt="We gaan optreden bij proef- en eetlokaal de Kurk op 27 juni" title="De poster voor ons optreden op donderdag 27 juni bij de Kurk" />
                 <p> De maand juni is al in volle gang, en dat betekent tentamenstress voor de gemiddelde student. Ook wij hebben hier last van, maar om de stress te onderdrukken gaan we gewoon lekker optreden! Voor de komende weken hebben wij maar liefst 3 optreden op de Agenda staan.</p>
 
-				<p>Allereerst hebben wij op <strong> zondag 16 juni </strong> een optreden gepland bij <a href="http://www.zondag-delft.nl/index.html">café Zondag op de Voldersgracht in Delft</a>. Wij zullen hier een middag lekker akoestisch helemaal los gaan op alles wat er in ons mag opkomen. Dus wil je ons lekker zien swingen op semi-geimproviseerde muziek, kom dan zeker kijken! (<a href="https://www.facebook.com/events/298844690251314/"> klik hier voor het facebook-evenement</a>)</p>
+				<p>Allereerst hebben wij op <strong> zondag 16 juni </strong> een optreden gepland bij <a href="http://www.zondag-delft.nl/index.html">café Zondag op de Voldersgracht in Delft</a>. Wij zullen hier een middag lekker akoestisch helemaal los gaan op alles wat er in ons mag opkomen. Dus wil je ons lekker zien swingen op semi-geimproviseerde muziek, kom dan zeker kijken! </p>
 
-				<p>Ten tweede gaan we optreden bij <strong><a href="http://www.dekurk.nl/index.php"> proef- en eetlokaal de Kurk</a> op donderdag 27 juni</strong>. We gaan hier lekker rocken en kijken de mensen laten proeven van onze covers overgoten met een Homemade Water-sausje. </p>
+				<p>Ten tweede gaan we optreden bij <strong><a href="http://www.dekurk.nl/index.php"> proef- en eetlokaal de Kurk</a> op donderdag 27 juni</strong>. We gaan hier lekker rocken en kijken de mensen laten proeven van onze covers overgoten met een Homemade Water-sausje. (<a href="https://www.facebook.com/events/298844690251314/"> klik hier voor het facebook-evenement</a>)</p>
 
 				<p>Last but not least hebben we een optreden staan in Friesland, wat toch wel duidelijk maakt dat we al in heel Nederland een beetje bekend zijn. Wij spelen op de <strong>Simmerfeesten van Reah&ucirc;s</strong> en zullen daar onze volledige setlist van bijna 3 uur spelen!</p>
        </div>
