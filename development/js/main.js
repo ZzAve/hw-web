@@ -50,4 +50,10 @@ $(document).ready( function() {
         }
     );
 	
+	$('a.iframe').each(
+        function (i) {
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "' width='80%' height='600px' wmode='Opaque'></iframe>");
+        }
+    );
+	
 });
