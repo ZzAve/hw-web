@@ -86,7 +86,7 @@ $(document).ready( function() {
 	// BAD change of link to iframe due to inline styling!
 	$('a.iframe').each(
         function (i) {
-            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "' width='80%' height='600px' wmode='Opaque'></iframe>");
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "' width='100%' height='600px' wmode='Opaque'></iframe>");
         }
     );
 	/* END REPLACING IFRAME LINKS WITH IFRAMES */

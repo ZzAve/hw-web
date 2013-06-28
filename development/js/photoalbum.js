@@ -17,13 +17,14 @@ $(document).ready(function() {
 	
 	$("#thumbs-one-album img").click(function() {
 		var newImg = new Image();
+		$('#showPhoto span.hidden').removeClass('hidden');
 		$('#showPhoto img').fadeTo('fast',0.7);
 		newImg.onload = function(){ 
 			replaceImage(newImg);
 		};
 		
 		newImg.src = this.src.replace("_thumb","");
-		$('#showPhoto span.hidden').removeClass('hidden');
+		
 
 	});	
 });
