@@ -15,7 +15,7 @@
          	<li>Zanger Laurens Mensink</li>
             <li>Gitarist Andrea Forzoni</li>
             <li>Toetseniste Eline Burger</li>
-            <li>Bassist Jan Moos Meijer</li>
+            <li>Bassist Moos Meijer</li>
             <li>Drummer Julius van Dis</li>            
          </ul>
 		
