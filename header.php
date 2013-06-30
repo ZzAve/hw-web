@@ -10,7 +10,8 @@
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
-    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende!"/>
+    <link rel="image_src" href="" />
+    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot een feestende bende!"/>
     <meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
     <meta name="author" content="Homemade Water" />
     <meta name="publisher" content="Homemade Water" />
