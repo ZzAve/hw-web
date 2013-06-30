@@ -51,7 +51,7 @@
             <div class="date"><label> 4 </label><span> MEI</span></div>
             	<h3>  Voorronde van The Clash of the Coverbands </h3>
 
-            	<img src="images/albums/1e ronde Clash of the Coverbands @ P3/Clash_Purmerend_1.jpg" alt="Foto voorronde Clash" title="Homemade Water is door de voorrondes van Clash of the Coverbands!" />
+            	<img src="images/albums/1e ronde Clash of the Coverbands.jpg" alt="Foto voorronde Clash" title="Homemade Water is door de voorrondes van Clash of the Coverbands!" />
                 <p> Nadat we ons hadden ingeschreven voor The Clash of the Coverbands, een Benelux competitie voor coverbands, kregen we te horen dat we uit 1500 bands waren geselecteerd om deel te nemen aan de regionale voorronde bij Poppodium P3 in Purmerend! Dus hop, daar gingen we met z'n allen en onze instrumenten met het openbaar vervoer. </p>
                 <p>Onze eerste tegenstanders waren wel aardig, maar na het optreden van de sterke band 'de Ideale Schoonzoons', die een grote fan share hadden meegenomen, moesten we toch even slikken. Zelf hadden we helaas helemaal geen supporters meegenomen maar het lukte ons om de supporters van onze concurrerende band los te laten gaan met een geslaagd optreden! </p>
                 <p>Voor dit optreden werden we beloond met de jury prijs en bekroond tot "beste band van de avond"! <a href="http://www.theclashofthecoverbands.com/show/verslagen/item,671,Voorronde-Regio-West-2013.html"> Het uitgebreide jury verslag valt hier te lezen.</a></p>

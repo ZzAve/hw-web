@@ -5,7 +5,7 @@
 	<div id="content"> 
          <h1> Welkom op de site van Homemade Water!</h1>
 
-         <p> Homemade Water is een frisse pop-rock(cover)band die naam begint te krijgen Delft en de rest van Nederland. Zij brengt een strakke en gevarieerde set bekendere rock- en popnummers en enkele eigen nummers. Met deze set zijn al vele zalen, café's en sociëteiten op de kop gezet waarbij de temperatuur regelmatig boven het kookpunt is uitgestegen! </p>    
+         <p> Homemade Water is een frisse pop-rock(cover)band die naam begint te krijgen in Delft en de rest van Nederland. Zij brengt een strakke en gevarie&euml;rde set bekendere rock- en popnummers en enkele eigen nummers. Met deze set zijn al vele zalen, café's en sociëteiten op de kop gezet waarbij de temperatuur regelmatig boven het kookpunt is uitgestegen! </p>    
 
          
        <!--  <p> Op onze site kunt u terecht voor al het moois dat Homemade Water de wereld te bieden heeft. Zo kunt u ons laatste nieuws bekijken, onze unieke sound beluisteren, maar u kunt een aantal optreden herleven met uniek beeld- en videomateriaal. Mocht u contact willen opnemen, schroom dan vooral niet.</p>-->
@@ -19,7 +19,7 @@
             <li>Drummer Julius van Dis</li>            
          </ul>
 		
-         <p> Nieuwsgierig geworden? check onze media en laatste nieuws! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p>       
+         <p> Nieuwsgierig geworden? Check onze <a href="./audio.php">media</a> en <a href="./nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p>       
     </div>
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>

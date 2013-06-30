@@ -1,8 +1,22 @@
 <?php 
 // state global variables and functions
+
+// find all albums
 $album_folder="images/albums/";
-$all_albums=glob($album_folder."*",GLOB_ONLYDIR);
-usort($all_albums, create_function('$a,$b', 'return filemtime($b) - filemtime($a);'));
+$all_albumfolders=array_reverse(glob($album_folder."*",GLOB_ONLYDIR)); // get all albumfolders and order them reversely (newest first)
+//usort($all_albumfolders, create_function('$a,$b', 'return filemtime($b) - filemtime($a);'));
+
+// put all albums in an array ('date' ; 'name' ; 'place' ; 'relative url')
+$all_albums = array();
+$all_albumnames = array();
+foreach ($all_albumfolders as $album){
+	$album = substr(strrchr($album,"/"),1);
+	$newrow = array_map('trim',explode(";",$album));
+	$newrow[] = $album;
+	$all_albumnames[] = $newrow[1];
+	$all_albums[] = $newrow;
+}
+
 
 /*
 * Function album_present() checks whether a GET request is send to this page, 
@@ -12,7 +26,8 @@ usort($all_albums, create_function('$a,$b', 'return filemtime($b) - filemtime($a
 */
 function album_present(){
 	global $album_folder; // make use of variable $album_folder as instantiated globally
-	global $all_albums;		// idem for $all_albums
+	global $all_albumfolders;		// idem for $all_albums
+	global $all_albums;
 	
 	// check wheter album is requested
 	if(isset($_GET['album'])){ 
@@ -20,14 +35,15 @@ function album_present(){
 		$album=$_GET['album'];
 			
 		//check whether requested album exists on server and return this (true of false)
-		if(in_array($album_folder.$album,$all_albums)){
-			return $album;
+		$test = array_search($album_folder.$album,$all_albumfolders);
+		if($test !== FALSE){
+			return $all_albums[$test];
 		} else {
-			return NULL;
+			return FALSE;
 		}
 	} else {
 		// no album is selected. So return value false
-		return NULL;
+		return FALSE;
 	}
 } // end function album_present
 
@@ -37,15 +53,18 @@ include 'header.php';
 
 <div id="content-bar">  
       <div id="content">
-      
           <div id="gallery">
             <?php 
 			$album_presence = album_present(); // return album name if album is requested AND exists, NULL otherwise
-			if ($album_presence != NULL) {
+			if ($album_presence !== FALSE) {
 				//echo "album \"".$album_presence."\" exists";
+				$album_date = $album_presence[0];
+				$album_name  = $album_presence[1];
+				$album_place = $album_presence[2];
+				$album_location =  $album_presence[3];
 				?>
-            	<h1> Fotoalbum:  <?= $album_presence?> </h1>
-                
+            	<h1> Fotoalbum:  </label> <?= $album_name?> </h1>
+                <h2> Datum: <?= $album_date?> <br /> Plaats: <?= $album_place?> </h2>
                 <div id="photolist-overflow">   
                     <div id="up"></div>
                     <div id="down"></div>
@@ -53,14 +72,15 @@ include 'header.php';
                         <ul id="thumbs-one-album">
                             <?php //get all photo
                             $curdir=getcwd();
-                            chdir($album_folder.$album_presence);
+                            chdir($album_folder.$album_location);
                             $photolist = glob("*_thumb.jpg");
+							natsort($photolist);
                             chdir($curdir);
                             foreach ($photolist as $photo){
                                 $length = strlen($photo);
                                 $photo_descr = substr($photo,0,$length-10);
                                 ?>
-                                <li> <img src="<?=$album_folder.$album_presence."/".$photo?>" alt="<?=$photo_descr?>"/> </li>	
+                                <li> <img src="<?=$album_folder.$album_location."/".$photo?>" alt="<?=$photo_descr?>"/> </li>	
                                 <?php
                             }
                             ?>
@@ -68,7 +88,7 @@ include 'header.php';
                    </div>
                  </div>
                  <div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="images/logo.jpg" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Dit fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
+                    <img src="images/logo.jpg" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Deze fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
                     <span class="hidden"> Loading . . . </span>
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
@@ -76,7 +96,7 @@ include 'header.php';
                 </div> 
 			
 			<?php
-			}else { 
+			} else { 
 				?>
                 
                 <!-- Say hi to people on the page -->
@@ -86,12 +106,18 @@ include 'header.php';
                 <ul id="album-list">
 					<?php
                     // Show photo-albums in an unordered list (<ul> ... </ul>)
-                    foreach ($all_albums as $photo_album){
+                    foreach ($all_albums as $album_array){
                         // show a thumbnail and description
-                        $album_name  = substr(strrchr($photo_album,"/"),1);
+						$album_date = $album_array[0];
+                        $album_name  = $album_array[1];
+						$album_place = $album_array[2];
+						$album_location =  $album_array[3];
 						?>
-                      	<li> <a href="./foto.php?album=<?=$album_name
-?>"><img src="<?=$photo_album?>_thumb.jpg" alt="<?=$photo_album ?>" title="<?=$photo_album ?>" /></a> <?=$album_name?> </li>
+                      	<li> <a href="./foto.php?album=<?=$album_location?>"> 
+                        		<img src="<?=$album_folder.$album_name?>.jpg" alt="<?=$album_name?>" title="<?=$album_name?>" />
+                             </a> 
+							 <label> <?= $album_date?> </label>	<?=$album_name?> <span> <?=$album_place?> </span>
+                        </li>
                     <?php
                     } 
 				?>
