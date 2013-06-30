@@ -20,7 +20,7 @@
        	<div class="newsitem" id="news_Kurk">
         	<div class="date"><label> 28 </label><span> JUN </span></div>
             <h3>  Geslaagd optreden de Kurk</h3>
-            <img src="images/albums/cafe de kurk.jpg" alt="Homemade Water logo" title="Geslaagd optreden bij de Kurk!" />
+            <img src="images/albums/Cafe de Kurk.jpg" alt="Homemade Water logo" title="Geslaagd optreden bij de Kurk!" />
             
             <p> Het was weer een mooi feestje gisteravond. De Kurk is vakkundig afgebroken (of nja, het glaswerk in ieder geval). Dit smaakt naar meer, meer meer!</p>
 			<p>	Ondanks wat opstartproblemen met het geluid en de techniek, gingen we om 11 uur helemaal los, en druppelde de Kurk langzaam aan vol. Na de eerste helft, een korte pauze van 10 minuten was nodig om even te bekomen van de spanning, om vervolgens super delicaat de tweede set te beginnen. Met het heerlijke Feeling Good van Simone, Bublé en Muse beloofde de tweede helft ijzersterk te worden. En zo geschiedde...</p>
