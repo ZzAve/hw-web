@@ -17,8 +17,8 @@ $(document).ready(function() {
 	
 	$("#thumbs-one-album img").click(function() {
 		var newImg = new Image();
-		$('#showPhoto img').fadeTo('slow',0.3,function(){newImg.onload = replaceImage(newImg);});
 		newImg.src = this.src.replace("_thumb","");
+		$('#showPhoto img').fadeTo('slow',0.3,function(){newImg.onload = replaceImage(newImg);});
 		$('#showPhoto span.hidden').removeClass('hidden');
 
 	});	
