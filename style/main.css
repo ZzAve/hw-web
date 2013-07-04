@@ -4,6 +4,9 @@
 	/*border: 1px solid #FF3;*/
 }
 
+img{
+	border:none;
+}
 
 body,html{
     min-height: 100%; /* ie6 ignores min-height completely */
@@ -54,11 +57,12 @@ body,html{
 }
 	
 #content{
+	position:relative;
 	overflow:auto;
 	padding-bottom:120px;
 	padding-top: 270px;
-	padding-left: 30px;
-	padding-right:30px;
+	margin-left: 30px;
+	margin-right:30px;
 }
 
 #sidebar-left{

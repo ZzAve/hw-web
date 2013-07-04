@@ -17,29 +17,18 @@ $(document).ready(function() {
 	
 	$("#thumbs-one-album img").click(function() {
 		var newImg = new Image();
+		newImg.src = this.src.replace("_thumb","");	
+		$('#showPhoto img').fadeTo('slow',0.3,function(){
+			newImg.onload = replaceImage(newImg);
+		});
 		$('#showPhoto span.hidden').removeClass('hidden');
-		$('#showPhoto img').fadeTo('fast',0.7);
-		newImg.onload = function(){ 
-			replaceImage(newImg);
-		};
-		
-		newImg.src = this.src.replace("_thumb","");
-		
-
 	});	
 });
 
 function replaceImage(image){
 	var photo = $('#showPhoto img');
-	/*image.alt = photo.attr('alt');
-	image.title = photo.attr('title');
-	image.style.opacity = photo.css('opacity');
-	photo.replaceWith(image);*/
-	
 	photo.attr('src',image.src);
 	photo.fadeTo('fast',1,function() { $('#showPhoto span').addClass('hidden')});
-	//var pos = photo.position();
-	//scrollTo(pos.top, pos.left);
 }
 
 	

@@ -1,5 +1,4 @@
 <?php include 'header.php' ?>
-
 <div id="content-bar">
 	<div id="content">
     	<h1> De 'changes' pagina </h1>

@@ -10,18 +10,36 @@
 }
 
 /* overall page */
-#album-list {
+#album-list{
 	list-style: none;
 }
 
-#album-list li {
+#album-list li{
 	display:inline-block;
 	vertical-align:top;
 	text-align:center;
 	width:150px;
-	margin: 20px 10px;
+	margin: 20px 5px;
+	padding:5px;
 }
 
+#album-list li:hover{
+	/*width:300px;*/
+	border:1px solid white;
+	padding:4px;
+	background-color:#122A2F;
+}
+
+#album-list li label{
+	font-style:italic;
+	font-weight:bold;
+	display:block;
+}
+
+#album-list li span{
+	display:block;
+	color:white;	
+}
 #album-list li img {
 	width:100%;
 }
@@ -98,6 +116,9 @@
 	cursor:pointer;
 }
 
+#thumbs-one-album li img:hover{
+	border-color: white;	
+}
 
 #up, #down{
 	position:absolute;

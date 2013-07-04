@@ -4,13 +4,15 @@
 	  xmlns:fb="http://ogp.me/ns/fb#"
       lang="nl" xml:lang="nl">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-06-12" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="last-modified" content="2013-07-01" />
     <meta http-equiv="content-language" content="nl" />
+   	<meta property="fb:admins" content="100001997083297" />
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
-    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot feestende bende!"/>
+    <link rel="image_src" href="" />
+    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot een feestende bende!"/>
     <meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
     <meta name="author" content="Homemade Water" />
     <meta name="publisher" content="Homemade Water" />
@@ -30,8 +32,7 @@
     <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/video.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />    
-    <link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />    <link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
     
     <!--- scripts -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
