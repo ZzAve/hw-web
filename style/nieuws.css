@@ -15,7 +15,7 @@ div.newsitem{
 .newsitem img{
 	float:left;
 	clear:left;
-	margin-top:5px;
+	margin-top:11px;
 	margin-left:55px;
 	margin-right:10px;
 	margin-bottom:10px;
@@ -58,12 +58,13 @@ div.newsitem{
 }
 
 .newsitem p:first-of-type:first-letter{
+	font-family: BrushstrokePlain;
 	float:left;
-	line-height:0.8em;
+	line-height:1em;
 	font-size:300%;
-	font-weight:bold;
+	font-weight:900;
 	margin-right:5px;
-	padding-top:0.1em;
+	color:#06F;
 }
 
 /*.newsitem .first{
