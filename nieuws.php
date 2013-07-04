@@ -12,6 +12,7 @@
             <img src="images/nieuws-hwlight.jpg" alt="Homemade Water Light" title="Homemade Water Light" />
             
             <p> De veelzijdigheid van Homemade Water is weer uitgebreid! Na een drietal experimentele optredens in een akoestische setting hebben we besloten om nu officieel Homemade Water <em>light</em> leven in te blazen!</p>
+
             
             <p> Homemade Water <em>light</em> is, zoals de naam al zegt, een light versie van onze vaste prik. Geen scheurende gitaren, en geen schelle synthesiser geluiden. Nee, gewoon een lekkere back-to-basic opstelling met natuurlijke geluiden van de gitaar en de piano. Voeg daar een cajon en een lekkere zangstem of twee aan toe, en je hebt Homemade Water <em>light</em>.
             
