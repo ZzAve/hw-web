@@ -1,4 +1,3 @@
-
 <?php include 'header.php'; ?>
 <div id="content-bar">
 
@@ -6,18 +5,18 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
-        <!--<object data='data:application/x-silverlight-2,' type='application/x-silverlight-2' width='620' height='350'>
-        	<param name='source' value='http://embed.player.omroep.nl/sle/ugslplayer.xap'/>
-            <param name='enablehtmlaccess' value='true'/>
-            <param name="wmode" value="transparent"></param>
-            <param name='initParams' value='version=sl.1.9.9,episodeID=VARA_101322962,playlistEnabled=no,playMode=pause,volume=100,seekTime=00:35:55,subtitlesEnabled=false' />
-            <embed source='http://embed.player.omroep.nl/sle/ugslplayer.xap' type='application/x-silverlight-2' enablehtmlaccess='true' width='620' height='350' seekTime='00:35:55' initParams='version=sl.1.9.9,episodeID=VARA_101322962,playlistEnabled=no,playMode=pause,volume=100,seekTime=00:35:55,subtitlesEnabled=true'>
-            	<a href='http://go.microsoft.com/fwlink/?LinkID=124807' style='text-decoration: none;'>
-            	<img src='http://embed.player.omroep.nl/sle/downloadsilverlight.jpg' alt='Get Microsoft Silverlight' style='border-style: none'/>
-           	</a> 
-            </embed> 
-       </object>-->
-       	<div class="newsitem" id="news_Kurk">
+        <!--
+        <div class="newsitem" id="ID">
+        	<div class="date"><label> 28 </label><span> JUN </span></div>
+            <h3>  TITEL </h3>
+            <img src="images/albums/Cafe de Kurk.jpg" alt="Homemade Water logo" title="Geslaagd optreden bij de Kurk!" />
+            
+            <p> Tekst</p>
+            <p> Meer tekst</p>
+    	</div>-->
+       	
+        
+        <div class="newsitem" id="news_Kurk">
         	<div class="date"><label> 28 </label><span> JUN </span></div>
             <h3>  Geslaagd optreden de Kurk</h3>
             <img src="images/albums/Cafe de Kurk.jpg" alt="Homemade Water logo" title="Geslaagd optreden bij de Kurk!" />
@@ -86,7 +85,6 @@
 
 </div> <!-- end content-bar -->
 <?php include 'footer.html' ?>
+</div> <!-- end wrapper div -->
 </body>
-
-
 </html>

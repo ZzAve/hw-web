@@ -8,15 +8,14 @@ img{
 	border:none;
 }
 
-body,html{
-    min-height: 100%; /* ie6 ignores min-height completely */
-    height: 100%;
+html, body{
+	height:100%;
 	width:auto;
-	min-width:100%;	
+	min-width:1100px;
 	position:relative;
 	background: url("../images/backgrounds/achtergrondDSB5.jpg")  fixed no-repeat top left #000000;
 	/*font-family: "Baskerville Old Face", Arial, Gadget, sans-serif;*/
-	font-family:'Average Sans','Josefin Slab', Arial, Gadget, serif;
+	font-family:'Average Sans', Arial, Gadget, serif;
 	font-size: 1em;
 	color: #CCC;
 
@@ -31,29 +30,34 @@ body,html{
 }
 
 #header{
-	position:fixed;
+	position:absolute;
+	width:100%;
 	top:0px;
 	left:0px;
 	z-index:100;
 }
 
+#wrapper{
+	position:relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin:0 auto;
+}
 
 #footer{
-	position:fixed;
-	bottom: 0;
-	left:0;
+	position:absolute;
+	bottom:0;
 	z-index:100;
+	
 }
 
 #content-bar{
-	background-color:#362F2F;	
+	background-color:#362F2F;
 	width:800px;
-	height:auto;
-	min-height:100%;
 	position:relative;
 	z-index:50;
-	margin-left:150px;
-	margin-right:auto;
+	margin: 0 auto  0 150px;
 }
 	
 #content{

@@ -12,27 +12,25 @@
     <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
     <link rel="image_src" href="" />
-    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren tot een feestende bende!"/>
-    <meta name="keywords" content="Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
+    <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren in een feestende bende! Groot, klein, jong of oud? Homewade Water krijgt óók u aan het feesten!"/>
+    <meta name="keywords" content="Homemade Water, Delft, band, coverband, pop, rock, studenten, feestband, clash, coverbands, student, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
     <meta name="author" content="Homemade Water" />
     <meta name="publisher" content="Homemade Water" />
+    <meta name="copyright" content="Homemade Water" />
     <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
-
+	<title>Homemade Water</title>
     <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css' />
-    
-    <title>Homemade Water</title>
-    
+        
    	<!-- stylesheets --> 
     <link rel="stylesheet" type="text/css" href="style/header.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/nieuws.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/video.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />    <link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />    
     
     <!--- scripts -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -69,10 +67,10 @@
 		}(document, 'script', 'facebook-jssdk'));
     </script>
 
+<div id="wrapper">
     <div id="header">       
-        
         <img id="tapsplash" src="images/tapsplash.png" alt="Stromend water uit de kraan"/>
-        <img id="logo" src="images/logo_head.png" alt="Het Homemade Water logo"/> 
+        <img id="logo" src="images/logo_head.png" alt="Hét Homemade Water logo"/> 
         
         <div id="navbar">
             <ul id="menu">
@@ -92,6 +90,4 @@
        </div>
           
     </div><!-- end header -->
-
-<!-- rest of document -->
 

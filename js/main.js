@@ -6,7 +6,7 @@ window.onresize = replaceFooter;
 
 
 // ensure HORIZONTAL scrolling of header and footer
-$(window).scroll(function(){
+/*$(window).scroll(function(){
   $('#menu').css('left',-$(window).scrollLeft());
   $('#logo').css('left',-$(window).scrollLeft());
   $('#tapsplash').css('left',-$(window).scrollLeft());
@@ -14,28 +14,37 @@ $(window).scroll(function(){
   $('#social-media-icons').css('left',-$(window).scrollLeft());
 
   $('#footer').css('right',-$(window).scrollLeft());
-});
+});*/
 
 
 function replaceFooter(){
 	var bodie = document.body;
 	var footer = document.getElementById("footer");
+	var wrapper = document.getElementById("wrapper");
 	var contentbar = document.getElementById("content-bar");
+	contentbar.removeAttribute("style");
+	contentbar.style.height = wrapper.clientHeight-20+"px";
 	
 	var minHeight=700;
 	if ( bodie.clientHeight < minHeight ){
-		var footerStart = contentbar.clientHeight;
+		var footerEnd = wrapper.clientHeight;
 		var footerHeight = footer.clientHeight;
-		var footerTop = footerStart - footerHeight;
-		footer.style.position = "absolute";
-		footer.style.top = footerStart + "px";
+		var footerTop = footerEnd - footerHeight;
+		footer.style.top = footerTop + 75 + "px";
 
 	} else {
 		footer.removeAttribute("style");
 	}			
 }
 
+	
+
+
 $(document).ready( function() {
+	
+	var wrapper = document.getElementById("wrapper");
+	var contentbar = document.getElementById("content-bar");
+	contentbar.style.height = wrapper.clientHeight-20+"px";	
 	
 	/*****************
 	*  MENU FUNCTIONS 

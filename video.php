@@ -34,6 +34,7 @@
     <div id="sidebar-right"></div>
 </div> <!-- end content-bar -->
 <?php include 'footer.html' ?>
+</div> <!-- end wrapper div -->
 
 <!-- page specific scripts -->
 <script type="text/javascript" src="js/video.js"></script>
