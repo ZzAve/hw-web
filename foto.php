@@ -68,8 +68,9 @@ include 'header.php';
                    </div>
                  </div>
                  <div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="images/logo.jpg" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Dit fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
-                    <span class="hidden"> Loading . . . </span>
+                 	<?php $foto = str_replace("_thumb","",$photolist[0]);?>
+                    <img src="<?=$album_folder.$album_presence."/".$foto?>" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Dit fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
+                    <span class="hidden"> Laden . . . </span>
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
                     <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->

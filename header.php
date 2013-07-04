@@ -4,7 +4,7 @@
 	  xmlns:fb="http://ogp.me/ns/fb#"
       lang="nl" xml:lang="nl">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="last-modified" content="2013-06-12" />
     <meta http-equiv="content-language" content="nl" />
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
@@ -36,36 +36,61 @@
     <!--- scripts -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/menu.js"></script>
-	<?php include_once("analyticstracking.php") ?>    
+	<script type="text/javascript"> <!-- google analytics script -->
+	  (function(i,s,o,g,r,a,m){
+		  i['GoogleAnalyticsObject']=r;
+		  i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+			a=s.createElement(o), m=s.getElementsByTagName(o)[0];
+			a.async=1;
+			a.src=g;
+			m.parentNode.insertBefore(a,m)
+	  })
+	
+	  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-41431442-1', 'homemadewater.nl');
+	  ga('send', 'pageview');
+	
+	</script>   
 </head>
 
 <body>
-<?php include_once("facebookjssdk.php");?>
+	<!-- Facebook SDK import function -->
+    <div id="fb-root"></div>
+    <script type="text/javascript" async="async">
+		(function(d, s, id) {
+		   var js, fjs = d.getElementsByTagName(s)[0];
+		   if (d.getElementById(id)) return;
+		   js = d.createElement(s); 
+		   js.id = id;
+		   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+		   fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+    </script>
 
-<div id="header">       
-	
-    <img id="tapsplash" src="images/tapsplash.png" alt="Stromend water uit de kraan"/>
-    <img id="logo" src="images/logo_head.png" alt="Het Homemade Water logo"/> 
-    
-    <div id="navbar">
-        <ul id="menu">
-           <li class="highlight"><a href="index.php">HOME</a></li>
-           <li><a href="nieuws.php">NIEUWS</a></li> 
-           <li><a href="#">MEDIA</a>
-                <ul>
-                    <li><a href="foto.php"> FOTO</a></li>
-                    <li><a href="video.php"> VIDEO</a></li>
-                    <li><a href="audio.php"> AUDIO</a></li>
-                </ul>
-                </li>
-<!--       <li><a href="band.php">BAND</a></li> -->                  	
-<!--       <li><a href="agenda.php">AGENDA</a></li> -->
-           <li><a href="contact.php">CONTACT</a></li>
-        </ul>
-   </div>
-      
-</div><!-- end header -->
+    <div id="header">       
+        
+        <img id="tapsplash" src="images/tapsplash.png" alt="Stromend water uit de kraan"/>
+        <img id="logo" src="images/logo_head.png" alt="Het Homemade Water logo"/> 
+        
+        <div id="navbar">
+            <ul id="menu">
+               <li class="highlight"><a href="index.php">HOME</a></li>
+               <li><a href="nieuws.php">NIEUWS</a></li> 
+               <li><a href="#">MEDIA</a>
+                    <ul>
+                        <li><a href="foto.php"> FOTO</a></li>
+                        <li><a href="video.php"> VIDEO</a></li>
+                        <li><a href="audio.php"> AUDIO</a></li>
+                    </ul>
+                    </li>
+    <!--       <li><a href="band.php">BAND</a></li> -->                  	
+    <!--       <li><a href="agenda.php">AGENDA</a></li> -->
+               <li><a href="contact.php">CONTACT</a></li>
+            </ul>
+       </div>
+          
+    </div><!-- end header -->
 
 <!-- rest of document -->
 
