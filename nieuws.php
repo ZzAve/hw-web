@@ -6,24 +6,27 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
-        <!--<object data='data:application/x-silverlight-2,' type='application/x-silverlight-2' width='620' height='350'>
-        	<param name='source' value='http://embed.player.omroep.nl/sle/ugslplayer.xap'/>
-            <param name='enablehtmlaccess' value='true'/>
-            <param name="wmode" value="transparent"></param>
-            <param name='initParams' value='version=sl.1.9.9,episodeID=VARA_101322962,playlistEnabled=no,playMode=pause,volume=100,seekTime=00:35:55,subtitlesEnabled=false' />
-            <embed source='http://embed.player.omroep.nl/sle/ugslplayer.xap' type='application/x-silverlight-2' enablehtmlaccess='true' width='620' height='350' seekTime='00:35:55' initParams='version=sl.1.9.9,episodeID=VARA_101322962,playlistEnabled=no,playMode=pause,volume=100,seekTime=00:35:55,subtitlesEnabled=true'>
-            	<a href='http://go.microsoft.com/fwlink/?LinkID=124807' style='text-decoration: none;'>
-            	<img src='http://embed.player.omroep.nl/sle/downloadsilverlight.jpg' alt='Get Microsoft Silverlight' style='border-style: none'/>
-           	</a> 
-            </embed> 
-       </object>-->
        	<div class="newsitem" id="news_Kurk">
+        	<div class="date"><label> 28 </label><span> JUN </span></div>
+            <h3>  Homemade Water <em>light</em></h3>
+            <img src="images/nieuws-hwlight.jpg" alt="Homemade Water Light" title="Homemade Water Light" />
+            
+            <p> De veelzijdigheid van Homemade Water is weer uitgebreid! Na een drietal experimentele optredens in een akoestische setting hebben we besloten om nu officieel Homemade Water <em>light</em> leven in te blazen!</p>
+            
+            <p> Homemade Water <em>light</em> is, zoals de naam al zegt, een light versie van onze vaste prik. Geen scheurende gitaren, en geen schelle synthesiser geluiden. Nee, gewoon een lekkere back-to-basic opstelling met natuurlijke geluiden van de gitaar en de piano. Voeg daar een cajon en een lekkere zangstem of twee aan toe, en je hebt Homemade Water <em>light</em>.
+            
+            <p> <strong>Wat spelen we dan?</strong> We hebben een gevarieerd reportoire, met een duidelijk focus op hedendaagse, herkenbare muziek. Daar waar we kunnen improviseren we, om zo ook elkaar muzikaal uit te dagen op het podium. Doordat we al ruim anderhalf jaar met elkaar musiceren levert dit soms hele mooie taferelen op.</p>
+            
+            <p> Ge&iuml;nteresseerd geraakt? Inmiddels is Homemade Water <em>light</em> ook al te boeken. Vul het <a href="contact.php">contactformulier</a> in of stuur een mailtje!
+    	</div>
+        
+        <div class="newsitem" id="news_Kurk">
         	<div class="date"><label> 28 </label><span> JUN </span></div>
             <h3>  Geslaagd optreden de Kurk</h3>
             <img src="images/albums/Cafe de Kurk.jpg" alt="Homemade Water logo" title="Geslaagd optreden bij de Kurk!" />
             
             <p> Het was weer een mooi feestje gisteravond. De Kurk is vakkundig afgebroken (of nja, het glaswerk in ieder geval). Dit smaakt naar meer, meer meer!</p>
-			<p>	Ondanks wat opstartproblemen met het geluid en de techniek, gingen we om 11 uur helemaal los, en druppelde de Kurk langzaam aan vol. Na de eerste helft, een korte pauze van 10 minuten was nodig om even te bekomen van de spanning, om vervolgens super delicaat de tweede set te beginnen. Met het heerlijke Feeling Good van Simone, Bublé en Muse beloofde de tweede helft ijzersterk te worden. En zo geschiedde...</p>
+			<p>	Ondanks wat opstartproblemen met het geluid en de techniek, gingen we om 11 uur helemaal los, en druppelde de Kurk langzaamaan vol. Nadat de eerste helft erop zat, was de korte pauze van 10 minuten hard nodig om even te bekomen van de spanning. Vervolgens vervolgden we super delicaat de set door ijzersterk te beginnen met het heerlijke Feeling Good van Simone, Bublé en Muse, wat veel goeds beloofde. En zo geschiedde...</p>
             
 			<p>Gelukkig hebben we volgende week ons eerste optreden in het buitenland gepland staan; We gaan naar het pitoreske Reâhus in Friesland. We hebben er nu al zin in.</p>
 

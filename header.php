@@ -22,7 +22,8 @@
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css' />
-    
+    <link href='http://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'/>
+
     <title>Homemade Water</title>
     
    	<!-- stylesheets --> 
