@@ -1,8 +1,8 @@
 // JavaScript Document
 
 // Link events to a function
-window.onload = replaceFooter;
-window.onresize = replaceFooter;
+//window.onload = replaceFooter;
+window.onresize = sizeContentbar;
 
 
 // ensure HORIZONTAL scrolling of header and footer
@@ -17,7 +17,7 @@ window.onresize = replaceFooter;
 });*/
 
 
-function replaceFooter(){
+/*function replaceFooter(){
 	var bodie = document.body;
 	var footer = document.getElementById("footer");
 	var wrapper = document.getElementById("wrapper");
@@ -36,15 +36,20 @@ function replaceFooter(){
 		footer.removeAttribute("style");
 	}			
 }
+*/
 
-	
-
-
-$(document).ready( function() {
-	
+function sizeContentbar(){
 	var wrapper = document.getElementById("wrapper");
+	var header = document.getElementById("header");
+	var pusha = document.getElementById("push");
 	var contentbar = document.getElementById("content-bar");
-	contentbar.style.height = wrapper.clientHeight-20+"px";	
+	contentbar.removeAttribute("style");
+	contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+}
+	
+$(document).ready( function() {
+	sizeContentbar();
+	
 	
 	/*****************
 	*  MENU FUNCTIONS 
