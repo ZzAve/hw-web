@@ -7,7 +7,7 @@
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
        	<div class="newsitem" id="news_Kurk">
-        	<div class="date"><label> 28 </label><span> JUN </span></div>
+        	<div class="date"><label> 04 </label><span> JUL </span></div>
             <h3>  Homemade Water <em>light</em></h3>
             <img src="images/nieuws-hwlight.jpg" alt="Homemade Water Light" title="Homemade Water Light" />
             
