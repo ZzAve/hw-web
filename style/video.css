@@ -3,7 +3,8 @@
 
 
 #showVideo{
-	width: auto;
+	margin-top:50px;
+	width: 420px;
 	height:auto;
 }
 
@@ -13,7 +14,7 @@
 }
 
 #videoList{
-	padding-top:40px;
+	margin-top:30px;
 	float:right;
 	clear:right;
 	width:300px;
@@ -23,7 +24,7 @@
 .video{
 	min-height: 100px;
 	height:auto;
-	width:100%;	
+	width:300px;	
 	margin-bottom:10px;
 }
 

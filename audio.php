@@ -2,8 +2,9 @@
 <?php include 'header.php'; ?>
 <div id="content-bar">
     <div id="content">
-		 
-        <h1> Zet die speakers maar vol open om de unieke sound van Homemade Water terug te horen!</h1>
+		<h1> De audio pagina </h1>
+        <h2> Zet die speakers maar vol open om de unieke sound van Homemade Water terug te horen!</h2>
+        
         <div id="audioList">
         	<div class="audioitem">
                 <h3> Give it Back @ de Storing Haarlem </h3>

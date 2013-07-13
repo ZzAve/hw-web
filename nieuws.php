@@ -6,6 +6,22 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
+        <div class="newsitem" id="news_Reahus">
+        	<div class="date"><label> 13 </label><span> JUL </span></div>
+            <h3>  Homemade Water verovert/betovert het hoge Noorden</h3>
+            <img src="images/albums/Dorpsfeest Roodhuis.jpg" alt="Dorpsfeest Re&acirc;hus staat op z'n kop dankzij Homemade Water" title="Dorpsfeest Reah&ucirc;s staat op z'n kop dankzij Homemade Water" />
+        	
+            <p>Vorig weekend heeft Homemade Water haar debuut gemaakt in het buitenland, en wat voor een! Het mooie dorpje Reah&ucirc;s in het verre Friesland werd helemaal op z'n kop in nog geen 3 uur tijd. Het hele dorp (zeker 180 man) heeft dan ook tot in de vroege uurtjes kunnen dansen en springen op de frisse wind die wij door Friesland deden waaien!</p>
+            
+            <p>Te midden van een groot grasveld midden in het dorp stond een grote feesttent waar we voor een volledige avond aan entertainment zouden zorgen voor jong en oud. Last minute werd nog even snel besloten om Laurens solo met gitaar en zang de avond te laten openen zodat het feest rustig op gang kon komen. De Reah&ucirc;senaren hadden echter een ander idee van een rustige start en begonnen bij het eerste nummer gelijk hard mee te zingen en te dansen! </p>
+            
+            <p>Dit energieniveau hield de hele avond/nacht aan en nam zelfs nog flink toe met misschien wel als hoogtepunt toen Eline solo het Friese nummer "in Nije Dei" begon te zingen en de Friese trots bij de bewoners vol naar boven kwam. Daarna hebben we de avond nog knallend afgesloten met onder andere onze nieuwe nummers als Lonely Boy, Gold and Seaweed, Sex on Fire en als toegift de altijd succesvolle Narcotic.</p>
+
+			<p>De sfeer was geweldig, de mensen super gezellig en de performance ging heerlijk, wat het totaal misschien wel neer zet op het geslaagdste optreden van Homemade Water tot nu toe! Reah&ucirc;s bedankt en misschien wel "Oant Sjen!"</p>
+			
+            <p> Zie ook de foto's op onze <a href="foto.php">fotopagina</a>, of check onze <a href="http://www.facebook.com/homemadewater">facebook</a>!</p>    
+        </div>
+        
        	<div class="newsitem" id="news_Kurk">
         	<div class="date"><label> 04 </label><span> JUL </span></div>
             <h3>  Homemade Water <em>light</em></h3>

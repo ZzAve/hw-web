@@ -11,7 +11,7 @@ $all_albums = array();
 $all_albumnames = array();
 foreach ($all_albumfolders as $album){
 	$album = substr(strrchr($album,"/"),1);
-	$newrow = array_map('trim',explode(";",$album));
+	$newrow = array_map('trim',explode("!!",$album));
 	$newrow[] = $album;
 	$all_albumnames[] = $newrow[1];
 	$all_albums[] = $newrow;
@@ -26,7 +26,7 @@ foreach ($all_albumfolders as $album){
 */
 function album_present(){
 	global $album_folder; // make use of variable $album_folder as instantiated globally
-	global $all_albumfolders;		// idem for $all_albums
+	global $all_albumnames;		// idem for $all_albums
 	global $all_albums;
 	
 	// check wheter album is requested
@@ -35,7 +35,7 @@ function album_present(){
 		$album=$_GET['album'];
 			
 		//check whether requested album exists on server and return this (true of false)
-		$test = array_search($album_folder.$album,$all_albumfolders);
+		$test = array_search($album,$all_albumnames);
 		if($test !== FALSE){
 			return $all_albums[$test];
 		} else {
@@ -76,11 +76,15 @@ include 'header.php';
                             $photolist = glob("*_thumb.jpg");
 							natsort($photolist);
                             chdir($curdir);
+							$photo1=NULL;
                             foreach ($photolist as $photo){
                                 $length = strlen($photo);
                                 $photo_descr = substr($photo,0,$length-10);
+								if($photo1==NULL){
+									$photo1 = str_replace(" ","%",$photo_descr);
+								}
                                 ?>
-                                <li> <img src="<?=$album_folder.$album_location."/".$photo?>" alt="<?=$photo_descr?>"/> </li>	
+                                <li> <img src="<?=$album_folder.$album_location."/".$photo?>" alt="<?=$photo_descr?>" title="<?=$photo_descr?>"/> </li>	
                                 <?php
                             }
                             ?>
@@ -88,7 +92,7 @@ include 'header.php';
                    </div>
                  </div>
                  <div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="images/logo.jpg" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Deze fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
+                    <img src="<?=$album_folder.$album_location."/".$photo1.".jpg"?>" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Deze fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
                     <span class="hidden"> Loading . . . </span>
                     <div id="nextPhoto"></div> <!-- make it a button later on with js -->
 					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
@@ -101,7 +105,7 @@ include 'header.php';
                 
                 <!-- Say hi to people on the page -->
                 <h1> Fotoalbums </h1>
-                <h3> Om een beeld te krijgen van een feestje met Homemade Water! </h3>
+                <h2> Om een beeld te krijgen van een feestje met Homemade Water! </h2>
                 
                 <ul id="album-list">
 					<?php
@@ -113,7 +117,7 @@ include 'header.php';
 						$album_place = $album_array[2];
 						$album_location =  $album_array[3];
 						?>
-                      	<li> <a href="./foto.php?album=<?=$album_location?>"> 
+                      	<li> <a href="./foto.php?album=<?=$album_name?>"> 
                         		<img src="<?=$album_folder.$album_name?>.jpg" alt="<?=$album_name?>" title="<?=$album_name?>" />
                              </a> 
 							 <label> <?= $album_date?> </label>	<?=$album_name?> <span> <?=$album_place?> </span>
