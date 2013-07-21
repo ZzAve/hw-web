@@ -3,7 +3,7 @@
 // Link events to a function
 //window.onload = replaceFooter;
 window.onresize = sizeContentbar;
-
+window.onload = sizeContentbar;
 
 // ensure HORIZONTAL scrolling of header and footer
 /*$(window).scroll(function(){
@@ -39,17 +39,18 @@ window.onresize = sizeContentbar;
 */
 
 function sizeContentbar(){
-	var wrapper = document.getElementById("wrapper");
-	var header = document.getElementById("header");
-	var pusha = document.getElementById("push");
-	var contentbar = document.getElementById("content-bar");
-	contentbar.removeAttribute("style");
-	contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+	if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) { 
+		var wrapper = document.getElementById("wrapper");
+		var header = document.getElementById("header");
+		var pusha = document.getElementById("push");
+		var contentbar = document.getElementById("content-bar");
+		contentbar.removeAttribute("style");
+		contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+	}
 }
 	
 $(document).ready( function() {
 	sizeContentbar();
-	
 	
 	/*****************
 	*  MENU FUNCTIONS 
