@@ -1,4 +1,3 @@
-
 <?php include 'header.php'; ?>
 <div id="content-bar">
 
@@ -6,6 +5,7 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
+
         <div class="newsitem" id="news_Reahus">
         	<div class="date"><label> 13 </label><span> JUL </span></div>
             <h3>  Homemade Water verovert/betovert het hoge Noorden</h3>
@@ -22,7 +22,7 @@
             <p> Zie ook de foto's op onze <a href="foto.php">fotopagina</a>, of check onze <a href="http://www.facebook.com/homemadewater">facebook</a>!</p>    
         </div>
         
-       	<div class="newsitem" id="news_Kurk">
+       	<div class="newsitem" id="news_HWLight">
         	<div class="date"><label> 04 </label><span> JUL </span></div>
             <h3>  Homemade Water <em>light</em></h3>
             <img src="images/nieuws-hwlight.jpg" alt="Homemade Water Light" title="Homemade Water Light" />
@@ -35,7 +35,7 @@
             <p> <strong>Wat spelen we dan?</strong> We hebben een gevarieerd reportoire, met een duidelijk focus op hedendaagse, herkenbare muziek. Daar waar we kunnen improviseren we, om zo ook elkaar muzikaal uit te dagen op het podium. Doordat we al ruim anderhalf jaar met elkaar musiceren levert dit soms hele mooie taferelen op.</p>
             
             <p> Ge&iuml;nteresseerd geraakt? Inmiddels is Homemade Water <em>light</em> ook al te boeken. Vul het <a href="contact.php">contactformulier</a> in of stuur een mailtje!
-    	</div>
+    	</div>       	
         
         <div class="newsitem" id="news_Kurk">
         	<div class="date"><label> 28 </label><span> JUN </span></div>
@@ -106,7 +106,6 @@
 
 </div> <!-- end content-bar -->
 <?php include 'footer.html' ?>
+</div> <!-- end wrapper div -->
 </body>
-
-
 </html>

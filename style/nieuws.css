@@ -11,7 +11,6 @@ div.newsitem{
 	background-color:rgba(0,0,0,0.3);
 }
 
-
 .newsitem img{
 	float:left;
 	clear:left;
@@ -74,7 +73,3 @@ div.newsitem img:hover{
 	margin-right:5px;
 	color:#06F;
 }
-
-/*.newsitem .first{
-	font-weight:bold;
-}*/

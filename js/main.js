@@ -1,12 +1,12 @@
 // JavaScript Document
 
 // Link events to a function
-window.onload = replaceFooter;
-window.onresize = replaceFooter;
-
+//window.onload = replaceFooter;
+window.onresize = sizeContentbar;
+window.onload = sizeContentbar;
 
 // ensure HORIZONTAL scrolling of header and footer
-$(window).scroll(function(){
+/*$(window).scroll(function(){
   $('#menu').css('left',-$(window).scrollLeft());
   $('#logo').css('left',-$(window).scrollLeft());
   $('#tapsplash').css('left',-$(window).scrollLeft());
@@ -14,28 +14,76 @@ $(window).scroll(function(){
   $('#social-media-icons').css('left',-$(window).scrollLeft());
 
   $('#footer').css('right',-$(window).scrollLeft());
-});
+});*/
 
 
-function replaceFooter(){
+/*function replaceFooter(){
 	var bodie = document.body;
 	var footer = document.getElementById("footer");
+	var wrapper = document.getElementById("wrapper");
 	var contentbar = document.getElementById("content-bar");
+	contentbar.removeAttribute("style");
+	contentbar.style.height = wrapper.clientHeight-20+"px";
 	
 	var minHeight=700;
 	if ( bodie.clientHeight < minHeight ){
-		var footerStart = contentbar.clientHeight;
+		var footerEnd = wrapper.clientHeight;
 		var footerHeight = footer.clientHeight;
-		var footerTop = footerStart - footerHeight;
-		footer.style.position = "absolute";
-		footer.style.top = footerStart + "px";
+		var footerTop = footerEnd - footerHeight;
+		footer.style.top = footerTop + 75 + "px";
 
 	} else {
 		footer.removeAttribute("style");
 	}			
 }
+*/
 
+function sizeContentbar(){
+	if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) { 
+		var wrapper = document.getElementById("wrapper");
+		var header = document.getElementById("header");
+		var pusha = document.getElementById("push");
+		var contentbar = document.getElementById("content-bar");
+		contentbar.removeAttribute("style");
+		contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+	}
+}
+	
 $(document).ready( function() {
+	sizeContentbar();
+	
+	/*****************
+	*  MENU FUNCTIONS 
+	******************/
+	// nice scrolling of submenus on hovering menu item
+	$('#menu').find('> li').hover(function(){
+        	$(this).find('ul').removeClass('noJS').stop(true,true).slideDown('fast');
+    	}, function () {
+        	$(this).find('ul').stop(true,true).slideUp('fast');	
+		});
+	
+	// ensure highlighting of menu entry of current page
+	var str=location.href.toLowerCase();
+	$("#menu li a").each(function() {
+		if (str.indexOf(this.href.toLowerCase()) > -1) {
+			$("li.highlight").removeClass("highlight");
+			$(this).parent().addClass("highlight");
+		}
+  	});
+
+	// if subpage is highlighted, also highlight the parent of it
+	$("#menu li ul").each(function() {
+		if ($(this).has('li.highlight').length != 0 ){
+			$(this).parent().addClass("highlight");
+		}
+	});
+	/* END OF MENU FUNCTIONS */
+
+	
+	/***********************************
+	* REPLACE IFRAME LINKS WITH IFRAMES
+	************************************/
+	
     // create xhtml strict friendly iframe for all Soundcloud embed players
     $('a.iframeSC').each(
         function (i) {
@@ -50,4 +98,12 @@ $(document).ready( function() {
         }
     );
 	
+	// BAD change of link to iframe due to inline styling!
+	$('a.iframe').each(
+        function (i) {
+            $(this).replaceWith("<iframe src='" + this.getAttribute("href") + "' width='100%' height='600px' wmode='Opaque'></iframe>");
+        }
+    );
+	/* END REPLACING IFRAME LINKS WITH IFRAMES */
 });
+
