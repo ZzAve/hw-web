@@ -77,12 +77,12 @@ html, body{
 }
 
 #sidebar-left{
-	background:url("../images/enkele-streep-verticaal_01.png") repeat-y top left transparent;
+	background:url("../images/sidebar_left.png") repeat-y top left transparent;
 	left:-22px;
 }
 
 #sidebar-right{
-	background:url("../images/enkele-streep-verticaal-rechts_03.png") repeat-y top left transparent;
+	background:url("../images/sidebar_right.png") repeat-y top left transparent;
 	right:-35px;
 }
 
