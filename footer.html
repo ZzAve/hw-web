@@ -4,11 +4,20 @@
     <div id="social-media-icons">
         <ul>
         	<li id="fb-like"> 
-				<script type="text/javascript"> 
+			<script type="text/javascript"> 
 				//<![CDATA[
-					document.write('<fb:like href="http://www.homemadewater.nl" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like>');
+					var ieversion = 100;
+					if (/MSIE (\d+\.\d+);/.test(navigator.userAgent))
+					{ 
+   					   ieversion=new Number(RegExp.$1);
+					}	
+   					
+					if (ieversion>=8)
+   					{
+      					   document.write('<fb:like href="http://www.homemadewater.nl" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like>');
+					}
 				//]]>
-                </script> 
+                </script>
             </li>
             <li id="fb"><a href="http://www.facebook.com/HomemadeWater" target="_blank"><img src="./images/icon_fb.png" alt="Facebook-pagina Homemade Water" title="Facebook pagina"/></a></li>
             <li id="sc"><a href="https://soundcloud.com/homemade-water" target="_blank"><img src="./images/icon_sc.png" alt="Soundcloud-pagina Homemade Water" title="Soundcloud pagina"/></a></li>

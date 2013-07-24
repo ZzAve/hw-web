@@ -8,7 +8,7 @@
            <div id="videoList">
            		<h4> Video's van Homemade Water:</h4>
            		<div class="video">
-                    <img src="./images/YT_I'm_just_me.jpg" alt="Give it back thumbnail" title="Give It Back"  />
+                    <img src="./images/YT_i'm_just_me.jpg" alt="I'm Just Me, Live @ Dorpsfeest Reahus" title="I'm just me, Live @ Dorpsfeest Reahus"  />
                     <a href="http://www.youtube.com/embed/CFnpnFr-oW4"></a> 
                     <h4> I'm Just Me - Live @ Dorpsfeest Re&acirc;hus, Friesland</h4>
                     <p> 05/07/2013 Het buitenlandse debuut van Homemade Water is ook te zien op YouTube. Het eigen nummer "I'm Just Me" werd hier gespeeld voor de uitzinnige bewoners van Re&acirc;hus. <br /><br />Credits voor de video gaan naar Arnold Burger.</p>
