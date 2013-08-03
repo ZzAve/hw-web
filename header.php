@@ -18,6 +18,12 @@
     <meta name="publisher" content="Homemade Water" />
     <meta name="copyright" content="Homemade Water" />
     <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
+
+    <!-- for testing -->
+    <base href="http://localhost/hw-web/" />
+    <!-- for site -->
+	<!--	<base href="http://www.homemadewater.nl/" /> -->
+
 	<title>Homemade Water</title>
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css' />
@@ -70,21 +76,35 @@
 <div id="wrapper">
     <div id="header">       
         <img id="tapsplash" src="images/tapsplash.png" alt="Stromend water uit de kraan"/>
-        <img id="logo" src="images/logo_head.png" alt="Hét Homemade Water logo"/> 
+        <a href="index.php"><img id="logo" src="images/logo_head.png" alt="Hét Homemade Water logo"/></a>
         
         <div id="navbar">
             <ul id="menu">
                <li class="highlight"><a href="index.php">HOME</a></li>
                <li><a href="nieuws.php">NIEUWS</a></li> 
+               <li><a href="band.php">BAND</a>
+                 <ul>
+                    <li> <a href="band.php"> ALGEMEEN </a></li> 
+                 	<li> <a href="reportoire.php"> REPORTOIRE </a></li> 
+                    <li> <a href="bandleden.php"> BANDLEDEN </a>
+                      <ul>
+                        <li> <a href="Laurens.php"> Laurens </a></li>
+                        <li> <a href="Andrea.php"> Andrea </a></li>
+                        <li> <a href="Eline.php"> Eline </a></li>
+                        <li> <a href="Moos.php"> Moos </a></li>
+                        <li> <a href="Julius.php"> Julius </a></li>
+                      </ul>
+                    
+                 </ul>
+               </li>
                <li><a href="#">MEDIA</a>
-                    <ul>
-                        <li><a href="foto.php"> FOTO</a></li>
-                        <li><a href="video.php"> VIDEO</a></li>
-                        <li><a href="audio.php"> AUDIO</a></li>
-                    </ul>
-                    </li>
-    <!--       <li><a href="band.php">BAND</a></li> -->                  	
-    <!--       <li><a href="agenda.php">AGENDA</a></li> -->
+                 <ul>
+                    <li><a href="foto.php"> FOTO</a></li>
+                    <li><a href="video.php"> VIDEO</a></li>
+                    <li><a href="audio.php"> AUDIO</a></li>
+                 </ul>
+               </li>                 	
+			   <li><a href="agenda.php">AGENDA</a></li>
                <li><a href="contact.php">CONTACT</a></li>
             </ul>
        </div>

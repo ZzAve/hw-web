@@ -38,18 +38,22 @@
 #menu, #menu ul {
     list-style: none;
     padding: 0;
-	margin-left:30px;}
+	margin-left:20px;
+	margin-right:20px;
+}
 
 #menu > li{ 
     float: left;
-	margin-left: 50px;
+	margin-left: 25px;
+	margin-right:10px;
 }
 #menu li a {
     display: block;
     height: 2em;
     line-height: 2.5em;
-    padding: 0 1.5em;
+    padding: 0 20px;
     text-decoration: none;
+	vertical-align:middle;
 }
 #menu ul {
     position: absolute;
@@ -57,9 +61,16 @@
 	margin-left:0px;
     z-index: 999;
 }
-#menu ul li a {
-    width: 80px;
+
+#menu li{
+	position:relative;
+	left:0;
 }
+#menu ul ul{
+	top:0;
+	margin-left:140px;
+}
+
 #menu li:hover ul.noJS {
     display: block;
 }
@@ -72,32 +83,57 @@
     font-family: Arial;
     font-size: 16px;
 }
-#menu > li > a {
+
+#menu > li:nth-child(even){
+	position:relative;
+	top:-1px;
+	transform:rotate(1deg);
+	-ms-transform:rotate(1deg); /* IE 9 */
+	-webkit-transform:rotate(1deg); /* Safari and Chrome */
+}
+
+
+
+#menu > li:nth-child(odd){
+	position:relative;
+	top:2px;
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+}
+
+#menu ul{
+	font-size:15px;
+}
+#menu ul ul{
+	font-size:14px;
+}
+
+#menu  li > a {
     color: #000;
     font-weight: bold;
 }
-#menu > li:hover > a {
-    color: rgba(255,255,255,0.8);
-    color: #000;
+#menu li:hover > a {
+    /*color: rgba(255,255,255,0.8);*/
+    color: #00A;
 }
  
 
 /* Submenu
 ------------------------------------------*/
 #menu ul {
-    background: white;
-	opacity: .80; /* standard: ff gt 1.5, opera, safari */
-
+    background-color: white;
+	opacity: .88; /* standard: ff gt 1.5, opera, safari */
 }
 
-#menu ul li a {
-    color: #000;
+#menu ul li:hover{
+	background-color: #EEE;
+	border-radius:40px 10px;
 }
-#menu ul li:hover a {
-    background: rgba(255,255,255,0.8);
+#menu ul ul{
+	background: #CCC;
 }
-
-#menu > li.highlight > a, #menu ul li.highlight a{
+#menu > li.highlight > a, #menu ul li.highlight > a{
     color: #00C;
 }
 

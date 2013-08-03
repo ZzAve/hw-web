@@ -56,12 +56,25 @@ $(document).ready( function() {
 	*  MENU FUNCTIONS 
 	******************/
 	// nice scrolling of submenus on hovering menu item
-	$('#menu').find('> li').hover(function(){
+	$('#menu').find('li').hover(function(event){
+		if ($(this).next('ul').children().length !== 0) {     
+			event.preventDefault();
+		}
+		$(this).children('ul').slideToggle('fast');
+	});
+	
+	/*$('#menu').find('> li').hover(function(){
         	$(this).find('ul').removeClass('noJS').stop(true,true).slideDown('fast');
     	}, function () {
         	$(this).find('ul').stop(true,true).slideUp('fast');	
 		});
 	
+	$('#menu').find('ul > li').hover(function(){
+        	$(this).find('ul').removeClass('noJS').stop(true,true).slideDown('fast');
+    	}, function () {
+        	$(this).find('ul').stop(true,true).slideUp('fast');	
+		});
+	*/
 	// ensure highlighting of menu entry of current page
 	var str=location.href.toLowerCase();
 	$("#menu li a").each(function() {
@@ -70,7 +83,7 @@ $(document).ready( function() {
 			$(this).parent().addClass("highlight");
 		}
   	});
-
+	
 	// if subpage is highlighted, also highlight the parent of it
 	$("#menu li ul").each(function() {
 		if ($(this).has('li.highlight').length != 0 ){
