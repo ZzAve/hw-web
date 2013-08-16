@@ -5,7 +5,20 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
+		<div class="newsitem" id="news_GigsOWee">
+        	<div class="date"><label> 16 </label><span> AUG </span></div>
+            <h3> Terug van weggeweest!</h3>
+            <img src="images/agenda_nieuws.jpg" alt="Er staan maar liefst 3 optredens gepland voor volgende week!" title="Er staan maar liefst 3 optredens gepland voor volgende week!" />
+        	
+            <p>Ondertussen is het grootste deel van de vakantie voorbij en zijn de meeste van onze bandleden weer terug in het land! En dat zullen we laten merken ook! Volgende week hebben we maar liefst <strong>3</strong> optredens gepland staan in Delft! Te beginnen met de Owee, d&eacute; grote openingsweek van het studentenleven in Delft, dus sowieso de moeite waard om mee te maken, en daarna nog een mooie Bierbeurs!</p>
 
+			<p>Maandagavond 19 augustus staat ons eerste optreden gepland bij O.J.V. De Koornbeurs, vanaf 21u. Deze avond gaan we niet spelen met Homemade Water, ook niet met Homemade Water Light, maar we hebben nog een derde bezetting in het leven geroepen voor deze gelegenheid: <strong>Homemade Water Heavy</strong>. Onze lieftallige toetseniste trekt zich even terug (in dit geval naar Bali), en met de volledige mannelijke bezetting gaan we lekker los met ruige hardrock! Iedereen is welkom, so be there!</p>
+
+			<p>Dinsdagavond 20 augustus staat Homemade Water Heavy bij roeiverening Proteus de pannen van het dak te spelen. Dit optreden is enkel en alleen voor de nulletjes en de studenten met een Owee-bandje, dus zorg dat je er aan eentje geraakt!</p>	
+
+			<p>En dan last maar zeker niet least: zondagavond 25 augustus speelt de voltallige bezetting van Homemade Water vanaf 18u op de Brabantse Turfamrkt bij biercafé Locus Publicus. Daar leuken we de Bierbeurs die daar plaatsvindt op. Bijna 70 verschillende brouwerijen komen hun lekkerste bieren verkopen, dus fan of niet, daar moet je gewoon bij zijn!</p>  
+        </div>
+        
         <div class="newsitem" id="news_Reahus">
         	<div class="date"><label> 13 </label><span> JUL </span></div>
             <h3>  Homemade Water verovert/betovert het hoge Noorden</h3>
