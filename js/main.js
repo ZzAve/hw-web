@@ -44,8 +44,10 @@ function sizeContentbar(){
 		var header = document.getElementById("header");
 		var pusha = document.getElementById("push");
 		var contentbar = document.getElementById("content-bar");
-		contentbar.removeAttribute("style");
-		contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+		if (wrapper.clientHeight - 50 > contentbar.clientHeight + header.clientHeight + pusha.clientHeight){
+			contentbar.removeAttribute("style");
+			contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+		}
 	}
 }
 	

@@ -53,7 +53,8 @@ html, body{
 }
 
 #content-bar{
-	background-color:#362F2F;
+	background-color:rgb(54, 47, 47);
+	background-color:rgba(54, 47, 47,.85);
 	width:800px;
 	position:relative;
 	z-index:50;
@@ -71,6 +72,7 @@ html, body{
 }
 
 #sidebar-left, #sidebar-right{
+	opacity:0.91;
 	position:absolute;
 	width:50px;
 	height:100%;
