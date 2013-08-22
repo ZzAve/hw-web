@@ -58,6 +58,7 @@ html, body{
 	position:relative;
 	z-index:50;
 	margin: 0 auto  0 150px;
+	overflow:visible;
 }
 	
 #content{

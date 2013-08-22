@@ -20,9 +20,11 @@
     <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
 
     <!-- for testing -->
-    <base href="http://localhost/hw-web/" />
+    <!--<base href="http://localhost/hw-web/" />-->
+    <!-- for test site -->
+	<base href="http://development.homemadewater.nl/" /> 
     <!-- for site -->
-	<!--	<base href="http://www.homemadewater.nl/" /> -->
+    <!--<base href="http://www.homemadewater.nl/" />-->
 
 	<title>Homemade Water</title>
     <!-- fonts -->
@@ -32,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="style/header.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/main.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/footer.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="style/index.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/nieuws.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
@@ -82,17 +85,17 @@
             <ul id="menu">
                <li class="highlight"><a href="index.php">HOME</a></li>
                <li><a href="nieuws.php">NIEUWS</a></li> 
-               <li><a href="band.php">BAND</a>
+               <li><a href="band/">BAND</a>
                  <ul>
-                    <li> <a href="band.php"> ALGEMEEN </a></li> 
-                 	<li> <a href="reportoire.php"> REPORTOIRE </a></li> 
-                    <li> <a href="bandleden.php"> BANDLEDEN </a>
+                    <li> <a href="band/"> ALGEMEEN </a></li> 
+                 	<li> <a href="band/reportoire.php"> REPORTOIRE </a></li> 
+                    <li> <a href="band/bandleden.php"> BANDLEDEN </a>
                       <ul>
-                        <li> <a href="Laurens.php"> Laurens </a></li>
-                        <li> <a href="Andrea.php"> Andrea </a></li>
-                        <li> <a href="Eline.php"> Eline </a></li>
-                        <li> <a href="Moos.php"> Moos </a></li>
-                        <li> <a href="Julius.php"> Julius </a></li>
+                        <li> <a href="band/Laurens.php"> Laurens </a></li>
+                        <li> <a href="band/Andrea.php"> Andrea </a></li>
+                        <li> <a href="band/Eline.php"> Eline </a></li>
+                        <li> <a href="band/Moos.php"> Moos </a></li>
+                        <li> <a href="band/Julius.php"> Julius </a></li>
                       </ul>
                     
                  </ul>

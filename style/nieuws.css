@@ -1,10 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 	
-div.newsitem{
+.newsitem{
 	width:95%;
 	height:auto;
-	border-radius:10px;	
+	border-radius:20px;	
 	margin-bottom:30px;
 	overflow:auto;
 	padding:10px;
@@ -26,14 +26,11 @@ div.newsitem{
 	border-radius:4px;
 }
 
-div.newsitem img:hover{
-	width:450px;
-	border-radius:10px;
-}
-
 .newsitem .date{
 	float:left;
 	margin-right:20px;
+	margin-left:5px;
+	margin-top:5px;
 	height:45px;
 	width:45px;
 	background-color:#06F;
@@ -72,4 +69,41 @@ div.newsitem img:hover{
 	font-weight:900;
 	margin-right:5px;
 	color:#06F;
+}
+
+.morenews{
+	text-align:center;
+	margin:30px auto 10px;
+}
+
+.morenews span{
+	margin:auto 20px;
+	color:#999;
+}
+
+.morenews span a{
+	color:#CCC;
+}
+
+
+.single img{
+	float:none;
+	width:75%;
+	display:block;
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:5px;
+	-webkit-box-shadow: 0px 0px 3px 5px #333;
+	-moz-box-shadow: 0px 0px 3px 3px #333;
+	box-shadow: 0px 0px 3px 3px #333; 
+	filter:progid:DXImageTransform.Microsoft.Glow(color='gray', Strength='7')
+}
+.single{
+	width:90%;
+	padding-left:30px;
+	padding-right:40px;
+	padding-top:50px;
+	padding-bottom:100px;
+	border-radius:100px 10px ;
 }

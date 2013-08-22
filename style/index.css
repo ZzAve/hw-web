@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*#news, #agenda{
+	color:black;
+	overflow:visible;
+	z-index:80;
+	padding:10px;
+	/*background: url("../images/notepad.png") top left repeat-y;
+	background-color: red;
+	position: absolute;
+	right:-100px;
+}
+
+#news ul, #agenda ul{
+	list-style-type: none;
+	margin-top:1.2em;
+	margin-left:0;	
+}
+#agenda{
+	top:20px;
+}
+
+#news{
+	top:280px;
+	right:-250px;
+	width:300px;
+}
+
+#agenda li{
+	margin:8px auto;
+	font-weight:normal;
+}
+
+#news li{
+	margin: 0.2em auto;
+}
+#agenda li span{
+	display: block;
+	font-weight:bold;
+}*/
