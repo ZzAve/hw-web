@@ -9,6 +9,9 @@
 
 #footer-bar{
 	background: url("../images/bar_head_and_foot.png") repeat-x top left transparent;
+	-webkit-filter: drop-shadow(-2px -5px 15px #222); filter: drop-shadow(5px 5px 5px #222); 
+	-moz-webkit-filter: drop-shadow(5px 5px 5px #222);
+	-ms-webkit-filter: drop-shadow(5px 5px 5px #222);
 	position:absolute;
 	z-index:10;
 	top:-10px; left:0;
