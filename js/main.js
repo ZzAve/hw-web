@@ -41,12 +41,15 @@ window.onload = sizeContentbar;
 function sizeContentbar(){
 	if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) { 
 		var wrapper = document.getElementById("wrapper");
-		var header = document.getElementById("header");
-		var pusha = document.getElementById("push");
+		var footer = document.getElementById("footer");
 		var contentbar = document.getElementById("content-bar");
-		if (wrapper.clientHeight - 50 > contentbar.clientHeight + header.clientHeight + pusha.clientHeight){
-			contentbar.removeAttribute("style");
-			contentbar.style.height = wrapper.clientHeight - header.clientHeight - pusha.clientHeight +"px";
+		totalHeight = wrapper.clientHeight + footer.clientHeight;
+
+		
+		if (totalHeight < window.innerHeight) {
+			diff = window.innerHeight - totalHeight + footer.clientHeight;
+			newHeight = contentbar.clientHeight + diff;
+			contentbar.style.height = newHeight + "px";
 		}
 	}
 }
