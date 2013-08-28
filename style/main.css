@@ -15,8 +15,8 @@ html, body{
 	min-width:1100px;
 	position:relative;
 	background: url("../images/backgrounds/achtergrondDSB4.jpg")  fixed no-repeat top left #000000;
-	font-family:'Average Sans', Arial, Gadget, serif;
-	font-size: 1em;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 0.95em;
 	color: #CCC;
 
 }
