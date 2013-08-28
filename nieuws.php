@@ -12,7 +12,7 @@
         	
             <p>Afgelopen zondag (25 augustus) speelden wij op de bierbeurs van bierlokaal Locus Publicus. Na een relaxte dag van speciaalbiertjes proeven, keuren en verhemelen werd het publiek blij verrast met Homemade Water.</p>
 
-			<p>Om 18.00 werd het startsein gegeven, en mochten wij na twee maanden eindelijk weer eens met z'n allen helemaal los op een podium om zo ons eigen feestje te b(r)ouwen. Het is dat ook ons eerste optreden in de buitenlucht geweest met de voltallige bezetting!</p>
+			<p>Om 18.00 werd het startsein gegeven, en mochten wij na twee maanden eindelijk weer eens met z'n allen helemaal los op een podium om zo ons eigen feestje te b(r)ouwen. Het is dan ook ons eerste optreden in de buitenlucht geweest met de voltallige bezetting!</p>
 
 			<p>Nadat in de eerste helft de biertjes door begonnen te werken was het na de pauze een en al gekkigheid. Jong maar vooral ook oud waren de verschillende dansmoves nog niet vergeten, en zelfs een enkele rolstoelganger kon het niet laten om lekker mee te swingen op onze opzwepende melodien.</p>
 
