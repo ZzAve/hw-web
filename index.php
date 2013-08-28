@@ -1,5 +1,5 @@
 <?php 
-	include 'header.php'; 
+	require_once 'header.php'; 
 	require_once 'misc/db_connectread.php';
 	setlocale(LC_TIME, 'Dutch');
 ?>
@@ -27,7 +27,7 @@
          <div id="agenda"> <h3>Agenda:</h3>
            <ul>
                 <?php // Fetch the 3 gigs closest to today (in the future)
-                $query = "SELECT * FROM `Agenda` WHERE `Datum`>(CURDATE()-1) ORDER BY `Datum` ASC LIMIT 0,5";
+                $query = "SELECT * FROM `agenda` WHERE `Datum`>(CURDATE()-1) ORDER BY `Datum` ASC LIMIT 0,5";
                 $result = mysqli_query($mysql,$query);			
                 $counter=0;
                 while( $row = mysqli_fetch_array($result) )  {
@@ -43,7 +43,7 @@
                     <h4> Laatste optredens: </h4> 
                     <ul> 
                        <?php
-                        $query = "SELECT * FROM `Agenda` WHERE `Datum`<=(CURDATE()-1) ORDER BY `Datum` DESC LIMIT 0,".(5-$counter).";";
+                        $query = "SELECT * FROM `agenda` WHERE `Datum`<=(CURDATE()-1) ORDER BY `Datum` DESC LIMIT 0,".(5-$counter).";";
                         $result = mysqli_query($mysql,$query);
                         while( $row = mysqli_fetch_array($result) )  {
                               // while there is still an newsitem to process, put it in a listitem
@@ -62,7 +62,7 @@
             <ul>
                 <?php 
                     // Fetch the 3 latest newsitems
-                      $query = "SELECT * FROM `newsitems` ORDER BY `Datum` DESC LIMIT 0,3";
+                      $query = "SELECT * FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,3";
                       $result = mysqli_query($mysql,$query);		  
                       while( $row = mysqli_fetch_array($result) ) {
                           ?>
@@ -83,10 +83,8 @@
 
 </div> <!-- end content-bar div -->
 
-<?php include 'footer.html'; ?>	
-</div> <!-- end wrapper div -->
-</body>
-</html>
+<?php require_once 'footer.php'; ?>	
+<!-- end html  (</html>) -->
 
 <?php
 	function popagendaevent($db_entry){

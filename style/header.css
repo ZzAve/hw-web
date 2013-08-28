@@ -95,8 +95,8 @@
 	top:-1px;
 	transform:rotate(1deg);
 	-ms-transform:rotate(1deg); /* IE 9 */
-	/*-webkit-transform:rotate(1deg); /* Safari and Chrome */
-}
+/*	-webkit-transform:rotate(1deg); /* Safari and Chrome */
+/*}*/
 
 
 
@@ -105,8 +105,8 @@
 	top:2px;
 	transform:rotate(-2deg);
 	-ms-transform:rotate(-2deg); /* IE 9 */
-	/*-webkit-transform:rotate(-2deg); /* Safari and Chrome */
-}
+/*	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+/*}*/
 
 #menu ul{
 	font-size:15px;

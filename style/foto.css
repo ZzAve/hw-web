@@ -2,13 +2,6 @@
 /* Foto stylesheet */
 
 
-#gallery{
-	width:100%;
-	height:auto;
-	max-height:100%;
-	overflow:auto;
-}
-
 /* overall page */
 #album-list{
 	list-style: none;
@@ -46,38 +39,145 @@
 
 /* album page */
 #showPhoto{ 
-	position:relative;
-	height:400px;
-	width:70%;
-	margin-left: 5%;
-	margin-right:23%;
-	margin-top:20px;
-	overflow:visible;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999;
+	height:100%;
+	width:100%;
+	max-width:100%;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.9);
 }
 
-#showPhoto img{
-	display: block;
-	margin: 0px auto;
-	border-radius:20px;
-	border: 2px solid #322F32;
+#photosite{
+	position:relative;
+	height:95%;
+	width:auto;
+	max-width:90%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#photosite > div{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left:0;
+	margin-top:10px;
+	clear:both;
+	height:40px;
+}
+
+#photosite img.show{
+	display:block;
+	border-radius:10px;
+	box-shadow: 0px 0px 5px #FFF;
 	height:auto;
-	max-height:95%;
+	max-height:100%;
 	width:auto;
 	max-width:100%;
-
+ 	margin: 0px auto;
 }
 
-#showPhoto span{
+#photosite span{
 	position: absolute;	
 	width:100%;
 	top:30%;
+	margin-left:auto;
+	margin-right:auto;
 	text-align:center;
-	vertical-align:middle;
-	font-size:1.3em;
+	font-size:20px;
 	font-weight:bold;
 }
 
-#photolist-overflow{
+#closePhotoAlbum{
+	position:relative;
+	bottom:25px;
+	left:48%;
+	width:40px;
+	cursor:pointer;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+}
+
+#closePhotoAlbum:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+#closePhotoAlbum img{
+	width:100%;
+}
+	
+#nextPhoto, #previousPhoto{
+	width:42%;
+}
+#nextPhoto{
+	float:right;
+	text-align:left;
+}
+#previousPhoto{
+	float:left;
+	text-align:right;
+}
+
+#thumblist{
+	margin:30px auto;
+}
+
+#thumblist ul{
+	list-style:none;
+	margin-left:0;
+}
+
+#thumblist li{
+	display: inline-block;
+	overflow:hidden;
+	width:110px;
+	height:75px;
+	margin:10px 13px;
+	border-radius:1px;
+	opacity:0.7;
+	filter:alpha(opacity=70); /* For IE8 and earlier */
+	cursor:pointer;
+}
+
+#thumblist li img{
+	display:block;
+	width:100%;
+	margin:auto;
+}
+#thumblist li:hover{
+	border-radius:3px;
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.fb_comment{
+	margin-left:10px;
+	width:700px;	
+}
+
+#sharediv{
+	width:25%;
+	margin-right:20px;
+	float:right;
+	top:-6.5em;
+	background-color:#323;
+	padding:10px 10px;
+	border-radius:3px;
+}
+
+#sharediv ul{
+	list-style:none;
+	margin-left:0;	
+	line-height:1.5em;
+}
+
+#sharediv li{
+	margin:5px auto;
+}
+/*#photolist-overflow{
 	float:right;
 	position:relative;
 	width:100px;
@@ -144,4 +244,8 @@
 	background-position:top center;
 	top:-25px;
 }
+
+*/
+
+
 

@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php require_once 'header.php' ?>
 <div id="content-bar">
 	<div id="content">
     	<h1> De 'changes' pagina </h1>
@@ -17,7 +17,5 @@
     <div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
 </div>
-<?php include 'footer.html'?>
-</div> <!-- end wrapper div -->
-</body>
-</html>
+<?php require_once 'footer.php'?>
+

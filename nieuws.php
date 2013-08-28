@@ -1,5 +1,5 @@
 <?php 
-	  include 'header.php';
+	  require_once 'header.php';
 	  require_once('misc/db_connectread.php');
 	  setlocale(LC_TIME, 'Dutch'); 
 ?>
@@ -12,30 +12,27 @@
 
 			if(isset($_GET['id'])){
 				$id=intval(str_replace('item','',$_GET['id']));
-				$query = "SELECT * FROM  `newsitems` WHERE  `ID` = $id";
+				$query = "SELECT * FROM  `nieuwsitems` WHERE  `ID` = $id";
 				$result = mysqli_query($mysql,$query);
 				$row = mysqli_fetch_array($result);
 				if ($row != NULL && $row['ID']!= "" ) {
-					$prev_news = strstr($_SERVER['HTTP_REFERER'],"?startat=");
-					?> <p><a href="nieuws.php
-					<?php
-						if($prev_news != false){
-							echo $prev_news;
-						} 
-                   	?>
-					"> Ga terug naar het nieuwsoverzicht</a></p>
+					$prev_news = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?startat=");
+					?> 
+                    <p> 
+                    	<a href="nieuws.php<?= $prev_news ? $prev_news : "" ?>">Ga terug naar het nieuwsoverzicht</a>
+                    </p>
                     <?php
 					// create only 1 newsitem
 					$special=true;
 					popnewsitem($row);
 					?>
-                    <p> <a href="nieuws.php"> Ga terug naar het nieuwsoverzicht</a></p>
+                    <p> <a href="nieuws.php<?= $prev_news ? $prev_news : "" ?>"> Ga terug naar het nieuwsoverzicht</a></p>
                     <?php
 				}
 			}
 			
 			if(!$special){
-				  $query = "SELECT `ID` FROM `newsitems` ORDER BY `ID` DESC LIMIT 1;";
+				  $query = "SELECT `ID` FROM `nieuwsitems` ORDER BY `ID` DESC LIMIT 1;";
 				  $result = mysqli_query($mysql,$query);
 				  $ans = mysqli_fetch_array($result);
 				  $start = $ans['ID'];
@@ -50,7 +47,7 @@
 				
                  <?php
                   include 'misc/morenews.php';
-                  $query = "SELECT * FROM `newsitems` WHERE `ID`<=$start ORDER BY `Datum` DESC LIMIT 5;";
+                  $query = "SELECT * FROM `nieuwsitems` WHERE `ID`<=$start ORDER BY `Datum` DESC LIMIT 5;";
                   $result = mysqli_query($mysql,$query);
                   while( $row = mysqli_fetch_array($result) )  {
                       popnewsitem($row);
@@ -65,20 +62,19 @@
     <div id="sidebar-right"></div>
 
 </div> <!-- end content-bar -->
-<?php include 'footer.html' ?>
-</div> <!-- end wrapper div -->
-</body>
-</html>
+<?php require_once 'footer.php' ?>
+
+
 
 
 <?php 
-	// function POPNEWSITEM creates a <div> entry for one single newsitem. It checks whether multiple newsitem need to be posted (by means of variable $special, and if so it only posts short versions of the items.
+	/* function POPNEWSITEM creates a <div> entry for one single newsitem. It checks whether multiple newsitem need to be posted (by means of variable $special, and if so it only posts short versions of the items.
 	//	input:
 	//		$db_entry   a database entry with the newsitem, coming from the 'newsitems' table of the 'juliuqb30_hw' database.
 	//  output:
 	// 		$ one <div> with class 'newsitem' (and 'single' in case only one newsitem is requested.
-	//  returns
-	//  	nothing
+	//  returns nothing
+	*/
 	function popnewsitem($db_entry){
 		global $special;
 		$date = explode("-",$db_entry['Datum']);

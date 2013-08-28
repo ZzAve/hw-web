@@ -16,7 +16,5 @@
 
 </div> <!-- end content-bar div -->
 
-<?php include 'footer.html'; ?>	
-</div> <!-- end wrapper div -->
-</body>
-</html>
+<?php require_once 'footer.php'; ?>	
+

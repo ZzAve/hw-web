@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>	
+<?php require_once 'header.php'; ?>	
 
 <div id="content-bar">
     <div id="content">
@@ -17,7 +17,6 @@
     <div id="sidebar-right"></div>
  
 </div> <!-- end content-bar -->
-<?php include 'footer.html' ?>
-</div> <!-- end wrapper div -->
-</body>
-</html>
+<?php require_once 'footer.php' ?>
+
+

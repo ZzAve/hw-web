@@ -1,4 +1,5 @@
-<div id="push"></div>
+	<div id="push"></div>
+</div> <!-- end wrapper div -->
 <div id="footer"> 
 	<div id="footer-bar"></div>
     <div id="social-media-icons">
@@ -37,3 +38,11 @@
         </ul>
     </div>
 </div>
+<?php
+	if(isset($mysql)){
+		@mysqli_close();
+	}
+?>
+
+</body>
+</html>
