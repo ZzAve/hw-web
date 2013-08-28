@@ -5,6 +5,22 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
+        <div class="newsitem" id="news_Locus">
+        	<div class="date"><label> 29 </label><span> AUG </span></div>
+            <h3> Bruisend optreden Locus Publicus</h3>
+            <img src="images/albums/2013 - 08 -25 !! Bierbiers Locus Publicus !! Locus, Brabantse Turfmarkt, Delft/HW_Locus_Publicus_20.jpg" alt="Bruisend optreden Locus Publicus" title="Bruisend optreden Locus Publicus" />
+        	
+            <p>Afgelopen zondag (25 augustus) speelden wij op de bierbeurs van bierlokaal Locus Publicus. Na een relaxte dag van speciaalbiertjes proeven, keuren en verhemelen werd het publiek blij verrast met Homemade Water.</p>
+
+			<p>Om 18.00 werd het startsein gegeven, en mochten wij na twee maanden eindelijk weer eens met z'n allen helemaal los op een podium om zo ons eigen feestje te b(r)ouwen. Het is dat ook ons eerste optreden in de buitenlucht geweest met de voltallige bezetting!</p>
+
+			<p>Nadat in de eerste helft de biertjes door begonnen te werken was het na de pauze een en al gekkigheid. Jong maar vooral ook oud waren de verschillende dansmoves nog niet vergeten, en zelfs een enkele rolstoelganger kon het niet laten om lekker mee te swingen op onze opzwepende melodien.</p>
+
+			<p>Echter werd om iets na achten het einde van het optreden niet erg hartelijk ontvangen, en werden we bijna gedwongen om nog maar een liedje te spelen. En dat terwijl 'Lonely Boy' en 'Dance With Somebody' juist zulke lekkere afsluiters waren, dachten wij. Maar nee, we moesten door blijven spelen, en na niet &eacute;&eacute;n, maar twee extra toegiften werd toch ook maar besloten om de Brabantse Turfmarkt af te breken door loeihard af te sluiten met 'Killing in the Name'.</p>
+
+			<p>Locus Publicus en alle andere bierbeursbezoekers: "Bedankt voor deze mooie avond!" (zie ook de <a href="foto.php">foto's</a>!</p>
+        </div>
+        
 		<div class="newsitem" id="news_GigsOWee">
         	<div class="date"><label> 16 </label><span> AUG </span></div>
             <h3> Terug van weggeweest!</h3>
