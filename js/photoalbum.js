@@ -16,19 +16,32 @@ $(document).ready(function() {
 	});
 	
 	$("#thumbs-one-album img").click(function() {
-		var newImg = new Image();
-		newImg.src = this.src.replace("_thumb","");	
-		$('#showPhoto img').fadeTo('slow',0.3,function(){
-			newImg.onload = replaceImage(newImg);
-		});
 		$('#showPhoto span.hidden').removeClass('hidden');
+		newImg = new Image();
+		newImg.src = this.src.replace("_thumb","");	
+		//alert('1  ' + newImg.src);
+		$('#showPhoto img').fadeTo('fast',0.5);
+		newImg.onload = function(){		
+			//alert('2 : ' + newImg.src);
+			var photo = $('#showPhoto img');
+			photo.attr('src',newImg.src);
+			photo.fadeTo('fast',1,function(){
+				$('#showPhoto span').addClass('hidden');
+			});
+		
+		};		
 	});	
+	
 });
 
 function replaceImage(image){
+	alert(image.src);
 	var photo = $('#showPhoto img');
 	photo.attr('src',image.src);
-	photo.fadeTo('fast',1,function() { $('#showPhoto span').addClass('hidden')});
+	photo.fadeTo('slow',1,function() { 
+		$('#showPhoto span').addClass('hidden');
+	});
+	
 }
 
 	

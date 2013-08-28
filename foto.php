@@ -142,7 +142,7 @@ include 'header.php';
 
 
 <!-- page specific scripts -->
-<script type="text/javascript" src="js/photoalbum.js"></script>
+<script type="text/javascript" src="/js/photoalbum.js"></script>
 </body>
 </html>
 

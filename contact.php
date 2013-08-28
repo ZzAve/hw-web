@@ -71,7 +71,7 @@ if( isset($_REQUEST['name']) ){
 
 </div> <!-- end content-bar -->
 <?php require_once 'footer.html'; ?>
-</div> <!-- end wrapper div -->
+
 
 
 <!--  Document specific scripts  --> 

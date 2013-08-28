@@ -18,6 +18,6 @@
     <div id="sidebar-right"></div>
 </div>
 <?php include 'footer.html'?>
-</div> <!-- end wrapper div -->
+
 </body>
 </html>

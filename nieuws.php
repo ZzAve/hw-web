@@ -119,6 +119,6 @@
 
 </div> <!-- end content-bar -->
 <?php include 'footer.html' ?>
-</div> <!-- end wrapper div -->
+
 </body>
 </html>
