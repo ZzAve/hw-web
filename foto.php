@@ -1,124 +1,139 @@
-<?php 
-// state global variables and functions
-
-// find all albums
-$album_folder="images/albums/";
-$all_albumfolders=array_reverse(glob($album_folder."*",GLOB_ONLYDIR)); // get all albumfolders and order them reversely (newest first)
-//usort($all_albumfolders, create_function('$a,$b', 'return filemtime($b) - filemtime($a);'));
-
-// put all albums in an array ('date' ; 'name' ; 'place' ; 'relative url')
-$all_albums = array();
-$all_albumnames = array();
-foreach ($all_albumfolders as $album){
-	$album = substr(strrchr($album,"/"),1);
-	$newrow = array_map('trim',explode("!!",$album));
-	$newrow[] = $album;
-	$all_albumnames[] = $newrow[1];
-	$all_albums[] = $newrow;
-}
-
-
-/*
-* Function album_present() checks whether a GET request is send to this page, 
-* concerning a photo album. If so it checks whether that photo albums exist. 
-* If not, or no request was send, it returns NULL. If an album is present it 
-* returns the name of the album.
-*/
-function album_present(){
-	global $album_folder; // make use of variable $album_folder as instantiated globally
-	global $all_albumnames;		// idem for $all_albums
-	global $all_albums;
-	
-	// check wheter album is requested
-	if(isset($_GET['album'])){ 
-		//  if album is requested, than get its name
-		$album=$_GET['album'];
-			
-		//check whether requested album exists on server and return this (true of false)
-		$test = array_search($album,$all_albumnames);
-		if($test !== FALSE){
-			return $all_albums[$test];
-		} else {
-			return FALSE;
-		}
-	} else {
-		// no album is selected. So return value false
-		return FALSE;
-	}
-} // end function album_present
-
-
-include 'header.php'; 
+<?php	
+	function putPhotoThumb($previous,$current,$next,$aLocation,$aName){
+		?>
+		<li id="<?=str_replace("_thumb.jpg","",$current)?>"> 
+		  <img src="<?=$aLocation."/".$current?>"/> 
+		  <!-- alt="<?=$aName?>" title="<?=$aName?>" --> 
+		  <span class="hidden prevImage"><?= $previous?></span>
+		  <span class="hidden nextImage"><?= $next?></span>
+	   </li>	
+       <?php
+   }
+   
+   
+   	require_once 'header.php'; 
+	require_once 'misc/db_connectread.php';
 ?>
 
 <div id="content-bar">  
       <div id="content">
-          <div id="gallery">
+
             <?php 
-			$album_presence = album_present(); // return album name if album is requested AND exists, NULL otherwise
-			if ($album_presence !== FALSE) {
-				//echo "album \"".$album_presence."\" exists";
-				$album_date = $album_presence[0];
-				$album_name  = $album_presence[1];
-				$album_place = $album_presence[2];
-				$album_location =  $album_presence[3];
-				?>
-            	<h1> Fotoalbum:  </label> <?= $album_name?> </h1>
-                <h2> Datum: <?= $album_date?> <br /> Plaats: <?= $album_place?> </h2>
-                <div id="photolist-overflow">   
-                    <div id="up"></div>
-                    <div id="down"></div>
-                    <div id="photolist">
-                        <ul id="thumbs-one-album">
-                            <?php //get all photo
-                            $curdir=getcwd();
-                            chdir($album_folder.$album_location);
-                            $photolist = glob("*_thumb.jpg");
-							natsort($photolist);
-                            chdir($curdir);
-							$photo1=NULL;
-                            foreach ($photolist as $photo){
-                                $length = strlen($photo);
-                                $photo_descr = substr($photo,0,$length-10);
-								if($photo1==NULL){
-									$photo1 = str_replace(" ","%",$photo_descr);
-								}
-                                ?>
-                                <li> <img src="<?=$album_folder.$album_location."/".$photo?>" alt="<?=$photo_descr?>" title="<?=$photo_descr?>"/> </li>	
-                                <?php
-                            }
-                            ?>
+			$special=FALSE;
+			if(isset($_GET['album'])){
+				$albumid=$_GET['album'];
+				
+				//check if album exists
+				$query = "SELECT * FROM `fotoalbums` WHERE `ID`=$albumid;";
+				$result = mysqli_query($mysql,$query);
+				$row = mysqli_fetch_array($result);
+				
+				if (isset($row['ID']) ) {
+					// now a special album is requested
+					$special=TRUE;
+					
+					$album_id=$row['ID'];
+					$album_name = $row['Titel'];
+					$album_date = $row['Datum'];
+					$album_place = $row['Locatie'];
+					$album_location = $row['Fotofolder'];
+					$album_descr = $row['Omschrijving'];
+					
+					?>
+					<a href="foto.php"> Terug naar het album overzicht</a>            	
+
+               		<h1> Fotoalbum:  </label> <?= $album_name?> </h1>
+               	 	<div id="sharediv">
+                        <ul>
+                            <li> 
+                                <script> 
+									document.write('<fb:like href="http://www.homemadewater.nl/foto.php?album=<?=$album_id?>" width="200" layout="button_count" show_faces="false" send="false"></fb:like>')
+                                </script> 
+                            </li>
+                            <li> 
+                                <a href="#"  onclick="window.open(
+                                'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+                                    'facebook-share-dialog', 
+                                    'width=626,height=436'); 
+                                    return false;">
+                                    Deel op Facebook</a>
+                            </li>
+                            <li> <div class="g-plusone" data-annotation="inline" data-width="200"></div></li>
+                            <li> 
+                                <a href="https://twitter.com/share" data-text="Wat een tof fotoalbum van dat optreden van Homemade Water" class="twitter-share-button" data-lang="nl">
+                                    Tweeten
+                                </a>
+                            </li>
                         </ul>
-                   </div>
-                 </div>
-                 <div id="showPhoto"> <!-- div that can be used to "pop up" -->
-                    <img src="<?=$album_folder.$album_location."/".$photo1.".jpg"?>" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Deze fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto"/>   
-                    <span class="hidden"> Laden . . . </span>
-                    <div id="nextPhoto"></div> <!-- make it a button later on with js -->
-					<div id="previousPhoto"></div> <!-- make it a button later on with js -->
-                    <div id="closePhotoAlbum"></div> <!-- make it a button later on with js -->
-                </div> 
+                    </div><!-- end 	share div -->
+                    
+                    <h2> Datum: <?= $album_date?> <br /> Plaats: <?= $album_place?> </h2>		
+                    <p class="album_descr"> <?=$album_descr?></p>
+    
+                    <div id="thumblist">
+                        <ul>
+                            <?php //get all photo
+                              $curdir=getcwd();
+                              chdir($album_location);
+                              $photolist = glob("*_thumb.jpg");
+                              natsort($photolist);
+                              chdir($curdir);
+                              $firstdone=false;
+							  $prevPhoto = "";
+							  $curPhoto = "";
+							  $nextPhoto = "";
+							  foreach($photolist as $photo){
+								  $prevPhoto = $curPhoto;
+								  $curPhoto = $nextPhoto;
+								  $nextPhoto = $photo;
+                                  if (!$firstdone) {
+									  $firstdone=true;
+								  } else {
+									  putPhotoThumb($prevPhoto,$curPhoto,$nextPhoto,$album_location,$album_name);
+								  }
+                              }
+
+                           putPhotoThumb($curPhoto,$nextPhoto,"",$album_location,$album_name);
+						   ?>
+                        </ul>	
+                    </div>
+                    
+                    <div class="fb_comment">
+                        <script>
+                            document.write('<fb:comments href="http://www.homemadewater.nl//foto.php?album=<?=$album_id?>" colorscheme="dark" width="600"></fb:comments>')
+                        </script>
+                    </div>
+					
+					<?php
+				}
+			} // end check for special album
 			
-			<?php
-			} else { 
+			
+			
+			if (!$special){
+				//no special album is requested, so give all.	
+			
 				?>
                 
-                <!-- Say hi to people on the page -->
                 <h1> Fotoalbums </h1>
                 <h2> Om een beeld te krijgen van een feestje met Homemade Water! </h2>
                 
                 <ul id="album-list">
 					<?php
                     // Show photo-albums in an unordered list (<ul> ... </ul>)
-                    foreach ($all_albums as $album_array){
+					$query= "SELECT * FROM `fotoalbums`  WHERE 1 ORDER BY `Datum` DESC;";
+					$result = mysqli_query($mysql,$query);
+                    while ($row = mysqli_fetch_array($result)){
                         // show a thumbnail and description
-						$album_date = $album_array[0];
-                        $album_name  = $album_array[1];
-						$album_place = $album_array[2];
-						$album_location =  $album_array[3];
+						$album_id = $row['ID'];
+						$album_date = $row['Datum'];
+                        $album_name  = $row['Titel'];
+						$album_place = $row['Locatie'];
+						$album_location =  $row['Fotofolder'];
+						$album_thumb = $row['Thumbnail'];
 						?>
-                      	<li> <a href="./foto.php?album=<?=$album_name?>"> 
-                        		<img src="<?=$album_folder.$album_name?>.jpg" alt="<?=$album_name?>" title="<?=$album_name?>" />
+                      	<li> <a href="./foto.php?album=<?=$album_id?>"> 
+                        		<img src="<?=$album_thumb?>" alt="<?=$album_name?>" title="<?=$album_name?>" />
                              </a> 
 							 <label> <?= $album_date?> </label>	<?=$album_name?> <span> <?=$album_place?> </span>
                         </li>
@@ -130,19 +145,41 @@ include 'header.php';
 			} // end if else (show ONE albums, or albumlist)
 			?>
             
-         </div> <!-- end gallery div -->
+
      </div>
      
      <div id="sidebar-left"></div>
      <div id="sidebar-right"></div>   
 </div> <!-- end content-bar -->
 
-<?php include 'footer.html'; ?>
-</div> <!-- end wrapper div -->
+<div id="showPhoto" class="hidden"> <!-- div that can be used to "pop up" -->
+    <div id="photosite">
+       	<img class="show" src="" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Deze fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto" />
+		<span class="hidden"> Laden . . . </span>
+        <div>
+        	<div id="nextPhoto"> <a href="#">Volgende foto</a></div>
+            <div id="previousPhoto"><a href="#">Vorige foto </a></div> 
+            <div id="closePhotoAlbum" ><img src="images/close_button.png" alt="Close" title="Close" /></div>
+		</div>
+</div> 
+
+   
+<?php require_once 'footer.php'; ?>
+
 
 <!-- page specific scripts -->
 <script type="text/javascript" src="js/photoalbum.js"></script>
-</body>
-</html>
 
 
+<!-- te verwerken scripts -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'nl'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

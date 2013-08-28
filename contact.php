@@ -70,11 +70,10 @@ if( isset($_REQUEST['name']) ){
     <div id="sidebar-right"></div>
 
 </div> <!-- end content-bar -->
-<?php require_once 'footer.html'; ?>
-</div> <!-- end wrapper div -->
+<?php require_once 'footer.php'; ?>
+
 
 
 <!--  Document specific scripts  --> 
 <script type="text/javascript" src="./js/validate.js"></script>
-</body>
-</html>
+
