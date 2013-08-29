@@ -13,6 +13,8 @@
 	-moz-webkit-filter: drop-shadow(5px 5px 5px #222);
 	-ms-webkit-filter: drop-shadow(5px 5px 5px #222);
 	position:absolute;
+	position:fixed;
+	bottom:0px;
 	z-index:10;
 	top:-10px; left:0;
 	height:40px;
