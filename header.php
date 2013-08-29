@@ -5,7 +5,7 @@
       lang="nl" xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-07-01" />
+    <meta http-equiv="last-modified" content="2013-08-29" />
     <meta http-equiv="content-language" content="nl" />
    	<meta property="fb:admins" content="100001997083297" />
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
