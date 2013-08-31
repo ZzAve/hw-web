@@ -72,8 +72,8 @@ if( isset($_REQUEST['name']) ){
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php'; ?>
 
-
-
 <!--  Document specific scripts  --> 
 <script type="text/javascript" src="./js/validate.js"></script>
 
+</body>
+</html>

@@ -20,9 +20,9 @@
     <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
 
     <!-- for testing -->
-    <!--<base href="http://localhost/hw-web/" />-->
+    <base href="http://localhost/hw-web/" />
     <!-- for test site -->
-	<base href="http://development.homemadewater.nl/" />
+	<!--<base href="http://development.homemadewater.nl/" />
     <!-- for site -->
     <!--<base href="http://www.homemadewater.nl/" />-->
 
@@ -39,42 +39,10 @@
     <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/video.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />    
-    
-    <!--- scripts -->
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript"> <!-- google analytics script -->
-	  (function(i,s,o,g,r,a,m){
-		  i['GoogleAnalyticsObject']=r;
-		  i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
-			a=s.createElement(o), m=s.getElementsByTagName(o)[0];
-			a.async=1;
-			a.src=g;
-			m.parentNode.insertBefore(a,m)
-	  })
-	
-	  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-41431442-1', 'homemadewater.nl');
-	  ga('send', 'pageview');
-	
-	</script>   
+    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />       
 </head>
 
 <body>
-	<!-- Facebook SDK import function -->
-    <div id="fb-root"></div>
-    <script type="text/javascript" async="async">
-		(function(d, s, id) {
-		   var js, fjs = d.getElementsByTagName(s)[0];
-		   if (d.getElementById(id)) return;
-		   js = d.createElement(s); 
-		   js.id = id;
-		   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-		   fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-    </script>
 
 <div id="wrapper">
     <div id="header">       
@@ -84,9 +52,10 @@
         <div id="navbar">
             <ul id="menu">
                <li class="highlight"><a href="index.php">HOME</a></li>
-               <li><a href="nieuws.php">NIEUWS</a></li> 
                <li><a href="band/">BAND</a>
-                 <ul>
+               <li><a href="nieuws.php">NIEUWS</a></li> 
+               <li><a href="agenda.php">AGENDA</a></li>
+                 <!--<ul>
                     <li> <a href="band/"> ALGEMEEN </a></li> 
                  	<li> <a href="band/reportoire.php"> REPORTOIRE </a></li> 
                     <li> <a href="band/bandleden.php"> BANDLEDEN </a>
@@ -98,16 +67,12 @@
                         <li> <a href="band/Julius.php"> Julius </a></li>
                       </ul>
                     
-                 </ul>
+                 </ul>-->
                </li>
-               <li><a href="#">MEDIA</a>
-                 <ul>
-                    <li><a href="foto.php"> FOTO</a></li>
-                    <li><a href="video.php"> VIDEO</a></li>
-                    <li><a href="audio.php"> AUDIO</a></li>
-                 </ul>
-               </li>                 	
-			   <li><a href="agenda.php">AGENDA</a></li>
+               <li><a href="foto.php"> FOTO'S</a></li>
+               <li><a href="video.php"> VIDEO</a></li>
+               <li><a href="audio.php"> AUDIO</a></li>              	
+			   
                <li><a href="contact.php">CONTACT</a></li>
             </ul>
        </div>

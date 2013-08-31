@@ -2,18 +2,25 @@ window.onresize = setPhotoViewMargin;
 
 $(document).ready(function() {
 	setPhotoViewMargin();	
+	window.onkeyup = checkKey;
 	var c=0;
 
 	$("#thumblist li img").click(function() {
 		var src = this.src.replace("_thumb","");
 		$("#showPhoto img.show").attr("src",src);
 		$("#showPhoto").removeClass("hidden");
+		preloadImg(src);
 
 	});
 	
 	$("#closePhotoAlbum").click(function() {
 		$("#showPhoto").addClass("hidden");
 	});
+	
+	$('#photosite img.show').click(function(){
+		$('#nextPhoto').click();
+	});
+	
 	
 	/*
 	* This function is used to determine the next and previous photo.
@@ -36,6 +43,7 @@ $(document).ready(function() {
 			$('#showPhoto').addClass('hidden');
 		} else {
 			$("#photosite img.show").attr('src',path.concat(newPhoto));
+			preloadImg(path.concat(newPhoto));
 		}
 		
 		//alert("$(\"#\" " + next + "\" .nextImage\") : " +  	$("#" + next + " .nextImage"));
@@ -71,6 +79,7 @@ $(document).ready(function() {
 		$('#showPhoto span.hidden').removeClass('hidden');
 	});	
 	*/
+	
 });
 /*
 function replaceImage(image){
@@ -86,4 +95,33 @@ function setPhotoViewMargin(){
 	var newMargin = 0.03 * winheight;
 	photodiv.style.marginTop = newMargin + "px";
 
+}
+
+function checkKey(){
+	if ( !$('#showPhoto').hasClass('hidden')){
+	   	if (event.keyCode == 39){ //right
+			$('#nextPhoto').click();
+		} else if (event.keyCode == 37) { // left
+			$('#previousPhoto').click();
+		} else if (event.keyCode == 27) { // esc
+			$('#closePhotoAlbum').click();
+		}
+	}
+}
+
+function preloadImg(liID){
+	path = liID.substring(0,liID.lastIndexOf("/")+1);
+	liID = liID.substring(liID.lastIndexOf("/")+1,liID.length);
+	liID = liID.replace(".jpg","");
+	prevstr = liID.concat(" .prevImage");
+	prev = $('#'+prevstr).html().replace("_thumb","");
+	nextstr = liID.concat(" .nextImage");
+	next = $('#'+nextstr).html().replace("_thumb","");
+
+	prvImg = new Image();
+	nxtImg = new Image();
+	nxtImg.src=path+next;
+	nxtImg.onload = function() {
+		prvImg.src = path + prev;
+	}
 }

@@ -43,10 +43,19 @@ function sizeContentbar(){
 		var wrapper = document.getElementById("wrapper");
 		var footer = document.getElementById("footer");
 		var contentbar = document.getElementById("content-bar");
-		totalHeight = wrapper.clientHeight + footer.clientHeight;
+		
+		var ieversion = 100;
+		if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ 
+		   ieversion=new Number(RegExp.$1);
+		}	
+		totalHeight = wrapper.clientHeight;
+		if (ieversion<8){
+			 totalHeight += footer.clientHeight;
+		}
+		
 		
 		if (totalHeight < window.innerHeight) {
-			diff = window.innerHeight - totalHeight + footer.clientHeight;
+			diff = window.innerHeight - totalHeight;
 			newHeight = contentbar.clientHeight + diff;
 			contentbar.style.height = newHeight + "px";
  		}

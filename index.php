@@ -25,15 +25,20 @@
          <p> Nieuwsgierig geworden? Check onze <a href="./audio.php">media</a> en <a href="./nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p>    
          
          <div id="agenda"> <h3>Agenda:</h3>
-           <ul>
-                <?php // Fetch the 3 gigs closest to today (in the future)
+           
+                <?php // Fetch the 5 gigs closest to today (in the future)
                 $query = "SELECT * FROM `agenda` WHERE `Datum`>(CURDATE()-1) ORDER BY `Datum` ASC LIMIT 0,5";
                 $result = mysqli_query($mysql,$query);			
                 $counter=0;
                 while( $row = mysqli_fetch_array($result) )  {
-                          // while there is still an newsitem to process, put it in a listitem
-                          $counter++;
-                          popagendaevent($row);
+				   // while there is still an newsitem to process, put it in a listitem
+				   if($counter++ ==0){
+					  ?>
+						  <h4> Aankomende optredens</h4>
+						  <ul> 
+					  <?php
+				   }
+				   popagendaevent($row);
 				} ?>
            </ul>
            
@@ -54,7 +59,7 @@
 				} //end $counter<5 if 
 		  ?> 
           <p> <a href="agenda.php"> Meer optredens </a></p>
-        </div>
+        </div> <!-- end agenda -->
         
         
          <div id="news"> 
@@ -74,7 +79,7 @@
                 ?>
             </ul>
             <p><a href="nieuws.php"> Meer nieuws </a></p>
-        </div>    
+        </div>    <!-- end news -->
         
     </div> <!-- end content -->    
     
@@ -84,7 +89,8 @@
 </div> <!-- end content-bar div -->
 
 <?php require_once 'footer.php'; ?>	
-<!-- end html  (</html>) -->
+</body>
+</html>
 
 <?php
 	function popagendaevent($db_entry){

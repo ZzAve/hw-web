@@ -14,7 +14,7 @@ html, body{
 	width:auto;
 	min-width:1100px;
 	position:relative;
-	background: url("../images/backgrounds/achtergrondDSB4.jpg")  fixed no-repeat top left #000000;
+	background: url("../images/backgrounds/witewall_3.png") fixed repeat top left #000000;
 	font-family: 'Maven Pro', sans-serif;
 	font-size: 0.95em;
 	color: #CCC;

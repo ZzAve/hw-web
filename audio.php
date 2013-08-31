@@ -36,6 +36,7 @@
 
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php' ?>
-
+</body>
+</html>
 
 

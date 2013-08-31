@@ -43,9 +43,10 @@
 					<a href="foto.php"> Terug naar het album overzicht</a>            	
 
                		<h1> Fotoalbum:  </label> <?= $album_name?> </h1>
-               	 	<div id="sharediv">
+               	 	<div id="sharediv">                
                         <ul>
-                            <li> 
+                        
+                            <li class="fblike"> 
                                 <script> 
 									document.write('<fb:like href="http://www.homemadewater.nl/foto.php?album=<?=$album_id?>" width="200" layout="button_count" show_faces="false" send="false"></fb:like>')
                                 </script> 
@@ -132,7 +133,7 @@
 						$album_location =  $row['Fotofolder'];
 						$album_thumb = $row['Thumbnail'];
 						?>
-                      	<li> <a href="./foto.php?album=<?=$album_id?>"> 
+                      	<li> <a href="foto.php?album=<?=$album_id?>"> 
                         		<img src="<?=$album_thumb?>" alt="<?=$album_name?>" title="<?=$album_name?>" />
                              </a> 
 							 <label> <?= $album_date?> </label>	<?=$album_name?> <span> <?=$album_place?> </span>
@@ -161,15 +162,13 @@
             <div id="previousPhoto"><a href="#">Vorige foto </a></div> 
             <div id="closePhotoAlbum" ><img src="images/close_button.png" alt="Close" title="Close" /></div>
 		</div>
+   </div>
 </div> 
 
-   
 <?php require_once 'footer.php'; ?>
-
 
 <!-- page specific scripts -->
 <script type="text/javascript" src="js/photoalbum.js"></script>
-
 
 <!-- te verwerken scripts -->
 <script type="text/javascript">
@@ -183,3 +182,7 @@
 </script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</body>
+</html>
+

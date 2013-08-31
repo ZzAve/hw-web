@@ -12,7 +12,7 @@
 	position: absolute;
 	margin-left: 689px;
 	margin-top: 138px;
-	z-index:2;
+	z-index:10;
 } 
 
 #logo {
@@ -46,12 +46,13 @@
     padding: 0;
 	margin-left:20px;
 	margin-right:20px;
+	margin-top:1px;
 }
 
 #menu > li{ 
     float: left;
-	margin-left: 25px;
-	margin-right:10px;
+	margin-left: 15px;
+	margin-right:0;
 }
 #menu li a {
     display: block;

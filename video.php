@@ -47,7 +47,6 @@
 
 <!-- page specific scripts -->
 <script type="text/javascript" src="js/video.js"></script>
+
 </body>
-
-
 </html>

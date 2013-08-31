@@ -28,7 +28,7 @@
    margin-bottom: 8px;
    position: relative;
    z-index:9; /* show below the footer-bar */
-   bottom: 53%;
+   bottom: 55%;
 }
 
 #social-media-icons ul{
@@ -46,7 +46,7 @@
 #social-media-icons li{
 	max-height:100%;
 	width:14%;
-	display: inline;
+	display: inline-block;
 	margin-right:10px;
 	position:relative;
 	vertical-align:top;
@@ -64,7 +64,7 @@
 }
 
 #social-media-icons ul li:hover{
-	bottom:8px;
+	bottom:6px;
 }
 
 #fb-like{
@@ -80,11 +80,12 @@
 
 #fb{
 	bottom:5px;
-	transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); /* IE 9 */
-	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+	transform:rotate(-5deg);
+	-ms-transform:rotate(-5deg); /* IE 9 */
+	-webkit-transform:rotate(-5deg); /* Safari and Chrome */
 }
 #fb:hover{
+	bottom:9px;
 	transform:rotate(1deg);
 	-ms-transform:rotate(1deg); /* IE 9 */
 	-webkit-transform:rotate(1deg); /* Safari and Chrome */	
@@ -102,10 +103,16 @@
 	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
 }
 
+#yt{
+	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-webkit-transform:rotate(3deg); /* Safari and Chrome */
+}
+
 #yt:hover{
-	transform:rotate(2deg);
-	-ms-transform:rotate(2deg); /* IE 9 */
-	-webkit-transform:rotate(2deg); /* Safari and Chrome */
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-webkit-transform:rotate(7deg); /* Safari and Chrome */
 }
 
 #copyright {

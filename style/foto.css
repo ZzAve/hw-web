@@ -78,6 +78,7 @@
 	width:auto;
 	max-width:100%;
  	margin: 0px auto;
+	cursor:pointer;
 }
 
 #photosite span{
@@ -176,6 +177,11 @@
 
 #sharediv li{
 	margin:5px auto;
+}
+
+#sharediv .fblike {
+	overflow:hidden;
+	height:22px;
 }
 /*#photolist-overflow{
 	float:right;
