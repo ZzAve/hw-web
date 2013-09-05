@@ -1,11 +1,18 @@
 <?php	
-	function putPhotoThumb($previous,$current,$next,$aLocation,$aName){
+	$counter=1;
+	function putPhotoThumb($current,$aLocation,$aName){
+		global $counter;
 		?>
+        
 		<li id="<?=str_replace("_thumb.jpg","",$current)?>"> 
-		  <img src="<?=$aLocation."/".$current?>"/> 
-		  <!-- alt="<?=$aName?>" title="<?=$aName?>" --> 
+		  <a href="<?=$aLocation."/".str_replace("_thumb","",$current)?>" data-lightbox="photo-album" title=""/> 
+          	<img src="<?=$aLocation."/".$current?>"/> <!-- show thumbnail --> 
+          </a>
+          <!-- old image thingies -->
+          <!--<a href="img/image-1.jpg" data-lightbox="image-1" title="My caption">image #1</a>
+		  <!-- alt="<?=$aName?>" title="<?=$aName?>" -- 
 		  <span class="hidden prevImage"><?= $previous?></span>
-		  <span class="hidden nextImage"><?= $next?></span>
+		  <span class="hidden nextImage"><?= $next?></span>-->
 	   </li>	
        <?php
    }
@@ -90,11 +97,11 @@
                                   if (!$firstdone) {
 									  $firstdone=true;
 								  } else {
-									  putPhotoThumb($prevPhoto,$curPhoto,$nextPhoto,$album_location,$album_name);
+									  putPhotoThumb($curPhoto,$album_location,$album_name);
 								  }
                               }
 
-                           putPhotoThumb($curPhoto,$nextPhoto,"",$album_location,$album_name);
+                           putPhotoThumb($nextPhoto,$album_location,$album_name);
 						   ?>
                         </ul>	
                     </div>
@@ -152,8 +159,8 @@
      <div id="sidebar-left"></div>
      <div id="sidebar-right"></div>   
 </div> <!-- end content-bar -->
-
-<div id="showPhoto" class="hidden"> <!-- div that can be used to "pop up" -->
+<!--
+<div id="showPhoto" class="hidden"> <!-- div that can be used to "pop up" --
     <div id="photosite">
        	<img class="show" src="" alt="De gevraagde foto is helaas niet beschikbaar, door een fout op de server. Deze fout wordt z.s.m. verholpen. Ons excuses voor het ongemak" title="Awesome foto" />
 		<span class="hidden"> Laden . . . </span>
@@ -164,16 +171,15 @@
 		</div>
    </div>
 </div> 
-
+-->
 <?php require_once 'footer.php'; ?>
 
 <!-- page specific scripts -->
 <script type="text/javascript" src="js/photoalbum.js"></script>
-
-<!-- te verwerken scripts -->
+<script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
+<!-- google plus script -->
 <script type="text/javascript">
   window.___gcfg = {lang: 'nl'};
-
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
@@ -181,6 +187,7 @@
   })();
 </script>
 
+<!-- twitter script -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 </body>

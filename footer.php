@@ -15,7 +15,7 @@
    					
 					if (ieversion>=8)
    					{
-      					   document.write('<fb:like href="http://www.homemadewater.nl" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like>');
+      					   document.write('<fb:like href="http://www.facebook.com/HomemadeWater" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like>');
 					}
 				//]]>
                 </script>
@@ -45,7 +45,8 @@
 ?>
 
  	<!--- scripts -->
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
     <!-- Facebook SDK import function -->
     <div id="fb-root"></div>
     <script type="text/javascript" async="async">

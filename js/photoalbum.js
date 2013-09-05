@@ -1,10 +1,29 @@
-window.onresize = setPhotoViewMargin;
+//window.onresize = setPhotoViewMargin;
+
+window.onload = function(){
+	$('#thumblist li img').each(function(index){
+			//check height of father element
+			var imgHeight = $(this).height();
+			var parentHeight = $(this).parent().parent().height();
+			
+			// if height of father element is smaller then height of img, shift image up
+			if (parentHeight < imgHeight){
+				
+				shiftUp = (imgHeight - parentHeight)/2;
+				shiftValue = (-shiftUp) + "px";
+				$(this).css('position','relative');
+				$(this).css('top',shiftValue);
+			}
+			$(this).parent().parent().css('opacity',0.8);
+		});
+};
 
 $(document).ready(function() {
-	setPhotoViewMargin();	
-	window.onkeyup = checkKey;
-	var c=0;
-
+	//setPhotoViewMargin();	
+	//window.onkeyup = checkKey;
+	//var c=0;
+	
+	/*
 	$("#thumblist li img").click(function() {
 		var src = this.src.replace("_thumb","");
 		$("#showPhoto img.show").attr("src",src);
@@ -24,7 +43,7 @@ $(document).ready(function() {
 	
 	/*
 	* This function is used to determine the next and previous photo.
-	*/
+	*
 	$('#previousPhoto, #nextPhoto').click(function() {
 		event.preventDefault();
 		var liId = $(this).parent().parent().children("img").attr("src");
@@ -54,7 +73,8 @@ $(document).ready(function() {
 		//$("#showPhoto img.show").attr("src",src);
 		
 	});
-
+	*/
+	
 	/**
 	if($('#thumbs-one-album') != null){		
 		heightdiv = $('#photolist').height(); // get height of showing div
@@ -87,7 +107,7 @@ function replaceImage(image){
 	photo.attr('src',image.src);
 	photo.fadeTo('fast',1,function() { $('#showPhoto span').addClass('hidden')});
 }
-*/
+
 
 function setPhotoViewMargin(){
 	var photodiv = document.getElementById("photosite");
@@ -124,4 +144,6 @@ function preloadImg(liID){
 	nxtImg.onload = function() {
 		prvImg.src = path + prev;
 	}
+	
 }
+*/

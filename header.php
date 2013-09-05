@@ -20,9 +20,9 @@
     <meta name="Homemade Water" content="Delft band cover coverband Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
 
     <!-- for testing -->
-    <base href="http://localhost/hw-web/" />
+    <!--<base href="http://localhost/hw-web/" />-->
     <!-- for test site -->
-	<!--<base href="http://development.homemadewater.nl/" />
+	<base href="http://development.homemadewater.nl/" />
     <!-- for site -->
     <!--<base href="http://www.homemadewater.nl/" />-->
 
@@ -39,7 +39,10 @@
     <link rel="stylesheet" type="text/css" href="style/audio.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/foto.css" title="style" />
     <link rel="stylesheet" type="text/css" href="style/video.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" />       
+    <link rel="stylesheet" type="text/css" href="style/contact.css" title="style" /> 
+    
+    <link rel="stylesheet" type="text/css" href="style/lightbox.css" title="style" />
+      
 </head>
 
 <body>
