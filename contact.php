@@ -54,7 +54,7 @@ if( isset($_REQUEST['name']) ){
         <?php } ?>
         
         <!-- The contact form -->
-        <form id="contact_form" enctype="multipart/form-data" onsubmit="return validate()" action="./contact.php" method="post">
+        <form id="contact_form" enctype="multipart/form-data" onsubmit="return validateContact()" action="./contact.php" method="post">
             <p>Naam <br /><input type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>
             <p>E-mail <br /><input type="text" name="email" <?= $error ?"value=\"$email\"" : NULL ?> /></p>
             <p>Telefoon (optioneel) <br /><input type="text" name="phone"/> </p>

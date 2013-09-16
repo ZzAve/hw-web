@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-#guestbook p{
+/*#guestbook p{
 	height:auto;
 	margin-right:10px;
 	display:inline;
@@ -19,11 +19,62 @@
 
 }
 
+
+
 #guestbook input["text"]{
 	display:inline;
 	text-align:left;
 		
+}*/
+
+#guestbook input, #guestbook textarea, #guestbook select, #guestbook submit, #guestbook reset #guestbook checkbox{
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;	
+	margin-bottom:10px;
 }
+
+#guestbook label{
+	text-align:right;
+	display:inline-block;
+	vertical-align:middle;
+	width:80px;
+	margin:0 10px 0 0;
+}
+
+#guestbook input[type="text"]{
+	width:228px;
+
+}
+
+#guestbook textarea{
+	width:290px;
+	max-width:290px;
+	min-width:290px;
+	min-height:75px;
+	height:75px;
+	max-height:150px;
+}
+
+#guestbook input[type="submit"]{
+	vertical-align:bottom;
+	margin:0 10px 10px 10px;
+}
+
+#guestbook input[type="checkbox"], #guestbook #email-copy-label{
+	vertical-align:bottom;
+	margin: 0 0 10px 5px;
+}
+
+#guestbook #email-copy-label{
+	width:115px;
+}
+
+#guestbook #email-copy-checkbox{
+	margin-bottom:15px;	
+}
+
 #posts{
 	margin-top:50px;
 }

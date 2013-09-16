@@ -11,7 +11,7 @@ function stripTags(input){
 	return input.replace(/<\/?[^>]+(>|$)/g, "").replace(/^\s*/, "").replace(/\s*$/, "");
 } 
 
-function validate()
+function validateContact()
 {
 	var doc = $("#contact_form");
 	var name = $('#contact_form input[name="name"]');
@@ -48,5 +48,40 @@ function validate()
 		bericht.focus();
 		return false;
 	}
+	return  true;
+}
+
+function validateGuestbook()
+{
+	var doc = $("#guestbook");
+	var name = $('#guestbook input[name="name"]');
+	if(stripTags( name.val() ) == '')
+	{
+		alert("Vul a.u.b. een naam in.");
+		name.focus();
+		return false;
+	}
+	var email = $('#guestbook input[name="email"]');
+	if(!validate_email(stripTags( email.val() ))){
+		alert("Vul a.u.b. een geldig e-mail adres in");
+		email.focus();
+		return false;
+	}
+	/*if(!validate_number(doc.phone.value))
+	{
+		alert("Vul a.u.b. een geldig telefoonnummer in (0-9)");
+		doc.phone.focus();
+		return false;
+	}*/
+	
+	var bericht = $('#guestbook textarea[name="bericht"]');
+	if(stripTags(bericht.val()) == '')
+	{
+		alert("Vul a.u.b. een bericht in");
+		bericht.focus();
+		return false;
+	}
+	
+	// If message is valid (name, e-mail and message), admit it ...
 	return  true;
 }

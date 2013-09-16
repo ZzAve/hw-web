@@ -9,12 +9,13 @@
 
 input[type="text"]{
 	height:25px;
-	width:150px;
+	width:250px;
 	margin-top:5px;
 	margin-bottom:5px;
 }
 
 input[type="text"], textarea{
+	font: inherit;
 	text-align:left;
 	color:#06F;
 	border-radius:5px;
