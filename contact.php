@@ -26,10 +26,9 @@ if( isset($_REQUEST['name']) ){
 		$copy_mail = NULL;
 	}
 }
-?>
-
-
-<?php require_once 'header.php'; ?>	
+	$title= "Contact";
+ 	require_once 'header.php'; 	
+?>	
 <div id="content-bar">
     <div id="content">
         <h1> Neem contact met ons op</h1>

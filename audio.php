@@ -1,5 +1,8 @@
-
-<?php require_once 'header.php'; ?>
+<?php
+ 
+	$title="Audio";
+	require_once 'header.php'; 
+?>
 <div id="content-bar">
     <div id="content">
 		<h1> De audio pagina </h1>
@@ -25,10 +28,7 @@
                     <li> Seven Nation Army - The White Stripes </li>
                 </ul> 
             </div>
-		</div>        
-      
-           
-           
+		</div> <!-- end audiolist -->       
            
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>

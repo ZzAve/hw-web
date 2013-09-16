@@ -1,4 +1,6 @@
-<?php require_once  '../header.php'; ?>
+<?php
+	$title="Band"; 
+	require_once  '../header.php'; ?>
 <div id="content-bar">
 	<div id="content">
          <h1> De band</h1>

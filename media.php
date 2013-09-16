@@ -1,4 +1,7 @@
-<?php require_once 'header.php'; ?>	
+<?php 
+	$title= "Media"
+	require_once 'header.php'; 
+?>	
 
 <div id="content-bar">
     <div id="content">

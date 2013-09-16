@@ -1,4 +1,8 @@
-<?php require_once 'header.php'; ?>
+
+<?php 
+	$title = "Video";
+	require_once 'header.php'; 
+?>
 
 <div id="content-bar">
     <div id="content">   
