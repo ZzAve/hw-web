@@ -14,7 +14,7 @@ window.onload = function(){
 				$(this).css('position','relative');
 				$(this).css('top',shiftValue);
 			}
-			$(this).parent().parent().css('opacity',0.8);
+			$(this).parent().parent().addClass('loadedImg');
 		});
 };
 
