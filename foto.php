@@ -5,8 +5,8 @@
 	
 	if(isset($_GET['album'])){
 		$request=true;
-		$albumid=$_GET['album'];
-		
+		$albumid=intval($_GET['album']);
+				
 		//check if album exists
 		$query = "SELECT * FROM `fotoalbums` WHERE `ID`=$albumid;";
 		$result = mysqli_query($mysql,$query);
@@ -19,7 +19,7 @@
 	}
 
 	//Set a facebook image
-	$fb_img = $valid_request!==false ? $valid_request['Foto'] :"";	
+	$fb_img = $valid_request!==false ? $valid_request['Thumbnail'] :"";	
 	
 	//Set a title for the page
 	$pre_title=$valid_request!==false ? $valid_request['Titel']." - " : "";
@@ -49,7 +49,7 @@
             <div id="sharediv">                
                 <ul>
                     <li class="fblike"> 
-                        <script> 
+                        <script type="text/javascript"> 
                             //<![CDATA[
                             document.write('<fb:like href="http://www.homemadewater.nl/foto.php?album=<?=$album_id?>" width="200" layout="button_count" show_faces="false" send="false"></fb:like>');
                             //]]>
@@ -59,9 +59,17 @@
                         <a href="#"  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;">
                             Deel op Facebook</a>
                     </li>
-                    <li> <div class="g-plusone" data-annotation="inline" data-width="200"></div></li>
-                    <li> 
-                        <a href="https://twitter.com/share" data-text="Wat een tof fotoalbum van dat optreden van Homemade Water" class="twitter-share-button" data-lang="nl">Tweeten</a>
+                    <li> <script type="text/javascript"> 
+                            //<![CDATA[
+                            document.write('<div class="g-plusone" data-annotation="inline" data-width="200"></div>');
+                            //]]>
+                        </script>
+                    </li>
+                    <li> <script type="text/javascript"> 
+                            //<![CDATA[
+                            document.write('<a href="https://twitter.com/share" data-text="Wat een tof fotoalbum van dat optreden van Homemade Water" class="twitter-share-button" data-lang="nl">Tweeten</a>');
+                            //]]>
+                        </script>
                     </li>
                 </ul>
             </div><!-- end 	share div -->
@@ -70,7 +78,8 @@
             <h2> Plaats: <?= $album_place ?> </h2>		
             <p class="album_descr"> <?=$album_descr?></p>
 	
-            <div id="thumblist">
+            <div id="thumblist" class="notLoaded">
+              <div class="loading"></div>
               <ul>
 <?php		    //get all photos
 				$curdir=getcwd();
@@ -86,7 +95,7 @@
             </div>
 			
             <div class="fb_comment">
-              <script>
+              <script type="text/javascript">
                 //<![CDATA[
                 document.write('<fb:comments href="http://www.homemadewater.nl//foto.php?album=<?=$album_id?>" colorscheme="dark" width="600"></fb:comments>')
                 //]]>
@@ -98,7 +107,7 @@
 		    // the overview is requested
 			
 			if($request){//show error (through an javascript alert?)
-?>				<script> 
+?>				<script type="text/javascript"> 
 					setTimeout(function(){alert('Helaas is het door u opgegeven nieuwsbericht niet meer beschikbaar of heeft het nooit bestaan.\n\nDesalniettemin hebben wij voor u de meest recente nieuwsbericht voor u op een rijtje gezet.');},800);
                 </script>
 <?php		}
@@ -156,7 +165,7 @@
     </script>
     
     <!-- twitter script -->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <!-- ||| end page specific scripts ||| -->	
 </body>
 </html>
@@ -166,9 +175,9 @@
 	function putPhotoThumb($current,$aLocation,$aName){
 		global $counter;
 ?>
-                <li id="<?=str_replace("_thumb.jpg","",$current)?>"> 
-                    <a href="<?=$aLocation."/".str_replace("_thumb","",$current)?>" data-lightbox="photo-album" title="<?=$aName?>"/> 
-                      <img src="<?=$aLocation."/".$current?>"/> <!-- show thumbnail --> 
+                <li id="<?=str_replace("_thumb.jpg","",$current)?>" class="loadingImg"> 
+                    <a href="<?=$aLocation."/".str_replace("_thumb","",$current)?>" data-lightbox="photo-album" title="<?=$aName?>" > <!-- show thumbnail --> 
+                      <img src="<?=$aLocation."/".$current?>" alt="<?=$current?>" /> 
                     </a>
                 </li>	
 <?php

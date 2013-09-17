@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://ogp.me/ns/fb#"
-      lang="nl" xml:lang="nl">
+      xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-08-29" />
+    <meta http-equiv="last-modified" content="2013-10-29" />
     <meta http-equiv="content-language" content="nl" />
     <meta property="fb:admins" content="100001997083297" />
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
@@ -18,7 +18,7 @@
     <meta name="author" content="Homemade Water" />
     <meta name="publisher" content="Homemade Water" />
     <meta name="copyright" content="Homemade Water" />
-    <meta name="Homemade Water" content="Delft band cover studentenband coverband Clash Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
+    <meta name="HomemadeWater" content="Delft band cover studentenband coverband Clash Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />
 
     <!-- for testing -->
    	<base href="http://localhost/hw-web/" />
@@ -28,7 +28,7 @@
     <!--<base href="http://www.homemadewater.nl/" />-->
 
     <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css' />
 
     <!-- stylesheets --> 
     <link rel="stylesheet" type="text/css" href="style/header.css" title="style" />
@@ -55,7 +55,7 @@
         <div id="navbar">
             <ul id="menu">
                <li class="highlight"><a href="index.php">HOME</a></li>
-               <li><a href="band/">BAND</a>
+               <li><a href="band/">BAND</a></li>
                <li><a href="nieuws.php">NIEUWS</a></li> 
                <li><a href="agenda.php">AGENDA</a></li>
                <li><a href="foto.php"> FOTO'S</a></li>

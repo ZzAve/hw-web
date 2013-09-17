@@ -1,4 +1,3 @@
-
 <?php 
 	$title = "Video";
 	require_once 'header.php'; 

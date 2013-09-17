@@ -1,22 +1,39 @@
 //window.onresize = setPhotoViewMargin;
-
-window.onload = function(){
+var count;
+var nrOfImgs;
+$(document).ready(function(){
+	nrOfImgs = $('#thumblist li img').length;
 	$('#thumblist li img').each(function(index){
-			//check height of father element
-			var imgHeight = $(this).height();
-			var parentHeight = $(this).parent().parent().height();
-			
-			// if height of father element is smaller then height of img, shift image up
-			if (parentHeight < imgHeight){
-				
-				shiftUp = (imgHeight - parentHeight)/2;
-				shiftValue = (-shiftUp) + "px";
-				$(this).css('position','relative');
-				$(this).css('top',shiftValue);
-			}
-			$(this).parent().parent().addClass('loadedImg');
-		});
-};
+		//check height of father element
+		count=index+1;
+		currentImg = $(this);
+		curImg = new Image();
+		curImg.src = $(this).attr('src');
+		curImg.onload = adaptImg(currentImg);
+	})
+});
+
+function adaptImg(image){
+	var imgHeight = image.height();
+	var parentHeight = image.parent().parent().height();
+	// if height of father element is smaller then height of img, shift image up
+	if (parentHeight < imgHeight){
+		
+		shiftUp = (imgHeight - parentHeight)/2;
+		shiftValue = (-shiftUp) + "px";
+		image.css('position','relative');
+		image.css('top',shiftValue);
+	}
+	// change class to data lightbox
+	image.attr('data-lightbox', "photo-album");
+	image.parent().parent().removeClass('loadingImg');
+
+	//alert('count ' + count +'\nnrOfImgs ' + nrOfImgs);
+	if(count == nrOfImgs){
+		$('#thumblist').removeClass('notLoaded');
+	}
+	return;
+}
 
 $(document).ready(function() {
 	//setPhotoViewMargin();	

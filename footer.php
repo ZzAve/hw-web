@@ -48,7 +48,7 @@
     
     <!-- Facebook SDK import function -->
     <div id="fb-root"></div>
-    <script type="text/javascript" async="async">
+    <script type="text/javascript">
         (function(d, s, id) {
            var js, fjs = d.getElementsByTagName(s)[0];
            if (d.getElementById(id)) return;

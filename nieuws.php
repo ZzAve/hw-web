@@ -113,7 +113,7 @@ function popnewsitem($db_entry){
 <?php  // make both the title and image a link, such that if clicked, a screen opens with only that newsitem
 	   if($valid_request===false){
 ?>
-      <a href="<?= "nieuws.php?item=".$db_entry['ID']?> "><h3><?= $db_entry['Titel']?> </h3></a>
+      <h3><a href="<?= "nieuws.php?item=".$db_entry['ID']?> "><?= $db_entry['Titel']?></a></h3>
       <a href="<?= "nieuws.php?item=".$db_entry['ID']?>"> <img src="<?=$db_entry['Foto']?>" alt="<?=$db_entry['Alt_foto']?>" title="<?=$db_entry['Alt_foto']?>"/></a>
 <?php
 	   } else {

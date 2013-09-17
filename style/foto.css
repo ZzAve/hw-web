@@ -37,95 +37,28 @@
 	width:100%;
 }
 
-/* album page */
-/*
-#showPhoto{ 
-	position:fixed;
-	top:0;
-	left:0;
-	z-index:999;
-	height:100%;
-	width:100%;
-	max-width:100%;
-	background-color:rgb(0,0,0);
-	background-color:rgba(0,0,0,0.9);
-}
-
-#photosite{
-	position:relative;
-	height:95%;
-	width:auto;
-	max-width:90%;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-#photosite > div{
-	position:absolute;
-	width:100%;
-	bottom:0;
-	left:0;
-	margin-top:10px;
-	clear:both;
-	height:40px;
-}
-
-#photosite img.show{
-	display:block;
-	border-radius:10px;
-	box-shadow: 0px 0px 5px #FFF;
-	height:auto;
-	max-height:100%;
-	width:auto;
-	max-width:100%;
- 	margin: 0px auto;
-	cursor:pointer;
-}
-
-#photosite span{
-	position: absolute;	
-	width:100%;
-	top:30%;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	font-size:20px;
-	font-weight:bold;
-}
-
-#closePhotoAlbum{
-	position:relative;
-	bottom:25px;
-	left:48%;
-	width:40px;
-	cursor:pointer;
-	opacity:0.9;
-	filter:alpha(opacity=90);
-}
-
-#closePhotoAlbum:hover{
-	opacity:1;
-	filter:alpha(opacity=100);
-}
-#closePhotoAlbum img{
-	width:100%;
-}
-	
-#nextPhoto, #previousPhoto{
-	width:42%;
-}
-#nextPhoto{
-	float:right;
-	text-align:left;
-}
-#previousPhoto{
-	float:left;
-	text-align:right;
-}
-*/
 
 #thumblist{
 	margin:30px auto;
+	position:relative;
+}
+
+div.loading{
+	visibility:hidden;
+	position:absolute;
+	top:0; left:0;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.8);
+	background-image: url("../images/lightbox/loading.gif");
+	background-position:center center;
+	background-repeat: no-repeat;
+	width:100%;
+	height:100%;
+	z-index:2;
+}
+
+.notLoaded > div.loading{
+	visibility: visible;	
 }
 
 #thumblist ul{
@@ -140,17 +73,18 @@
 	height:75px;
 	margin:3px;
 	border-radius:2px;
-	opacity:0.3;
+	opacity:0.9;
 	filter:alpha(opacity=30); /* For IE8 and earlier */
 	background-color:#777;
 	border: 1px solid #777;
 }
 
-#thumblist li.loadedImg{
-	opacity:0.9;
-	filter:alpha(opacity=90); /* For IE8 and earlier */
+#thumblist li.loadingImg{
+	opacity:0.3;
+	filter:alpha(opacity=30); /* For IE8 and earlier */
 }
-#thumblist li.loadedImg:hover{
+
+#thumblist li:hover{
 	opacity:1;
 	filter:alpha(opacity=100); /* For IE8 and earlier */
 	border-color:#122A2F;
@@ -178,9 +112,10 @@
 
 #sharediv{
 	width:25%;
-	margin-right:20px;
+	margin-right:40px;
 	float:right;
-	top:-6.5em;
+	position:relative;
+	z-index:3;
 	background-color:#323;
 	padding:10px 10px;
 	border-radius:3px;
@@ -200,75 +135,4 @@
 	overflow:hidden;
 	height:22px;
 }
-/*#photolist-overflow{
-	float:right;
-	position:relative;
-	width:100px;
-	height:355px;
-	margin-right: 50px;
-	margin-top:20px;
-	border: 3px outset white;
-	border-radius:2px;
-	z-index:1;
-}
-	
-#photolist{
-	background-color:black;
-	position:relative;
-	overflow:hidden;
-	width:100%;
-	height:100%;
-}
-
-#thumbs-one-album {
-	margin:0;
-	position:absolute;
-	height:auto;
-	width:100%;
-}
-
-#thumbs-one-album li {
-	list-style: none;
-	width:100%;
-	margin-top:10px;
-}	
-
-#thumbs-one-album li img {
-	width:100%;
-	border:1px solid grey;	
-	cursor:pointer;
-}
-
-#thumbs-one-album li img:hover{
-	border-color: white;	
-}
-
-#up, #down{
-	position:absolute;
-	cursor:pointer;
-	width:50px;
-	height:50px;
-	background-color: rgba(255,255,255,0.5);
-	background-repeat:no-repeat;
-	left:25px;
-	border-radius:25px;
-}
-#up:hover, #down:hover{
-	background-color: rgba(255,255,255,0.9);
-}
-
-#down{
-	background-image: url("../images/arrow_down.png");
-	background-position: bottom center;
-	bottom:-25px;
-}
-#up{
-	background-image: url("../images/arrow_up.png");
-	background-position:top center;
-	top:-25px;
-}
-
-*/
-
-
 
