@@ -46,40 +46,40 @@
 ?>
             <a href="foto.php"> Terug naar het album overzicht</a>            	
             <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>
-            <div id="sharediv">                
-                <ul>
-                    <li class="fblike"> 
-                        <script type="text/javascript"> 
-                            //<![CDATA[
-                            document.write('<fb:like href="http://www.homemadewater.nl/foto.php?album=<?=$album_id?>" width="200" layout="button_count" show_faces="false" send="false"></fb:like>');
-                            //]]>
-                        </script> 
-                    </li>
-                    <li> 
-                        <a href="#"  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;">
-                            Deel op Facebook</a>
-                    </li>
-                    <li> <script type="text/javascript"> 
-                            //<![CDATA[
-                            document.write('<div class="g-plusone" data-annotation="inline" data-width="200"></div>');
-                            //]]>
-                        </script>
-                    </li>
-                    <li> <script type="text/javascript"> 
-                            //<![CDATA[
-                            document.write('<a href="https://twitter.com/share" data-text="Wat een tof fotoalbum van dat optreden van Homemade Water" class="twitter-share-button" data-lang="nl">Tweeten</a>');
-                            //]]>
-                        </script>
-                    </li>
-                </ul>
-            </div><!-- end 	share div -->
-			
             <h2> Datum: <?= $album_date ?></h2>
             <h2> Plaats: <?= $album_place ?> </h2>		
             <p class="album_descr"> <?=$album_descr?></p>
 	
+    		<!-- Share with.. <div> -->
+            <div id="sharediv">                
+              <ul>
+                <li class="fblike"> 
+                    <script type="text/javascript"> 
+                        //<![CDATA[
+                        document.write('<fb:like href="http://www.homemadewater.nl/foto.php?album=<?=$album_id?>" width="200" layout="button_count" show_faces="false" send="false"></fb:like>');
+                        //]]>
+                    </script> 
+                </li>
+                <li> 
+                    <a href="#"  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;">
+                        Deel op Facebook</a>
+                </li>
+                <li> <script type="text/javascript"> 
+                        //<![CDATA[
+                        document.write('<div class="g-plusone" data-annotation="inline" data-width="100"></div>');
+                        //]]>
+                    </script>
+                </li>
+                <li> <script type="text/javascript"> 
+                        //<![CDATA[
+                        document.write('<a href="https://twitter.com/share" data-text="Wat een tof fotoalbum van dat optreden van Homemade Water" class="twitter-share-button" data-lang="nl">Tweeten</a>');
+                        //]]>
+                    </script>
+                </li>
+              </ul>
+            </div><!-- end 	share div -->
+            
             <div id="thumblist" class="notLoaded">
-              <div class="loading"></div>
               <ul>
 <?php		    //get all photos
 				$curdir=getcwd();
@@ -87,10 +87,16 @@
 				$photolist = glob("*_thumb.jpg");
 				natsort($photolist);
 				chdir($curdir);
+				$counter=1;
 				foreach($photolist as $photo){
-				  putPhotoThumb($photo,$album_location,$album_name);
-				}
 ?>
+				    <li class="loading"> 
+                    <a class="hidden" href="<?=$album_location."/".str_replace("_thumb","",$photo)?>" title="<?=$album_name?>" ><?=$album_location."/".$photo?></a>
+                </li>	
+<?php
+   }
+?>
+
               </ul>	
             </div>
 			
@@ -169,17 +175,3 @@
 <!-- ||| end page specific scripts ||| -->	
 </body>
 </html>
-
-<?php	
-	$counter=1;
-	function putPhotoThumb($current,$aLocation,$aName){
-		global $counter;
-?>
-                <li id="<?=str_replace("_thumb.jpg","",$current)?>" class="loadingImg"> 
-                    <a href="<?=$aLocation."/".str_replace("_thumb","",$current)?>" data-lightbox="photo-album" title="<?=$aName?>" > <!-- show thumbnail --> 
-                      <img src="<?=$aLocation."/".$current?>" alt="<?=$current?>" /> 
-                    </a>
-                </li>	
-<?php
-   }
-?>

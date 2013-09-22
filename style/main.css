@@ -24,6 +24,10 @@ html, body{
 	visibility:hidden;
 }
 
+.loading{
+	background: url("../images/lightbox/loading.gif") no-repeat center center;
+}
+
 #header, #footer{
 	width:auto;
 	min-width:100%;	

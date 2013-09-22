@@ -39,7 +39,7 @@
 
 <?php
 	if(isset($mysql)){
-		@mysqli_close();
+		@mysqli_close($mysql);
 	}
 ?>
 <!--- ||| scripts ||| -->

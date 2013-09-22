@@ -29,12 +29,23 @@
 	display:block;
 }
 
+#album-list li a{
+	display:block;
+	width:100%;
+	height:150px;
+	overflow:hidden;
+}
+
 #album-list li span{
 	display:block;
 	color:white;	
 }
 #album-list li img {
-	width:100%;
+	min-width:100%;
+	width:auto;
+	min-height:100%;
+	height:auto;
+	max-height:100%;
 }
 
 
@@ -92,7 +103,6 @@ div.loading{
 	cursor:pointer;
 }
 
-
 #thumblist li img{
 	display:block;
 	margin:0;
@@ -107,17 +117,13 @@ div.loading{
 
 .fb_comment{
 	margin-left:10px;
-	width:700px;	
+	width:700px;
 }
 
 #sharediv{
-	width:25%;
-	margin-right:40px;
-	float:right;
-	position:relative;
-	z-index:3;
+	width:90%;
 	background-color:#323;
-	padding:10px 10px;
+	padding:5px 2%;
 	border-radius:3px;
 }
 
@@ -128,11 +134,16 @@ div.loading{
 }
 
 #sharediv li{
-	margin:5px auto;
+	display:inline-block;
+	width:20%;
+	margin: 0 2%;
+	vertical-align:middle;
+	overflow:hidden;
 }
 
 #sharediv .fblike {
 	overflow:hidden;
 	height:22px;
+	width:100px;
 }
 

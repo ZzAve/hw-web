@@ -54,7 +54,7 @@ function validateContact()
 function validateGuestbook()
 {
 	var doc = $("#guestbook");
-	var name = $('#guestbook input[name="name"]');
+	var name = $('#guestbook input[name="Naam"]');
 	if(stripTags( name.val() ) == '')
 	{
 		alert("Vul a.u.b. een naam in.");
@@ -74,7 +74,7 @@ function validateGuestbook()
 		return false;
 	}*/
 	
-	var bericht = $('#guestbook textarea[name="bericht"]');
+	var bericht = $('#guestbook textarea[name="Bericht"]');
 	if(stripTags(bericht.val()) == '')
 	{
 		alert("Vul a.u.b. een bericht in");

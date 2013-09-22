@@ -1,38 +1,52 @@
 //window.onresize = setPhotoViewMargin;
-var count;
-var nrOfImgs;
 $(document).ready(function(){
-	nrOfImgs = $('#thumblist li img').length;
-	$('#thumblist li img').each(function(index){
-		//check height of father element
+	var nrOfImgs = $('#thumblist li a').length;
+	$('#thumblist li a').each(function(index){
 		count=index+1;
-		currentImg = $(this);
+		
 		curImg = new Image();
-		curImg.src = $(this).attr('src');
-		curImg.onload = adaptImg(currentImg);
+		curImg.src = $(this).html();
+		//alert($(this).html());
+		
+		curImg.onload = adaptImg($(this),curImg,count,count==nrOfImgs);
 	})
 });
 
-function adaptImg(image){
-	var imgHeight = image.height();
-	var parentHeight = image.parent().parent().height();
+function adaptImg(aElement,image,count,last){
+	// Create new element ('img' element)
+	var img = document.createElement('img');
+	img.src = aElement.html();
+	img.alt = 'Foto #'+count;
+	
+	//Change the inside of the <a> element
+	aElement.html('');
+	aElement.append(img);
+	var newEl = aElement.children('img');
+	//alert(newEl.attr('src'));
+	//Get height of both image and father element
+	var imgHeight = img.clientHeight;
+	var parentHeight = aElement.parent().height();
+	//alert('imgHeight :'+ imgHeight + '\nparentHeight :' + parentHeight);
+
 	// if height of father element is smaller then height of img, shift image up
-	if (parentHeight < imgHeight){
-		
+	if (parentHeight - imgHeight < 10){
 		shiftUp = (imgHeight - parentHeight)/2;
 		shiftValue = (-shiftUp) + "px";
-		image.css('position','relative');
-		image.css('top',shiftValue);
+		newEl.css('position','relative');
+		newEl.css('top',shiftValue);
 	}
+	
 	// change class to data lightbox
-	image.attr('data-lightbox', "photo-album");
-	image.parent().parent().removeClass('loadingImg');
-
+	newEl.hide()
+	aElement.attr('data-lightbox', "photo-album");
+	aElement.removeClass('hidden');
+	aElement.parent().removeClass('loading');
+	newEl.fadeIn("slow");
 	//alert('count ' + count +'\nnrOfImgs ' + nrOfImgs);
-	if(count == nrOfImgs){
+	if(last){
 		$('#thumblist').removeClass('notLoaded');
 	}
-	return;
+	
 }
 
 $(document).ready(function() {
