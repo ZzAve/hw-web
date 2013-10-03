@@ -6,6 +6,8 @@
 
 img{
 	border:none;
+	max-height:100%;
+	max-width:100%;
 }
 
 html, body{
@@ -90,6 +92,28 @@ html, body{
 	right:-35px;
 }
 
+.attention{
+	border: 5px solid red;
+	padding:10px;
+	border-radius:2px;
+	margin: 2em 1em;
+	overflow:hidden;
+}
+
+
+.attention img{
+	display:block;
+	float:left;
+	width:45%;
+	margin: 10px;
+}
+
+.attention h3:first-letter{
+	font-size:1.7em;
+	font-family:BrushstrokePlain;
+	color:red;
+}
+
 ul{
 	margin-left:20px;
 	font-weight:bold;
@@ -110,7 +134,7 @@ h3 {
 }
 
 p{
-	margin:10px auto;
+	margin:1.15em auto;
 	line-height:120%;
 }
 
