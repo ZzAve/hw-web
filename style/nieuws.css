@@ -24,6 +24,7 @@ div.newsitem{
 	height:auto;
 	width:250px;
 	border-radius:4px;
+	background-color:white;
 }
 
 div.newsitem img:hover{

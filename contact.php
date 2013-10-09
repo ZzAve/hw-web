@@ -56,10 +56,10 @@ if( isset($_REQUEST['name']) ){
         
         <!-- The contact form -->
         <form id="contact_form" enctype="multipart/form-data" onsubmit="return validate()" action="./contact.php" method="post">
-            <p>Naam <br /><input type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>
+            <p>Naam <br /><input autofocus type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>
             <p>E-mail <br /><input type="text" name="email" <?= $error ?"value=\"$email\"" : NULL ?> /></p>
             <p>Telefoon (optioneel) <br /><input type="text" name="phone"/> </p>
-            <p> Onderwerp <br /><input type="text" name="subject"/> </p>
+            <p> Onderwerp <br /> <input type="text" name="subject" <?= isset($_GET['o']) && $_GET['o']=="Clash" ? "value=\"Kaartje Kwartfinale Clash of the coverband\"": "";?> /> </p>
             <p>Bericht <br /><textarea name="bericht" rows="10" cols="58" <?= $error ?"value=\"$message\"" : NULL ?>></textarea></p>
             <p><input type="submit" value="Versturen" /><input type="reset" value="Wissen" />
             <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Kopie versturen naar uw eigen mail?</label> <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> /> </p>

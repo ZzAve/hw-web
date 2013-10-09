@@ -6,7 +6,6 @@
 
 img{
 	border:none;
-	max-height:100%;
 	max-width:100%;
 }
 
@@ -93,8 +92,8 @@ html, body{
 }
 
 .attention{
-	border: 5px solid red;
-	padding:10px;
+	border: 5px solid #D00C0D;
+	padding:1.5%;
 	border-radius:2px;
 	margin: 2em 1em;
 	overflow:hidden;
@@ -104,16 +103,24 @@ html, body{
 .attention img{
 	display:block;
 	float:left;
-	width:45%;
-	margin: 10px;
+	width:48%;
+	margin:1%;
+	position:relative;
+	top:30px;
+	left:0;
 }
 
 .attention h3:first-letter{
 	font-size:1.7em;
 	font-family:BrushstrokePlain;
-	color:red;
+	color:#D00C0D;
 }
 
+.attention div.text{
+	float:left;
+	width: 45%;
+	margin-left:2%;
+}
 ul{
 	margin-left:20px;
 	font-weight:bold;

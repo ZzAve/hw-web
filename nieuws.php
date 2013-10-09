@@ -24,7 +24,7 @@
 		<div class="newsitem" id="news_GigsOWee">
         	<div class="date"><label> 16 </label><span> AUG </span></div>
             <h3> Terug van weggeweest!</h3>
-            <img src="images/agenda_nieuws.jpg" alt="Er staan maar liefst 3 optredens gepland voor volgende week!" title="Er staan maar liefst 3 optredens gepland voor volgende week!" />
+			<img alt="By Ranjithsiji (Own work) [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Schedule_clock.svg/512px-Schedule_clock.svg.png"/></a>
         	
             <p>Ondertussen is het grootste deel van de vakantie voorbij en zijn de meeste van onze bandleden weer terug in het land! En dat zullen we laten merken ook! Volgende week hebben we maar liefst <strong>3</strong> optredens gepland staan in Delft! Te beginnen met de Owee, d&eacute; grote openingsweek van het studentenleven in Delft, dus sowieso de moeite waard om mee te maken, en daarna nog een mooie Bierbeurs!</p>
 

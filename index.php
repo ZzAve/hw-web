@@ -17,14 +17,17 @@
          <p> Nieuwsgierig geworden? Check onze <a href="./audio.php">media</a> en <a href="./nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p>       
          <div class="attention">
              <a href="images/Clash_kwartfinale.jpg"><img src="images/Clash_kwartfinale.jpg" alt="De line up voor de kwartfinale van de Clash of The Coverbands" /></a> 
-             <h3> Jouw hulp is geboden! </h3>
+            
              
-             <p>Homemade Water doet mee aan de Clash of the Coverbands, en strijdt mee om de felbegeerde titel van 'beste coverband van de Benelux'. Inmiddels zitten we in de kwartfinale van de regio West.</p>
-            
-             <p> In deze ronde strijden we tegen 6 andere covenbandjes uit de randstad. Helaas vallen en 3 van de 7 bands af die avond en daar hopen wij niet tussen te zitten. Op de poster is te zien welke andere bands er nog meer spelen die avond. Het belooft in ieder geval een geweldige avond te worden!</p>
-            
-             <p>Maar om door naar de volgende ronde te kunnen hebben we JOUW hulp nodig. Elke bezoeker krijgt bij binnenkomst een stembiljet, en dus zo de mogelijkheid om te stemmen op de band die hij of zijn het beste vond. Kom ook en stem op ons!</p>
-             <p> Kaarten zijn <a href= "http://www.artistsandbandsbv.nl/a-29667520/the-clash-of-the-cover-bands/1-november-2013-total-music-schiedam/" >hier</a> verkrijgbaar. </p>
+             <div class="text">
+				<h3> Jouw hulp is geboden! </h3>
+             	<p>Homemade Water doet mee aan de Clash of the Coverbands, en strijdt mee om de felbegeerde titel van 'beste coverband van de Benelux'. Inmiddels zitten we in de kwartfinale van de regio West.</p>
+                
+                 <p> In deze ronde strijden we tegen 6 andere covenbandjes uit de randstad. Helaas vallen en 3 van de 7 bands af die avond en daar hopen wij niet tussen te zitten. Op de poster is te zien welke andere bands er nog meer spelen die avond. Het belooft in ieder geval een geweldige avond te worden!</p>
+                
+                 <p>Maar om door naar de volgende ronde te kunnen hebben we JOUW hulp nodig. Elke bezoeker krijgt bij binnenkomst een stembiljet, en dus zo de mogelijkheid om te stemmen op de band die hij of zijn het beste vond. Kom ook en stem op ons!</p>
+                 <p>  De kaarten, a &euro;10,- per stuk zijn in de voorverkoop verkrijgbaar via ons! Wil je mee om ons te steunen, stuur ons dan even een berichtje (via de <a href="mailto:info@homemadewater.nl">mail</a>, of het <a href="contact.php?o=Clash">contactformulier</a>) dan helpen wij je aan een kaartje en de mogelijkheid om samen met de band te reizen! </p>
+             </div>
         </div>
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>
