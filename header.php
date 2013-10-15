@@ -64,8 +64,8 @@
           
        <div class="agendaHighlight">
           <p><label>Eerstvolgende gig:</label>
-          <a href="https://www.facebook.com/events/399477436845271" target="_blank">Zaterdag 12 oktober<br />
-          Cafe de V</a></p>
+          <a href="https://www.facebook.com/events/399477436845271" target="_blank">Donderdag 17 oktober<br />
+          Diesfeest Sint-Jansbrug</a></p>
        </div>
     </div><!-- end header -->
 
