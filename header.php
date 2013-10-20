@@ -5,17 +5,17 @@
       lang="nl" xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-10-09" />
+    <meta http-equiv="last-modified" content="2013-10-20" />
     <meta http-equiv="content-language" content="nl" />
    	<meta property="fb:admins" content="100001997083297" />
     
     <link href="images/shortIcon.jpg" rel="shortcut icon" />
     <link rel="image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
-    <link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />
+    <!--<link rel="image_src" href="http://www.homemadewater.nl/images/screenshot.jpg" />-->
     <link rel="image_src" href="" />
     
     <meta name="description" content="Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren in een feestende bende! Groot, klein, jong of oud? Homewade Water krijgt óók u aan het feesten!"/>
-    <meta name="keywords" content="Homemade Water, Delft, band, coverband, pop, rock, studenten, feestband, clash, coverbands, student, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
+    <meta name="keywords" content="Homemade Water, Delft, band, coverband, pop, rock, studenten, feestband, clash of the coverbands, student, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
     <meta name="author" content="Homemade Water" />
     <meta name="publisher" content="Homemade Water" />
     <meta name="copyright" content="Homemade Water" />
@@ -64,8 +64,8 @@
           
        <div class="agendaHighlight">
           <p><label>Eerstvolgende gig:</label>
-          <a href="https://www.facebook.com/events/399477436845271" target="_blank">Donderdag 17 oktober<br />
-          Diesfeest Sint-Jansbrug</a></p>
+          <a href="https://www.facebook.com/events/462711423826300/" target="_blank">Vrijdag 1 november<br />
+          Kwartfinale Clash ot Coverbands<br /> (Regio West)</a></p>
        </div>
     </div><!-- end header -->
 
