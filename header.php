@@ -5,7 +5,7 @@
       lang="nl" xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-10-20" />
+    <meta http-equiv="last-modified" content="2013-11-05" />
     <meta http-equiv="content-language" content="nl" />
    	<meta property="fb:admins" content="100001997083297" />
     
@@ -61,11 +61,20 @@
                <li><a href="contact.php">CONTACT</a></li>
             </ul>
        </div>
-          
-       <div class="agendaHighlight">
+        
+        
+       <div class="home_highlight home_news">
+          <p>
+          	<label> Laatste nieuws</label>
+          	<a href="/nieuws.php#news_Clash4" />Clash of the Coverbands,<br />
+           	voor een kwart regiofinale</a>
+          </p>
+       </div>
+         <!-- 
+       <div class="home_highlight home_agenda hidden">
           <p><label>Eerstvolgende gig:</label>
           <a href="https://www.facebook.com/events/462711423826300/" target="_blank">Vrijdag 1 november<br />
           Kwartfinale Clash ot Coverbands<br /> (Regio West)</a></p>
-       </div>
+       </div>-->
     </div><!-- end header -->
 

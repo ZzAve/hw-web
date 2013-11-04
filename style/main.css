@@ -17,7 +17,7 @@ html, body{
 	position:relative;
 	background: url("../images/backgrounds/achtergrondDSB4.jpg")  fixed no-repeat top left #000000;
 	font-family:'Average Sans', Arial, Gadget, serif;
-	font-size: 1em;
+	font-size: 12pt;/*1em*/
 	color: #CCC;
 
 }
@@ -111,7 +111,7 @@ html, body{
 }
 
 .attention h3:first-letter{
-	font-size:1.7em;
+	font-size:20.5pt;
 	font-family:BrushstrokePlain;
 	color:#D00C0D;
 }
@@ -134,14 +134,14 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h2{
-	font-size:1.1em;
+	font-size:13.5pt;
 }
 h3 { 
-	font-size:1.4em;
+	font-size:17pt;
 }
 
 p{
-	margin:1.15em auto;
+	margin:15px auto;
 	line-height:120%;
 }
 

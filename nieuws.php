@@ -5,6 +5,24 @@
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
         
+        <div class="newsitem" id="news_Clash4">
+        	<div class="date"><label> 4 </label><span> NOV </span></div>
+            <h3> Clash of the Coverbands, voor een kwart regiofinale</h3>
+            <img src="images/albums/2013 - 11 - 01 !! Clash of the Coverbands !! Schiedam/HW_Clash_Schiedam_13.jpg" alt="Eline soleert als een baas tijdens 'Gold and 'Seaweed'" title="Eline soleert als een baas tijdens 'Gold and 'Seaweed'" />
+        	
+            <p>Het is alweer een half jaar terug dat we met succes de voorronde van the Clash of the Coverbands hebben doorstaan en met in ontvangst neming van de eerste jury prijs door zijn gelaten naar de volgende ronde: de kwart regio finales. Deze ronde vond plaats in Schiedam op 1 november bij muziekcentrum Total Music! </p>
+
+			<p>Na een aantal maanden hard te hebben geoefend op onze performance was het eindelijk weer tijd om onze skillz te testen en te kijken of we weer een juryprijs in ontvangst konden slepen. Oorspronkelijk was het de bedoeling dat we 6 concurrenten zouden hebben deze avond, maar helaas/gelukkig hadden 2 bands zich teruggetrokken uit deze ronde waarna we nog maar 4 concurrenten overhielden. Van de in totaal 5 bands zouden er maar liefst 4 doorgaan naar de volgende ronde! Je begrijpt dus wel dat het meer een kwestie was van niet verliezen dan van moeten winnen. Dat weerhield ons er echter niet van om vol enthousiasme voor de eerste plek te gaan! </p>
+
+
+			<p>Dit werd nog een zware klus aangezien onze concurrentie weer sterk was. Met name de 18 koppige big-band Frank &amp; the Silly Symphonies en The Smart gaven nogal wat tegenstand. Gelukkig hebben we zelf als 2e band van de avond een zeer strakke 30 minuten set neergezet met daarin de sterkste nummers van ons gehele repertoire (exclusief onze eigen nummers). Deze performance heeft ons de 2e jury prijs opgeleverd en daarmee een plek in de volgende ronde! De eerste jury prijs ging naar The Smart, bestaande uit 5 zeer ervaren artiesten die ongelofelijk strak speelden waaronder een vrouwelijke drummer die ook nog eens geweldig kon zingen! Frank &amp; the Silly Symphonies en Engine zijn gekozen door het publiek om als nummer 3 &amp; 4 door te gaan naar de volgende ronde. </p>
+
+			<p>Voor de volgende ronde ergens in februari zorgen we er gewoon voor dat onze drummer Julius ook kan zingen en vervolgen we zo onze weg naar de beste coverband van de Benelux! </p>
+	
+    		<p>Zie ook de foto's op onze <a href="/foto.php">fotopagina</a>!</p>
+
+        </div>
+        
         <div class="newsitem" id="news_Locus">
         	<div class="date"><label> 29 </label><span> AUG </span></div>
             <h3> Bruisend optreden Locus Publicus</h3>

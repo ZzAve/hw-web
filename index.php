@@ -15,7 +15,7 @@
          </ul>
 		
          <p> Nieuwsgierig geworden? Check onze <a href="./audio.php">media</a> en <a href="./nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p>       
-         <div class="attention">
+         <!--<div class="attention">
              <a href="images/Clash_kwartfinale.jpg"><img src="images/Clash_kwartfinale.jpg" alt="De line up voor de kwartfinale van de Clash of The Coverbands" /></a> 
             
              
@@ -28,7 +28,7 @@
                  <p>Maar om door naar de volgende ronde te kunnen hebben we JOUW hulp nodig. Elke bezoeker krijgt bij binnenkomst een stembiljet, en dus zo de mogelijkheid om te stemmen op de band die hij of zijn het beste vond. Kom ook en stem op ons!</p>
                  <p>  De kaarten, a &euro;10,- per stuk zijn in de voorverkoop verkrijgbaar via ons! Wil je mee om ons te steunen, stuur ons dan even een berichtje (via de <a href="mailto:info@homemadewater.nl">mail</a>, of het <a href="contact.php?o=Clash">contactformulier</a>) dan helpen wij je aan een kaartje en de mogelijkheid om samen met de band te reizen! </p>
              </div>
-        </div>
+        </div>-->
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>

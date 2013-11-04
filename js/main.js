@@ -39,12 +39,13 @@ window.onload = sizeContentbar;
 */
 
 function sizeContentbar(){
+	
+	//Why the if statement?
 	if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) { 
 		var wrapper = document.getElementById("wrapper");
 		var footer = document.getElementById("footer");
 		var contentbar = document.getElementById("content-bar");
 		totalHeight = wrapper.clientHeight + footer.clientHeight;
-
 		
 		if (totalHeight < window.innerHeight) {
 			diff = window.innerHeight - totalHeight + footer.clientHeight;

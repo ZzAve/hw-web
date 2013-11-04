@@ -77,9 +77,9 @@
 
 #fb{
 	bottom:5px;
-	transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); /* IE 9 */
-	-webkit-transform:rotate(-2deg); /* Safari and Chrome */
+	transform:rotate(-5deg);
+	-ms-transform:rotate(-5deg); /* IE 9 */
+	-webkit-transform:rotate(-5deg); /* Safari and Chrome */
 }
 #fb:hover{
 	transform:rotate(1deg);
@@ -100,9 +100,9 @@
 }
 
 #yt:hover{
-	transform:rotate(2deg);
-	-ms-transform:rotate(2deg); /* IE 9 */
-	-webkit-transform:rotate(2deg); /* Safari and Chrome */
+	transform:rotate(5deg);
+	-ms-transform:rotate(5deg); /* IE 9 */
+	-webkit-transform:rotate(5deg); /* Safari and Chrome */
 }
 
 #copyright {
