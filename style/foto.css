@@ -12,29 +12,35 @@
 /* overall page */
 #album-list{
 	list-style: none;
+	margin-left:0;
 }
 
 #album-list li{
 	display:inline-block;
 	vertical-align:top;
 	text-align:center;
-	width:150px;
-	margin: 20px 5px;
-	padding:5px;
+	width:173px;
+	margin: 20px 0px;
+	padding:3px;
 }
 
-#album-list li img{
-	width:auto;
-	max-width:100%;
-	height:auto;
-	max-height:100px !important;
+#album-list li a{
+	height:120px;
+	width:100%;
 	overflow:hidden;
+	display:block;
+}
+#album-list li img{
+	min-width: 100%;
+	width: auto;
+	min-height: 100%;
+	height: auto;
 }
 
 #album-list li:hover{
 	/*width:300px;*/
-	border:1px solid white;
-	padding:4px;
+	border:1px groove #AAA;
+	padding:2px;
 	background-color:#122A2F;
 }
 

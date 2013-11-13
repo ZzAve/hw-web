@@ -5,7 +5,7 @@
       lang="nl" xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-11-05" />
+    <meta http-equiv="last-modified" content="2013-11-10" />
     <meta http-equiv="content-language" content="nl" />
    	<meta property="fb:admins" content="100001997083297" />
     
@@ -63,18 +63,18 @@
        </div>
         
         
-       <div class="home_highlight home_news">
+       <!--<div class="home_highlight home_news">
           <p>
           	<label> Laatste nieuws</label>
           	<a href="/nieuws.php#news_Clash4" />Clash of the Coverbands,<br />
            	voor een kwart regiofinale</a>
           </p>
        </div>
-         <!-- 
-       <div class="home_highlight home_agenda hidden">
+         -->
+       <div class="home_highlight home_agenda">
           <p><label>Eerstvolgende gig:</label>
-          <a href="https://www.facebook.com/events/462711423826300/" target="_blank">Vrijdag 1 november<br />
-          Kwartfinale Clash ot Coverbands<br /> (Regio West)</a></p>
-       </div>-->
+          <a href="https://www.facebook.com/events/234401526719177/" target="_blank">Donderdag 14 November<br /> Open Feest: It's a small World <br />
+           DSB Delft</a></p>
+       </div>
     </div><!-- end header -->
 
