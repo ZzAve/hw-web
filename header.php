@@ -71,10 +71,10 @@
           </p>
        </div>
          -->
-       <div class="home_highlight home_agenda">
+       <!--<div class="home_highlight home_agenda">
           <p><label>Eerstvolgende gig:</label>
           <a href="https://www.facebook.com/events/234401526719177/" target="_blank">Donderdag 14 November<br /> Open Feest: It's a small World <br />
            DSB Delft</a></p>
-       </div>
+       </div>-->
     </div><!-- end header -->
 
