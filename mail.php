@@ -53,18 +53,19 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 	if($copy==1){
 		$formcontent.="		
 			<p style=\"align:center; margin-top:10px\"><em>Dankuwel voor uw interesse in Homemade Water. Wij zullen zo snel mogelijk op u mail reageren. Kijk tot die tijd nog eens rond op onze <a href=\"http://www.homemadewater.nl/index.php\">site</a>, <a href=\"http://facebook.com/HomemadeWater/\">onze facebookpagina</a> of <a href=\"http://www.soundcloud.com/homemade-water\"> soundcloud</a>.</em></p>";
-	} else {
+	} /*else {
 	  	$formcontent.= "<p style=\"font-size: 150%\"> Om te reageren op de e-mail, klik dan op het e-mailadres, of <a href=\"mailto:$mail\">OP DEZE LINK</a>. Op 'reply' klikken werkt niet!</p>";	
-	}
+	}*/
 	
 	$formcontent.="	</body>	</html>";
 	// END OF MAIL BODY
-	$mailheader  = "Return-Path: $mail \r\n";		
-	$mailheader .= "From:  Homemade Water <info@homemadewater.nl> \r\n";
+		
 	
 	if ($copy==1){
+		$mailheader .= "From:  Homemade Water <info@homemadewater.nl> \r\n";
 		$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";
 	} else {
+		$mailheader .= "From:  $from <$mail> \r\n";
 		$mailheader .= "Reply-To: $from <$mail> \r\n";
 
 	}
