@@ -1,5 +1,12 @@
 <?php
+
+/* Function SENDMAIL 
+
+copy   1 if the mail is intended for the sender, 0 if it is intended for homemade water
+
+*/
 function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
+
 	// set mail body
 	$formcontent = "<html xmlns=\"http://www.w3.org/1999/xhtml\">
 		<head>
@@ -46,20 +53,20 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 	if($copy==1){
 		$formcontent.="		
 			<p style=\"align:center; margin-top:10px\"><em>Dankuwel voor uw interesse in Homemade Water. Wij zullen zo snel mogelijk op u mail reageren. Kijk tot die tijd nog eens rond op onze <a href=\"http://www.homemadewater.nl/index.php\">site</a>, <a href=\"http://facebook.com/HomemadeWater/\">onze facebookpagina</a> of <a href=\"http://www.soundcloud.com/homemade-water\"> soundcloud</a>.</em></p>";
+	} else {
+	  	$formcontent.= "<p style=\"font-size: 150%\"> Om te reageren op de e-mail, klik dan op het e-mailadres, of <a href=\"mailto:$mail\">OP DEZE LINK</a>. Op 'reply' klikken werkt niet!</p>";	
 	}
 	
-	$formcontent.="	
-		</body>
-		</html>";
+	$formcontent.="	</body>	</html>";
 	// END OF MAIL BODY
-	
-	$mailheader  = "Return-Path: $mail \r\n";	
+	$mailheader  = "Return-Path: $mail \r\n";		
 	$mailheader .= "From:  Homemade Water <info@homemadewater.nl> \r\n";
 	
 	if ($copy==1){
-		$mailheader .="Reply-To:$from <$mail> \r\n";
-	} else {
 		$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";
+	} else {
+		$mailheader .= "Reply-To: $from <$mail> \r\n";
+
 	}
 	
 	$mailheader .= 'X-Mailer: PHP/' . phpversion()."\r\n";
