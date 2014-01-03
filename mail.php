@@ -70,7 +70,6 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 		$mailheader .= "From:  $from <$mail> \r\n";
 		$mailheader .= "Reply-To: $from <$mail> \r\n";
 		//$mailheader  = "Return-Path: $mail \r\n";	
-
 	}
 	
 	$mailheader .= 'X-Mailer: PHP/' . phpversion()."\r\n";
