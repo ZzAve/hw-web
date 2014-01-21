@@ -1,5 +1,7 @@
 <?php
 function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
+	// copy  == 1 | 0  --> 1 means that the mail is a copy for the SENDER (the person who filled in the contact form). 0 means an e-mail to Homemade Water.
+	
 	// set mail body
 	$formcontent = "<html xmlns=\"http://www.w3.org/1999/xhtml\">
 		<head>
@@ -9,9 +11,9 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 		
 		<body>";
 		
-	if($copy==1){
+	if($copy==1){ // Copy for addressee
 		$formcontent .= "<p style=\"align:center;\"><em>Dit is een kopie van uw bericht verstuurd vanaf <a href=\"www.homemadewater.nl/contact.php\"> homemadewater.nl</a>. Dit bericht is automatisch gegenereerd.</em></p>";
-	} else {
+	} else { // copy for homemade water
 		$formcontent .= "<p style=\"align:center;\"> <em> Er heeft iemand een berichtje gestuurd via het contactformulier op de contactpagina van de Homemade Water site. Er is mogelijk een kopie van dit bericht naar de afzender gestuurd (<strong>meneer/mevrouw $from </strong>). Als lezer word je verzocht z.s.m. op dit bericht te reageren (zij het via mail of via telefoon). Alvast bedankt </em></p>";
 	}
 	
@@ -53,13 +55,16 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 		</html>";
 	// END OF MAIL BODY
 	
+	
 	$mailheader  = "Return-Path: $mail \r\n";	
 	$mailheader .= "From:  Homemade Water <info@homemadewater.nl> \r\n";
 	
-	if ($copy==1){
-		$mailheader .="Reply-To:$from <$mail> \r\n";
+	if ($copy==0){
+		$mailheader .= "From:     $from <$mail> \r\n";
+		//$mailheader .= "Reply-To: $from <$mail> \r\n";
 	} else {
-		$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";
+		$mailheader .= "From:     Homemade Water <info@homemadewater.nl> \r\n";
+		//$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";
 	}
 	
 	$mailheader .= 'X-Mailer: PHP/' . phpversion()."\r\n";
@@ -73,6 +78,8 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 	} else {
 		$receiver="info@homemadewater.nl";
 	}
+	
+	
 	return mail($receiver,$topic,$formcontent,$mailheader);
 }
 ?>

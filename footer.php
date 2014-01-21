@@ -20,9 +20,9 @@
                //]]>
              </script>
            </li>
-           <li id="fb"><a href="http://www.facebook.com/HomemadeWater" target="_blank"><img src="images/icon_fb.png" alt="Facebook-pagina Homemade Water" title="Facebook pagina"/></a></li>
-           <li id="sc"><a href="https://soundcloud.com/homemade-water" target="_blank"><img src="images/icon_sc.png" alt="Soundcloud-pagina Homemade Water" title="Soundcloud pagina"/></a></li>
-           <li id="yt"><a href="http://www.youtube.com/HomemadeWaterOfficia" target="_blank"><img src="images/icon_yt.png" alt="Youtube-pagina Homemade Water" title="Youtube pagina"/></a></li>
+           <li id="fb"><a href="http://www.facebook.com/HomemadeWater" target="_blank"><img src="/images/icon_fb.png" alt="Facebook-pagina Homemade Water" title="Facebook pagina"/></a></li>
+           <li id="sc"><a href="https://soundcloud.com/homemade-water" target="_blank"><img src="/images/icon_sc.png" alt="Soundcloud-pagina Homemade Water" title="Soundcloud pagina"/></a></li>
+           <li id="yt"><a href="http://www.youtube.com/HomemadeWaterOfficia" target="_blank"><img src="/images/icon_yt.png" alt="Youtube-pagina Homemade Water" title="Youtube pagina"/></a></li>
         </ul>
     </div> <!-- end social media icons --> 
     

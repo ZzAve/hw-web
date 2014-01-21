@@ -3,7 +3,7 @@
 $error=false; // set error and 'am i mailed'-variables to standard value false
 $mailed=false;
 
-if( isset($_REQUEST['name']) ){
+if( isset($_POST['name']) ){
 	global $error; // make use of global defined variables
 	global $mailed;
 	

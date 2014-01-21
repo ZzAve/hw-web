@@ -68,18 +68,20 @@
             <h3>Laatste Nieuws:</h3>
             <ul>    	   
 <?php	      // Fetch the 3 latest newsitems
-              $query = "SELECT * FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,3";
+              $query = "SELECT `ID`,`Titel`,`Foto` FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,3";
               $result = mysqli_query($mysql,$query);		  
               while( $row = mysqli_fetch_array($result) ) {
+				  $imgFile = substr($row['Foto'],0,6)=="images" ? "/" : "";
+				  $imgFile = $imgFile.$row['Foto'];
 ?>
               <li>
-                <a href="<?="nieuws.php?item=".$row['ID']?>"><?=$row['Titel']?></a>
+                <a href="<?="nieuws.php?item=".$row['ID']?>"><img src="<?=$imgFile?>" alt="Nieuwsbericht" /> <?=$row['Titel']?></a>
               </li>
 <?php 
 			  }
 ?>
            </ul>
-           <p><a href="nieuws.php"> Meer nieuws </a></p>
+           <p><a href="/nieuws.php"> Meer nieuws </a></p>
         </div>    <!-- end news -->
         
     </div> <!-- end content -->    
@@ -100,8 +102,11 @@
 	  $time = explode(":",$db_entry['Tijd']);
 ?>
 		<li>
-		   <label> <?= strftime("%a %d %B %H:%M",mktime($time[0],$time[1],0,$date[1],$date[2],$date[0])) ?> </label>
-		   <a href="<?= "agenda.php?event=".$db_entry['ID']?>" ><?=$db_entry['Titel']?></a>	
+		  <label> 
+		  	<?= array_pop($date)?> 
+          	<span> <?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?> </span>
+          </label>
+          <a href="<?= "/agenda.php?event=".$db_entry['ID']?>" ><?=$db_entry['Titel']?></a>	
 		</li>
 <?php
 	} // end function popagendaevent

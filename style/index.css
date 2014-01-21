@@ -1,6 +1,60 @@
 @charset "utf-8";
 /* CSS Document */
 
+#news ul, #agenda ul{
+	list-style:none;
+	margin:0;
+}
+
+#news li{
+	margin:5px auto;
+	overflow:hidden;
+	height:auto;
+}
+
+#news img{
+	width:50px;
+	max-height:50px;
+	heigt:auto;
+	min-height:30px;
+	vertical-align:middle;
+}
+
+#agenda li{
+	height:55px;
+	margin:2px auto;
+	line-height:50px;
+}
+#agenda li a{
+	vertical-align:middle;
+}
+
+#agenda li label{
+    display:block;
+	float:left;
+	margin-right:20px;
+	margin-left:5px;
+	margin-top:5px;
+	height:45px;
+	width:45px;
+	background-color:#06F;
+	border-radius:4px;
+	color:black;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	line-height:22px;
+}
+
+.newsitem li label span{
+	display:block;
+	color:#011369;
+}
 
 /*#news, #agenda{
 	color:black;

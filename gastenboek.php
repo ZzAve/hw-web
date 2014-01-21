@@ -92,7 +92,7 @@
 ?>	
 
 <!--  Document specific scripts  --> 
-<script type="text/javascript" src="./js/validate.js"></script>
+<script type="text/javascript" src="/js/validate.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
 	  
@@ -118,7 +118,7 @@ Output:
 function popgastItem($db_item,$new=0){
 	// Obviously, the first task is error checking.
 	
-	// ..
+	// TODO: IMPLEMENT ERROR CHECKING
 	// ..
 	
 	// END ERROR CHECKING

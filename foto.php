@@ -1,5 +1,5 @@
 <?php
-	require_once 'misc/db_connectread.php';
+	require_once '/misc/db_connectread.php';
 	$request=false;
 	$valid_request=false;   
 	
@@ -26,7 +26,7 @@
 	$title= $pre_title."Foto's";   
    	
 	// Import header
-	require_once 'header.php'; 7
+	require_once '/header.php'; 7
 ?>
 
 <div id="content-bar">  
@@ -91,7 +91,7 @@
 				foreach($photolist as $photo){
 ?>
 				    <li class="loading"> 
-                    <a class="hidden" href="<?=$album_location."/".str_replace("_thumb","",$photo)?>" title="<?=$album_name?>" ><?=$album_location."/".$photo?></a>
+                    <a class="hidden" href="<?="/".$album_location."/".str_replace("_thumb","",$photo)?>" title="<?=$album_name?>" ><?=$album_location."/".$photo?></a>
                 </li>	
 <?php
    }
@@ -135,8 +135,8 @@
 						$album_thumb = $row['Thumbnail'];
 ?>
                       	<li> 
-                          <a href="foto.php?album=<?=$album_id?>"> 
-                            <img src="<?=$album_thumb?>" alt="<?=$album_name?>" title="<?=$album_name?>" />
+                          <a href="/foto.php?album=<?=$album_id?>"> 
+                            <img src="<?="/".$album_thumb?>" alt="<?=$album_name?>" title="<?=$album_name?>" />
                           </a> 
                           <label> <?= $album_date?> </label>	<?=$album_name?> <span> <?=$album_place?> </span>
                         </li>
