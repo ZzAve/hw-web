@@ -4,7 +4,7 @@
 div.newsitem{
 	width:95%;
 	height:auto;
-	border-radius:10px;	
+	border-radius:2px;	
 	margin-bottom:30px;
 	overflow:auto;
 	padding:10px;
@@ -34,7 +34,8 @@ div.newsitem img:hover{
 
 .newsitem .date{
 	float:left;
-	margin-right:20px;
+	margin-right:15px;
+	margin-left:5px;;
 	height:45px;
 	width:45px;
 	background-color:#06F;
@@ -73,4 +74,12 @@ div.newsitem img:hover{
 	font-weight:900;
 	margin-right:5px;
 	color:#06F;
+}
+.newsitem ul{
+	margin-left:55px;
+	list-style-position:inside;
+}
+
+.newsitem h3{
+	margin-left:75px;
 }

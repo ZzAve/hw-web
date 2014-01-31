@@ -114,13 +114,17 @@ div.home_agenda{
     display: block;
 }
 
+#menu #clash_menu *{
+ 	color: #D00C0D;
+}
 	
 /* Menu coloring and styling */
 /* Main menu
 ------------------------------------------*/
 #menu {
-    font-family: Arial;
+    /*font-family: Arial;*/
     font-size: 16px;
+	font-weight:bolder;
 }
 #menu > li > a {
     color: #000;

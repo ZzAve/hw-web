@@ -39,14 +39,16 @@ if( isset($_REQUEST['name']) ){
 			// if there was mailed, check if everything went according to plan.    	       
             if(!$error) {
 				// if so (everything went according to plan), say something nice
-                $starttxt="Uw bericht is verstuurd. U hoort zo spoedig mogelijk van ons!";		
+				?>
+                <p>Uw bericht is verstuurd. U hoort zo spoedig mogelijk van ons!</p>
+                <?php		
             } else {
 				// if not, at least let the person know
-                $starttxt="Tijdens de verwerking van uw formulier is fout opgetreden. Probeert u het later nog eens, of stuur een e-mail naar <a href=\"mailto:info@homemadewater.nl\">info@homemadewater.nl</a>";
+				?>
+                <p class="error">Tijdens de verwerking van uw formulier is fout opgetreden. Probeert u het later nog eens, of stuur een e-mail naar <a href=\"mailto:info@homemadewater.nl\">info@homemadewater.nl</a></p>
+            <?php
             }
-			// state the text
-            echo "<p> $starttxt </p>";
-            
+			// state the text            
         } else {
             // if no form was send to this page, allow people to fill in the contactform (show standard text)
         ?>    
@@ -58,8 +60,8 @@ if( isset($_REQUEST['name']) ){
         <form id="contact_form" enctype="multipart/form-data" onsubmit="return validate()" action="./contact.php" method="post">
             <p>Naam <br /><input autofocus type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>
             <p>E-mail <br /><input type="text" name="email" <?= $error ?"value=\"$email\"" : NULL ?> /></p>
-            <p>Telefoon (optioneel) <br /><input type="text" name="phone"/> </p>
-            <p> Onderwerp <br /> <input type="text" name="subject" <?= isset($_GET['o']) && $_GET['o']=="Clash" ? "value=\"Kaartje Kwartfinale Clash of the coverband\"": "";?> /> </p>
+            <p>Telefoon (optioneel) <br /><input type="text" name="phone" <?= $error ?"value=\"$phone\"" : NULL ?>/> </p>
+            <p> Onderwerp <br /> <input type="text" name="subject" <?= isset($_GET['o']) && $_GET['o']=="Clash" ? "value=\"Kaartje Kwartfinale Clash of the coverband\"": $error ?"value=\"$subject\"" : NULL ;?> /> </p>
             <p>Bericht <br /><textarea name="bericht" rows="10" cols="58" <?= $error ?"value=\"$message\"" : NULL ?>></textarea></p>
             <p><input type="submit" value="Versturen" /><input type="reset" value="Wissen" />
             <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Kopie versturen naar uw eigen mail?</label> <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> /> </p>

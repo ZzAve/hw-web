@@ -3,7 +3,41 @@
 
     <div id="content">
 		<h1> Blijf op de hoogte van Homemade Water's laatste nieuws!</h1> 
-        <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>   
+        <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater" target="_blank">facebook pagina</a></h2>   
+        
+        <div class="newsitem" id="news_Clash2">
+        	<div class="date"><label> 31 </label><span> JAN </span></div>
+            <h3> 3e Halve Finale Regio West Nederland 'The Clash of the Cover Bands, The BENELUX Edition 2013/2014' in Podium de Vorstin in Hilversum</h3>
+            <img src="images/Clash_halveFinale.jpg" alt="De derde Halve Finale van de Regio West belooft een knaller te worden met 7 topbands!" />
+            
+            <p>Op zaterdag 15 februari a.s. vindt in Podium de Vorstin in Hilversum de 3e Halve Finale plaats waar zeven bands de muzikale strijd met elkaar aan gaan in deze grootste zoektocht naar de beste en populairste coverband van de Benelux. Met uitsluitend nog topbands in de competitie belooft het weer een spannend feest der herkenning te gaan worden. De bands worden zowel door een vakjury als door het publiek beoordeeld en de winnaars plaatsen zich voor de Regio-Finale die wordt gehouden in de Melkweg in Amsterdam op zondag 18 mei 2014. Podium de Vorstin, Koninginneweg 44 in Hilversum opent op zaterdag 15 februari a.s. om 19.00 uur haar deuren en het programma start om 19.30 uur.</p>
+            
+            <p>Dit jaar is de grootste bandcompetitie van Nederland 'The Clash of the Cover Bands' voor de derde keer de grens over geweest en betrekt ook België en Luxemburg in haar spannende zoektocht naar de beste en populairste coverband. 'The Clash of the Cover Bands, The BENELUX Edition 2013' vindt in eerste instantie plaats in 5 regio's: Zuid Nederland (Noord-Brabant, Limburg en Zeeland), West Nederland (Noord-Holland, Zuid-Holland, Utrecht en Flevoland), Oost Nederland (Gelderland, Overijssel, Drenthe), Noord Nederland (Friesland, Groningen) en België/Luxemburg. Elke regio heeft haar eigen cyclus van voorrondes/selectierondes, kwart- en halve finales en finales. De winnaars van alle regionale finales ontmoeten elkaar in de <strong>BENELUX Semi-Finals</strong>, en daarna de knallende <strong>BENELUX Grand Finale</strong>. De regionale finalerondes in Nederland vinden plaats op de meest gerenommeerde podia zoals o.a. Poppodium 013 Tilburg, Melkweg Amsterdam, P60 in Amstelveen, MEZZ Breda, Effenaar Eindhoven, Podium de Vorstin in Hilversum en Metropool in Hengelo.</p>
+ 
+		<p><strong>3e Halve Finale Regio West (Noord-Holland, Zuid-Holland, Utrecht en Flevoland):</strong>
+zaterdag 15 februari 2014: Podium de Vorstin in Hilversum (willekeurige volgorde):</p>
+        <ul>
+            <li> <strong>Black Street Blues</strong>: BluesRock coverband uit Amersfoort</li>
+            <li> S<strong>ack Blabbath</strong>: Black Sabbath tribute uit Amsterdam</li>
+            <li> <strong>Homemade Water</strong>: Pop, Rock coverband uit Delft</li>
+            <li> <strong>HotRod Band</strong>: CountryRock coverband uit Den Haag</li>
+            <li> <strong>Player</strong>: Slayer tribute uit Amsterdam</li>
+            <li> <strong>ROV3D</strong>: Rock coverband uit Voorhout</li>
+            <li> <strong>The MiXX</strong>: Funk, Rock coverband uit Amersfoort</li>
+            <li> <strong>The Viewmasters</strong>: Eighties coverband uit Roelofarendsveen</li>
+        </ul>
+		<p>Zaal open: 19.00 uur, aanvang: 19.30 uur.</p>
+
+		<p>De deelnemende bands worden beoordeeld in 2 categorieën: vakjury (vertegenwoordigers van o.a. platenmaatschappijen, artiestenbureaus, muziekdocenten en vakmedia) en publiek (via stembiljetten). Beide categorieën krijgen een uiteindelijke winnaar in de BENELUX Grand Finale die wordt beloond met o.a. een CD-contract met videoclip met distributie en plugging in de Benelux en een tour van 20 optredens.</p>
+ 
+		<p>Vanaf de Regio-Finales worden ook de muzikanten individueel beoordeeld en per ronde krijgen de beste drummers, basgitaristen, gitaristen, toetsenisten en vocalisten een nominatie voor de Individuele Awards die tijdens de BENELUX Grand Finale.</p>
+ 
+		<p>Gedurende hun deelname aan The Clash of the Cover Bands worden de bands zoveel mogelijk begeleid en gecoacht om zowel muzikaal als ook op het gebied van presentatie en uitstraling het aanwezige talent optimaal te laten benutten. Door deze intensieve begeleiding groeit tijdens deze spannende en leerzame competitie niet alleen de kwaliteit van de bands, maar ook de betrokkenheid van het publiek en de enorme exposure.</p>
+ 
+		<p>Entrée: € 12,50 aan de kassa en € 10,- via de voorverkoop op <a href="http://www.ticketmaster.nl" target="_blank">www.ticketmaster.nl</a>, <a href="http://www.devorstin.nl" target="_blank">www.devorstin.nl</a> en op onze website <a href="http://www.theclashofthecoverbands.com" target="_blank">www.theclashofthecoverbands.com</a>, waar ook meer informatie over de deelnemende bands en het evenement te vinden is. <strong>Via de bands zijn kaarten in de voorverkoop vermoedelijk goedkoper te krijgen!</strong></p>
+
+            </div>
+        
         
         <div class="newsitem" id="news_Clash4">
         	<div class="date"><label> 4 </label><span> NOV </span></div>

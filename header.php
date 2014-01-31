@@ -5,7 +5,7 @@
       lang="nl" xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="last-modified" content="2013-11-10" />
+    <meta http-equiv="last-modified" content="2014-01-31" />
     <meta http-equiv="content-language" content="nl" />
    	<meta property="fb:admins" content="100001997083297" />
     
@@ -43,12 +43,13 @@
 <div id="wrapper">
     <div id="header">       
         <img id="tapsplash" src="images/tapsplash.png" alt="Stromend water uit de kraan"/>
-        <img id="logo" src="images/logo_head.png" alt="Hét Homemade Water logo"/> 
+        <a href="./index.php"><img id="logo" src="images/logo_head.png" alt="Hét Homemade Water logo"/></a>
         
         <div id="navbar">
             <ul id="menu">
                <li class="highlight"><a href="index.php">HOME</a></li>
                <li><a href="nieuws.php">NIEUWS</a></li> 
+               <li id="clash_menu"><a href="Clash.php">NAAR DE CLASH</a></li> 
                <li><a href="#">MEDIA</a>
                     <ul>
                         <li><a href="foto.php"> FOTO</a></li>
@@ -71,10 +72,9 @@
           </p>
        </div>
          -->
-       <!--<div class="home_highlight home_agenda">
+       <div class="home_highlight home_agenda">
           <p><label>Eerstvolgende gig:</label>
-          <a href="https://www.facebook.com/events/234401526719177/" target="_blank">Donderdag 14 November<br /> Open Feest: It's a small World <br />
-           DSB Delft</a></p>
-       </div>-->
+          <a href="/#Clash" >Zaterdag 15 februari<br /> Clash ot Cover Bands: Halve Finale <br /> De Vorstin, Hilversum</a></p>
+       </div>
     </div><!-- end header -->
 
