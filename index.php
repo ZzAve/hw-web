@@ -15,8 +15,19 @@
          </ul>
 		
          <p> Nieuwsgierig geworden? Check onze <a href="./audio.php">media</a> en <a href="./nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p>       
+
          
-         <div class="attention">
+         
+		 <div class="attention">
+         <img src="images/clash_win.jpg" alt="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" title="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" />
+         <h3> Eureka ! ! !</h3>
+         <p> We hebben het voor elkaar gekregen. Zaterdag 15 februari speelden we in de halve finale van de Clash of the Cover Bands (Regio West). Daar hebben we de sterren van de hemel gespeeld, en een plekje weten te bemachtigen in de finale!</p>
+         
+         <p> Deze finale zal plaatsen vinden op 18 mei, op een podium niks minder dan de <strong>main stage van de Melkweg, Amsterdam</strong>. Hoe gaaf is dat?</p>
+         
+         <p> Dit betekent ook dat we nog maar 1 ronde verwijderd zijn van de TV opnames van de Clash. De winnaars van de regiofinales gaan namelijk door naar de halve finales voor de Benelux, en hierbij worden tv opnames gemaakt!
+         </div>
+         <!--<div class="attention">
              <a href="./Clash.php"><img src="images/Clash_halveFinale.jpg" alt="De line up voor de halve 3e finale van de Clash of The Coverbands (Regio West)" /></a> 
             
              
@@ -28,7 +39,7 @@
 
                  <p>  <strong>!!! ACTIE !!!</strong> : De kaarten die normaal <s>&euro;10,-</s> per stuk zijn, kunnen we nu aanbieden <strong>per 2 voor &euro;15,-</strong> in de voorverkoop! Wil je mee om ons te steunen, ga dan naar onze <a href="./Clash.php">Clash pagina</a>, dan helpen wij je aan een kaartje en de mogelijkheid om samen met de band te reizen! </p>
              </div>
-        </div>
+        </div> ./attention -->
     </div> <!-- end div content -->
 	<div id="sidebar-left"></div>
     <div id="sidebar-right"></div>
