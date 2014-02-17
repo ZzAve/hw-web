@@ -20,6 +20,9 @@ html, body{
 	color: #CCC;
 
 }
+body > iframe{
+	display:none;
+}
 .hidden{
 	visibility:hidden;
 }

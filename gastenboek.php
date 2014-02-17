@@ -1,17 +1,69 @@
 <?php
+ 	// Set settings for page
+ 	$nr_of_posts = 10;  // nr of gastenboek posts to show
+ 
+    //Check if a post needs to be handled
 	$requestPostadd = false; 
 	$error=false;
-	
-	//Check if a post needs to be handled
+	require ('misc/recaptchalib.php'); 
+
+	// Was there a form submitted?
 	if( isset($_POST['Naam']) ){
+		$privatekey = "6Lf5we4SAAAAAAzEWbJVSnoYr2i_WZ4b1v-VDcIG";
+		$resp = recaptcha_check_answer ($privatekey,
+							 			$_SERVER["REMOTE_ADDR"],
+										$_POST["recaptcha_challenge_field"],
+										$_POST["recaptcha_response_field"] );
+		$error = !($resp->is_valid);
+		$errorMsg = "Er heeft een verkeerde verificatiecode ingevoerd. Probeert u het nog eens";		
+		
 		$requestPostadd=$_POST;
-		$requestPostadd['Datum'] = time();
+		$name = strip_tags($requestPostadd['Naam']);
+		$email = trim(strip_tags($requestPostadd['Email']));
+		$msg = wordwrap(strip_tags($requestPostadd['Bericht']),70); // strip message of any html tags and wrap lines that are longer than 70 characters
+		//$msg = str_replace("\n","<br />\n",$msg); // ensure linebreaks are shown in message
+		$copy_mail = isset($_POST['email-copy-checkbox']) ? "checked=\"checked\"": NULL;
+		
+		if (!$error){
+			$newPostSucces = uploadNewPost();
+		}
 	}
 	
+	require_once 'misc/db_guestRead.php';
+	// Check if page is available
+	if (isset($_GET['page'])){
+		$page = (int) $_GET['page'];
+		if ( $page <=0){
+			//echo"page is smaller than 0 \n";
+			//echo '$page = '.$page;
+			//newt_wait_for_key();
+			header('Location: '.substr(strrchr($_SERVER['PHP_SELF'],"/"),0));
+			exit;
+		} else {
+			$query = "SELECT * FROM `gastenboek`;";
+			$result = mysqli_query($mysql,$query);
+			$pageMax  = ceil( mysqli_num_rows($result)/$nr_of_posts );
+			//echo "pageMax is $pageMax.  Why?";
+			//newt_wait_for_key();
+			if ($page > $pageMax){
+				// select latest page
+				header('Location: '.substr(strrchr($_SERVER['PHP_SELF'],"/"),0)."?page=$pageMax");
+				exit;
+			}
+		}
+	}
+	
+	$extra = "
+		<script type=\"text/javascript\">  
+			var RecaptchaOptions = {  
+				theme : 'white',
+				language  : 'nl'
+				};  
+		</script> ";
 	
 	$title = "Gastenboek";
 	require_once 'header.php'; 
-	require_once 'misc/db_guestRead.php';
+
 	setlocale(LC_TIME, 'Dutch');
 ?>
 
@@ -21,7 +73,12 @@
       	
          <h3> Plaats hier je bericht </h3>
          <!-- The contact form -->
-        <form id="guestbook" enctype="multipart/form-data" onsubmit="return validateGuestbook()" action="gastenboek.php" method="post">
+         
+        <form id="guestbook" enctype="multipart/form-data" onsubmit="return validateGuestbook()" 
+        			action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+           <?php if($error){ ?>
+           <p class="errorMsg"> <?= $errorMsg?> </p>
+            <?php } ?>
            	<label for="Naam">Naam </label>
 <input autofocus="" type="text" name="Naam" id="Naam" placeholder="Uw naam" <?= $error ?"value=\"$name\"" : NULL ?>  /> 
            	<label for="Email">E-mail </label> 
@@ -29,8 +86,15 @@
 
             <br />
           	<label for="Bericht">Bericht </label> 
-            <textarea name="Bericht" id="Bericht" placeholder="Wat is uw ervaring met Homemade Water?" <?= $error ?"value=\"$message\"" : NULL ?>></textarea>
+            <textarea name="Bericht" id="Bericht" placeholder="Wat is uw ervaring met Homemade Water?"><?= $error ?$msg : NULL; ?></textarea>
+            <div class="captcha" >
+<?php   
+		$publickey = "6Lf5we4SAAAAACZLZL-h_-MPKRNHgL4YAi1trQxp"; // you got this from the signup page
+        echo recaptcha_get_html($publickey);  
+?> 
+           </div>
            	<input type="submit" value="Versturen" />
+            <input type="reset" value="Wissen" />
            	<label class="hidden" id="email-copy-label" class="copy mail" for="email-copy-checkbox">Stuur mij een kopie (email)</label> 
             <input class="hidden" id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> />
         </form>
@@ -40,29 +104,30 @@
          	<h3> Recente berichten</h3>
          	<!-- most recent post -->
 <?php		
-			$query = "SELECT MAX(`id`) FROM `gastenboek`";
-			$top = mysqli_fetch_array(mysqli_query($mysql,$query));
-
-			//Check whether startat is set
-			if(isset($_GET['startat'])){
-				$start= "WHERE `ID`<=". (int) $_GET['startat'];
-				$current = $_GET['startat'];
+			//Check whether the pagenumber is set
+			if(isset($_GET['page'])){
+				$page = (int) $_GET['page'];
 			} else {
-				$start="";
-				$current=$top[0];
+				$page = 1;
 			}	
-			 
-			$nr_of_posts = 10;
-            $query = "SELECT `Naam`, `Datum`, `Bericht` FROM `gastenboek` $start ORDER BY `Datum` DESC LIMIT $nr_of_posts;";
+			$start= $nr_of_posts * ($page-1);
+			$itemsreq = $nr_of_posts+1;
+            $query = "SELECT `Naam`, `Datum`, `Bericht` FROM `gastenboek` ORDER BY `Datum` DESC LIMIT $start, $itemsreq;";
             $result = mysqli_query($mysql,$query);
-						
-			if ($requestPostadd !== false){
-				popgastItem($requestPostadd,1);	
+			$last = ($nr_of_posts+1) != mysqli_num_rows($result);			
+			$end = $last ? 0 : 1;
+			
+			$count=0;
+            while(  $count < mysqli_num_rows($result) - $end && $row = mysqli_fetch_array($result)  )  {
+				if ($count==0 && $requestPostadd !== false && !$error)
+					popgastItem($row,1);
+				else 
+				 	popgastItem($row);
+				$count++;
 			}
-            while( $row = mysqli_fetch_array($result) )  {
-				popgastItem($row);
-			}
-			moreOf("gastenboek.php",$nr_of_posts,$current,$top[0],1);
+			
+			require 'misc/miscfunctions.php';
+			pagination($page,$last);
 ?>	
         </div>   
             
@@ -73,23 +138,7 @@
 
 </div> <!-- end content-bar div -->
 
-<?php 
-	// process the incoming request (if necessary)
-	if ($requestPostadd !== false){
-		//put it into the database
-		require_once 'misc/db_guestPost.php';
-		$query =  "INSERT INTO `gastenboek`(`Naam`, `Email`, `Bericht`) VALUES (\"".$requestPostadd['Naam']."\" ,\"".$requestPostadd['Email']."\" , \"".$requestPostadd['Bericht']."\" )";
-		$result=mysqli_query($mysql,$query);
-
-		// mail it (if necessary)
-		if( $result && $requestPostadd['checkbox-send-copy']=="on"){
-			//send mail (not yet)
-			
-		}
-	}
-
-	require_once 'footer.php'; 
-?>	
+<?php 	require_once 'footer.php'; ?>
 
 <!--  Document specific scripts  --> 
 <script type="text/javascript" src="/js/validate.js"></script>
@@ -104,7 +153,36 @@
 </body>
 </html>
 
-<?php
+<?php 
+// process the incoming request (if necessary)
+function uploadNewPost(){
+	global $error, $requestPostadd; 
+	//put it into the database
+	require_once 'misc/db_guestPost.php';
+	$name = strip_tags($requestPostadd['Naam']);
+	$email = trim(strip_tags($requestPostadd['Email']));
+	$msg = wordwrap(strip_tags($requestPostadd['Bericht']),70); // strip message of any html tags and wrap lines that are longer than 70 characters
+	//$msg = str_replace("\n","<br />\n",$msg); // ensure linebreaks are shown in message
+	$copy_mail = isset($_POST['email-copy-checkbox']) ? "checked=\"checked\"": NULL;
+	
+	$result = false;
+	if ($name!=NULL && $email!=NULL && $msg!=NULL){
+		$query =  "INSERT INTO `gastenboek`(`Naam`, `Email`, `Bericht`) VALUES (\"".$name."\" ,\"".$email."\" , \"".$msg."\" )";
+		$result=mysqli_query($mysql,$query);
+
+		// mail it (if necessary)
+		if( $result && $requestPostadd['checkbox-send-copy']=="on"){
+			//send mail (not yet)
+			
+		}
+		if ($result != TRUE){
+			$error = false;
+			$errorMsg = "Er is iets fout gegaan tijdens de behandeling van jouw bericht. Probeer het later nog een keertje!";
+		}
+	}
+	return $result;
+}
+
 
 /*
 * Function POPGASTITEM takes a database entry as a input argument, which holds the information about a post on the 'gastenboek' page. It calculates the time that has passed since the message was post, and uses this while it spits out some HTML code (a div with class gastItem)
@@ -147,58 +225,11 @@ function popgastItem($db_item,$new=0){
 	
 	//Now post the findings (naam, passedtime and the message (bericht)
 ?>
-	<div class="<?= $new==1 ? "hidden":"";?> gastItem"> 
+	<div id="newpost" class="<?= $new==1 ? "hidden":"";?> gastItem"> 
     	<p class="head"><label><?=$name?></label> (<?=$time?> geleden)</p>
         <p><?=$msg?></p>
     </div>
 <?php	
 }
 
-/*
-Function MOREOF puts in a div, with the text 'vorige pagina' and 'volgende pagina'. It dynamically determines what the next or previous page is based on what is currently shown.
-*
-Input:
-  $page 	name of the page
-  $ippage 	number of items that are showing, per page
-  $start 	this variable refers to the ID of the first newsitem showing on the current page
-  $top 		this variable refers to the item with highest ID in the database (and very likely to be the most recent one)
-*
-Output:
-  one <div> of class 'morenews', which holds two <span> elements, for both the previous and next news page respectively.
-*/
-function moreOf($page,$ipPage,$start,$top,$bottom=1){
-?>
-        <!-- Allow visitor to see more news -->
-        <div class="morenews">
-            <span>
-<?php 
-    if($start<$top){
-      // show previous with link
-?>
-              <a href="<?= substr(strrchr($_SERVER['PHP_SELF'],"/"),1)."?startat=".(($start+$ipPage) > $top ? $top : $start+$ipPage)?>" >Vorige pagina </a>
-<?php
-    } else { // show without link
-?>
-                  Vorige pagina
-<?php 
-    }
-?>
-            </span>					                
-            <span>
-    <?php   
-        if($start>$bottom+$ipPage-1){
-          //show next with link
-?>
-              <a href="<?= substr(strrchr($_SERVER['PHP_SELF'],"/"),1)."?startat=".(($start+$ipPage) > $top ? $top : $start+$ipPage)?>" >Volgende pagina </a>
-<?php
-        } else{ //show without link 
-?> 
-                Volgende pagina
-<?php 
-		} 
-?>
-            </span>
-        </div>  
-<?php     	
-} // end function MOREOF
 ?>

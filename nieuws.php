@@ -1,5 +1,6 @@
 <?php
 	require_once('misc/db_connectread.php');
+    require 'misc/miscfunctions.php';
 	$request = false;
 	$valid_request = false;
 	
@@ -58,27 +59,33 @@
 <?php
 		}
 		
-		$query = "SELECT `ID` FROM `nieuwsitems` ORDER BY `ID` DESC LIMIT 1;";
-		$result = mysqli_query($mysql,$query);
-		$ans = mysqli_fetch_array($result);
-		$start = $ans['ID'];
-		$top = $start;
-		if(isset($_GET['startat']) && intval($_GET['startat'])>=10 && intval($_GET['startat'])<=$top ){
-	 	  // give the five newsitems starting from number 'startat'
-		  $start=intval($_GET['startat']);
+		//$query = "SELECT `ID` FROM `nieuwsitems` ORDER BY `ID` DESC LIMIT 1;";
+		//$result = mysqli_query($mysql,$query);
+		//$ans = mysqli_fetch_array($result);
+		$nrOfItems=5;
+		if(isset($_GET['page']) && intval($_GET['page'])>=2){
+	 	  // give the five newsitems starting from  'page'
+		  $page=intval($_GET['page']);
+		} else {
+		  $page = 1;
 		}
 ?>
         <h1> Het laatste nieuws!</h1> 
         <h2> Om ons op de voet te volgen, verwijzen we u door naar onze <a href="http://www.facebook.com/HomemadeWater">facebook pagina</a></h2>  
 <?php
-            morenews($start,$top);
-            $query = "SELECT * FROM `nieuwsitems` WHERE `ID`<=$start ORDER BY `Datum` DESC LIMIT 5;";
+			$start = ($page-1)*$nrOfItems;
+			$limit = $nrOfItems+1;
+            $query = "SELECT * FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT $start,$limit;";
             $result = mysqli_query($mysql,$query);
-            while( $row = mysqli_fetch_array($result) )  {
+     		$rows = mysqli_num_rows($result); 
+		    $last = $nrOfItems+1 != $rows;
+			$count=0;
+            while( $count < $nrOfItems && $row = mysqli_fetch_array($result) )  {
               popnewsitem($row);
+			  $count++;
             }                 		
-            
-			morenews($start,$top);
+
+			pagination($page,$last);
 		}	
 ?>         
     </div> <!-- end div content -->
@@ -144,6 +151,7 @@ function popnewsitem($db_entry){
     </div>	
 <?php
 } //end function POPNEWSITEM
+
 
 /*
 Function MORENEWS puts in a div, with the text 'vorige pagina' and 'volgende pagina'. It dynamically determines what the next or previous page is based on what is currently shown.

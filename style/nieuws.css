@@ -8,7 +8,7 @@
 	margin-bottom:30px;
 	overflow:auto;
 	padding:10px;
-	background-color:rgba(0,0,0,.3);
+	background-color:rgba(21,21,21,.3);
 }
 
 .newsitem img{
@@ -75,15 +75,31 @@
 .morenews{
 	text-align:center;
 	margin:30px auto 10px;
+	width:50%;
+	overflow:hidden;
 }
 
-.morenews span{
-	margin:auto 20px;
-	color:#999;
+.morenews form{
+	float:left;
+	margin:1px 3%;
+	width:44%;
 }
 
-.morenews span a{
-	color:#CCC;
+.morenews form button{
+	line-height:20px;
+	padding:10px 15px !important;	
+	font-weight:bold;
+	color:#0060F0;
+	background-color:#DDD;
+	outline:none;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	vertical-align:top;
+}
+
+.morenews form button:disabled {
+ 	color:#778ba8;
 }
 
 

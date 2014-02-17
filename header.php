@@ -1,7 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#"
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#"
       xml:lang="nl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -44,6 +42,13 @@
     <link rel="stylesheet" type="text/css" href="/style/index.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/nieuws.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/video.css" title="style" />
+
+<?php 
+  	if (isset($extra)){
+	  echo $extra;
+ 	 }
+?>    
+    
 </head>
 
 <body>
