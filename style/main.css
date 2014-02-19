@@ -26,7 +26,9 @@ body > iframe{
 .hidden{
 	visibility:hidden;
 }
-
+.nodisp{
+	display:none;
+}
 .loading{
 	background: url("../images/lightbox/loading.gif") no-repeat center center;
 }

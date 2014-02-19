@@ -1,8 +1,8 @@
 <?php 
 	$title = "Video";
-	require_once 'header.php'; 
+	require_once 'header.php';
+	require_once 'misc/db_connectread.php'; 
 ?>
-
 <div id="content-bar">
     <div id="content">   
            <h1> De afdeling beeld en geluid </h1> 
@@ -11,33 +11,29 @@
            		<div class="iframe">
                      <a class="iframeYT" href="http://www.youtube.com/embed/CFnpnFr-oW4?wmode=transparent"></a>
     			</div>
-                <h3> I'm Just Me - Live @ Dorpsfeest Re&acirc;hus, Friesland</h3>
-                <p> 05/07/2013 Het buitenlandse debuut van Homemade Water is ook te zien op YouTube. Het eigen nummer "I'm Just Me" werd hier gespeeld voor de uitzinnige bewoners van Re&acirc;hus. <br /><br />Credits voor de video gaan naar Arnold Burger.</p>
+                <div class="description">
+                    <div class="date">
+                        <label> 05 </label>
+                        <span> JUL </span>
+                    </div>
+                    <div class="info"> <!-- rest -->
+                    <h3> I'm Just Me - Live @ Dorpsfeest Re&acirc;hus, Friesland</h3>
+                    
+                    <p> Het buitenlandse debuut van Homemade Water is ook te zien op YouTube. Het eigen nummer "I'm Just Me" werd hier gespeeld voor de uitzinnige bewoners van Re&acirc;hus. <br /><br />Credits voor de video gaan naar Arnold Burger.</p>
+                    </div>
+               </div>
            </div>
            
            <div id="videoList">
            		<h4> Video's van Homemade Water:</h4>
            		<ul>
-                    <li>
-                        <img src="./images/YT_i'm_just_me.jpg" alt="I'm Just Me, Live @ Dorpsfeest Reahus" title="I'm just me, Live @ Dorpsfeest Reahus"  />
-                        <a href="http://www.youtube.com/embed/CFnpnFr-oW4"></a> 
-                        <h4> I'm Just Me - Live @ Dorpsfeest Re&acirc;hus, Friesland</h4>
-                        <p> 05/07/2013 Het buitenlandse debuut van Homemade Water is ook te zien op YouTube. Het eigen nummer "I'm Just Me" werd hier gespeeld voor de uitzinnige bewoners van Re&acirc;hus. <br /><br />Credits voor de video gaan naar Arnold Burger.</p>
-                   </li>
-                   
-                    <li>
-                        <img src="./images/give_it_back.jpg" alt="Give it back thumbnail" title="Give It Back"  />
-                        <a href="http://www.youtube.com/embed/IBmy2bErdWM"></a> 
-                        <h4> Give it Back - Live @ De Storing, Haarlem </h4>
-                        <p> 14/02/2013 Het valentijnsoptreden van Homemade Water vond plaats in cafe De Storing in Haarlem. Hier werd zo ook de eerste versie van 'Give It Back' gespeeld, het tweede zelfgeschreven nummer. <br /><br  /> Credits voor de video gaan naar Elisabeth van Lent.</p>
-                   </li>
-                   
-                   <li>
-                        <img src="./images/dsb_optreden.jpg" alt="DSB optreden thumbnail" title="DSB compilatie - Zomer 2012" />
-                        <a href="http://www.youtube.com/embed/MWqYy2H6I8E"></a>
-                        <h4> Compilatievideo - Live optreden @ DSB, Delft </h4>
-                        <p> 6/07/2012 Het einde van het collegejaar werd flink gevierd tijdens het jaarlijkse eindfeest van studentenvereniging DSB. Homemade Water maakte hier haar debuut en knalde meteen de hele zaal weg. Lekker! <br /><br  /> Credits voor de video gaan naar Thomas Mensink. </p>
-                   </li>
+<?php
+				$query = "SELECT * FROM `videos` ORDER BY `Datum` DESC;";
+				$result = mysqli_query($mysql,$query);
+				while( $row = mysqli_fetch_array($result) )  {
+				  popVideoItem($row);
+				}   
+?>
                </ul>
            </div> <!-- end videoList div -->
            
@@ -51,7 +47,38 @@
 
 
 <!-- page specific scripts -->
-<script type="text/javascript" src="js/video.js"></script>
+<script type="text/javascript" src="/js/video.js"></script>
 
 </body>
 </html>
+
+<?php
+/* function POPVIDEOITEM creates a <div> entry for one single newsitem. 
+//	input:
+//		$db_entry   a database entry with the video, coming from the 'videos' table of the 'juliuqb30_hw' database.
+//  output:
+// 		$ one <li> with the video item as requested
+//  returns nothing
+*/
+
+function popVideoItem($dbEntry){
+	$date = explode("-",$dbEntry['Datum']);
+	$id = $dbEntry['ytID'];
+	$imgLoc1= "http://img.youtube.com/vi/";
+	$imgLoc2= "/hqdefault.jpg";
+?>
+   <li><span class="nodisp	"><?=$id?></span>
+   	  
+      <img src="<?=$imgLoc1.$id.$imgLoc2?>" alt="<?= $dbEntry['Titel']?>" title="<?= $dbEntry['Titel']?>"  />
+      <div class="playbutton"> <img src="http://www.clker.com/cliparts/L/y/p/N/e/L/play-button-red-th.png" alt="" title""/> <!-- tahnks to Clker.com --></div>
+       <div class="date">
+        <label> <?= array_pop($date)?> </label>
+        <span> <?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?> </span>
+       </div>
+       <h4> <?= $dbEntry['Titel']?></h4>          
+       <p class="nodisp"> <?=$dbEntry['Omschrijving']?></p>
+   </li>
+<?php
+}
+
+?>

@@ -27,13 +27,14 @@
 	background-color:white;
 }
 
-.newsitem .date{
+div.date{
 	float:left;
 	margin-right:20px;
 	margin-left:5px;
 	margin-top:5px;
-	height:45px;
-	width:45px;
+	margin-bottom:20px;
+ 	padding:4px 4px;
+ 	width:45px;
 	background-color:#06F;
 	border-radius:4px;
 	color:black;
@@ -43,7 +44,7 @@
 	vertical-align:middle;
 }
 
-.newsitem .date label{
+div.date label{
 	display:block;
 	color:white;
 	text-align:center;
@@ -51,7 +52,7 @@
 	line-height:22px;
 }
 
-.newsitem .date span{
+div.date span{
 	display:block;
 	color:#011369;
 }
