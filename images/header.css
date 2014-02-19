@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document for the header*/
+
+#header{
+	background:#000;
+	padding-bottom:30px;
+}
+
+
+/* Logo and tapsplash positioning */
+#tapsplash {
+	position: absolute;
+	margin-left: 689px;
+	margin-top: 138px;
+	z-index:2;
+} 
+
+#logo {
+	height:200px;
+	position:relative;
+	margin-left:400px;
+}
+
+/* The agenda item */
+div.agendaHighlight{
+	position:absolute;
+	top:10px;
+	left:20px;
+	color:#CC6633;
+	font-size:26px;
+	font-family:BrushstrokePlain;
+	transform:rotate(-10deg);
+	-ms-transform:rotate(-10deg); /* IE 9 */
+	-webkit-transform:rotate(-10deg); /* Safari and Chrome */
+	text-align:center;
+	
+}
+div.agendaHighlight label{
+	display:block;
+	margin-bottom:10px;	
+	color:white;
+}
+
+/* The agenda item */
+div.home_highlight{
+	position:absolute;
+	top:35px;
+	left:40px;
+	font-size:22px;
+	font-family:BrushstrokePlain;
+	transform:rotate(-10deg);
+	-ms-transform:rotate(-10deg); /* IE 9 */
+	-webkit-transform:rotate(-10deg); /* Safari and Chrome */
+	text-align:center;
+	
+}
+div.home_highlight label{
+	display:block;
+	margin-bottom:10px;	
+	color:white;
+}
+
+div.home_news{
+	color: #F00;
+}
+
+div.home_agenda{
+	color:#CC6633;
+}
+
+
+/* Menu positioning */
+#navbar {
+	background: url("../images/bar_head_and_foot.png") repeat-x top left;
+	height: 40px;
+	width: 100%;
+	position:absolute;
+	top:200px;
+	left:0;
+	z-index: 10;
+}
+#menu{
+	position:relative;
+}
+#menu, #menu ul {
+    list-style: none;
+    padding: 0;
+	margin-left:30px;
+}
+#menu ul{
+	padding-top:20px;
+}
+#menu > li{ 
+    float: left;
+	margin-left: 50px;
+}
+#menu li a {
+    display: block;
+    height: 2em;
+    line-height: 2.5em;
+    padding: 0 1.5em;
+    text-decoration: none;
+}
+#menu ul {
+    position: absolute;
+    display: none;
+	margin-left:0px;
+    z-index: 999;
+}
+#menu ul li a {
+    width: 80px;
+}
+#menu li:hover ul.noJS {
+    display: block;
+}
+
+#menu #clash_menu *{
+ 	color: #D00C0D;
+}
+	
+/* Menu coloring and styling */
+/* Main menu
+------------------------------------------*/
+#menu {
+    /*font-family: Arial;*/
+    font-size: 16px;
+	font-weight:bolder;
+}
+#menu > li > a {
+    color: #000;
+    font-weight: bold;
+}
+#menu > li:hover > a {
+    color: rgba(255,255,255,0.8);
+    color: #000;
+}
+ 
+
+/* Submenu
+------------------------------------------*/
+#menu ul {
+    background: white;
+	opacity: .80; /* standard: ff gt 1.5, opera, safari */
+}
+#menu ul li a {
+    color: #000;
+}
+#menu ul li:hover a {
+    background: rgba(245,245,245,0.8);
+}
+#menu  li.highlight > a{
+    color: #00C;
+}

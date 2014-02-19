@@ -70,7 +70,19 @@
                <li><a href="/contact.php">CONTACT</a></li>
                <li><a href="/gastenboek.php">GASTENBOEK</a></li>
             </ul>
-       </div>     
+       </div>
+       
+       <!--<div class="home_highlight home_news">
+          <p>
+          	<label> Laatste nieuws</label>
+          	<a href="/nieuws.php#news_Clash4" />Clash of the Coverbands,<br />
+           	voor een kwart regiofinale</a>
+          </p>
+       </div>-->
+       <div class="home_highlight home_agenda">
+          <p><label>Eerstvolgende gig:</label>
+          <a href="#" >Vrijdag 21 februari<br /> Gala CSR Delft (besloten) <br /> De Roode Schuur, Nijkerk</a></p>
+       </div>        
     </div><!-- end header -->
 	<div class="background"> 
     	<div class="pull"></div>

@@ -13,11 +13,19 @@
 }
 
 #news img{
-	width:50px;
-	max-height:50px;
-	heigt:auto;
+	width:120px;
+	max-height:180px;
+	height:auto;
 	min-height:30px;
 	vertical-align:middle;
+	background-color:white;
+	border-radius:2px;
+}
+#news span{
+	margin-left:10px;
+}
+#news li a{
+	text-decoration:none;
 }
 
 #agenda li{

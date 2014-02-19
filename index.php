@@ -76,7 +76,7 @@
 				  $imgFile = $imgFile.$row['Foto'];
 ?>
               <li>
-                <a href="<?="nieuws.php?item=".$row['ID']?>"><img src="<?=$imgFile?>" alt="Nieuwsbericht" /> <?=$row['Titel']?></a>
+                <a href="<?="nieuws.php?item=".$row['ID']?>"><img src="<?=$imgFile?>" alt="Nieuwsbericht" /><span><?=$row['Titel']?></span></a>
               </li>
 <?php 
 			  }
