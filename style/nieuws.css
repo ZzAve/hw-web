@@ -65,7 +65,7 @@ div.description p{
 div.description > p, div.description img{
 	margin-top:30px;	
 }
-.newsitem p:first-of-type:first-letter{
+.newsitem > p:first-of-type:first-letter{
 	font-family: BrushstrokePlain;
 	float:left;
 	line-height:1em;

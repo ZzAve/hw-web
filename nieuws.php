@@ -86,8 +86,21 @@
 
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php' ?>
-
+	<!-- google plus script -->
+    <script type="text/javascript">
+      window.___gcfg = {lang: 'nl'};
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    
+    <!-- twitter script -->
+    <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<!-- ||| end page specific scripts ||| -->
 </body>
+
 </html>
 
 
@@ -121,7 +134,10 @@ function popnewsitem($db_entry){
       <h3><?= $db_entry['Titel']?> </h3>
       <img src="<?=$db_entry['Foto']?>" alt="<?=$db_entry['Alt_foto']?>" title="<?=$db_entry['Alt_foto']?>"/>
 <?php	
-	   }
+		if ($valid_request!==false){
+			shareDiv();
+		} 
+	  }
 
 		 //Ensure what message to post. 
 		 //	 A short one (in case of multiple items) 

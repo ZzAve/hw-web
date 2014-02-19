@@ -52,4 +52,31 @@ function backToOverview($request){
 } // end function backToOverview
 
 
+function shareDiv(){
+	?>
+	<!-- Share with.. <div> -->
+    <div id="sharediv">                
+    <p><strong>Delen:</strong></p>
+      <ul>
+        <li class="fblike"> 
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+        </li>
+        <li> <script type="text/javascript"> 
+                //<![CDATA[
+                document.write('<div class="g-plusone" data-annotation="inline" data-width="100"></div>');
+                //]]>
+            </script>
+        </li>
+        <li> <script type="text/javascript"> 
+                //<![CDATA[
+                document.write('<a href="https://twitter.com/share" data-text="" class="twitter-share-button" data-lang="nl">Tweeten</a>');
+                //]]>
+            </script>
+        </li>
+      </ul>
+    </div><!-- end 	share div -->	
+<?php   
+}
+
 ?>
+
