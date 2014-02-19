@@ -52,7 +52,7 @@ if( isset($_POST['name']) ){
         <p> Meer info? Wilt u ons boeken, of om een andere reden contact met ons opnemen? Geen probleem. Gebruik onderstaand formulier of mail naar <a href="mailto:info@homemadewater.nl">info@homemadewater.nl</a>. U krijgt zo spoedig mogelijk antwoord! </p>
     
         <?php } ?>
-        
+        <img src="/images/HW_Locus_15.jpg" alt"We salute you" title="Namens Homemade Water, alvast bedankt"/>
         <!-- The contact form -->
         <form id="contact_form" enctype="multipart/form-data" onsubmit="return validateContact()" action="./contact.php" method="post">
             <p>Naam <br /><input type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>

@@ -64,7 +64,8 @@ function sizeContentbar(){
 	
 $(document).ready( function() {
 	sizeContentbar();
-	
+	//$(window).on("scroll",checkIfIntoView);
+
 	/*****************
 	*  MENU FUNCTIONS 
 	******************/
@@ -131,5 +132,27 @@ $(document).ready( function() {
         }
     );
 	/* END REPLACING IFRAME LINKS WITH IFRAMES */
+	
+	
+
 });
 
+// Fix srolling with background
+function checkIfIntoView(){
+	var element = $('div.background img');
+	if (element.offset().top +element.innerHeight() - $(window).scrollTop() <= $(window).innerHeight() ){
+		var pos = -20;	
+		//animate to pos
+
+		//set position in css
+		$('div.background').css({ 'position':'fixed', 'bottom': pos+'px', 'top':'initial' });
+				$('div.background').animate({'position':'fixed', 'bottom': pos+'px', 'top':'initial'},"fast");
+	}
+		
+		//alert('did it!');
+	if ( ($(window).scrollTop() + $(window).innerHeight()) <=	 $('div.background').innerHeight()){
+		$('div.background').animate({'position':'', 'bottom': ''},"fast");
+		$('div.background').css({'bottom':'initial','position':'','top':''});
+		//alert('and boven');
+	}
+}

@@ -5,6 +5,7 @@
 ?>
 
 <div id="content-bar">
+
 	<div id="content">
          <h1> Welkom op de site van Homemade Water!</h1>
          

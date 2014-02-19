@@ -39,3 +39,11 @@ input[type="submit"], input[type="reset"]{
 	border-radius:5px;
 	cursor:pointer;
 }
+
+#content > img{
+	float:right;
+	width:50%;	
+	margin-top:32px;
+	margin-right:45px;
+	border-radius:2px;
+}

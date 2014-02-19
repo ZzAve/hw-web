@@ -1,6 +1,6 @@
 <?php
 /*
-Function M<link rel="stylesheet" type="text/css" href="/hw-web/style/main.css">OREOF puts in a div, with the text 'vorige pagina' and 'volgende pagina'. It dynamically determines what the next or previous page is based on what is currently shown.
+Function PAGINATION puts in a div, with the text 'vorige pagina' and 'volgende pagina'. It dynamically determines what the next or previous page is based on what is currently shown.
 *
 Input:
   $page 	the current page number
@@ -12,7 +12,7 @@ Output:
 function pagination($page,$last){
 ?>
         <!-- Allow visitor to see more news -->
-        <div class="morenews">
+        <div class="navigate pagination">
 <?php 		//determine acitve or non active link 
 			$disPrev="";
 			if ($page==1){
@@ -36,6 +36,20 @@ function pagination($page,$last){
         </div>  
 <?php     	
 } // end function pagination
+
+
+/*
+Function Back
+*/
+function backToOverview($request){
+?>
+    <div class="navigate back">
+    <form action="<?=substr(strrchr($_SERVER['PHP_SELF'],"/"),0).($request ? $request : "") ?>" method="post">
+        <button> << Ga terug </button>
+    </form>
+    </div>
+<?php
+} // end function backToOverview
 
 
 ?>

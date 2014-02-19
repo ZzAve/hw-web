@@ -37,17 +37,9 @@
 
 	if($valid_request!==false){
 			// Show one item
-			$prev_news = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?startat=");
-?> 
-            <p> 
-            	<a href="nieuws.php<?= $prev_news ? $prev_news : "" ?>">Ga terug naar het nieuwsoverzicht</a>
-            </p>
-<?php
+			$prev_news = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?page=");
 			popnewsitem($valid_request);
-?>
-            <p> <a href="nieuws.php<?= $prev_news ? $prev_news : "" ?>"> Ga terug naar het nieuwsoverzicht</a></p>
-<?php
-
+			backToOverview($prev_news);
 	} else {
 		
 		// Show 'all' the newsitems
@@ -120,6 +112,7 @@ function popnewsitem($db_entry){
 <?php  // make both the title and image a link, such that if clicked, a screen opens with only that newsitem
 	   if($valid_request===false){
 ?>
+	  <div class="description">
       <h3><a href="<?= "nieuws.php?item=".$db_entry['ID']?> "><?= $db_entry['Titel']?></a></h3>
       <a href="<?= "nieuws.php?item=".$db_entry['ID']?>"> <img src="<?=$db_entry['Foto']?>" alt="<?=$db_entry['Alt_foto']?>" title="<?=$db_entry['Alt_foto']?>"/></a>
 <?php
@@ -145,6 +138,7 @@ function popnewsitem($db_entry){
 		if($valid_request===false){ 
 ?> 
       <p><a href="<?= "nieuws.php?item=" .$db_entry['ID']?>"> Lees meer...</a> </p>
+      </div>
 <?php 
 		} 
 ?>

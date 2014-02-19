@@ -26,7 +26,8 @@
 	$title= $pre_title."Foto's";   
    	
 	// Import header
-	require_once '/header.php'; 7
+	require_once '/header.php';
+	require_once 'misc/miscfunctions.php';
 ?>
 
 <div id="content-bar">  
@@ -44,25 +45,16 @@
       	     $album_location = $row['Fotofolder'];
       	     $album_descr = $row['Omschrijving'];
 ?>
-            <a href="foto.php"> Terug naar het album overzicht</a>            	
+            
+            <?php backToOverview(""); ?>
             <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>
-            <h2> Datum: <?= $album_date ?></h2>
-            <h2> Plaats: <?= $album_place ?> </h2>		
-            <p class="album_descr"> <?=$album_descr?></p>
-	
+            
     		<!-- Share with.. <div> -->
             <div id="sharediv">                
+            <p><strong>Deel dit album:</strong></p>
               <ul>
                 <li class="fblike"> 
-                    <script type="text/javascript"> 
-                        //<![CDATA[
-                        document.write('<fb:like href="http://www.homemadewater.nl/foto.php?album=<?=$album_id?>" width="200" layout="button_count" show_faces="false" send="false"></fb:like>');
-                        //]]>
-                    </script> 
-                </li>
-                <li> 
-                    <a href="#"  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;">
-                        Deel op Facebook</a>
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </li>
                 <li> <script type="text/javascript"> 
                         //<![CDATA[
@@ -79,6 +71,10 @@
               </ul>
             </div><!-- end 	share div -->
             
+            <h2> Datum: <?= $album_date ?></h2>
+            <h2> Plaats: <?= $album_place ?> </h2>		
+            <p class="album_descr"> <?=$album_descr?></p>
+	
             <div id="thumblist" class="notLoaded">
               <ul>
 <?php		    //get all photos

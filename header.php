@@ -54,8 +54,9 @@
 <body>
 <div id="wrapper">
     <div id="header">       
-        <img id="tapsplash" src="/images/tapsplash.png" alt="Stromend water uit de kraan"/>
+        <div class="logo"> <img id="tapsplash" src="/images/tapsplash.png" alt="Stromend water uit de kraan"/>
         <a href="index.php"><img id="logo" src="/images/logo_head.png" alt="Hét Homemade Water logo"/></a>
+        </div>
         
         <div id="navbar">
             <ul id="menu">
@@ -71,3 +72,10 @@
             </ul>
        </div>     
     </div><!-- end header -->
+	<div class="background"> 
+    	<div class="pull"></div>
+    	<div>
+        	<img src="/images/backgrounds/IMG_2978.jpg" alt="" title=""/>
+        	<div class="gradient"><!-- gradient div --></div>
+        </div>
+    </div>    

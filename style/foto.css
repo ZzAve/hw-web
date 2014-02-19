@@ -12,7 +12,7 @@
 	vertical-align:top;
 	text-align:center;
 	width:150px;
-	margin: 20px 5px;
+	margin: 10px 5px;
 	padding:5px;
 }
 
@@ -43,14 +43,15 @@
 #album-list li img {
 	min-width:100%;
 	width:auto;
+	max-width:200%;
 	min-height:100%;
 	height:auto;
-	max-height:100%;
+	max-height:200%;
 }
 
 
 #thumblist{
-	margin:30px auto;
+	margin:30px 0;
 	position:relative;
 }
 
@@ -74,7 +75,7 @@ div.loading{
 
 #thumblist ul{
 	list-style:none;
-	margin-left:20px;
+	margin-left:0;
 }
 
 #thumblist li{
@@ -82,7 +83,7 @@ div.loading{
 	overflow:hidden;
 	width:110px;
 	height:75px;
-	margin:3px;
+	margin:0.8% 0.5%;
 	border-radius:2px;
 	opacity:0.9;
 	filter:alpha(opacity=30); /* For IE8 and earlier */
@@ -121,10 +122,16 @@ div.loading{
 }
 
 #sharediv{
-	width:90%;
-	background-color:#323;
+	float:right;
+	width:27.5%;
+	margin-right:1%;
 	padding:5px 2%;
+	background-color:rgba(21,21,21,.3);
 	border-radius:3px;
+	/*
+	
+	background-color:#323;
+	*/
 }
 
 #sharediv ul{
@@ -133,10 +140,13 @@ div.loading{
 	line-height:1.5em;
 }
 
+#sharediv p{
+	margin-bottom:30px;
+}
 #sharediv li{
-	display:inline-block;
-	width:20%;
-	margin: 0 2%;
+	
+	width:100%;
+	margin: 13px 2%;
 	vertical-align:middle;
 	overflow:hidden;
 }

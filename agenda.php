@@ -21,7 +21,7 @@
 	setlocale(LC_TIME, 'Dutch'); 
 
 ?>
-<div id="content-bar">
+<div id="content-bar" class="under_construction">
     <div id="content">
 <?php	// There are to options to show:
 		// 	1. Show a specific item

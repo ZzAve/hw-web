@@ -11,18 +11,19 @@
 	background-color:rgba(21,21,21,.3);
 }
 
+.newsitem h3 a {
+	text-decoration:none;
+}
 .newsitem img{
 	float:left;
 	clear:left;
 	position: relative;
 	z-index:2;
 	display:block;
-	margin-top:18px;
-	margin-left:55px;
-	margin-right:10px;
-	margin-bottom:10px;	
+	width: 250px;
 	height:auto;
-	width:250px;
+	margin-right:10px;
+	margin-bottom:30px;	
 	border-radius:4px;
 	background-color:white;
 }
@@ -57,12 +58,13 @@ div.date span{
 	color:#011369;
 }
 
-.newsitem p{
+div.description p{
 	position:relative;
-	margin-top:20px;
-	margin-left:55px;
 }
 
+div.description > p, div.description img{
+	margin-top:30px;	
+}
 .newsitem p:first-of-type:first-letter{
 	font-family: BrushstrokePlain;
 	float:left;
@@ -73,20 +75,28 @@ div.date span{
 	color:#06F;
 }
 
-.morenews{
+.navigate{
 	text-align:center;
+	overflow:hidden;	
+}
+.navigate.pagination{
 	margin:30px auto 10px;
 	width:50%;
-	overflow:hidden;
+	overflow:hidden;	
 }
-
-.morenews form{
+.navigate.back{
+	margin:20px 0;
+}
+.navigate.back button{
+	float:left;
+}
+.navigate.pagination form{
 	float:left;
 	margin:1px 3%;
 	width:44%;
 }
 
-.morenews form button{
+.navigate form button{
 	line-height:20px;
 	padding:10px 15px !important;	
 	font-weight:bold;
@@ -99,7 +109,7 @@ div.date span{
 	vertical-align:top;
 }
 
-.morenews form button:disabled {
+.navigate form button:disabled {
  	color:#778ba8;
 }
 

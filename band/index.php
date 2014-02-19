@@ -1,14 +1,13 @@
 <?php
 	$title="Band"; 
 	require_once  '../header.php'; ?>
-<div id="content-bar">
-	<div id="content">
+<div id="content-bar" class="under_construction">
+	<div id="content" >
          <h1> De band</h1>
 		 <p>Homemade water is de leukste band die er maar is. Iets leukers is er niet! <i> Hier wordt wat gezegd over wat Homemade Water kan en doet, en hoe tof een feestje is met HW</i></p>
          
          <h3> Het begin </h3>
          <p> Het begon allemaal lang lang geleden, in een land hier ver ver vandaan</p>         
-         
          
          <h3> Het ultieme doel</h3>
          <p> blaat!</p>         
