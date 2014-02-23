@@ -60,7 +60,7 @@ div.description div.info{
 	margin:10px 0.5%;
 	position:relative;
 	z-index:2;
-	border:0.1% solid rgba(54, 47, 47,0);
+	border:1px solid rgba(54, 47, 47,0);
 	padding:0.5%;
 }
 
@@ -76,7 +76,7 @@ div.description div.info{
 	cursor:pointer;
 }
 #videoList li:hover{
-	background-color:rgba(54, 47, 47,.4);
+	background-color:rgba(154, 147, 147,.4);
 }
 
 #videoList li div.playbutton{

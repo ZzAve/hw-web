@@ -1,6 +1,7 @@
 <?php
-	require_once('misc/db_connectread.php');
     require 'misc/miscfunctions.php';
+	//Ensure db connection
+	db_connect(0);
 	$request = false;
 	$valid_request = false;
 	
@@ -25,7 +26,6 @@
 	
 	//Import header
     require_once 'header.php';  
-    setlocale(LC_TIME, 'Dutch'); 
 ?>
 
 <div id="content-bar">
@@ -116,7 +116,7 @@ function popnewsitem($db_entry){
 	global $valid_request;
 	$date = explode("-",$db_entry['Datum']);
 ?> 
-    <div class="newsitem <?= $valid_request!==false ? "single" : ""?>" id="<?="item" . $db_entry['ID']?>">
+    <div class="newsitem item <?= $valid_request!==false ? "single" : ""?>" id="<?="item" . $db_entry['ID']?>">
       <div class="date">
         <label> <?= array_pop($date)?> </label>
         <span> <?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?> </span>
@@ -152,12 +152,11 @@ function popnewsitem($db_entry){
 <?php
 
 		if($valid_request===false){ 
-?> 
-      <p><a href="<?= "nieuws.php?item=" .$db_entry['ID']?>"> Lees meer...</a> </p>
-      </div>
-<?php 
-		} 
-?>
+			moreOf("nieuws.php?item=" .$db_entry['ID']);
+			?> 	
+	</div>
+<?php	} ?>
+
     </div>	
 <?php
 } //end function POPNEWSITEM

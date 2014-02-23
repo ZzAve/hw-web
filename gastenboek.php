@@ -1,4 +1,6 @@
 <?php
+	require_once 'misc/miscfunctions.php';
+	
  	// Set settings for page
  	$nr_of_posts = 10;  // nr of gastenboek posts to show
  
@@ -29,7 +31,9 @@
 		}
 	}
 	
-	require_once 'misc/db_guestRead.php';
+
+	//Ensure db connection
+	db_connect(1);
 	// Check if page is available
 	if (isset($_GET['page'])){
 		$page = (int) $_GET['page'];
@@ -63,8 +67,6 @@
 	
 	$title = "Gastenboek";
 	require_once 'header.php'; 
-
-	setlocale(LC_TIME, 'Dutch');
 ?>
 
 <div id="content-bar">
@@ -82,7 +84,7 @@
            	<label for="Naam">Naam </label>
 <input autofocus="" type="text" name="Naam" id="Naam" placeholder="Uw naam" <?= $error ?"value=\"$name\"" : NULL ?>  /> 
            	<label for="Email">E-mail </label> 
-            <input type="text" name="Email"`id="Email" placeholder="Uw e-mailadres" <?= $error ?"value=\"$email\"" : NULL ?> />
+            <input type="text" name="Email" id="Email" placeholder="Uw e-mailadres" <?= $error ?"value=\"$email\"" : NULL ?> />
 
             <br />
           	<label for="Bericht">Bericht </label> 
@@ -95,7 +97,7 @@
            </div>
            	<input type="submit" value="Versturen" />
             <input type="reset" value="Wissen" />
-           	<label class="hidden" id="email-copy-label" class="copy mail" for="email-copy-checkbox">Stuur mij een kopie (email)</label> 
+           	<label class="hidden copy_mail" id="email-copy-label" for="email-copy-checkbox">Stuur mij een kopie (email)</label> 
             <input class="hidden" id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> />
         </form>
 
@@ -112,7 +114,7 @@
 			}	
 			$start= $nr_of_posts * ($page-1);
 			$itemsreq = $nr_of_posts+1;
-            $query = "SELECT `Naam`, `Datum`, `Bericht` FROM `gastenboek` ORDER BY `Datum` DESC LIMIT $start, $itemsreq;";
+            $query = "SELECT `id`,`Naam`, `Datum`, `Bericht` FROM `gastenboek` ORDER BY `Datum` DESC LIMIT $start, $itemsreq;";
             $result = mysqli_query($mysql,$query);
 			$last = ($nr_of_posts+1) != mysqli_num_rows($result);			
 			$end = $last ? 0 : 1;
@@ -126,7 +128,6 @@
 				$count++;
 			}
 			
-			require 'misc/miscfunctions.php';
 			pagination($page,$last);
 ?>	
         </div>   
@@ -158,7 +159,7 @@
 function uploadNewPost(){
 	global $error, $requestPostadd; 
 	//put it into the database
-	require_once 'misc/db_guestPost.php';
+	db_connect(2);
 	$name = strip_tags($requestPostadd['Naam']);
 	$email = trim(strip_tags($requestPostadd['Email']));
 	$msg = wordwrap(strip_tags($requestPostadd['Bericht']),70); // strip message of any html tags and wrap lines that are longer than 70 characters
@@ -180,7 +181,9 @@ function uploadNewPost(){
 			$errorMsg = "Er is iets fout gegaan tijdens de behandeling van jouw bericht. Probeer het later nog een keertje!";
 		}
 	}
+	db_restore();
 	return $result;
+
 }
 
 
@@ -225,9 +228,9 @@ function popgastItem($db_item,$new=0){
 	
 	//Now post the findings (naam, passedtime and the message (bericht)
 ?>
-	<div id="newpost" class="<?= $new==1 ? "hidden":"";?> gastItem"> 
-    	<p class="head"><label><?=$name?></label> (<?=$time?> geleden)</p>
-        <p><?=$msg?></p>
+	<div id="<?=$db_item['id']?>" class="<?= $new==1 ? "hidden":"";?> gastItem item"> 
+    	<p class="head"><label><?=$name?></label> zei: (<?=$time?> geleden)</p>
+        <p><em><?=$msg?></em></p>
     </div>
 <?php	
 }

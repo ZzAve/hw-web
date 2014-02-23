@@ -9,9 +9,10 @@
 
 #footer-bar{
 	background: url("../images/bar_head_and_foot.png") repeat-x top left transparent;
-	-webkit-filter: drop-shadow(-2px -5px 15px #222); filter: drop-shadow(5px 5px 5px #222); 
-	-moz-webkit-filter: drop-shadow(5px 5px 5px #222);
-	-ms-webkit-filter: drop-shadow(5px 5px 5px #222);
+	filter: drop-shadow(0px -9px 10px #222); 
+	-webkit-filter: drop-shadow(0px -9px 10px #222); 
+	-moz-webkit-filter: drop-shadow(0px -9px 10px #222); 
+	-ms-webkit-filter: drop-shadow(0px -9px 10px #222); 
 	position:absolute;
 	z-index:10;
 	top:-10px; left:0;
@@ -20,7 +21,7 @@
 }
 #social-media-icons{
    float:left;
-   width: 300px;
+   width: 350px;
    height: 50%;
    margin-top: 8px;
    margin-left: 50px;
@@ -41,7 +42,7 @@
 }
 
 #social-media-icons ul li:first-child{
-	width:80px;		
+	width:120px;		
 }
 #social-media-icons li{
 	max-height:100%;
@@ -68,8 +69,7 @@
 }
 
 #fb-like{
-	width:80px;
-	max-width:80px;
+	width:120px;
 	height:20px;
 	padding-bottom:20px;
 }

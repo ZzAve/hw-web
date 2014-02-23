@@ -1,5 +1,7 @@
 <?php 
-	require_once 'misc/db_connectread.php';
+	require_once 'misc/miscfunctions.php';
+	//Ensure connection
+	db_connect(0);
 	$request=false;
 	$valid_request=false;
 	
@@ -18,7 +20,6 @@
 	$pre_title = $valid_request!==false ? $valid_request['Titel']." - " : "";
 	$title = $pre_title."Agenda";
 	require_once 'header.php'; 
-	setlocale(LC_TIME, 'Dutch'); 
 
 ?>
 <div id="content-bar" class="under_construction">

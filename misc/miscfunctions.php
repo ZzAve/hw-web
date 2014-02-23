@@ -1,4 +1,64 @@
 <?php
+// active database;
+$active_db = -1;
+$previous_db=-1;
+$mysqlhost = 'homemadewater.nl';
+$mysql = NULL;
+
+function db_connect($type){
+	global $active_db, $previous_db, $mysqlhost,$mysql;
+	if ($active_db != -1){
+      if ($type == $active_db){ // you are already connected
+		return true;
+	  } else {
+		//close old db. Save active db
+		mysqli_close($mysql);
+		$previous_db = $active_db;
+	  }
+	}
+	
+	// connect to db
+	switch ($type){
+		case 0: // db-read
+			// Create connection with db
+			$user = 'juliuqb30_HWsite';
+			$passwd = 'Jelam';
+			$db = 'juliuqb30_hw';
+			break;
+		case 1: // db-guestRead
+			// Create connection with db
+			$user = 'juliuqb30_HWsite';
+			$passwd = 'Jelam';
+			$db = 'juliuqb30_hw2';
+			break;
+		case 2: // db-guestPost
+			// Create connection with db
+			$user = 'juliuqb30_hw2';
+			$passwd = 'oj1WR0fH';
+			$db = 'juliuqb30_hw2';			
+			break;
+		case -1:
+			return ('Could not connect: Wrong db type: '.$type);
+	}
+	
+	$mysql = mysqli_connect($mysqlhost,$user, $passwd, $db);
+    if (!$mysql) {
+        return ('Could not connect: ' . mysql_error());
+ 	} else {
+		$active_db =$type;	
+		return true;
+	}
+}
+
+function db_restore(){
+	global $previous_db;
+	if ($previous_db != -1){
+		return db_connect($previous_db);
+	} else {
+		return true;
+	}
+}
+
 /*
 Function PAGINATION puts in a div, with the text 'vorige pagina' and 'volgende pagina'. It dynamically determines what the next or previous page is based on what is currently shown.
 *
@@ -20,7 +80,7 @@ function pagination($page,$last){
 			}
 ?>
             <form action="<?= substr(strrchr($_SERVER['PHP_SELF'],"/"),0)."?page=".($page-1)?>" method="post">
-            	<button <?=$disPrev?>> << Vorige pagina </button> 
+            	<button <?=$disPrev?>> &laquo;  Vorige pagina </button> 
             </form>
             
 
@@ -31,7 +91,7 @@ function pagination($page,$last){
 		}
 ?>
              <form action="<?=substr(strrchr($_SERVER['PHP_SELF'],"/"),0)."?page=".($page+1) ?>" method="post">
-            	<button <?=$disNext?>> Volgende pagina >> </button> 
+            	<button <?=$disNext?>> Volgende pagina &raquo; </button> 
             </form>
         </div>  
 <?php     	
@@ -45,25 +105,39 @@ function backToOverview($request){
 ?>
     <div class="navigate back">
     <form action="<?=substr(strrchr($_SERVER['PHP_SELF'],"/"),0).($request ? $request : "") ?>" method="post">
-        <button> << Ga terug </button>
+        <button> &laquo; Ga terug </button>
     </form>
     </div>
 <?php
 } // end function backToOverview
+
+/*
+Function more
+*/
+function moreOf($link){
+?>
+    <div class="navigate more">
+    <form action="<?=$link?>" method="post">
+        <button> Klik hier voor meer . . .  </button>
+    </form>
+    </div>
+<?php
+} // end function moreOf
 
 
 function shareDiv(){
 	?>
 	<!-- Share with.. <div> -->
     <div id="sharediv">                
-    <p><strong>Delen:</strong></p>
       <ul>
+		<li class="title"> <strong>Deel dit met anderen: </strong></li>
         <li class="fblike"> 
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="<?="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"?>" data-width="100" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
         </li>
+        <li><ul>
         <li> <script type="text/javascript"> 
                 //<![CDATA[
-                document.write('<div class="g-plusone" data-annotation="inline" data-width="100"></div>');
+                document.write('<div class="g-plusone" data-annotation="inline" data-width="300"></div>');
                 //]]>
             </script>
         </li>
@@ -73,7 +147,9 @@ function shareDiv(){
                 //]]>
             </script>
         </li>
+        </ul></li>
       </ul>
+
     </div><!-- end 	share div -->	
 <?php   
 }

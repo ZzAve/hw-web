@@ -1,7 +1,9 @@
 <?php 
 	$title = "Video";
 	require_once 'header.php';
-	require_once 'misc/db_connectread.php'; 
+	require_once 'misc/miscfunctions.php';
+	//Set up connection
+	db_connect(0);
 ?>
 <div id="content-bar">
     <div id="content">   
@@ -70,7 +72,7 @@ function popVideoItem($dbEntry){
    <li><span class="nodisp	"><?=$id?></span>
    	  
       <img src="<?=$imgLoc1.$id.$imgLoc2?>" alt="<?= $dbEntry['Titel']?>" title="<?= $dbEntry['Titel']?>"  />
-      <div class="playbutton"> <img src="http://www.clker.com/cliparts/L/y/p/N/e/L/play-button-red-th.png" alt="" title""/> <!-- tahnks to Clker.com --></div>
+      <div class="playbutton"> <img src="http://www.clker.com/cliparts/L/y/p/N/e/L/play-button-red-th.png" alt="" title=""/> <!-- tahnks to Clker.com --></div>
        <div class="date">
         <label> <?= array_pop($date)?> </label>
         <span> <?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?> </span>

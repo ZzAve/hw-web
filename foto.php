@@ -1,5 +1,7 @@
 <?php
-	require_once '/misc/db_connectread.php';
+	require_once 'misc/miscfunctions.php';
+	//Ensure connection
+	db_connect(0);
 	$request=false;
 	$valid_request=false;   
 	
@@ -26,8 +28,7 @@
 	$title= $pre_title."Foto's";   
    	
 	// Import header
-	require_once '/header.php';
-	require_once 'misc/miscfunctions.php';
+	require_once 'header.php';
 ?>
 
 <div id="content-bar">  
@@ -38,23 +39,23 @@
 
 	 if($valid_request!==false){
              // an album is requested
-      	     $album_id=$row['ID'];
-      	     $album_name = $row['Titel'];
-      	     $album_date = $row['Datum'];
-      	     $album_place = $row['Locatie'];
-      	     $album_location = $row['Fotofolder'];
-      	     $album_descr = $row['Omschrijving'];
+      	     $album_id=$valid_request['ID'];
+      	     $album_name = $valid_request['Titel'];
+      	     $album_date = $valid_request['Datum'];
+      	     $album_place = $valid_request['Locatie'];
+      	     $album_location = $valid_request['Fotofolder'];
+      	     $album_descr = $valid_request['Omschrijving'];
 ?>
             
             <?php backToOverview(""); ?>
             <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>
             
-    		<?php shareDiv(); ?>
+    		
             
             <h2> Datum: <?= $album_date ?></h2>
             <h2> Plaats: <?= $album_place ?> </h2>		
             <p class="album_descr"> <?=$album_descr?></p>
-	
+			<?php shareDiv(); ?>
             <div id="thumblist" class="notLoaded">
               <ul>
 <?php		    //get all photos
@@ -79,7 +80,7 @@
             <div class="fb_comment">
               <script type="text/javascript">
                 //<![CDATA[
-                document.write('<fb:comments href="http://www.homemadewater.nl//foto.php?album=<?=$album_id?>" colorscheme="dark" width="600"></fb:comments>')
+                document.write('<fb:comments href="http://www.homemadewater.nl//foto.php?album=<?=$album_id?>" colorscheme="light" width="600"></fb:comments>')
                 //]]>
               </script>
             </div>

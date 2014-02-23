@@ -29,14 +29,19 @@ div.logo{
 /* Menu positioning */
 #navbar {
 	background: url("../images/bar_head_and_foot.png") repeat-x top left;
-	filter: drop-shadow(5px 5px 5px #222); 
-	-webkit-filter: drop-shadow(5px 5px 5px #222); 
-	-moz-webkit-filter: drop-shadow(5px 5px 5px #222);
-	-ms-webkit-filter: drop-shadow(5px 5px 5px #222);
+	filter: drop-shadow(0px 10px 14px #222); 
+	-webkit-filter: drop-shadow(0px 10px 14px #222); 
+	-moz-webkit-filter: drop-shadow(0px 10px 14px #222); 
+	-ms-webkit-filter: drop-shadow(0px 10px 14px #222); 
+	 
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
+	/* The url is relative to the document, not to the css file! */
+    /* Prefer absolute urls to avoid confusion. */
+    -ms-behavior: url(/backgroundsize.min.htc);
+   
 	height: 60px;
 	width: 100%;
 	position:absolute;
@@ -45,36 +50,17 @@ div.logo{
 	z-index: 10;
 }
 
-/* The agenda item */
-div.agendaHighlight{
-	position:absolute;
-	top:10px;
-	left:20px;
-	color:#CC6633;
-	font-size:26px;
-	font-family:BrushstrokePlain;
-	transform:rotate(-10deg);
-	-ms-transform:rotate(-10deg); /* IE 9 */
-	-webkit-transform:rotate(-10deg); /* Safari and Chrome */
-	text-align:center;
-	
-}
-div.agendaHighlight label{
-	display:block;
-	margin-bottom:10px;	
-	color:white;
-}
 
 /* The agenda item */
 div.home_highlight{
 	position:absolute;
 	top:15px;
-	margin-left:5%;
+	margin-left:2%;
 	font-size:18px;
 	font-family:BrushstrokePlain;
-	transform:rotate(-10deg);
-	-ms-transform:rotate(-10deg); /* IE 9 */
-	-webkit-transform:rotate(-10deg); /* Safari and Chrome */
+	transform:rotate(-6deg);
+	-ms-transform:rotate(-6deg); /* IE 9 */
+	-webkit-transform:rotate(-6deg); /* Safari and Chrome */
 	text-align:center;
 	
 }
@@ -206,6 +192,6 @@ div.home_agenda{
 	background: #CCC;
 }
 #menu > li.highlight > a, #menu ul li.highlight > a{
-    color: #00C;
+    color: #06F;
 }
 

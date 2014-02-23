@@ -54,7 +54,7 @@
            if (d.getElementById(id)) return;
            js = d.createElement(s); 
            js.id = id;
-           js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+           js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>

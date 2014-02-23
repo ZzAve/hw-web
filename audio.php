@@ -8,14 +8,14 @@
         <h2> Zet die speakers maar vol open om de unieke sound van Homemade Water terug te horen!</h2>
         
         <div id="audioList">
-        	<div class="audioitem">
+        	<div class="audioitem item">
                 <h3> Give it Back @ de Storing Haarlem </h3>
                 <!-- Give it Back - Haarlem -->
                 <a class="iframeSC" href="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></a>
                 <p>De eerste versie van het eigen nummer "Give it Back", gespeeld tijdens het valentijnsoptreden dit jaar in de Storing, Haarlem.  </p> <br /> 
             </div>
          
-         	<div class="audioitem">
+         	<div class="audioitem item">
                 <h3> Eerste demomix van Homemadewater </h3>
                 <!-- First demo -->
                 <a class="iframeSC" href="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79363524&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></a>

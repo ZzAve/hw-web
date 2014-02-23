@@ -4,101 +4,65 @@
 #news ul, #agenda ul{
 	list-style:none;
 	margin:0;
+	width:100%;
 }
+#news li a, #agenda li a{
+	text-decoration:none;
+	vertical-align:middle;
+}
+#news label{
+    display:block;
+	float:left;	
+	border-radius:4px;
+	vertical-align:middle;
+	margin-right:20px;
+}
+#agenda li > span, #news span{
+	display:block;
+	width:auto;
+	vertical-align:middle;
+	margin-right: 10px;	
+}
+
 
 #news li{
 	margin:5px auto;
 	overflow:hidden;
 	height:auto;
+	max-height:180px;
+	width:100%;
 }
-
-#news img{
+#news label{
 	width:120px;
+	height:100%;
+	vertical-align:middle;
+}
+#news img{
+	width:100%;	
+	background-color:white;
+	border-radius:2px;
 	max-height:180px;
 	height:auto;
 	min-height:30px;
+	cursor:pointer;
 	vertical-align:middle;
-	background-color:white;
-	border-radius:2px;
 }
-#news span{
-	margin-left:10px;
-}
-#news li a{
-	text-decoration:none;
-}
+
 
 #agenda li{
 	height:55px;
 	margin:2px auto;
-	line-height:50px;
-}
-#agenda li a{
-	vertical-align:middle;
+	overflow:hidden;
 }
 
-#agenda li label{
-    display:block;
-	float:left;
-	margin-right:20px;
-	margin-left:5px;
-	margin-top:5px;
-	height:45px;
-	width:45px;
-	background-color:#06F;
-	border-radius:4px;
-	color:black;
-	font-size:16px;
-	font-weight:bold;
-	text-align:center;
-	vertical-align:middle;
-
-	color:white;
-	text-align:center;
-	vertical-align:middle;
-	line-height:22px;
+#agenda li div.date{
+	margin-top:0;	
+}
+#agenda li>span{
+	margin-left:65px; /* width label + margin 20px */	
+}
+	
+#news span{
+	margin-left:140px; /* width label + margin 20px */	
 }
 
-.newsitem li label span{
-	display:block;
-	color:#011369;
-}
-
-/*#news, #agenda{
-	color:black;
-	overflow:visible;
-	z-index:80;
-	padding:10px;
-	/*background: url("../images/notepad.png") top left repeat-y;
-	background-color: red;
-	position: absolute;
-	right:-100px;
-}
-
-#news ul, #agenda ul{
-	list-style-type: none;
-	margin-top:1.2em;
-	margin-left:0;	
-}
-#agenda{
-	top:20px;
-}
-
-#news{
-	top:280px;
-	right:-250px;
-	width:300px;
-}
-
-#agenda li{
-	margin:8px auto;
-	font-weight:normal;
-}
-
-#news li{
-	margin: 0.2em auto;
-}
-#agenda li span{
-	display: block;
-	font-weight:bold;
-}*/

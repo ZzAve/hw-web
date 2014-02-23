@@ -52,16 +52,19 @@ if( isset($_POST['name']) ){
         <p> Meer info? Wilt u ons boeken, of om een andere reden contact met ons opnemen? Geen probleem. Gebruik onderstaand formulier of mail naar <a href="mailto:info@homemadewater.nl">info@homemadewater.nl</a>. U krijgt zo spoedig mogelijk antwoord! </p>
     
         <?php } ?>
-        <img src="/images/HW_Locus_15.jpg" alt"We salute you" title="Namens Homemade Water, alvast bedankt"/>
+
         <!-- The contact form -->
         <form id="contact_form" enctype="multipart/form-data" onsubmit="return validateContact()" action="./contact.php" method="post">
+            <img src="/images/HW_Locus_15.jpg" alt="We salute you" title="Namens Homemade Water, alvast bedankt"/>
             <p>Naam <br /><input type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>
-            <p>E-mail <br /><input type="text" name="email" <?= $error ?"value=\"$email\"" : NULL ?> /></p>
+            <p>E-mail <br /><input type="email" name="email" <?= $error ?"value=\"$email\"" : NULL ?> /></p>
             <p>Telefoon (optioneel) <br /><input type="text" name="phone"/> </p>
             <p> Onderwerp <br /><input type="text" name="subject"/> </p>
             <p>Bericht <br /><textarea name="bericht" rows="10" cols="58" <?= $error ?"value=\"$message\"" : NULL ?>></textarea></p>
+            <p> <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> /> <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Stuur een kopie naar mijn eigen e-mailadres</label> </p>
             <p><input type="submit" value="Versturen" /><input type="reset" value="Wissen" />
-            <label id="email-copy-label" class="copy mail" for="email-copy-checkbox">Kopie versturen naar uw eigen mail?</label> <input id="email-copy-checkbox" type="checkbox" name="checkbox-send-copy" <?= $error ? $copy_mail : "checked=\"checked\"" ?> /> </p>
+            </p>
+
         </form>
     
     </div> <!-- end div content -->
