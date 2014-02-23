@@ -128,26 +128,34 @@ function moreOf($link){
 function shareDiv(){
 	?>
 	<!-- Share with.. <div> -->
-    <div id="sharediv">                
+    <div id="sharediv" class="hiddenWell" style="overflow: hidden;">                
       <ul>
 		<li class="title"> <strong>Deel dit met anderen: </strong></li>
-        <li class="fblike"> 
-            <div class="fb-like" data-href="<?="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"?>" data-width="100" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+        <li class="fblike">
+        	<ul>
+        		<li> 
+            		<div class="fb-like" data-href="<?="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"?>" data-width="100" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+        		</li>
+                <li>
+                	<div class="fb-share-button" data-href="<?="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"?>" data-width="100" data-type="button_count"></div>
+                </li>
+        	</ul>
         </li>
         <li><ul>
-        <li> <script type="text/javascript"> 
-                //<![CDATA[
-                document.write('<div class="g-plusone" data-annotation="inline" data-width="300"></div>');
-                //]]>
-            </script>
-        </li>
-        <li> <script type="text/javascript"> 
-                //<![CDATA[
-                document.write('<a href="https://twitter.com/share" data-text="" class="twitter-share-button" data-lang="nl">Tweeten</a>');
-                //]]>
-            </script>
-        </li>
-        </ul></li>
+            <li> 
+                <script type="text/javascript"> 
+                    //<![CDATA[
+                        document.write('<div class="g-plusone" data-annotation="inline" data-width="250"></div>');
+                    //]]>
+                </script>
+            </li>
+            <li> <script type="text/javascript"> 
+                    //<![CDATA[
+                    document.write('<a href="https://twitter.com/share" data-text="" class="twitter-share-button" data-lang="nl">Tweeten</a>');
+                    //]]>
+                </script>
+            </li>
+       	</ul></li>
       </ul>
 
     </div><!-- end 	share div -->	

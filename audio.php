@@ -1,5 +1,9 @@
 <?php 
 	$title="Audio";
+	$extra = "<style type=\"text/css\">@charset utf-8;
+#audioList{height:auto}
+#audioList iframe{height:166px;margin-bottom:10px;margin-top:10px;width:100%}
+#audioList div{margin-top:30px;padding:20px}</style>";
 	require_once 'header.php'; 
 ?>
 <div id="content-bar">

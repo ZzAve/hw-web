@@ -134,62 +134,9 @@ div.loading{
 	border-radius:2px;
 }
 
-
 .fb_comment{
 	margin-left:10px;
 	width:700px;
 }
 
-#sharediv{
-	width:96%;
-	padding:5px 2%;
-	height:auto;
-	min-height:80px;
-	background-color:rgb(180,180,180);
-	background-color:rgba(180,180,180,.9);
-	border-radius:3px;
-	/*
-	
-	background-color:#323;
-	*/
-}
-
-#sharediv  ul{
-
-	list-style:none;
-	margin-left:0;	
-	line-height:1.5em;
-	overflow:visible;	
-	
-}
-#sharediv ul ul{
-	overflow:hidden;
-}
-#sharediv > ul{
-	float:left;
-	width:100%;
-}
-
-#sharediv ul ul{
-	width:200px;
-}
-#sharediv li{	
-	width:auto;
-	margin: 5px 0.5%;
-	vertical-align:middle;
-	overflow:hidden;
-	display:inline-block;
-}
-
-#sharediv li.title{
-	width:150px;
-	min-width:100px;
-	
-}
-#sharediv .fblike {
-	height:auto;
-	overflow:visible;
-	min-width:200px;
-	width:auto;
-}
 

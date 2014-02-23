@@ -1,5 +1,6 @@
 <?php 
 	$title = "Video";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/video.css\" title=\"style\" />";
 	require_once 'header.php';
 	require_once 'misc/miscfunctions.php';
 	//Set up connection

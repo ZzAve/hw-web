@@ -156,3 +156,8 @@ function checkIfIntoView(){
 		//alert('and boven');
 	}
 }
+
+$(window).load(function(){
+	setTimeout(function(){$("#sharediv").removeClass("hiddenWell"); $("#sharediv").css('overflow','');},1500);
+
+});

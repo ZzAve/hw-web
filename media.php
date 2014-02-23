@@ -1,5 +1,5 @@
 <?php 
-	$title= "Media"
+	$title= "Media";
 	require_once 'header.php'; 
 ?>	
 

@@ -19,6 +19,7 @@
 	}
 	$pre_title = $valid_request!==false ? $valid_request['Titel']." - " : "";
 	$title = $pre_title."Agenda";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda.css\" title=\"style\" />";
 	require_once 'header.php'; 
 
 ?>

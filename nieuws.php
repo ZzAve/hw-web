@@ -25,6 +25,7 @@
 	$fb_img = $valid_request!==false ? $valid_request['Foto'] :"";
 	
 	//Import header
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws.css\" title=\"style\" />";
     require_once 'header.php';  
 ?>
 

@@ -28,6 +28,7 @@
 	$title= $pre_title."Foto's";   
    	
 	// Import header
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/foto.css\" title=\"style\" />";
 	require_once 'header.php';
 ?>
 
@@ -48,10 +49,7 @@
 ?>
             
             <?php backToOverview(""); ?>
-            <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>
-            
-    		
-            
+            <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>  
             <h2> Datum: <?= $album_date ?></h2>
             <h2> Plaats: <?= $album_place ?> </h2>		
             <p class="album_descr"> <?=$album_descr?></p>
@@ -73,7 +71,6 @@
 <?php
    }
 ?>
-
               </ul>	
             </div>
 			
@@ -88,10 +85,9 @@
 <?php // END OF SHOWING ONE ALBUM ! ! 
 	 } else { 
 		    // the overview is requested
-			
-			if($request){//show error (through an javascript alert?)
+			if($request){//show error (through a javascript alert?)
 ?>				<script type="text/javascript"> 
-					setTimeout(function(){alert('Helaas is het door u opgegeven nieuwsbericht niet meer beschikbaar of heeft het nooit bestaan.\n\nDesalniettemin hebben wij voor u de meest recente nieuwsbericht voor u op een rijtje gezet.');},800);
+					setTimeout(function(){alert('Helaas is het door u opgegeven fotoalbum niet (meer) beschikbaar of heeft het nooit bestaan.\n\nDesalniettemin hebben wij voor u een overzicht gemaakt van de andere fotoalbums.');},800);
                 </script>
 <?php		}
 ?>
@@ -132,10 +128,10 @@
 
 <!-- ||| page specific scripts ||| -->
 	<!-- javascript for the photoalbums -->
-	<script type="text/javascript" src="js/photoalbum.js"></script>
+	<script type="text/javascript" src="/js/photoalbum.js"></script>
     
     <!-- lightbox -->
-    <script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
     
     <!-- google plus script -->
     <script type="text/javascript">

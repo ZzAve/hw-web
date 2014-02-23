@@ -20,9 +20,6 @@
     <meta name="description" content="<?= isset($description)? $description : "Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren in een feestende bende! Groot, klein, jong of oud? Homewade Water krijgt óók u aan het feesten!"?> "/>
     <meta name="keywords" content="Homemade Water, Delft, band, coverband, pop, rock, studenten, feestband, clash, coverbands, student, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
     <meta name="author" content="Homemade Water" />
-<!--    <meta name="publisher" content="Homemade Water" />
-    <meta name="copyright" content="Homemade Water" />
-    <meta name="HomemadeWater" content="Delft band cover studentenband coverband Clash Laurens Mensink Eline Burger Moos Meijer Andrea Forzoni Julius van Dis" />-->
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -39,21 +36,12 @@
     <link rel="stylesheet" type="text/css" href="/style/footer.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/lightbox.css" title="style" />
 
-    <link rel="stylesheet" type="text/css" href="/style/agenda.css" title="style" /> 
-    <link rel="stylesheet" type="text/css" href="/style/audio.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/contact.css" title="style" /> 
-    <link rel="stylesheet" type="text/css" href="/style/foto.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/gastenboek.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/index.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/nieuws.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/video.css" title="style" />
-
 <?php 
+	// Check if any extra settings were requested for this header
   	if (isset($extra)){
 	  echo $extra;
  	 }
-?>    
-    
+?>
 </head>
 
 <body>

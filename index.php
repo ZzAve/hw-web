@@ -1,4 +1,5 @@
 <?php 
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/index.css\" title=\"style\" />";
 	require_once 'header.php'; 
 	require_once 'misc/miscfunctions.php';
 ?>

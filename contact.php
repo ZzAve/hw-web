@@ -27,6 +27,7 @@ if( isset($_POST['name']) ){
 	}
 }
 	$title= "Contact";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/contact.css\" title=\"style\" />";
  	require_once 'header.php'; 	
 ?>	
 <div id="content-bar">

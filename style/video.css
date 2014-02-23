@@ -20,19 +20,17 @@
 	max-height:500px;
 	overflow:hidden;
 }
-div.description{
-	overflow:hidden;	
-}
-div.description div{
-	float:left;
-	clear:right;
-}
 
 #showVideo div.date, #videoList div.date{
 	position:relative;
 	top:8px;	
 }
-div.description div.info{
+#showVideo div.description div{
+	float:left;
+	clear:right;
+}
+
+#showVideo div.description div.info{
 	width:80%;
 }
 

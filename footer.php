@@ -10,11 +10,8 @@
                //<![CDATA[
                  var ieversion = 100;
                  if (/MSIE (\d+\.\d+);/.test(navigator.userAgent))
-                 { 
-                    ieversion=new Number(RegExp.$1);
-                 }	
-                 if (ieversion>=8)
-                 {
+                 { ieversion=new Number(RegExp.$1); }	
+                 if (ieversion>=8){
                     document.write('<fb:like href="http://www.facebook.com/HomemadeWater" send="false" layout="button_count" width="80" show_faces="false" font="arial"></fb:like>');
                  }
                //]]>
@@ -48,35 +45,11 @@
     
     <!-- Facebook SDK import function -->
     <div id="fb-root"></div>
-    <script type="text/javascript">
-        (function(d, s, id) {
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) return;
-           js = d.createElement(s); 
-           js.id = id;
-           js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
-           fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
     
     <!-- Google Analytics script -->
-    <script type="text/javascript"> 
-      (function(i,s,o,g,r,a,m){
-          i['GoogleAnalyticsObject']=r;
-          i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
-            a=s.createElement(o), m=s.getElementsByTagName(o)[0];
-            a.async=1;
-            a.src=g;
-            m.parentNode.insertBefore(a,m)
-      })
-      (window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41431442-1', 'homemadewater.nl');
-      ga('send', 'pageview');
-    </script>
+    <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41431442-1', 'homemadewater.nl');ga('send', 'pageview');</script>
     
     <!-- main javascript for all pages -->
     <script type="text/javascript" src="/js/main.js"></script>
-    
-    
 <!-- ||| end scripts ||| -->

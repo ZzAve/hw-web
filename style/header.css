@@ -10,14 +10,14 @@
 /* Logo and tapsplash positioning */
 #tapsplash {
 	position: absolute;
-	margin-left: 174.5px;
-	margin-top: 95px;	
+	margin-left: 233px;
+	margin-top: 122px;	
 	width:150px;
 	z-index:11;
 } 
 
 div.logo{
-	height:130px;
+	height:160px;
 	margin-left:30%;
 	width:auto;
 	position:relative;
@@ -45,7 +45,7 @@ div.logo{
 	height: 60px;
 	width: 100%;
 	position:absolute;
-	top:140px;
+	top:166px;
 	left:0;
 	z-index: 10;
 }

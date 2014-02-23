@@ -16,6 +16,7 @@
 	border-radius:4px;
 	vertical-align:middle;
 	margin-right:20px;
+	
 }
 #agenda li > span, #news span{
 	display:block;
@@ -26,7 +27,7 @@
 
 
 #news li{
-	margin:5px auto;
+	margin:10px auto;
 	overflow:hidden;
 	height:auto;
 	max-height:180px;
@@ -40,14 +41,12 @@
 #news img{
 	width:100%;	
 	background-color:white;
-	border-radius:2px;
 	max-height:180px;
 	height:auto;
 	min-height:30px;
 	cursor:pointer;
 	vertical-align:middle;
 }
-
 
 #agenda li{
 	height:55px;

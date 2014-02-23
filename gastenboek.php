@@ -63,7 +63,8 @@
 				theme : 'white',
 				language  : 'nl'
 				};  
-		</script> ";
+		</script> \n
+		<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/gastenboek.css\" title=\"style\" />";
 	
 	$title = "Gastenboek";
 	require_once 'header.php'; 
