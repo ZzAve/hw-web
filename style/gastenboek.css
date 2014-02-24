@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+#guestbook input, #guestbook textarea, #guestbook select, #guestbook submit, #guestbook reset #guestbook checkbox, #guestbook .captcha{
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	
+	vertical-align: middle;	
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+#guestbook label{
+	text-align:right;
+	display:inline-block;
+	vertical-align:middle;
+	width:80px;
+	margin:0 10px 0 0;
+}
+
+#guestbook input[type="text"]{
+	width:228px;
+
+}
+
+#guestbook textarea{
+	width:250px;
+	max-width:250px;
+	min-width:250px;
+	min-height:132px;
+	height:132px;
+	max-height:132px;
+}
+
+#guestbook input[type="submit"]{
+	vertical-align:bottom;
+	margin:10px 10px 10px 95px;
+}
+
+#guestbook input[type="checkbox"], #guestbook #email-copy-label{
+	vertical-align:bottom;
+	margin: 0 0 10px 5px;
+}
+
+#guestbook #email-copy-label{
+	width:115px;
+}
+
+#guestbook #email-copy-checkbox{
+	margin-bottom:15px;	
+}
+
+#guestbook .captcha{
+	width:350px;
+}
+
+#guestbook .errorMsg{
+	margin:5px auto;
+	color: red;
+	text-align:center;
+}
+
+#posts{
+	margin-top:50px;
+}
+
+#posts div.gastItem{
+	height:auto;
+	min-height:90px;
+	border-radius:5px;	
+	margin:10px;
+	background: url("../images/quote.png") top left no-repeat;
+	background-color: rgb(200,200,200);
+	background-color: rgba(200,200,200,0.7);
+}
+
+#posts p.head label{
+	font-weight:bold;
+}
+
+#posts p.head{
+	font-weight:normal;
+	font-style:italic;
+}
+
+#posts p{
+	margin-left:90px;
+}
+
+ 
+#guestbook #recaptcha_response_field{
+	background-color:#EEE !important;
+}
+
