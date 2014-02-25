@@ -21,7 +21,7 @@
 	}
 
 	//Set a facebook image
-	$fb_img = $valid_request!==false ? $valid_request['Thumbnail'] :"";	
+	$fb_img = $valid_request!==false ? str_replace("_thumb","",$valid_request['Thumbnail']) :"";	
 	
 	//Set a title for the page
 	$pre_title=$valid_request!==false ? $valid_request['Titel']." - " : "";
