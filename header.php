@@ -23,7 +23,7 @@
     
     <!-- facebook open graph tags -->
     <meta property="fb:admins" content="100001997083297" />
-    <meta property="og:url" content="<?="http://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]?>" />
+    <meta property="og:url" content="<?="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']?>" />
     <meta property="og:title" content="<?= isset($title)?$title." | ":""?>Homemade Water" />
 <?php if(isset($fb_img) && $fb_img!=""){
 		echo "<meta property=\"og:image\" content=\"http://www.homemadewater.nl/$fb_img\" />";
