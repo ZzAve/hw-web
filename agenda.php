@@ -23,7 +23,7 @@
 	require_once 'header.php'; 
 
 ?>
-<div id="content-bar" class="under_construction">
+<div id="content-bar" >
     <div id="content">
 <?php	// There are to options to show:
 		// 	1. Show a specific item
@@ -36,13 +36,16 @@
             <p class="back"> <a href="agenda.php">Terug naar het overzicht</a></p>
             <h1> <?= $valid_request['Titel']?></h1>
             <img src="<?=$valid_request['Foto']?>" alt="<?=$valid_request['Titel']?>" title="<?=$valid_request['Titel']?>"> 
-            <h3> Datum: <?=$valid_request['Datum']?></h3>
-            <h3> Tijd: <?=$valid_request['Tijd']?></h3>
+			<?php $date = explode("-",$valid_request['Datum']);
+				  $time = explode(":",$valid_request['Tijd']); ?>
+            <h3> Datum: <?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?></h3>
+            <h3> Aanvang: <?=$time[0].":".$time[2]?></h3>
             <h3> Locatie: <?=$valid_request['Locatie']?></h3>
             <p> <?=$valid_request['Bericht']?></p>
 
-            
-            <p id="botback" class="back"> <a href="agenda.php">Terug naar het overzicht</a></p>
+<?php       $prev_news = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?page=");
+			backToOverview($prev_news); 
+?>
             <!--
             <p> De request vars: request: <?=$request? "true" : "false"?> en valid_request: <?=$valid_request!==false?"true":"false"?></p>
             <p> <pre><?=print_r($valid_request);?></pre></p>
@@ -63,8 +66,9 @@
     	
          <h1> Agenda</h1>
 		 
+         <div class="item">
          <h3> Toekomstige optredens </h3>
-         <ul>
+         <ul id="toekAgenda" class="item">
 <?php
          // Fetch the in the future (ascending order (first today, then tomorrow)
 			$query = "SELECT * FROM `agenda` WHERE `Datum`>(CURDATE()-1) ORDER BY `Datum` ASC LIMIT 0,30";
@@ -82,12 +86,20 @@
             }
 ?>
          </ul>
+         </div>
          
+         <div class="item">
          <h3> Optredens in het verleden </h3>
-         <ul>
-<?php
-         // Fetch the past gigs (yesterday before the 'day-before-yesterday')
-			$query = "SELECT * FROM `agenda` WHERE `Datum`<(CURDATE()-1) ORDER BY `Datum` DESC LIMIT 0,30";
+         <ul id="verAgenda">
+<?php	
+			/*$curYear = strftime("%Y",time());
+			$dayspassed2 = strftime("%j",mktime(0,0,0,12,31,$curYear-1));
+			$dayspassed3 = strftime("%j",mktime(0,0,0,12,31,$curYear-2));
+			$dayspassed = strftime("%j",time());
+			echo $dayspassed;
+			$pass = $dayspassed;*/
+            // Fetch the past gigs (yesterday before the 'day-before-yesterday')
+			$query = "SELECT * FROM `agenda` WHERE `Datum`<(CURDATE()-1) ORDER BY `Datum` DESC;";
 			$result = mysqli_query($mysql,$query);			
 			$counter=0;
 			while( $row = mysqli_fetch_array($result) )  {
@@ -102,6 +114,7 @@
            }
 ?>
          </ul>
+         </div>
 <?php
 	} // end check what to show (if $valid_request!==false)
 ?>
@@ -122,8 +135,13 @@
 	  $time = explode(":",$db_entry['Tijd']);
 ?>
            <li>
-             <label> <?= strftime("%a %d %B %H:%M",mktime($time[0],$time[1],0,$date[1],$date[2],$date[0])) ?> </label>
-             <a href="<?= "agenda.php?event=".$db_entry['ID']?>" ><?=$db_entry['Titel']?></a>	
+             <div class="date">
+             	<label><?= array_pop($date)?></label>
+          	 	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?></span>
+             <!--<label> <?= strftime("%a %d %B %H:%M",mktime($time[0],$time[1],0,$date[1],$date[2],$date[0])) ?> </label>
+             <span> </span>-->
+             </div>
+             <span><a href="<?="agenda.php?event=".$db_entry['ID']?>"><?= $db_entry['Titel'] ?><span><?= $db_entry['Locatie'] ?></span></a></span>	
            </li>
 <?php
 	} // end function popagendaevent

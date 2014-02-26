@@ -126,8 +126,9 @@
 ?>
 		<li>
 		  <div class="date">
-          <label><?= array_pop($date)?></label>
-          	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?></span>          </div>
+    	      <label><?= array_pop($date)?></label>
+	          <span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?></span>
+          </div>
           <span><a href="<?= "/agenda.php?event=".$db_entry['ID']?>" ><?=$db_entry['Titel']?></a></span>	
 		</li>
 <?php

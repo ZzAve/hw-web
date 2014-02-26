@@ -17,13 +17,19 @@
 			$valid_request=$row;
 		}
 	}
-    //Set a title for the page
-	$pre_title = $valid_request!==false ? $valid_request['Titel']." - " : "";
-    $title = $pre_title."Nieuws";
+	if ($valid_request !== false){
+		//Set a title for the page
+		$pre_title = $valid_request['Titel']." - ";
+		$title = $pre_title."Nieuws";
+		
+		//Set the description for the page
+		$description = htmlspecialchars(substr(strip_tags( $valid_request['Bericht'] ),0,200))."...";
 	
-	//Set a facebook image
-	$fb_img = $valid_request!==false ? $valid_request['Foto'] :"";
-	
+		//Set a facebook image
+		$fb_img = $valid_request['Foto'];
+	} else { 
+		$title = "Nieuws";
+	}
 	//Import header
 	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws.css\" title=\"style\" />";
     require_once 'header.php';  
