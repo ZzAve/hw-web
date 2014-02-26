@@ -24,11 +24,14 @@
     <!-- facebook open graph tags -->
     <meta property="fb:admins" content="100001997083297" />
     <meta property="og:url" content="<?="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']?>" />
+    <meta property="og:type" contenct="website" />
     <meta property="og:title" content="<?= isset($title)?$title." | ":""?>Homemade Water" />
 <?php if(isset($fb_img) && $fb_img!=""){
 		echo "<meta property=\"og:image\" content=\"http://www.homemadewater.nl/$fb_img\" />";
 	  }
 ?>
+    <meta property="og:image" content="http://www.homemadewater.nl/images/logo.jpg" />
+    <meta propery="og:description" content="<?= isset($description)? $description : "Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren in een feestende bende! Groot, klein, jong of oud? Homewade Water krijgt óók u aan het feesten!"?> "/>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
