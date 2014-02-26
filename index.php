@@ -25,7 +25,7 @@
          <p> Nieuwsgierig geworden? Check onze <a href="/video.php">media</a> en <a href="/nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p> 
          
          <div class="attention">
-             <img src="images/clash_win.jpg" alt="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" title="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" />
+             <img src="/images/clash_win.jpg" alt="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" title="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" />
              <div class="text">
 	             <h3> Eureka ! ! !</h3>
 
