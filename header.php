@@ -9,13 +9,10 @@
 <html xml:lang="nl" lang="nl">
 <head>
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="/images/shortIcon.jpg" rel="shortcut icon" />
     <link href="/images/shortIcon.jpg" rel="shortIcon" />
-    <link rel="/image_src" href="<?=isset($fb_img) && $fb_img!="" ? $fb_img : "/images/logo.jpg"?>" />
-    <link rel="/image_src" href="http://www.homemadewater.nl/images/logo.jpg" />
     <title><?= isset($title)?$title." | ":""?>Homemade Water</title>
     <meta name="description" content="<?= isset($description)? $description : "Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren in een feestende bende! Groot, klein, jong of oud? Homewade Water krijgt óók u aan het feesten!"?> "/>
     <meta name="keywords" content="Homemade Water, Delft, band, coverband, pop, rock, studenten, feestband, clash, coverbands, student, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
@@ -24,7 +21,7 @@
     <!-- facebook open graph tags -->
     <meta property="fb:admins" content="100001997083297" />
     <meta property="og:url" content="<?="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']?>" />
-    <meta property="og:type" contenct="website" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="<?= isset($title)?$title." | ":""?>Homemade Water" />
 <?php if(isset($fb_img) && $fb_img!=""){
 		echo "<meta property=\"og:image\" content=\"http://www.homemadewater.nl/$fb_img\" />";
@@ -101,7 +98,7 @@
 ?>
        <div class="home_highlight home_agenda">
           <p><label>Eerstvolgende gig:</label>
-          <a href="<?="/agenda.php?item=".$row['ID']?>" ><?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?><br /><?=$row['Titel']?><br /><?=$row['Locatie']?></a></p>
+          <a href="<?="/agenda.php?event=".$row['ID']?>" ><?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?><br /><?=$row['Titel']?><br /><?=$row['Locatie']?></a></p>
        </div>        
        <?php } ?>
     </div><!-- end header -->

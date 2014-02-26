@@ -59,6 +59,13 @@ function db_restore(){
 	}
 }
 
+function db_close(){
+	global $active_db, $mysql;
+	if ($active_db  != -1){
+		mysqli_close($mysql);
+		$active_db = -1;
+	}
+}
 /*
 Function PAGINATION puts in a div, with the text 'vorige pagina' and 'volgende pagina'. It dynamically determines what the next or previous page is based on what is currently shown.
 *
@@ -77,13 +84,11 @@ function pagination($page,$last){
 			$disPrev="";
 			if ($page==1){
 				$disPrev = "disabled";
-			}
-?>
+			} 
+?>            
             <form action="<?= substr(strrchr($_SERVER['PHP_SELF'],"/"),0)."?page=".($page-1)?>" method="post">
             	<button <?=$disPrev?>> &laquo;  Vorige pagina </button> 
             </form>
-            
-
 <?php 
         $disNext ="";
 		if ($last){

@@ -20,13 +20,19 @@
 		}
 	}
 
-	//Set a facebook image
-	$fb_img = $valid_request!==false ? str_replace("_thumb","",$valid_request['Thumbnail']) :"";	
-	
-	//Set a title for the page
-	$pre_title=$valid_request!==false ? $valid_request['Titel']." - " : "";
-	$title= $pre_title."Foto's";   
-   	
+	if ($valid_request !== false){
+		//Set a title for the page
+		$pre_title= $valid_request['Titel']." - ";
+		$title= $pre_title."Foto's";   
+		
+		//Set a description
+		$description = htmlspecialchars(substr(strip_tags( $valid_request['Omschrijving'] ),0,200))."...";
+		
+		//Set a facebook image
+		$fb_img =str_replace("_thumb","",$valid_request['Thumbnail']);	
+	} else {
+		$title = "Foto's";
+	}
 	// Import header
 	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/foto.css\" title=\"style\" />";
 	require_once 'header.php';
@@ -43,6 +49,7 @@
       	     $album_id=$valid_request['ID'];
       	     $album_name = $valid_request['Titel'];
       	     $album_date = $valid_request['Datum'];
+			 $date = explode("-",$album_date);
       	     $album_place = $valid_request['Locatie'];
       	     $album_location = $valid_request['Fotofolder'];
       	     $album_descr = $valid_request['Omschrijving'];
@@ -50,7 +57,7 @@
             
             <?php backToOverview(""); ?>
             <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>  
-            <h2> Datum: <?= $album_date ?></h2>
+            <h2> Datum: <?=strftime("%A %#d %B %Y",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?></h2>
             <h2> Plaats: <?= $album_place ?> </h2>		
             <p class="album_descr"> <?=$album_descr?></p>
 			<?php shareDiv(); ?>

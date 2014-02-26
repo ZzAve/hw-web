@@ -12,3 +12,47 @@
 #botback  {
 	margin-top:100px;
 }
+
+#toekAgenda, #verAgenda{
+	list-style:none;
+}
+
+#toekAgenda li , #verAgenda li{
+	overflow:hidden;
+	width:48%;
+	margin:1% 0.5%;
+	padding:0;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:top;
+
+}
+#toekAgenda li > span , #verAgenda li > span{
+	display:block;
+	margin-left: 65px;	
+	text-indent:0;
+	width:auto;
+}
+
+#toekAgenda div.date , #verAgenda div.date{
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:-1px;
+	height:100%;
+}
+#toekAgenda li a , #verAgenda li a{
+	text-decoration:none;
+	overflow:hidden;
+	display:block;
+}
+#toekAgenda li a span , #verAgenda li a span{
+	color:#333;
+	display:block;
+	width:auto;
+}
+
+#toekAgenda li:hover , #verAgenda li:hover{
+	background-color:rgb(184, 187, 187);
+	background-color:rgba(184, 187, 187,.4);;
+}
