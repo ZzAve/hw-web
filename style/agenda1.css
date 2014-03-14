@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+#agendaItem{
+	overflow:hidden;
+}
 #agendaItem img{
 	background-color:white;
 	border-radius:5px;
@@ -13,11 +16,20 @@
 	margin-top:100px;
 }
 
-#toekAgenda, #verAgenda{
+
+.agenda{
+	margin:10px auto;
+}
+.agenda ul{
 	list-style:none;
 }
 
-#toekAgenda li , #verAgenda li{
+.agenda h4{
+	width:95%;
+	margin: 25px auto 5px 0;
+	border-bottom:2px solid grey;	
+}
+.agenda li{
 	overflow:hidden;
 	width:48%;
 	margin:1% 0.5%;
@@ -28,31 +40,31 @@
 	vertical-align:top;
 
 }
-#toekAgenda li > span , #verAgenda li > span{
+.agenda li > span{
 	display:block;
 	margin-left: 65px;	
 	text-indent:0;
 	width:auto;
 }
 
-#toekAgenda div.date , #verAgenda div.date{
+.agenda div.date{
 	margin-top:0;
 	margin-bottom:0;
 	margin-left:-1px;
 	height:100%;
 }
-#toekAgenda li a , #verAgenda li a{
+.agenda li a{
 	text-decoration:none;
 	overflow:hidden;
 	display:block;
 }
-#toekAgenda li a span , #verAgenda li a span{
+.agenda li a span{
 	color:#333;
 	display:block;
 	width:auto;
 }
 
-#toekAgenda li:hover , #verAgenda li:hover{
+.agenda li:hover{
 	background-color:rgb(184, 187, 187);
 	background-color:rgba(184, 187, 187,.4);;
 }
