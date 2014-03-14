@@ -19,7 +19,7 @@
 	}
 	$pre_title = $valid_request!==false ? $valid_request['Titel']." - " : "";
 	$title = $pre_title."Agenda";
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda1.css\" title=\"style\" />";
 	require_once 'header.php'; 
 
 ?>
@@ -32,8 +32,7 @@
 	if ($valid_request !== false){
 		// show the requested item!
 ?>
-        <div id="agendaItem">
-            <p class="back"> <a href="agenda.php">Terug naar het overzicht</a></p>
+        <div id="agendaItem" class="item">
             <h1> <?= $valid_request['Titel']?></h1>
             <img src="<?=$valid_request['Foto']?>" alt="<?=$valid_request['Titel']?>" title="<?=$valid_request['Titel']?>"> 
 			<?php $date = explode("-",$valid_request['Datum']);
@@ -66,10 +65,12 @@
     	
          <h1> Agenda</h1>
 		 
-         <div class="item">
+         <div class="agenda item">
          <h3> Toekomstige optredens </h3>
-         <ul id="toekAgenda" class="item">
-<?php
+         <ul id="toekAgenda" class=" agenda future">
+<?php	 // Get current year
+		 $curYear = strftime("%Y",time());
+		 
          // Fetch the in the future (ascending order (first today, then tomorrow)
 			$query = "SELECT * FROM `agenda` WHERE `Datum`>(CURDATE()-1) ORDER BY `Datum` ASC LIMIT 0,30";
 			$result = mysqli_query($mysql,$query);			
@@ -88,21 +89,36 @@
          </ul>
          </div>
          
-         <div class="item">
+         <div class="agenda item">
          <h3> Optredens in het verleden </h3>
-         <ul id="verAgenda">
-<?php	
-			/*$curYear = strftime("%Y",time());
-			$dayspassed2 = strftime("%j",mktime(0,0,0,12,31,$curYear-1));
-			$dayspassed3 = strftime("%j",mktime(0,0,0,12,31,$curYear-2));
-			$dayspassed = strftime("%j",time());
-			echo $dayspassed;
-			$pass = $dayspassed;*/
-            // Fetch the past gigs (yesterday before the 'day-before-yesterday')
-			$query = "SELECT * FROM `agenda` WHERE `Datum`<(CURDATE()-1) ORDER BY `Datum` DESC;";
+         
+<?php 	 // For each year make a itemlist
+		 // Current year
+       	 $query = "SELECT * FROM `agenda` WHERE `Datum` BETWEEN \"$curYear-01-01\" AND CURDATE()-1 ORDER BY `Datum` DESC;";
+		 $result = mysqli_query($mysql,$query);			
+		 $counter=0;
+?>       <h4> Optredens afgelopen jaar (<?=$curYear?>)</h4>
+         <ul class="agenda past"> 
+<?php	 while( $row = mysqli_fetch_array($result) )  {
+		  // while there is still an newsitem to process, put it in a listitem
+		  $counter++;
+		  popagendaevent($row);
+		 } //end while
+		 if($counter==0){
+?> 		     <li> <em> helaas zijn er in het verleden geen optredens gepland </em></li>         		 
+<?php    }  ?>
+         </ul>
+
+<?php		 
+		 //Previous years
+		 $year = $curYear -1;
+		 while ($year >=2012){
+			$query = "SELECT * FROM `agenda` WHERE `Datum` BETWEEN \"$year-01-01\" AND \"$year-12-31\" ORDER BY `Datum` DESC;";
 			$result = mysqli_query($mysql,$query);			
 			$counter=0;
-			while( $row = mysqli_fetch_array($result) )  {
+?> 			<h4>Optredens in <?=$year?></h4>
+			<ul class="agenda past">
+<?php		while( $row = mysqli_fetch_array($result) )  {
 			  // while there is still an newsitem to process, put it in a listitem
 			  $counter++;
 			  popagendaevent($row);
@@ -114,6 +130,11 @@
            }
 ?>
          </ul>
+<?php	
+		 	$year = $year -1;
+		 }
+?>
+
          </div>
 <?php
 	} // end check what to show (if $valid_request!==false)
@@ -132,13 +153,14 @@
 	function popagendaevent($db_entry){
 	  //change the format of date and timestamps
 	  $date = explode("-",$db_entry['Datum']);
+	  $date2 = $date;
 	  $time = explode(":",$db_entry['Tijd']);
 ?>
            <li>
              <div class="date">
              	<label><?= array_pop($date)?></label>
           	 	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?></span>
-             <!--<label> <?= strftime("%a %d %B %H:%M",mktime($time[0],$time[1],0,$date[1],$date[2],$date[0])) ?> </label>
+             <!--<label> <?= strftime("%a %d %B %H:%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </label>
              <span> </span>-->
              </div>
              <span><a href="<?="agenda.php?event=".$db_entry['ID']?>"><?= $db_entry['Titel'] ?><span><?= $db_entry['Locatie'] ?></span></a></span>	
