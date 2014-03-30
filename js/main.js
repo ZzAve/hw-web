@@ -158,6 +158,12 @@ function checkIfIntoView(){
 }
 
 $(window).load(function(){
-	setTimeout(function(){$("#sharediv").removeClass("hiddenWell"); $("#sharediv").css('overflow','');},1500);
+	shareDiv = $("#sharediv");
+	setTimeout(function(){
+		shareDiv.hide();
+		shareDiv.removeClass("hiddenWell"); 
+		shareDiv.css('overflow','');
+		shareDiv.fadeIn('fast');
+		},1000);
 
 });

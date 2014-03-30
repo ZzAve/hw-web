@@ -35,7 +35,8 @@
 }
 #news label{
 	width:120px;
-	height:100%;
+	height:auto;
+	max-height:120px;
 	vertical-align:middle;
 }
 #news img{
@@ -44,6 +45,8 @@
 	max-height:180px;
 	height:auto;
 	min-height:30px;
+	display:table-cell;
+	vertical-align:middle;
 	cursor:pointer;
 	vertical-align:middle;
 }

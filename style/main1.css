@@ -143,11 +143,15 @@ body > iframe{
 	height:0;
 	width:0;
 	overflow:hidden;
+
 }
-.hiddenWell *, .hiddenWell * *{
+.hiddenWell *{
 	height:0;
 	width:0;
 	visibility:hidden;
+	position:fixed;
+	top:-100000px;
+	left:-100000px;
 }
 .nodisp{
 	display:none;

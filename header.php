@@ -24,7 +24,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<?= isset($title)? strip_tags($title)." | ":""?>Homemade Water" />
 <?php if(isset($fb_img) && $fb_img!=""){
-		echo "<meta property=\"og:image\" content=\"http://www.homemadewater.nl/$fb_img\" />";
+		$start="";
+		if(substr($fb_img,0,7)!="http://") $start="www.homemadewater.nl/";
+		echo "<meta property=\"og:image\" content=\"$start$fb_img\" />";
 	  }
 ?>
     <meta property="og:image" content="http://www.homemadewater.nl/images/logo.jpg" />
@@ -40,8 +42,8 @@
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css' />
 
     <!-- stylesheets --> 
-    <link rel="stylesheet" type="text/css" href="/style/header.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/main.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/header1.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/main1.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/footer.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/lightbox.css" title="style" />
 
@@ -88,8 +90,11 @@
 ?>          <p> Er is is fout gegaan tijdens de verbinding met de database: <?= $connection ?></p>				
 <?php
 		} else { 
-		
+		// earliest gig
 		$query = "SELECT * FROM `agenda` WHERE (`Datum` - CURDATE()) > -1 ORDER BY `Datum` ASC LIMIT 0,1";
+		
+		// latest newest
+		//$query = "SELECT * FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,1";
 		$result = mysqli_query($mysql,$query);
 		$row = mysqli_fetch_array($result);
 		$date = explode("-",$row['Datum']);
@@ -99,7 +104,12 @@
        <div class="home_highlight home_agenda">
           <p><label>Eerstvolgende gig:</label>
           <a href="<?="/agenda.php?event=".$row['ID']?>" ><?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?><br /><?=$row['Titel']?><br /><?=$row['Locatie']?></a></p>
-       </div>        
+       </div>
+
+       <!--<div class="home_highlight home_news">
+          <p><label>Laatste nieuws:</label>
+          <a href="<?="/nieuws.php?item=".$row['ID']?>" ><?=$row['Titel']?></a></p>
+       </div> -->
        <?php } ?>
     </div><!-- end header -->
 <?php

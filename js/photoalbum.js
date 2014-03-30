@@ -3,11 +3,14 @@ $(window).load(function(){
 	var nrOfImgs = $('#thumblist li a').length;
 	$('#thumblist li a').each(function(index){
 		count=index+1;		
-		curImg = new Image();
-		curImg.src = $(this).html();
 		//alert($(this).html());
-		
-		curImg.onload = adaptImg($(this),curImg,count,count==nrOfImgs);
+		var time = count*75;
+		var deze = $(this);
+		setTimeout(function(){
+			curImg = new Image();
+			curImg.src = $(this).html();
+			curImg.onload = adaptImg(deze,curImg,count,count==nrOfImgs);
+		},time);
 	})
 });
 
@@ -24,11 +27,8 @@ function adaptImg(aElement,image,count,last){
 	
 	// At this point, the image is inserted!
 	newEl.load(function(){
-		
 		//alert(newEl.attr('src'));
-		
 		//Get height of both image and father element
-
 		var imgHeight = newEl.height();
 		var imgWidth  = newEl.width();
 		var parentHeight = aElement.parent().height();
