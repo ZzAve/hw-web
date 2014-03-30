@@ -53,6 +53,11 @@
       	     $album_place = $valid_request['Locatie'];
       	     $album_location = $valid_request['Fotofolder'];
       	     $album_descr = $valid_request['Omschrijving'];
+			 // strip first and last p tag if present
+			 if(strcasecmp(substr($album_descr,0,3),"<p>")==0){
+				$album_descr = substr($album_descr,3);
+				$album_descr = substr($album_descr,0,strripos($album_descr,"</p>"));
+			 }
 ?>
             
             <?php backToOverview(""); ?>
