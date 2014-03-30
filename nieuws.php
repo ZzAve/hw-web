@@ -31,7 +31,7 @@
 		$title = "Nieuws";
 	}
 	//Import header
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws1.css\" title=\"style\" />";
     require_once 'header.php';  
 ?>
 
@@ -44,8 +44,9 @@
 
 	if($valid_request!==false){
 			// Show one item
+?>	    <h1>Nieuwsbericht</h1> 
+<?php		popnewsitem($valid_request);
 			$prev_news = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?page=");
-			popnewsitem($valid_request);
 			backToOverview($prev_news);
 	} else {
 		

@@ -1,25 +1,31 @@
 <?php 
+	// Include miscellaneous functions (such as database connection, buttons and sharedivs)
 	require_once 'misc/miscfunctions.php';
 	//Ensure connection
 	db_connect(0);
-	$request=false;
-	$valid_request=false;
 	
 	// check the request of user
+	$request=false;
+	$valid_request=false;
 	if( isset($_REQUEST['event']) ){
 		$request=true;	
 		$id=intval($_GET['event']);
 		$query = "SELECT * FROM  `agenda` WHERE  `ID` = $id";
 		$result = mysqli_query($mysql,$query);
 		$row = mysqli_fetch_array($result);
-		
+		// check if there was a return
 		if ($row != NULL && $row['ID']!= "" ) {
 			$valid_request=$row;
 		}
 	}
+	// Update the title of the page
 	$pre_title = $valid_request!==false ? $valid_request['Titel']." - " : "";
 	$title = $pre_title."Agenda";
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda1.css\" title=\"style\" />";
+	
+	// Additional constraints for this page - css etc
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda.css\" title=\"style\" />";
+	
+	// include the header
 	require_once 'header.php'; 
 
 ?>
@@ -42,8 +48,8 @@
             <h3> Locatie: <?=$valid_request['Locatie']?></h3>
             <p> <?=$valid_request['Bericht']?></p>
 
-<?php       $prev_news = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?page=");
-			backToOverview($prev_news); 
+<?php       $prev_agenda = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?page=");
+			backToOverview($prev_agenda); 
 ?>
             <!--
             <p> De request vars: request: <?=$request? "true" : "false"?> en valid_request: <?=$valid_request!==false?"true":"false"?></p>
@@ -62,51 +68,50 @@
 <?php
 		}
 ?>
-    	
-         <h1> Agenda</h1>
+         <h1>Agenda</h1>
 		 
          <div class="agenda item">
-         <h3> Toekomstige optredens </h3>
-         <ul id="toekAgenda" class=" agenda future">
-<?php	 // Get current year
-		 $curYear = strftime("%Y",time());
+         	<h3> Toekomstige optredens </h3>
+         	<ul id="toekAgenda" class=" agenda future">
+<?php	 	// Get current year
+		 	$curYear = strftime("%Y",time());
 		 
-         // Fetch the in the future (ascending order (first today, then tomorrow)
+        	// Fetch the events in the future (ascending order (first today, then tomorrow)
 			$query = "SELECT * FROM `agenda` WHERE `Datum`>(CURDATE()-1) ORDER BY `Datum` ASC LIMIT 0,30";
 			$result = mysqli_query($mysql,$query);			
 			$counter=0;
 			while( $row = mysqli_fetch_array($result) )  {
-			  // while there is still an newsitem to process, put it in a listitem
+			  // while there is still an agendaitem to process, put it in a listitem
 			  $counter++;
 			  popagendaevent($row);
-            } //end while
-            if($counter==0){
-?>
-             <li> <em> helaas zijn er in de toekomst geen optredens gepland </em></li>         		 
-<?php
             }
+			
+			// Perform and error check (to check if there are no events scheduled
+            if($counter==0){
+?>            	<li> <em> helaas zijn er in de toekomst geen optredens gepland </em></li>         		 
+<?php       }
 ?>
-         </ul>
-         </div>
+            </ul>
+        </div>
          
-         <div class="agenda item">
-         <h3> Optredens in het verleden </h3>
+        <div class="agenda item">
+        	<h3> Optredens in het verleden </h3>
          
-<?php 	 // For each year make a itemlist
-		 // Current year
-       	 $query = "SELECT * FROM `agenda` WHERE `Datum` BETWEEN \"$curYear-01-01\" AND CURDATE()-1 ORDER BY `Datum` DESC;";
-		 $result = mysqli_query($mysql,$query);			
-		 $counter=0;
-?>       <h4> Optredens afgelopen jaar (<?=$curYear?>)</h4>
-         <ul class="agenda past"> 
-<?php	 while( $row = mysqli_fetch_array($result) )  {
-		  // while there is still an newsitem to process, put it in a listitem
-		  $counter++;
-		  popagendaevent($row);
-		 } //end while
-		 if($counter==0){
-?> 		     <li> <em> helaas zijn er in het verleden geen optredens gepland </em></li>         		 
-<?php    }  ?>
+<?php 	 	// For each year make a itemlist
+		 	// Current year
+       	 	$query = "SELECT * FROM `agenda` WHERE `Datum` BETWEEN \"$curYear-01-01\" AND CURDATE()-1 ORDER BY `Datum` DESC;";
+			$result = mysqli_query($mysql,$query);			
+		 	$counter=0;
+?>       	<h4> Optredens afgelopen jaar (<?=$curYear?>)</h4>
+         	<ul class="agenda past"> 
+<?php	 	while( $row = mysqli_fetch_array($result) )  {
+		  		// while there is still an newsitem to process, put it in a listitem
+		  		$counter++;
+		  		popagendaevent($row);
+		 	}
+		 	if($counter==0){
+?> 		      <li> <em> helaas zijn er in het verleden geen optredens gepland </em></li>         		 
+<?php    	}  ?>
          </ul>
 
 <?php		 
@@ -124,15 +129,13 @@
 			  popagendaevent($row);
             } //end while
             if($counter==0){
-?> 		
-              <li> <em> helaas zijn er in het verleden geen optredens gepland </em></li>         		 
-<?php
-           }
+?> 		    	<li> <em> helaas zijn er in het verleden geen optredens gepland </em></li>         		 
+<?php       }
 ?>
-         </ul>
+          	</ul>
 <?php	
 		 	$year = $year -1;
-		 }
+		 } // end while year check
 ?>
 
          </div>

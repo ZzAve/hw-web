@@ -71,6 +71,8 @@ div.home_highlight label{
 }
 
 div.home_news{
+	width:250px;
+	font-size:20px;
 	color: #F00;
 }
 
