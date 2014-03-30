@@ -121,14 +121,17 @@
 	function popagendaevent($db_entry){
 	  //change the format of date and timestamps
 	  $date = explode("-",$db_entry['Datum']);
+	  $date2= $date;
+	  //print_r($date);
 	  $time = explode(":",$db_entry['Tijd']);
 
 ?>
 		<li>
-		  <div class="date">
-    	      <label><?= array_pop($date)?></label>
-	          <span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?></span>
-          </div>
+          <div class="date">
+             	<label><?= array_pop($date)?></label>
+          	 	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date),1 ) ) )?></span>
+             <!--<label> <?= strftime("%a %d %B %Y %H:%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </label> -->
+             </div>
           <span><a href="<?= "/agenda.php?event=".$db_entry['ID']?>" ><?=$db_entry['Titel']?></a></span>	
 		</li>
 <?php
