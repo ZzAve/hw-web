@@ -69,8 +69,7 @@ if( isset($_POST['name']) ){
         </form>
     
     </div> <!-- end div content -->
-    <div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
+  
 
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php'; ?>

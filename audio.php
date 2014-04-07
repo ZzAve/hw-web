@@ -2,8 +2,8 @@
 	$title="Audio";
 	$extra = "<style type=\"text/css\">@charset utf-8;
 #audioList{height:auto}
-#audioList iframe{height:166px;margin-bottom:10px;margin-top:10px;width:100%}
-#audioList div{margin-top:30px;padding:20px}</style>";
+#audioList iframe{height:166px;margin-bottom:5px;margin-top:5px;width:100%}
+</style>";
 	require_once 'header.php'; 
 ?>
 <div id="content-bar">
@@ -18,7 +18,7 @@
                 <a class="iframeSC" href="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F79928304&amp;color=1f78c7&amp;auto_play=false&amp;show_artwork=true"></a>
                 <p>De eerste versie van het eigen nummer "Give it Back", gespeeld tijdens het valentijnsoptreden dit jaar in de Storing, Haarlem.  </p> <br /> 
             </div>
-         
+         	<hr />
          	<div class="audioitem item">
                 <h3> Eerste demomix van Homemadewater </h3>
                 <!-- First demo -->
@@ -34,8 +34,7 @@
 		</div> <!-- end audiolist -->       
            
     </div> <!-- end div content -->
-	<div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
+	
 
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php' ?>

@@ -31,7 +31,7 @@
 		$title = "Nieuws";
 	}
 	//Import header
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws1.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws1.1.css\" title=\"style\" />";
     require_once 'header.php';  
 ?>
 
@@ -84,13 +84,12 @@
               popnewsitem($row);
 			  $count++;
             }                 		
-
-			pagination($page,$last);
+?> 		<hr />
+<?php		pagination($page,$last);
 		}	
 ?>         
     </div> <!-- end div content -->
-	<div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
+	
 
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php' ?>
@@ -124,6 +123,7 @@ function popnewsitem($db_entry){
 	global $valid_request;
 	$date = explode("-",$db_entry['Datum']);
 ?> 
+    <hr  />
     <div class="newsitem item <?= $valid_request!==false ? "single" : ""?>" id="<?="item" . $db_entry['ID']?>">
       <div class="date">
         <label> <?= array_pop($date)?> </label>

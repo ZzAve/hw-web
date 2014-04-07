@@ -107,9 +107,15 @@ function pagination($page,$last){
 Function Back
 */
 function backToOverview($request){
+	if (isset($_SERVER['HTTP_REFERER']) &&strpos($_SERVER['HTTP_REFERER'],"media.php")!==FALSE){
+		//Directed from media
+		$backToURL =  $_SERVER['HTTP_REFERER'];	
+	} else {
+		$backToURL =  substr(strrchr($_SERVER['PHP_SELF'],"/"),0).($request ? $request : "");
+	}
 ?>
     <div class="navigate back">
-    <form action="<?=substr(strrchr($_SERVER['PHP_SELF'],"/"),0).($request ? $request : "") ?>" method="post">
+    <form action="<?=$backToURL?>" method="post">
         <button> &laquo; Ga terug </button>
     </form>
     </div>
