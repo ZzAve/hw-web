@@ -16,8 +16,9 @@ if( isset($_POST['name']) ){
 	$subject = strip_tags($_REQUEST['subject']);
 	$message = wordwrap(strip_tags($_REQUEST['bericht']),70); // strip message of any html tags and wrap lines that are longer than 70 characters
 	$message = str_replace("\n","<br />\n",$message); // ensure linebreaks are shown in message
-	require_once("mail.php"); // mail.php contains a function sendMail that requires the necessary information to send an e-mail.
+	require_once 'mail.php'; // mail.php contains a function sendMail that requires the necessary information to send an e-mail.
 	$worked = sendMail($name,$email,$phone,$subject,$message,0);
+
 	$error=!$worked;
 	if(isset($_REQUEST['checkbox-send-copy'])){
 		$copy_mail = "checked =\"checked\"";
@@ -55,7 +56,7 @@ if( isset($_POST['name']) ){
         <?php } ?>
 
         <!-- The contact form -->
-        <form id="contact_form" enctype="multipart/form-data" onsubmit="return validateContact()" action="./contact.php" method="post">
+        <form id="contact_form" enctype="multipart/form-data" onsubmit="return validateContact()" action="/contact.php" method="post">
             <img src="/images/HW_Locus_15.jpg" alt="We salute you" title="Namens Homemade Water, alvast bedankt"/>
             <p>Naam <br /><input type="text" name="name" <?= $error ?"value=\"$name\"" : NULL ?>  /> </p>
             <p>E-mail <br /><input type="email" name="email" <?= $error ?"value=\"$email\"" : NULL ?> /></p>

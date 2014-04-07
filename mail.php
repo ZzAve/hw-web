@@ -55,17 +55,16 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 		</html>";
 	// END OF MAIL BODY
 	
-	
-	$mailheader  = "Return-Path: $mail \r\n";	
+	$mailheader  = "Return-Path: $from <$mail> \r\n";	
 	$mailheader .= "From:  Homemade Water <info@homemadewater.nl> \r\n";
 	
-	if ($copy==0){
+	/*if ($copy==0){
 		$mailheader .= "From:     $from <$mail> \r\n";
 		//$mailheader .= "Reply-To: $from <$mail> \r\n";
 	} else {
 		$mailheader .= "From:     Homemade Water <info@homemadewater.nl> \r\n";
 		//$mailheader .= "Reply-To: Homemade Water <info@homemadewater.nl> \r\n";
-	}
+	}*/
 	
 	$mailheader .= 'X-Mailer: PHP/' . phpversion()."\r\n";
 	// Always set content-type when sending HTML email
@@ -78,8 +77,6 @@ function sendMail($from,$mail,$number ="",$sub,$msg,$copy){
 	} else {
 		$receiver="info@homemadewater.nl";
 	}
-	
-	
 	return mail($receiver,$topic,$formcontent,$mailheader);
 }
 ?>
