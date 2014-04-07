@@ -29,10 +29,10 @@ div.logo{
 /* Menu positioning */
 #navbar {
 	background: url("../images/bar_head_and_foot.png") repeat-x top left;
-	filter: drop-shadow(0px 10px 14px #222); 
-	-webkit-filter: drop-shadow(0px 10px 14px #222); 
-	-moz-webkit-filter: drop-shadow(0px 10px 14px #222); 
-	-ms-webkit-filter: drop-shadow(0px 10px 14px #222); 
+	filter: drop-shadow(0px 8px 7px #222); 
+	-webkit-filter: drop-shadow(0px 8px 7px #222); 
+	-moz-webkit-filter: drop-shadow(0px 8px 7px #222); 
+	-ms-webkit-filter: drop-shadow(0px 8px 7px #222); 
 	 
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -82,7 +82,7 @@ div.home_agenda{
 
 #menu{
 	position:relative;
-	-webkit-filter: drop-shadow(0px 0px 0px #222); filter: drop-shadow(0px 0px 0px #222);
+	font-weight:bold;
 }
 
 #menu, #menu ul {
@@ -98,7 +98,7 @@ div.home_agenda{
 #menu > li{ 
     float: left;
 	margin-left: 15px;
-	margin-right:0;
+	margin-right:15px;
 	z-index:12;
 }
 #menu >li *{
@@ -138,10 +138,7 @@ div.home_agenda{
 /* Menu coloring and styling */
 /* Main menu
 ------------------------------------------*/
-#menu {
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 15px;
-}
+
 
 
 /*#menu > li:nth-child(even){
@@ -175,7 +172,7 @@ div.home_agenda{
 }
 #menu li:hover > a {
     /*color: rgba(255,255,255,0.8);*/
-    color: #00A;
+	color:#333;	
 }
  
 

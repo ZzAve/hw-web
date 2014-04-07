@@ -134,9 +134,6 @@
         </div>   
             
     </div> <!-- end content -->    
-    
-    <div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
 
 </div> <!-- end content-bar div -->
 

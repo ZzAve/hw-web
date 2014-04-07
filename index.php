@@ -1,7 +1,7 @@
 <?php 
+	require_once 'misc/miscfunctions.php';
 	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/index1.css\" title=\"style\" />";
 	require_once 'header.php'; 
-	require_once 'misc/miscfunctions.php';
 ?>
 
 <div id="content-bar">
@@ -108,8 +108,7 @@
         
     </div> <!-- end content -->    
     
-    <div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
+
 
 </div> <!-- end content-bar div -->
 

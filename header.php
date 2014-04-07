@@ -42,8 +42,8 @@
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css' />
 
     <!-- stylesheets --> 
-    <link rel="stylesheet" type="text/css" href="/style/header1.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/main1.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/header1.1.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/main1.1.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/footer.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/lightbox.css" title="style" />
 
@@ -68,11 +68,12 @@
                <li><a href="/band/">BAND</a></li>
                <li><a href="/nieuws.php">NIEUWS</a></li> 
                <li><a href="/agenda.php">AGENDA</a></li>
-               <li><a href="/foto.php"> FOTO'S</a></li>
+               <li><a href="/media.php">MEDIA</a></li>
+               <!--<li><a href="/foto.php"> FOTO'S</a></li>
                <li><a href="/video.php"> VIDEO</a></li>
-               <li><a href="/audio.php"> AUDIO</a></li>              	
+               <li><a href="/audio.php"> AUDIO</a></li>-->
                <li><a href="/contact.php">CONTACT</a></li>
-               <li><a href="/gastenboek.php">GASTENBOEK</a></li>
+               <!--<li><a href="/gastenboek.php">GASTENBOEK</a></li>-->
             </ul>
        </div>
        

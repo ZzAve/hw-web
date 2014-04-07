@@ -61,11 +61,10 @@
 ?>
             
             <?php backToOverview(""); ?>
-            <h1> Fotoalbum:  <label><?= $album_name?></label> </h1>  
+            <h1> Fotoalbum: <label><?= $album_name?></label> </h1>  
             <h2> Datum: <?=strftime("%A %#d %B %Y",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?></h2>
             <h2> Plaats: <?= $album_place ?> </h2>		
-            <p class="album_descr"> <?=$album_descr?></p>
-			<?php shareDiv(); ?>
+            
             <div id="thumblist" class="notLoaded">
               <ul>
 <?php		    //get all photos
@@ -84,8 +83,10 @@
    }
 ?>
               </ul>	
-            </div>
-			
+
+            </div><!-- end thumblist -->
+             <p class="album_descr"> <?=$album_descr?></p>
+			<?php shareDiv(); ?>
             <div class="fb_comment">
               <script type="text/javascript">
                 //<![CDATA[
@@ -132,8 +133,7 @@
 <?php  } // end if else (show ONE albums, or albumlist)
 ?>
      </div> <!-- end content div -->	   
-     <div id="sidebar-left"></div>
-     <div id="sidebar-right"></div>   
+      
 </div> <!-- end content-bar -->
 
 <?php require_once 'footer.php'; ?>

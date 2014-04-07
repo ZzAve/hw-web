@@ -32,10 +32,20 @@ function changeVideo(event) {
 	datetar.html(date);
 	target.src= "http://www.youtube.com/embed/"+span+"?wmode=transparent&autoplay=1";
   	
-	var offset = $(tarDiv).offset();
 
-	$('html, body').animate({
-   	 scrollTop: offset.top,
-   	 scrollLeft: offset.left
-	});
+
+	
+		
+	setTimeout(function(){		
+	if ( $(tarDiv).hasClass("hiddenWell") ){
+		$(tarDiv).hide();
+		$(tarDiv).removeClass("hiddenWell");
+		$(tarDiv).fadeIn(1000);
+	}
+		var offset = $(tarDiv).offset();	
+		$('html, body').animate({
+	   	 scrollTop: offset.top,
+	   	 scrollLeft: offset.left});
+	},300);
+
 }

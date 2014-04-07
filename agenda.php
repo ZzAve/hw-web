@@ -143,8 +143,7 @@
 	} // end check what to show (if $valid_request!==false)
 ?>
     </div> <!-- end content div -->
-    <div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
+ 
 </div> <!-- end content-bar div -->
 
 <?php require_once 'footer.php'; ?>	

@@ -1,6 +1,6 @@
 <?php 
 	$title = "Video";
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/video.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/video1.css\" title=\"style\" />";
 	require_once 'header.php';
 	require_once 'misc/miscfunctions.php';
 	//Set up connection
@@ -43,8 +43,7 @@
            
            
     </div> <!-- end div content -->
-	<div id="sidebar-left"></div>
-    <div id="sidebar-right"></div>
+
 </div> <!-- end content-bar -->
 <?php require_once 'footer.php' ?>
 
