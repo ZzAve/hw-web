@@ -6,11 +6,11 @@
 }
 #agendaItem img{
 	background-color:white;
-	border-radius:5px;
+	border-radius:2px;
 	float:right;
 	width:300px;
 	height:auto;
-	margin-bottom:30px;
+	margin:30px 0 30px 30px;
 }
 
 #botback  {

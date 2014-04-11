@@ -23,7 +23,7 @@
 	$title = $pre_title."Agenda";
 	
 	// Additional constraints for this page - css etc
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda1.css\" title=\"style\" />";
 	
 	// include the header
 	require_once 'header.php'; 
@@ -41,20 +41,25 @@
         <div id="agendaItem" class="item">
             <h1> <?= $valid_request['Titel']?></h1>
             <img src="<?=$valid_request['Foto']?>" alt="<?=$valid_request['Titel']?>" title="<?=$valid_request['Titel']?>"> 
-			<?php $date = explode("-",$valid_request['Datum']);
-				  $time = explode(":",$valid_request['Tijd']); ?>
+<?php 			$date = explode("-",$valid_request['Datum']);
+				$time = explode(":",$valid_request['Tijd']); 
+				$msg = $valid_request['Bericht'];
+                // strip first and last p tag if present
+			    if(strcasecmp(substr($msg,0,3),"<p>")==0){
+				   $msg = substr($msg,3);
+				   $msg = substr($msg,0,strripos($msg,"</p>"));
+				}
+?>
+			 
             <h3> Datum: <?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?></h3>
             <h3> Aanvang: <?=$time[0].":".$time[2]?></h3>
             <h3> Locatie: <?=$valid_request['Locatie']?></h3>
-            <p> <?=$valid_request['Bericht']?></p>
+            <p><?=$msg?></p>
 
 <?php       $prev_agenda = strstr(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "" ,"?page=");
 			backToOverview($prev_agenda); 
 ?>
-            <!--
-            <p> De request vars: request: <?=$request? "true" : "false"?> en valid_request: <?=$valid_request!==false?"true":"false"?></p>
-            <p> <pre><?=print_r($valid_request);?></pre></p>
-            -->
+            
       </div>
 <?php		
 
