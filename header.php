@@ -11,8 +11,8 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="/images/shortIcon.jpg" rel="shortcut icon" />
-    <link href="/images/shortIcon.jpg" rel="shortIcon" />
+    <link href="/images/shortico_new.jpg" rel="shortcut icon" />
+    <link href="/images/shortico_new.jpg" rel="shortIcon" />
     <title><?= isset($title)?strip_tags($title)." | ":""?>Homemade Water</title>
     <meta name="description" content="<?= isset($description)? strip_tags($description) : "Homemade Water is een frisse pop/rock (cover)band die elke zaal om kan toveren in een feestende bende! Groot, klein, jong of oud? Homewade Water krijgt óók u aan het feesten!"?> "/>
     <meta name="keywords" content="Homemade Water, Delft, band, coverband, pop, rock, studenten, feestband, clash, coverbands, student, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis" />
@@ -43,9 +43,9 @@
 
     <!-- stylesheets --> 
     <link rel="stylesheet" type="text/css" href="/style/header1.1.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/main1.1.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/mainv1.5.css" title="style" />
     <link rel="stylesheet" type="text/css" href="/style/footer.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/lightbox.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/lightbox1.7.css" title="style" />
 
 <?php 
 	// Check if any extra settings were requested for this header
@@ -54,12 +54,12 @@
  	 }
 ?>
 </head>
-
+<?php flush(); ?>
 <body>
 <div id="wrapper">
     <div id="header">       
         <div class="logo"> <img id="tapsplash" src="/images/tapsplash.png" alt="Stromend water uit de kraan"/>
-        <a href="index.php"><img id="logo" src="/images/logo_head.png" alt="Hét Homemade Water logo"/></a>
+        <a href="/index.php"><img id="logo" src="/images/logo_head.png" alt="Hét Homemade Water logo"/></a>
         </div>
         
         <div id="navbar">
@@ -96,10 +96,10 @@
 		
 		// latest newest
 		//$query = "SELECT * FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,1";
-		$result = mysqli_query($mysql,$query);
-		$row = mysqli_fetch_array($result);
-		$date = explode("-",$row['Datum']);
-	  	
+                $result = mysqli_query($mysql,$query);
+		
+		while ($row = mysqli_fetch_array($result)){
+    		  $date = explode("-",$row['Datum']);	
 	
 ?>
        <div class="home_highlight home_agenda">
@@ -111,7 +111,10 @@
           <p><label>Laatste nieuws:</label>
           <a href="<?="/nieuws.php?item=".$row['ID']?>" ><?=$row['Titel']?></a></p>
        </div> -->
-       <?php } ?>
+<?php    
+             } //end while 
+        }//end connection check 
+?>
     </div><!-- end header -->
 <?php
     db_restore();

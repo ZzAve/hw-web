@@ -1,6 +1,6 @@
 <?php 
 	require_once 'misc/miscfunctions.php';
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/index1.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/indexv1.2.css\" title=\"style\" />";
 	require_once 'header.php'; 
 ?>
 
@@ -25,18 +25,18 @@
          <p> Nieuwsgierig geworden? Check onze <a href="/video.php">media</a> en <a href="/nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p> 
          
          <div class="attention">
-             <img src="/images/clash_win.jpg" alt="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" title="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" />
+             <img src="/images/clash_win_lau.jpg" alt="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" title="Verkozen tot best coverband van de regio West-Nederland" />
              <div class="text">
-	             <h3> Eureka ! ! !</h3>
+	             <h3>Joepie ! ! !</h3>
 
-                 <p> We hebben het voor elkaar gekregen. Zaterdag 15 februari speelden we in de halve finale van de Clash of the Cover Bands (Regio West). Daar hebben we de sterren van de hemel gespeeld, en een plekje weten te bemachtigen in de finale!</p>
+                 <p>We hebben het voor elkaar gekregen. Zondag 18 mei speelden we in de  finale van de Clash of the Cover Bands (Regio West). Daar hebben we de sterren van de hemel gespeeld, en verkozen door de jury tot beste coverband van de regio.</p>
+                              
+                 <p>Nu mogen we doorstomen naar internationaal succes, en zullen we spelen in de BENELUX editie, tegen bands uit ook Belgi&euml; en Luxumburg. En, en, dan zullen er ook TV-opnames gemaakt worden! De eerstvolgende ronde zal op 18 oktober zijn. Wij hebben er nu al zin in!</p>
                  
-                 <p> Deze finale zal plaatsen vinden op 18 mei, op een podium niks minder dan de <strong>main stage van de Melkweg, Amsterdam</strong>. Hoe gaaf is dat?</p>
-                 
-                 <p> Dit betekent ook dat we nog maar 1 ronde verwijderd zijn van de TV opnames van de Clash. De winnaars van de regiofinales gaan namelijk door naar de halve finales voor de Benelux, en hierbij worden tv opnames gemaakt!</p>
+                 <p>Kijk <a href="http://clashofthecoverbands.nl/show/verslagen/item,724,Regio-Finale-Regio-West-2013-2014.html" target="_blank">hier voor het jurycommentaar van de avond</a>.</p>
              </div>
          </div>
-         
+   
          <div class="col-50" id="agenda"> 
              <h3>Agenda:</h3>
 <?php 		// Ensure connection	
@@ -90,14 +90,18 @@
          <div id="news" class="col-50" > 
             <h3>Laatste Nieuws:</h3>
             <ul>    	   
-<?php	      // Fetch the 3 latest newsitems
-              $query = "SELECT `ID`,`Titel`,`Foto` FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,3";
+<?php	      // Fetch the 4 latest newsitems
+              $query = "SELECT `ID`,`Titel`,`Foto` FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,4";
               $result = mysqli_query($mysql,$query);		  
               while( $row = mysqli_fetch_array($result) ) {
 				  $imgFile = substr($row['Foto'],0,6)=="images" ? "/" : "";
 				  $imgFile = $imgFile.$row['Foto'];
 ?>
-              <li><label><a href="<?="nieuws.php?item=".$row['ID']?>"><img src="<?=$imgFile?>" alt="Nieuwsbericht" /></a></label><span><a href="<?="nieuws.php?item=".$row['ID']?>"><?=$row['Titel']?></a></span>
+              <li>
+              	<label class="col-33">
+                	<a class="itemimg" href="<?="nieuws.php?item=".$row['ID']?>" style="background-image:url(<?=$imgFile?>)"></a>
+                </label>
+                <span class="col-66"><a href="<?="nieuws.php?item=".$row['ID']?>"><?=$row['Titel']?></a></span>
               </li>
 <?php 
 			  }

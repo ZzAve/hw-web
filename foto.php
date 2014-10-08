@@ -143,7 +143,7 @@
 	<script type="text/javascript" src="/js/photoalbum.js"></script>
     
     <!-- lightbox -->
-    <script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="/js/lightbox.min.js"></script>
     
     <!-- google plus script -->
     <script type="text/javascript">
