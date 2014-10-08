@@ -31,7 +31,7 @@
 		$title = "Nieuws";
 	}
 	//Import header
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws1.1.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuwsv1.2.css\" title=\"style\" />";
     require_once 'header.php';  
 ?>
 
@@ -135,7 +135,7 @@ function popnewsitem($db_entry){
 ?>
 	  <div class="description">
       <h3><a href="<?= "nieuws.php?item=".$db_entry['ID']?> "><?= $db_entry['Titel']?></a></h3>
-      <a href="<?= "nieuws.php?item=".$db_entry['ID']?>"> <img src="<?=$db_entry['Foto']?>" alt="<?=$db_entry['Alt_foto']?>" title="<?=$db_entry['Alt_foto']?>"/></a>
+      <a class="itemimg" href="<?= "nieuws.php?item=".$db_entry['ID']?>" style="background-image:url(<?=$db_entry['Foto']?>)"></a>
 <?php
 	   } else {
 ?>

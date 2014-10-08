@@ -1,0 +1,28 @@
+Redirect 301 /development http://www.homemadewater.nl/404.shtml
+AddType text/x-component .htc
+
+# 480 weeks
+<FilesMatch "\.(ico|pdf|flv|jpg|JPG|jpeg|png|gif|swf|doc)$">
+Header set Cache-Control "max-age=290304000, public"
+Header append Vary Accept-Encoding
+</FilesMatch>
+
+# 1 Week
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=604800, public, must-revalidate"
+Header append Vary Accept-Encoding
+</FilesMatch>
+
+# 2 HOURS
+<FilesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=7200, must-revalidate"
+Header append Vary Accept-Encoding
+</FilesMatch>
+
+#Set browser rendering for IE
+<FilesMatch "\.(htm|html|php)$">
+    <IfModule mod_headers.c>
+        BrowserMatch MSIE ie
+        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+    </IfModule>
+</FilesMatch>

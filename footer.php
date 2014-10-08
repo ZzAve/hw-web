@@ -27,7 +27,7 @@
     <div id="copyright">
         <ul>     	
             <li> Neem contact met ons op: <a href="mailto:info@homemadewater.nl" target="_blank"> info@homemadewater.nl</a></li>
-            <li><strong>Homemade water</strong> 2013 &copy; All rights reserved</li>
+            <li><strong>Homemade water</strong> <?= date("Y")?> &copy; All rights reserved</li>
             <li class="hidden"><a href="http://www.homemadewater.nl/sitemap.xml" target="_blank"> Sitemap</a></li>
             <li class="hidden"> keywords: Homemade Water, band, coverband, pop, rock, dutch, nederlands, feestband, clash, coverbands, student, studenten, Laurens Mensink, Andrea Forzoni, Eline Burger, Moos Meijer, Julius van Dis</li>
         </ul>
@@ -41,7 +41,7 @@
 ?>
 <!--- ||| scripts ||| -->
     <!-- jquery -->
-    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
     
     <!-- Facebook SDK import function -->
     <div id="fb-root"></div>

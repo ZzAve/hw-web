@@ -1,0 +1,36 @@
+/* CSS Document */
+
+.bandmember{
+	height:350px;
+	width:600px;
+	display:block;
+
+}
+
+#laurens{
+	background: url("/images/homemade_water_wallpaper.jpg") -248px 0;
+	background-size:cover;
+	width:128px;
+}
+#andrea{
+	background: url("/images/homemade_water_wallpaper.jpg") -375px 0;
+	background-size:cover;
+	width:124px;
+}
+#eline{
+	background: url("/images/homemade_water_wallpaper.jpg") -124px 0;
+	background-size:cover;
+	width:126px;
+}
+#moos{
+	background: url("/images/homemade_water_wallpaper.jpg") -1px 0;
+	background-size:cover;
+	width:124px;
+}
+#julius{
+	background: url("/images/homemade_water_wallpaper.jpg") -498px 0;
+	background-size:cover;
+	width:126px;
+}
+	
+	
