@@ -129,7 +129,7 @@ function moreOf($link){
 ?>
     <div class="navigate more">
     <form action="<?=$link?>" method="post">
-        <button> Klik hier voor meer . . .  </button>
+        <button> Lees verder . . .  </button>
     </form>
     </div>
 <?php
