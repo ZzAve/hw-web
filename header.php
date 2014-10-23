@@ -104,7 +104,7 @@
 ?>
        <div class="home_highlight home_agenda">
           <p><label>Eerstvolgende gig:</label>
-          <a href="<?="/agenda.php?event=".$row['ID']?>" ><?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?><br /><?=$row['Titel']?><br /><?=$row['Locatie']?></a></p>
+          <a href="<?="/agenda.php#event-id".$row['ID']?>" ><?=strftime("%A %#d %B",mktime(0, 0, 0, $date[1],$date[2],$date[0] ) )?><br /><?=$row['Titel']?><br /><?=$row['Locatie']?></a></p>
        </div>
 
        <!--<div class="home_highlight home_news">

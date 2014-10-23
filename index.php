@@ -1,6 +1,7 @@
 <?php 
 	require_once 'misc/miscfunctions.php';
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/indexv1.2.css\" title=\"style\" />";
+	$extra = "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/indexv1.2.css\" title=\"style\" />\n\t
+	<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agendav1.2.css\" title=\"style\" />\n";
 	require_once 'header.php'; 
 ?>
 
@@ -37,7 +38,7 @@
              </div>
          </div>-->
    
-         <div class="col-50" id="agenda"> 
+         <div class="col-50 agenda" id="agenda"> 
              <h3>Agenda:</h3>
 <?php 		// Ensure connection	
 			$connection = db_connect(0);
@@ -59,7 +60,7 @@
            		<ul> 
 <?php
               }
-			  popagendaevent($row);
+			  popagendaevent($row,$counter);
            } //end while
            if($counter>0){
 ?> 		
@@ -75,7 +76,7 @@
 			 $result = mysqli_query($mysql,$query);
 			 while( $row = mysqli_fetch_array($result) )  {
 				// while there is still an newsitem to process, put it in a listitem
-				popagendaevent($row);	     
+				popagendaevent($row,$counter++);     
 			 }	
 ?>
              </ul>
@@ -117,26 +118,33 @@
 </div> <!-- end content-bar div -->
 
 <?php require_once 'footer.php'; ?>	
+<script type="text/javascript" src="js/agenda.js"></script>
 </body>
 </html>
 
 <?php
-	function popagendaevent($db_entry){
+	function popagendaevent($db_entry,$number){
 	  //change the format of date and timestamps
 	  $date = explode("-",$db_entry['Datum']);
-	  $date2= $date;
-	  //print_r($date);
+	  $date2 = $date;
 	  $time = explode(":",$db_entry['Tijd']);
-
 ?>
-		<li>
-          <div class="date">
+           <li class="<?=$number>=3?"noJS":"";?>">
+             <div class="date">
              	<label><?= array_pop($date)?></label>
           	 	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date),1 ) ) )?></span>
-             <!--<label> <?= strftime("%a %d %B %Y %H:%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </label> -->
+             	
              </div>
-          <span><a href="<?= "/agenda.php?event=".$db_entry['ID']?>" ><?=$db_entry['Titel']?></a></span>	
-		</li>
+             <span>
+                  <span class="title"> 
+					<?= $db_entry['Titel'] ?>			
+                    <span class="location"><?= $db_entry['Locatie'] ?></span>
+                  </span>
+                  <span class="noJS description">
+				 	<?= $db_entry['Bericht'] ?>
+                   	<p> Het feest barst los om: <?= strftime("%Hh%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </p>                  </span>
+             </span>	
+           </li>
 <?php
 	} // end function popagendaevent
 ?>

@@ -32,6 +32,7 @@ p{
 }
 a{
 	color:inherit;	
+	text-style:underline;
 }
 
 hr{
@@ -289,7 +290,7 @@ div.date{
 	margin-right:20px;
 	margin-left:5px;
 	margin-top:5px;
-	margin-bottom:20px;
+	margin-bottom:10px;
  	padding:4px 4px;
  	width:45px;
 	background-color:#06F;
@@ -325,7 +326,7 @@ div.description > p, div.description img, div.description .itemimg{
 
 div.item{
 	width:100%;
-	margin:10px auto;
+	margin:20px auto;
 }
 /* Style navigation buttons (next , previous, back etc.) */
 .navigate{

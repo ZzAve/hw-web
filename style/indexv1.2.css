@@ -5,6 +5,7 @@
 	list-style:none;
 	margin:0;
 	width:100%;
+	clear:both;
 }
 #news li a, #agenda li a{
 	text-decoration:none;
@@ -48,12 +49,19 @@
 	vertical-align:middle;
 }
 
-
 #agenda li{
-	height:55px;
-	margin:2px auto;
-	overflow:hidden;
+	width:100%;
+	margin:5px auto;
 }
+#agenda h4{
+	margin-top:15px;
+}
+
+#agenda li.noJS{
+	position:fixed;
+	top:-1000000px;
+	left:-1000000px;
+/*
 #agenda li div.date{
 	margin-top:0;	
 }
@@ -61,8 +69,8 @@
 	display:block;
 	width:auto;
 	vertical-align:middle;
-	margin-left:65px; /* width label + margin 20px */	
-}
+	margin-left:65px; /* width label + margin 20px /	
+}*/
 	
 
 

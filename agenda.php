@@ -169,8 +169,11 @@
 </div> <!-- end content-bar div -->
 
 <?php require_once 'footer.php'; ?>	
+
 <!-- lightbox -->
 <script type="text/javascript" src="/js/lightbox.min.js"></script>
+
+<script type="text/javascript" src="/js/agenda.js"></script>
 </body>
 </html>
 
@@ -181,20 +184,20 @@
 	  $date2 = $date;
 	  $time = explode(":",$db_entry['Tijd']);
 ?>
-           <li>
+           <li id="event-id<?=$db_entry['ID']?>">
              <div class="date">
              	<label><?= array_pop($date)?></label>
           	 	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date),1 ) ) )?></span>
-             <!--<label> <?= strftime("%a %d %B %Y %H:%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </label> -->
+             	
              </div>
              <span>
-<?php				if($link){
-?>                    <span class="fst"><a href="<?="agenda.php?event=".$db_entry['ID']?>"><?= $db_entry['Titel'] ?>			
-                    	<span class="snd"><?= $db_entry['Locatie'] ?></span>
-                      </a></span>
-<?php               } else {
-?>                    <span class="fst"><?= $db_entry['Titel'] ?><span class="snd"><?= $db_entry['Locatie'] ?></span>
-<?php               } ?>
+                  <span class="title"> 
+					<?= $db_entry['Titel'] ?>			
+                    <span class="location"><?= $db_entry['Locatie'] ?></span>
+                  </span>
+                  <span class="noJS description">
+				 	<?= $link ? $db_entry['Bericht'] :"" ?>
+                   	<p> Het feest barst los om: <?= strftime("%Hh%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </p>                  </span>
              </span>	
            </li>
 <?php

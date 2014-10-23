@@ -13,10 +13,6 @@
 	margin:30px 0 30px 30px;
 }
 
-div.agenda{
-	margin:20px auto;
-	margin-bottom:20px;
-}
 .agenda ul{
 	list-style:none;
 }
@@ -50,16 +46,30 @@ div.agenda{
 	height:100%;
 }
 
-.agenda li span.fst{
+.agenda li span.title{
 	overflow:hidden;
 	display:block;
+	cursor:pointer	;
 }
-.agenda li span.snd{
+.agenda .description{
+	margin:0;
+	margin-bottom:10px;
+	display: inline-block;
+	width:100%;
+	font-style: italic;
+	font-size: 14px;
+}
+.agenda .description > *{
+	position: relative;
+	right: 16%;
+	width: 114%;
+}
+.agenda li span.location{
 	color:#333;
 	display:block;
 	width:auto;
 }
-.agenda li a{
+.agenda li span > a{
 	text-decoration:none;
 }
 .agenda li:hover{
