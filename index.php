@@ -24,7 +24,7 @@
 		
          <p> Nieuwsgierig geworden? Check onze <a href="/video.php">media</a> en <a href="/nieuws.php">laatste nieuws</a>! <br />. . . . en vergeet niet om ons te liken op facebook! (zie het icoontje onderaan deze pagina)</p> 
          
-         <div class="attention">
+         <!--<div class="attention">
              <img src="/images/clash_win_lau.jpg" alt="Andrea en Laurens swingen zich naar de finale van de Clash of The Coverbands (Regio West)" title="Verkozen tot best coverband van de regio West-Nederland" />
              <div class="text">
 	             <h3>Joepie ! ! !</h3>
@@ -35,7 +35,7 @@
                  
                  <p>Kijk <a href="http://clashofthecoverbands.nl/show/verslagen/item,724,Regio-Finale-Regio-West-2013-2014.html" target="_blank">hier voor het jurycommentaar van de avond</a>.</p>
              </div>
-         </div>
+         </div>-->
    
          <div class="col-50" id="agenda"> 
              <h3>Agenda:</h3>
