@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 	// Include miscellaneous functions (such as database connection, buttons and sharedivs)
 	require_once 'misc/miscfunctions.php';
 	//Ensure connection

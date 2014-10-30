@@ -32,7 +32,10 @@ p{
 }
 a{
 	color:inherit;	
-	text-style:underline;
+	text-decoration:underline;
+}
+a.cool{
+	text-decoration:none;
 }
 
 hr{
@@ -169,7 +172,7 @@ body > iframe{
 	display:none;
 }
 .loading{
-	background: url("../images/lightbox/loading.gif") no-repeat center center;
+	background: url("../images/lightbox/loading.gif") no-repeat center center #777;
 }
 
 .under_construction{
@@ -187,56 +190,62 @@ body > iframe{
 .clearfix{
 	clear:both;
 }
+.right{
+	text-align:right;
+}
+.left{
+	text-align:left;
+}
 .col-50{
 	float:left;
 	width:47%;
-	margin:auto 1.5%;
+	margin:auto 1%;
 	border:0;
 	padding:0;
 }
 
 .col-25{
 	float:left;
-	width:24%;
-	margin:auto 0.5%;
+	width:23.5%;
+	margin:auto 1%;
 	border:0;
 	padding:0;
 }
 .col-20{
 	float:left;
-	width:19.2%;
-	margin:auto 0.4%;
+	width:18%;
+	margin:auto 1%;
 	border:0;
 	padding:0;
 }
 .col-40{
 	float:left;
-	width:38.4%;
-	margin:auto 0.8%;
+	width:38%;
+	margin:auto 1%;
 	border:0;
 	padding:0;
 }
 .col-60{
 	float:left;
-	width:57.6%;
-	margin:auto 1.2%;
+	width:58%;
+	margin:auto 1%;
 	border:0;
 	padding:0;	
 }
 .col-80{
 	float:left;
-	width:76.8%;
-	margin:auto 1.6%;
+	width:78%;
+	margin:auto 1%;
 	border:0;
 	padding:0;
 }
 .col-75{
 	float:left;
-	width:72.5%;
-	margin:auto 1.2%;
+	width:73.5%;
+	margin:auto 0.75%;
 	border:0;
 	padding:0;
-	}
+}
 .col-33{
 	float:left;
 	width:31.33%;
@@ -246,15 +255,20 @@ body > iframe{
 }
 .col-66{
 	float:left;
-	width:65%;
-	margin:auto 0.6%;
+	width:64.66%;
+	margin:auto 1%;
 	border:0;
 	padding:0;
 }
 .skip-col-16{
-	margin-left:15%;	
+	margin-left:16.67%;	
 }	
-
+.skip-col-20{
+	margin-left:20%;
+}
+.skip-col-10{
+	margin-left:10%;
+}
 .attention{
 	border: 5px solid #D00C0D;
 	padding:1.5%;

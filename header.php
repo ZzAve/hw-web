@@ -65,7 +65,7 @@
         <div id="navbar">
             <ul id="menu">
                <li class="highlight"><a href="/index.php">HOME</a></li>
-               <li><a href="/band/">BAND</a></li>
+               <li><a href="/band.php">BAND</a></li>
                <li><a href="/nieuws.php">NIEUWS</a></li> 
                <li><a href="/agenda.php">AGENDA</a></li>
                <li><a href="/media.php">MEDIA</a></li>

@@ -4,7 +4,22 @@
 	height:350px;
 	width:600px;
 	display:block;
+}
 
+#leden ul.previews{
+	width:100%;
+}
+#leden ul.previews li{
+	list-style:none;
+	overflow:hidden;
+	height:50px;	
+	cursor:pointer;
+}
+#leden ul.previews img{
+	width:auto;
+	min-width:100%; max-width:175%;
+	height:auto;
+	min-height:100%; max-height:175%;
 }
 
 #laurens{

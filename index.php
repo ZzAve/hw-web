@@ -39,7 +39,7 @@
          </div>-->
    
          <div class="col-50 agenda" id="agenda"> 
-             <h3>Agenda:</h3>
+             <h3><a class="cool" href="/agenda.php">Agenda:</a></h3>
 <?php 		// Ensure connection	
 			$connection = db_connect(0);
 			if ($connection !== true){
@@ -89,7 +89,7 @@
         
         
          <div id="news" class="col-50" > 
-            <h3>Laatste Nieuws:</h3>
+            <h3><a class="cool" href="/nieuws.php">Laatste Nieuws:</a></h3>
             <ul>    	   
 <?php	      // Fetch the 4 latest newsitems
               $query = "SELECT `ID`,`Titel`,`Foto` FROM `nieuwsitems` ORDER BY `Datum` DESC LIMIT 0,4";
@@ -118,7 +118,7 @@
 </div> <!-- end content-bar div -->
 
 <?php require_once 'footer.php'; ?>	
-<script type="text/javascript" src="js/agenda.js"></script>
+<script type="text/javascript" src="/js/agenda.js"></script>
 </body>
 </html>
 

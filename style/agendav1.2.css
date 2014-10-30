@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-#agendaItem{
+#agendaItem, #visualGigs{
 	overflow:hidden;
 }
 #agendaItem img{
@@ -26,11 +26,10 @@
 	width:48%;
 	margin:1% 0.5%;
 	padding:0;
+	vertical-align:top;
 	display:inline-block;
 	*display:inline;
 	*zoom:1;
-	vertical-align:top;
-
 }
 .agenda li > span{
 	display:block;
@@ -74,11 +73,9 @@
 }
 .agenda li:hover{
 	background-color:rgb(184, 187, 187);
-	background-color:rgba(184, 187, 187,.4);;
+	background-color:rgba(184, 187, 187,.4);
 }
-#visualGigs{
-	overflow:hidden;
-}
+
 #visualGigs span{
 	font-weight:bold;
 	font-style:italic;	

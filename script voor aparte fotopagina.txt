@@ -23,7 +23,7 @@
 </a>
 
 <div id="fancy_content" style="top: 10px; right: 10px; bottom: 10px; left: 10px; width: auto; height: auto; display: block;">
-	<img id="fancy_img" src="images/albums/DSB/DSB10_thumb.jpg" alt="">
+	<img id="fancy_img" src="/imagesalbums/DSB/DSB10_thumb.jpg" alt="">
                         
                         </div>
                         </div>

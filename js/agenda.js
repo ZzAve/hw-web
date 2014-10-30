@@ -1,7 +1,4 @@
 // JavaScript Document
-
-
-
 $(document).ready( function() {
 	$(document).find('span.noJS').addClass('hiddenWell');
 	$(document).find('span.noJS').removeClass('noJS');
