@@ -1,11 +1,5 @@
 /* CSS Document */
 
-.bandmember{
-	height:350px;
-	width:600px;
-	display:block;
-}
-
 #leden ul.previews{
 	width:100%;
 }
@@ -20,32 +14,19 @@
 	min-width:100%; max-width:175%;
 	height:auto;
 	min-height:100%; max-height:175%;
+	opacity:0.85;
+}
+#leden ul.previews img:hover{
+	opacity:1;
 }
 
-#laurens{
-	background: url("/images/homemade_water_wallpaper.jpg") -248px 0;
-	background-size:cover;
-	width:128px;
+#leden > div{
+	margin:30px 0;
+	overflow:hidden;
 }
-#andrea{
-	background: url("/images/homemade_water_wallpaper.jpg") -375px 0;
-	background-size:cover;
-	width:124px;
+
+#leden div.col-20 label{
+	line-height:1em;
+	font-weight:bold;
+	margin-bottom:5px;
 }
-#eline{
-	background: url("/images/homemade_water_wallpaper.jpg") -124px 0;
-	background-size:cover;
-	width:126px;
-}
-#moos{
-	background: url("/images/homemade_water_wallpaper.jpg") -1px 0;
-	background-size:cover;
-	width:124px;
-}
-#julius{
-	background: url("/images/homemade_water_wallpaper.jpg") -498px 0;
-	background-size:cover;
-	width:126px;
-}
-	
-	

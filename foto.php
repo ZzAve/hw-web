@@ -76,8 +76,8 @@
 				$counter=1;
 				foreach($photolist as $photo){
 ?>
-				    <li class="loading"> 
-                    <a class="hidden" href="<?="/".$album_location."/".str_replace("_thumb","",$photo)?>" title="<?=$album_name?>" ><?=$album_location."/".$photo?></a>
+				    <li class="col-20 loading img"> 
+                    <a class="hidden" href="<?="/".$album_location."/".str_replace("_thumb","",$photo)?>" title="<?=$album_name?>" data-lightbox="photo-album" ><?=$album_location."/".$photo?></a>
                 </li>	
 <?php
    }
@@ -138,10 +138,7 @@
 
 <?php require_once 'footer.php'; ?>
 
-<!-- ||| page specific scripts ||| -->
-	<!-- javascript for the photoalbums -->
-	<script type="text/javascript" src="/js/photoalbum.js"></script>
-    
+<!-- ||| page specific scripts ||| -->    
     <!-- lightbox -->
     <script type="text/javascript" src="/js/lightbox.min.js"></script>
     

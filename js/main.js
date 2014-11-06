@@ -1,42 +1,8 @@
 // JavaScript Document
 
 // Link events to a function
-//window.onload = replaceFooter;
 window.onresize = sizeContentbar;
 window.onload = sizeContentbar;
-
-// ensure HORIZONTAL scrolling of header and footer
-/*$(window).scroll(function(){
-  $('#menu').css('left',-$(window).scrollLeft());
-  $('#logo').css('left',-$(window).scrollLeft());
-  $('#tapsplash').css('left',-$(window).scrollLeft());
-  $('#copyright').css('left',-$(window).scrollLeft());
-  $('#social-media-icons').css('left',-$(window).scrollLeft());
-
-  $('#footer').css('right',-$(window).scrollLeft());
-});*/
-
-
-/*function replaceFooter(){
-	var bodie = document.body;
-	var footer = document.getElementById("footer");
-	var wrapper = document.getElementById("wrapper");
-	var contentbar = document.getElementById("content-bar");
-	contentbar.removeAttribute("style");
-	contentbar.style.height = wrapper.clientHeight-20+"px";
-	
-	var minHeight=700;
-	if ( bodie.clientHeight < minHeight ){
-		var footerEnd = wrapper.clientHeight;
-		var footerHeight = footer.clientHeight;
-		var footerTop = footerEnd - footerHeight;
-		footer.style.top = footerTop + 75 + "px";
-
-	} else {
-		footer.removeAttribute("style");
-	}			
-}
-*/
 
 function sizeContentbar(){
 	if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) { 
@@ -61,34 +27,14 @@ function sizeContentbar(){
  		}
 	}
 }
+
 	
 $(document).ready( function() {
 	sizeContentbar();
-	//$(window).on("scroll",checkIfIntoView);
 
 	/*****************
 	*  MENU FUNCTIONS 
 	******************/
-	// nice scrolling of submenus on hovering menu item
-	$('#menu').find('li').hover(function(event){
-		if ($(this).next('ul').children().length !== 0) {     
-			event.preventDefault();
-		}
-		$(this).children('ul').slideToggle('fast');
-	});
-	
-	/*$('#menu').find('> li').hover(function(){
-        	$(this).find('ul').removeClass('noJS').stop(true,true).slideDown('fast');
-    	}, function () {
-        	$(this).find('ul').stop(true,true).slideUp('fast');	
-		});
-	
-	$('#menu').find('ul > li').hover(function(){
-        	$(this).find('ul').removeClass('noJS').stop(true,true).slideDown('fast');
-    	}, function () {
-        	$(this).find('ul').stop(true,true).slideUp('fast');	
-		});
-	*/
 	// ensure highlighting of menu entry of current page
 	var str=location.href.toLowerCase();
 	$("#menu li a").each(function() {
@@ -97,13 +43,6 @@ $(document).ready( function() {
 			$(this).parent().addClass("highlight");
 		}
   	});
-	
-	// if subpage is highlighted, also highlight the parent of it
-	$("#menu li ul").each(function() {
-		if ($(this).has('li.highlight').length != 0 ){
-			$(this).parent().addClass("highlight");
-		}
-	});
 	/* END OF MENU FUNCTIONS */
 
 	
@@ -132,30 +71,8 @@ $(document).ready( function() {
         }
     );
 	/* END REPLACING IFRAME LINKS WITH IFRAMES */
-	
-	
-
 });
 
-// Fix srolling with background
-function checkIfIntoView(){
-	var element = $('div.background img');
-	if (element.offset().top +element.innerHeight() - $(window).scrollTop() <= $(window).innerHeight() ){
-		var pos = -20;	
-		//animate to pos
-
-		//set position in css
-		$('div.background').css({ 'position':'fixed', 'bottom': pos+'px', 'top':'initial' });
-				$('div.background').animate({'position':'fixed', 'bottom': pos+'px', 'top':'initial'},"fast");
-	}
-		
-		//alert('did it!');
-	if ( ($(window).scrollTop() + $(window).innerHeight()) <=	 $('div.background').innerHeight()){
-		$('div.background').animate({'position':'', 'bottom': ''},"fast");
-		$('div.background').css({'bottom':'initial','position':'','top':''});
-		//alert('and boven');
-	}
-}
 
 $(window).load(function(){
 	shareDiv = $("#sharediv");
@@ -166,4 +83,69 @@ $(window).load(function(){
 		shareDiv.fadeIn('fast');
 		},1000);
 
+	var nrOfImgs = $('li.loading.img').length;
+	$('li.loading.img').each(function(index){
+		var count=index+1;		
+		var listitem = $(this);
+		var depth=1;
+		while (listitem.children().length > 0)
+		{
+			listitem = listitem.children();
+			depth++;
+		}
+		var time = count*100;
+		setTimeout(function(){
+			curImg = new Image();
+			curImg.src = listitem.html()
+			curImg.onload = adaptImg(listitem,curImg,count,count==nrOfImgs,depth);
+		},time);
+	})
 });
+
+function adaptImg(element,image,count,last,elementDepth){
+	// Create new element ('img' element)
+	var img = document.createElement('img');
+	img.src = element.html();
+	img.alt = 'Foto #'+count;
+	
+	//Change the inside of the <a> element
+	element.html('');
+	element.append(img);
+	var newEl = element.children('img');
+	var parent = element;
+
+	for(i=1;i<elementDepth;i++){
+		parent = parent.parent();
+	}
+	
+	// At this point, the image is inserted!
+	newEl.load(function(){
+		//alert(newEl.attr('src'));
+		//Get height of both image and father element
+		var imgHeight = newEl.height();
+		var imgWidth  = newEl.width();
+		var parentHeight = parent.height();
+		var parentWidth  = parent.width();
+	
+		// if height of father element is smaller then height of img, shift image up
+		if (parentHeight < imgHeight + 10){
+			shiftUp = (imgHeight - parentHeight)/2;
+			shiftValue = (-shiftUp) + "px";
+			newEl.css('position','relative');
+			newEl.css('top',shiftValue);
+		}
+		if (parentWidth < imgWidth + 10){
+			shiftLeft = (imgWidth - parentWidth)/2;
+			shiftValue = (-shiftLeft) + "px";
+			newEl.css('position','relative');
+			newEl.css('left',shiftValue);
+		}
+		
+		newEl.hide();
+		newEl.fadeIn(1000);
+		parent.removeClass('loading');
+		parent.children().removeClass('hidden');
+		
+	});
+	
+}

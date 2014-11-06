@@ -171,8 +171,9 @@ body > iframe{
 .noJS{
 	display:none;
 }
-.loading{
+.loading.img{
 	background: url("../images/lightbox/loading.gif") no-repeat center center #777;
+	font-size:0;
 }
 
 .under_construction{
