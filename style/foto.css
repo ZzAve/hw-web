@@ -2,30 +2,25 @@
 /* Foto stylesheet */
 
 
+
+
 /* overall page */
 #album-list{
 	list-style: none;
+	overflow:hidden;
+	margin:25px 0;
 }
 
 #album-list li{
-	display:inline-block;
-	vertical-align:top;
 	text-align:center;
-	width:150px;
-	margin: 10px 5px;
-	padding:5px;
-	overflow:hidden;
-
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 
 #album-list li:hover{
-	/*width:300px;*/
-	border:1px solid #EEE;
-	padding:4px;
 	background-color:rgb(240,240,240);
-	background-color:rgba(240,240,240,0.95);
-	
+	background-color:rgba(240,240,240,0.95);	
 }
 
 #album-list li label{

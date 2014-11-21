@@ -31,6 +31,10 @@ function sizeContentbar(){
 	
 $(document).ready( function() {
 	sizeContentbar();
+	$(document).find('.noJS-hide').removeClass('noJS-hide'); // there is JS, so no hiding needed anymore
+	$(document).find('.noJS-show').addClass('JS-hide');   	  // there is JS, hence no need to show directly
+	$(document).find('.noJS-show').removeClass('noJS-show'); //       ""         ""         ""  
+	
 
 	/*****************
 	*  MENU FUNCTIONS 

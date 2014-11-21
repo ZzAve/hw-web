@@ -33,15 +33,16 @@
 <?php
 				$query = "SELECT * FROM `videos` ORDER BY `Datum` DESC;";
 				$result = mysqli_query($mysql,$query);
+				$count=0;
 				while( $row = mysqli_fetch_array($result) )  {
-				  popVideoItem($row);
+				  popVideoItem($row,$count++%3==0);
 				}   
 ?>
                </ul>
            </div> <!-- end videoList div -->
            
            
-           
+      	   <?php backToOverview(""); ?>     
     </div> <!-- end div content -->
 
 </div> <!-- end content-bar -->
@@ -63,13 +64,13 @@
 //  returns nothing
 */
 
-function popVideoItem($dbEntry){
+function popVideoItem($dbEntry,$clear){
 	$date = explode("-",$dbEntry['Datum']);
 	$id = $dbEntry['ytID'];
 	$imgLoc1= "http://img.youtube.com/vi/";
 	$imgLoc2= "/hqdefault.jpg";
 ?>
-   <li><span class="nodisp	"><?=$id?></span>
+   <li class="col-33 <?=$clear?"clearfix":""?>"><span class="nodisp"><?=$id?></span>
    	  
       <img src="<?=$imgLoc1.$id.$imgLoc2?>" alt="<?= $dbEntry['Titel']?>" title="<?= $dbEntry['Titel']?>"  />
       <div class="playbutton"> <img src="http://www.clker.com/cliparts/L/y/p/N/e/L/play-button-red-th.png" alt="" title=""/> <!-- tahnks to Clker.com --></div>

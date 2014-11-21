@@ -27,7 +27,7 @@ h3 {
 	font-size:20px;
 }
 p{
-	margin:10px auto;
+	margin:15px auto;
 	line-height:120%;
 }
 a{
@@ -151,7 +151,12 @@ body > iframe{
 .hidden{
 	visibility:hidden;
 }
+
+.noJS-hide, /* hide if no JS */
+.JS-hide,   /* hide if JS   */
+.nodisp,
 .hiddenWell{
+	display:none;
 	visibility:hidden;
 	height:0;
 	width:0;
@@ -163,14 +168,13 @@ body > iframe{
 .hiddenWell *{
 	height:0;
 	width:0;
-	visibility:hidden;
-}
-.nodisp{
 	display:none;
 }
-.noJS{
-	display:none;
+
+.noJS-show{
+	display:inherit;
 }
+
 .loading.img{
 	background: url("../images/lightbox/loading.gif") no-repeat center center #777;
 	font-size:0;
@@ -192,10 +196,13 @@ body > iframe{
 	clear:both;
 }
 .right{
-	text-align:right;
+	float:right !important;
 }
 .left{
-	text-align:left;
+	float:left !important;
+}
+.right-align{
+	text-align:right;
 }
 .col-50{
 	float:left;
@@ -207,7 +214,7 @@ body > iframe{
 
 .col-25{
 	float:left;
-	width:23.5%;
+	width:23.0%;
 	margin:auto 1%;
 	border:0;
 	padding:0;
@@ -270,6 +277,18 @@ body > iframe{
 .skip-col-10{
 	margin-left:10%;
 }
+.quote{
+	padding-left:50px;
+	font-style:italic;
+	font-weight:bold;
+	background: url("/images/quote.png") no-repeat top left;
+	-webkit-background-size: 3em 4em;
+	   -moz-background-size: 3em 4em;
+	     -o-background-size: 3em 4em;
+	        background-size: 3em 4em;
+
+}
+
 .attention{
 	border: 5px solid #D00C0D;
 	padding:1.5%;
@@ -277,7 +296,6 @@ body > iframe{
 	margin: 2em 1em;
 	overflow:hidden;
 }
-
 
 .attention img{
 	display:block;

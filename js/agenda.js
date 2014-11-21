@@ -1,8 +1,8 @@
 // JavaScript Document
 $(document).ready( function() {
-	$(document).find('span.noJS').addClass('hiddenWell');
-	$(document).find('span.noJS').removeClass('noJS');
-	$(document).find('li.noJS').removeClass('noJS');
+	//$(document).find('span.noJS').addClass('hiddenWell');
+	//$(document).find('span.noJS').removeClass('noJS');
+	//$(document).find('li.noJS').removeClass('noJS');
 	
 	
 	var last = null;
@@ -11,9 +11,9 @@ $(document).ready( function() {
 		//alert($(this).html());
 		var parent = $(this).siblings([0]);
 		//alert(parent.html());
-		if (parent.hasClass("hiddenWell")){
+		if (parent.hasClass("JS-hide")){
 			parent.hide();
-			parent.removeClass("hiddenWell");
+			parent.removeClass("JS-hide");
 	
 		}
 		parent.toggle(100);

@@ -2,7 +2,28 @@
 //window.onresize = setPhotoViewMargin;
 
 var previous = null;
+function openMember(id){
+	if ($(id).hasClass("JS-hide")){
+		$(id).removeClass("JS-hide");
+	} else {
+		$(id).addClass("JS-hide");
+		
+	}
+	
+	if (previous !== null && previous != id){
+		$(previous).addClass("JS-hide");
+	}
+	previous = id;
+}
+
 $(document).ready(function(){
+	//$(document).find('.JS').addClass('hiddenWell');
+	//$(document).find('.JS').removeClass('JS');
+	
+	if(window.location.hash) {		
+		openMember(window.location.hash);
+	}
+	
 	$("ul.previews li").click(function(){		
 		//get the big image
 		bigImg = $(this).parent().parent().children([0]);
@@ -14,20 +35,8 @@ $(document).ready(function(){
 	});
 	
 	$("#leden > div div.col-20 a").click(function(){
-		id = $(this).attr('href');
+		var id = $(this).attr('href');
 		event.preventDefault();
-		//alert($(id).hasClass("hiddenWell"));
-		if ($(id).hasClass("hiddenWell")){
-			$(id).removeClass("hiddenWell");
-		} else {
-			$(id).addClass("hiddenWell");
-			
-		}
-		if (previous !== null && previous != id){
-			$(previous).addClass("hiddenWell");
-		}
-		previous = id;
+		openMember(id);
 	});
 });
-
-

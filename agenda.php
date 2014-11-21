@@ -104,7 +104,7 @@
         <div id="visualGigs">
          	<div class="col-50">
                  <h2> Optredens binnen Nederland</h2>
-                 <a href="/images/hw_nederland.png" title="Waar Homemade Water allemaal speelde in Nederland?" data-lightbox="waar"><img src="/images/hw_nederland.png" alt="Wij hebben al op een boel plekken in Nederland gespeeld!" /></a>
+                 <a href="/images/hw_nederland_2.png" title="Waar Homemade Water allemaal speelde in Nederland?" data-lightbox="waar"><img src="/images/hw_nederland_2.png" alt="Wij hebben al op een boel plekken in Nederland gespeeld!" /></a>
              </div>
              <div class="col-50">
                  <h2> Optredens in Delft</h2>
@@ -195,7 +195,7 @@
 					<?= $db_entry['Titel'] ?>			
                     <span class="location"><?= $db_entry['Locatie'] ?></span>
                   </span>
-                  <span class="noJS description">
+                  <span class="noJS-show description">
 				 	<?= $link ? $db_entry['Bericht'] :"" ?>
                    	<p> Het feest barst los om: <?= strftime("%Hh%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </p>                  </span>
              </span>	

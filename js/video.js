@@ -37,9 +37,9 @@ function changeVideo(event) {
 	
 		
 	setTimeout(function(){		
-	if ( $(tarDiv).hasClass("hiddenWell") ){
+	if ( $(tarDiv).hasClass("JS-hide") ){
 		$(tarDiv).hide();
-		$(tarDiv).removeClass("hiddenWell");
+		$(tarDiv).removeClass("JS-hide");
 		$(tarDiv).fadeIn(1000);
 	}
 		var offset = $(tarDiv).offset();	

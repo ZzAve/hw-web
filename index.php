@@ -129,7 +129,7 @@
 	  $date2 = $date;
 	  $time = explode(":",$db_entry['Tijd']);
 ?>
-           <li class="<?=$number>=3?"noJS":"";?>">
+           <li class="<?=$number>=2?"noJS-hide":"";?>">
              <div class="date">
              	<label><?= array_pop($date)?></label>
           	 	<span><?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date),1 ) ) )?></span>
@@ -140,7 +140,7 @@
 					<?= $db_entry['Titel'] ?>			
                     <span class="location"><?= $db_entry['Locatie'] ?></span>
                   </span>
-                  <span class="noJS description">
+                  <span class="noJS-show description">
 				 	<?= $db_entry['Bericht'] ?>
                    	<p> Het feest barst los om: <?= strftime("%Hh%M",mktime($time[0],$time[1],0,$date2[1],$date2[2],$date2[0])) ?> </p>                  </span>
              </span>	

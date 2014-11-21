@@ -6,6 +6,7 @@
 			  <style type=\"text/css\">@charset utf-8;
 				#audioList{height:auto}
 				#audioList iframe{height:166px;margin-bottom:5px;margin-top:5px;width:100%}
+				div h3 a{text-decoration:none}
 			  </style>";
 	require_once 'header.php'; 
 ?>	
@@ -16,7 +17,7 @@
         <h2> Waar Homemade Water tot leven komt</h2>
         <hr />
         <div id="foto">
-            <h3>  De laatste foto's:  </h3>
+            <h3><a href="/foto.php"> De laatste foto's:</a></h3>
             <ul id="album-list">                
 <?php
             // Show photo-albums in an unordered list (<ul> ... </ul>)
@@ -31,7 +32,7 @@
 				$album_location =  $row['Fotofolder'];
 				$album_thumb = $row['Thumbnail'];
 ?>
-               <li> 
+               <li class="col-25"> 
                  <a href="/foto.php?album=<?=$album_id?>"> 
                  <img src="<?="/".$album_thumb?>" alt="<?=$album_name?>" title="<?=$album_name?>" />
                  </a> 
@@ -41,16 +42,17 @@
 ?>
 
 	        </ul> <!--  end thumbnail list of photo albums -->
-            <div class="navigate more">
+            <div class="clearfix navigate more">
                 <form action="/foto.php" method="post">
                     <button> Meer foto's</button>
                 </form>
             </div>            
         </div>
         <hr />
+        
         <div id="video">
-        	<h3> Video's</h3>
-            <div id="showVideo" class="hiddenWell">
+        	<h3><a href="/video.php">Video's</a></h3>
+            <div id="showVideo" class="JS-hide">
            		<div class="iframe">
                      <a class="iframeYT" href="http://www.youtube.com/embed/CFnpnFr-oW4?wmode=transparent"></a>
     			</div>
@@ -84,7 +86,7 @@
         </div>
         <hr />
         <div id="audioList">
-        	<h3> Audio</h3>
+        	<h3><a href="/audio.php">Audio</a></h3>
             <div class="audioitem item">
                 <h3> Eerste demomix van Homemadewater </h3>
                 <!-- First demo -->
@@ -130,7 +132,7 @@ function popVideoItem($dbEntry){
 	$imgLoc1= "http://img.youtube.com/vi/";
 	$imgLoc2= "/hqdefault.jpg";
 ?>
-   <li><span class="nodisp	"><?=$id?></span>
+   <li class="col-33"><span class="nodisp"><?=$id?></span>
    	  
       <img src="<?=$imgLoc1.$id.$imgLoc2?>" alt="<?= $dbEntry['Titel']?>" title="<?= $dbEntry['Titel']?>"  />
       <div class="playbutton"> <img src="http://www.clker.com/cliparts/L/y/p/N/e/L/play-button-red-th.png" alt="" title=""/> <!-- tahnks to Clker.com --></div>

@@ -111,6 +111,7 @@
                     // Show photo-albums in an unordered list (<ul> ... </ul>)
 					$query= "SELECT * FROM `fotoalbums`  WHERE 1 ORDER BY `Datum` DESC;";
 					$result = mysqli_query($mysql,$query);
+					$count=0;
                     while ($row = mysqli_fetch_array($result)){
                         // show a thumbnail and description
 						$album_id = $row['ID'];
@@ -120,7 +121,7 @@
 						$album_location =  $row['Fotofolder'];
 						$album_thumb = $row['Thumbnail'];
 ?>
-                      	<li> 
+                      	<li class="col-25 <?= ($count++ % 4) == 0 ?"clearfix":""?>"> 
                           <a href="/foto.php?album=<?=$album_id?>"> 
                             <img src="<?="/".$album_thumb?>" alt="<?=$album_name?>" title="<?=$album_name?>" />
                           </a> 
@@ -129,7 +130,7 @@
 <?php             } 
 ?>
 				</ul> <!--  end thumbnail list of photo albums -->
-                
+                <?php backToOverview(""); ?>
 <?php  } // end if else (show ONE albums, or albumlist)
 ?>
      </div> <!-- end content div -->	   
