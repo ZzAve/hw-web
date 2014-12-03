@@ -125,45 +125,54 @@ function popnewsitem($db_entry){
 ?> 
     <hr  />
     <div class="newsitem item <?= $valid_request!==false ? "single" : ""?>" id="<?="item" . $db_entry['ID']?>">
+
+
+<?php  // make both the title and image a link, such that if clicked, a screen opens with only that newsitem
+	  if($valid_request===false){
+?>
       <div class="date">
         <label> <?= array_pop($date)?> </label>
         <span> <?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?> </span>
       </div>
-
-<?php  // make both the title and image a link, such that if clicked, a screen opens with only that newsitem
-	   if($valid_request===false){
-?>
-	  <div class="description">
       <h3><a href="<?= "nieuws.php?item=".$db_entry['ID']?> "><?= $db_entry['Titel']?></a></h3>
-      <a class="itemimg" href="<?= "nieuws.php?item=".$db_entry['ID']?>" style="background-image:url(<?=$db_entry['Foto']?>)"></a>
+      <div class="description"> 
+      	<div class="col-40 skip-img-col-right">
+        	<a class="itemimg" href="<?= "nieuws.php?item=".$db_entry['ID']?>" style="background-image:url(<?=$db_entry['Foto']?>)"></a>
+        </div>
 <?php
 	   } else {
 ?>
+      <div class="date">
+        <label> <?= array_pop($date)?> </label>
+        <span> <?= strtoupper(strftime("%b",mktime(0, 0, 0, array_pop($date) ) ) )?> </span>
+      </div>
       <h3><?= $db_entry['Titel']?> </h3>
       <img src="<?=$db_entry['Foto']?>" alt="<?=$db_entry['Alt_foto']?>" title="<?=$db_entry['Alt_foto']?>"/>
+      <div class="description">
 <?php	
 		if ($valid_request!==false){
 			shareDiv();
 		} 
-	  }
+	  } // end if valid request
 
-		 //Ensure what message to post. 
-		 //	 A short one (in case of multiple items) 
-		 //  or the whole text (in case a single newsitem is requested).
-		 $msg=$db_entry['Bericht'];
-		 if ($valid_request===false){ 
-			// a single item is not requested, thus do not show entire text!
-			$msg=strstr($msg,"</p>",TRUE)."</p>";
-		 }
+	 //Ensure what message to post. 
+	 //	 A short one (in case of multiple items) 
+	 //  or the whole text (in case a single newsitem is requested).
+	 $msg=$db_entry['Bericht'];
+	 if ($valid_request===false){ 
+		// a single item is not requested, thus do not show entire text!
+		$msg=strstr($msg,"</p>",TRUE)."</p>";
+	 }
 ?>
-      <?=$msg ?>
+      <div class="text"><?=$msg ?>
 <?php
 
 		if($valid_request===false){ 
 			moreOf("nieuws.php?item=" .$db_entry['ID']);
 			?> 	
-	</div>
 <?php	} ?>
+	   </div> <!-- einde text -->
+     </div> <!-- einde description -->
 
     </div>	
 <?php

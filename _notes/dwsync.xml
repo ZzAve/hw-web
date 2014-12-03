@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="header.php" server="c:/xampp/htdocs/hw-web/" local="130378442905869542" remote="130378442900000000" />
-<file name="index.php" server="c:/xampp/htdocs/hw-web/" local="130376613414274640" remote="130376613410000000" />
-<file name="band.php" server="c:/xampp/htdocs/hw-web/" local="130602980476612691" remote="130602980470000000" />
+<file name="index.php" server="c:/xampp/htdocs/hw-web/" local="130601959667268252" remote="130601959660000000" />
+<file name="band.php" server="c:/xampp/htdocs/hw-web/" local="130621134001673922" remote="130621134000000000" />
 <file name="media.php" server="c:/xampp/htdocs/hw-web/" local="130602936610999481" remote="130602936610000000" />
 <file name="video.php" server="c:/xampp/htdocs/hw-web/" local="130601981838092128" remote="130601981830000000" />
+<file name="file_upload.php" server="c:/xampp/htdocs/hw-web/" local="130610434840119257" remote="130610434840000000" />
+<file name="nieuws.php" server="c:/xampp/htdocs/hw-web/" local="130585532139150108" remote="130585532130000000" />
+<file name="foto.php" server="c:/xampp/htdocs/hw-web/" local="130601984344691880" remote="130601984340000000" />
 </dwsync>

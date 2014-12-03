@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul.imagelist{
+	list-style:none;
+}
+.imagelist li{
+	margin-top:5px;
+	margin-bottom:10px;
+	overflow:hidden;
+	height:130px;
+	text-align:center
+}
+.imagelist li img{
+	width:auto;
+	max-width:100%;
+	margin:auto 0;
+	height:auto;
+	max-height:80%;
+
+}
+
+.imagelist li:nth-child(4n+1){
+	clear:left;
+}

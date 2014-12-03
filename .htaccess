@@ -4,10 +4,16 @@ AddType text/x-component .htc
 # static to dynamic urls
 RewriteEngine On
 RewriteBase /
-#from nieuws.php?item=27
-#to  nieuws/item27.html
-RewriteRule ^nieuws/item([0-9]+)\.html$ nieuws.php?item=$1[L]
+#from nieuws/item27.html
+#to   nieuws.php?item=27
+RewriteRule ^nieuws/item([0-9]+)\.html$ nieuws.php?item=$1 [L]
 
+
+#dynamic urls for file_upload.php
+#from  file_upload/first/second/third/
+#to    file_upload.php?fst=first&second=snd&third=thd
+RewriteRule ^file_upload/([^/]*)/*([^/]*)/*([^/]*/*)$ file_upload.php?fst=$1&snd=$2&thd=$3 [L]
+#RewriteRule ^file_upload/([^/]+)$ file_upload.php?fst=$1&snd=$2&thd=$3 [L]
 
 # 480 weeks
 <FilesMatch "\.(ico|pdf|flv|jpg|JPG|jpeg|png|gif|swf|doc|css)$">

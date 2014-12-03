@@ -2,6 +2,8 @@
 //window.onresize = setPhotoViewMargin;
 
 var previous = null;
+var member = null;
+var active = false;
 function openMember(id){
 	if ($(id).hasClass("JS-hide")){
 		$(id).removeClass("JS-hide");
@@ -14,11 +16,22 @@ function openMember(id){
 		$(previous).addClass("JS-hide");
 	}
 	previous = id;
+	
+	// check if anything is open, otherwise remove previous and next
+	if ($("#leden > div.member").not(".JS-hide").length === 0){
+		$("#prevMember").hide();
+		$("#nextMember").hide();
+		active= false;
+	} else if (active === false) {
+		$("#prevMember").show();
+		$("#nextMember").show();
+		active = true;
+	}
 }
 
 $(document).ready(function(){
-	//$(document).find('.JS').addClass('hiddenWell');
-	//$(document).find('.JS').removeClass('JS');
+	$("#prevMember").hide();
+	$("#nextMember").hide();
 	
 	if(window.location.hash) {		
 		openMember(window.location.hash);
@@ -26,7 +39,7 @@ $(document).ready(function(){
 	
 	$("ul.previews li").click(function(){		
 		//get the big image
-		bigImg = $(this).parent().parent().children([0]);
+		bigImg = $(this).parent().parent().children([0]).children([0]);
 		
 		//chance big image
 		imgNewsrc  = $(this).children([0]).attr('src');
@@ -38,5 +51,16 @@ $(document).ready(function(){
 		var id = $(this).attr('href');
 		event.preventDefault();
 		openMember(id);
+	});
+	$("#prevMember").click(function(){
+		//open the previous member
+		member = $("#leden > div.member").not(".JS-hide");
+		openMember("#"+member.prevAll(".member").attr("id"));
+	});
+	$("#nextMember").click(function(){
+		//open the next member
+		member = $("#leden > div.member").not(".JS-hide");
+		openMember("#"+member.nextAll(".member").attr("id"));
+		
 	});
 });

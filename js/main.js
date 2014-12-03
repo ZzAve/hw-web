@@ -84,7 +84,7 @@ $(window).load(function(){
 		shareDiv.hide();
 		shareDiv.removeClass("hiddenWell"); 
 		shareDiv.css('overflow','');
-		shareDiv.fadeIn('fast');
+		shareDiv.show();
 		},1000);
 
 	var nrOfImgs = $('li.loading.img').length;
@@ -146,7 +146,7 @@ function adaptImg(element,image,count,last,elementDepth){
 		}
 		
 		newEl.hide();
-		newEl.fadeIn(1000);
+		newEl.fadeIn(500);
 		parent.removeClass('loading');
 		parent.children().removeClass('hidden');
 		

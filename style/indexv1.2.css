@@ -31,9 +31,9 @@
 	background-color:white;
 	background-position:center center;
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 	/* The url is relative to the document, not to the css file! */
     /* Prefer absolute urls to avoid confusion. */
     -ms-behavior: url("/misc/backgroundsize.min.htc");
