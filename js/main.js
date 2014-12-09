@@ -34,7 +34,37 @@ $(document).ready( function() {
 	$(document).find('.noJS-hide').removeClass('noJS-hide'); // there is JS, so no hiding needed anymore
 	$(document).find('.noJS-show').addClass('JS-hide');   	  // there is JS, hence no need to show directly
 	$(document).find('.noJS-show').removeClass('noJS-show'); //       ""         ""         ""  
+	$("div.readMore").each(function(){ // of all read more classes, replace text by link saying read more
+		$(this).hide();
+		prevElement = $(this).prevAll('p').first();
+		a = document.createElement("a");
+		a.href="#";
+		a.style.whiteSpace= "nowrap";
+		a2 = a.cloneNode(true);
+		
+		a.className="readMore-closed";
+		a.text="[lees meer]";
+
+		a2.className = "readMore-open"
+		a2.text = "[minder]";
+		
+		prevElement.append(" ");
+		prevElement.append(a);
+		$(this).children('p').last().append(" ");
+		$(this).children('p').last().append(a2);
+	});
 	
+	
+	$('a.readMore-closed').click(function(){
+		event.preventDefault();
+		$(this).toggle();
+		$(this).parent().nextAll(".readMore").first().toggle();
+	});
+	$('a.readMore-open').click(function(){
+		event.preventDefault();				
+		         //p    //div.readMore  //find previous p  //find the link element  // click it 
+		$(this).parent().parent().prevAll('p').first().find("a.readMore-closed").trigger("click");
+	});
 
 	/*****************
 	*  MENU FUNCTIONS 

@@ -14,24 +14,28 @@
        	<div class="col-60 skip-img-col-right"><img src="/images/homemade_water_wallpaper.jpg" title="De enige echte Homemade Water wallpaper" alt="De enige echte Homemade Water wallpaper"/></div>
         <h2>Homemade Water is een band waar je u tegen zegt!</h2>
 
-	   	<p>Homemade Water heeft als doel om deze wereld te veroveren door de mensen te betoveren met muziek. En dat zie je terug in de optredens van deze band. Zonder afbreuk te doen aan de kwaliteit van de muziek wordt er een feestje gebouwd en vooral genoten. En als wij dat doen, dan is het te aanstekelijk om niet mee te doen!</p>
+	   	<p>Homemade Water heeft als doel om deze wereld te veroveren door de mensen te betoveren met muziek. En dat zie je terug in de optredens van deze band. Zonder afbreuk te doen aan de kwaliteit van de muziek wordt er een feestje gebouwd en vooral genoten. En als de band dat doet, dan is het t&eacute; aanstekelijk om niet mee te doen!</p>
         
-        <p>Met nummers als I Shot The Sheriff, Dance With Somebody, Behind Blue Eyes en Tighten Up heeft de band bewezen dat zij zich tijd voelt in meerdere stijlen, en ook graag zijn eigen draai aan de verschillende nummers geeft. Daarmee onderscheidt Homemade Water zich van andere coverbandjes!</p>
+        <p>Met nummers als <span class="strong">I Shot The Sheriff</span>, <span class="strong">Dance With Somebody</span>, <span class="strong">Behind Blue Eyes</span> en <span class="strong">Tighten Up</span> heeft de band bewezen dat zij zich thuis voelt in meerdere stijlen (pop, (hard-)rock, indie), en ook graag haar eigen draai geeft aan de verschillende nummers. Daarmee onderscheidt Homemade Water zich van andere coverbandjes!</p>
         
-        <p>Naast het coveren (lees: een eigen draai geven aan bestaande muziek) van verscheidene bekende en minder bekende nummers houdt Homemade Water zich ook bezig met het schrijven van eigen muziek.</p>
+        <p>Naast het coveren van verscheidene bekende en minder bekende nummers houdt Homemade Water zich ook bezig met het schrijven van eigen muziek. Dit is vooral luchtige, eigentijdse (pop)muziek die erg lekker in het gehoor ligt. Binnen een jaar hopen ze dan ook een EP of wellicht een album uit te brengen!</p>
 
 
 		<h3> Hoe het allemaal begon</h3>
    		<p>Vanuit een speelgrage toetseniste en drummer is eind 2011 het idee gekomen om samen een bandje te beginnen. Het doel was om zo snel mogelijk podiumwaardig te worden, maar met als uitgangspunt de kwaliteit van de muziek te behouden. En zo zijn zij begonnen aan Homemade Water. Binnen een paar maanden werden door middel van advertenties, die verspreid waren over de campus van (voornamelijk) de TU Delft, de volledige aanvulling voor de band gevonden.</p>
         
-        <div class="col-33 right skip-img-col"><img src="/images/logo.jpg" alt="Homemade Water logo" title="Het logo van Homemade Water" /></div>
-        <p class="">Na een bewogen beginperiode, waarin er vooral veel werd gecovered, werd er wel voor gezorgd dat Homemade Water in no time een podium op kon. Het duurde dan ook niet lang voordat de bandleden op elkaar ingespeeld raakte en de band als geheel zich ontwikkelde. Begin 2013 werd besloten om deel te nemen aan the Clash of the Cover bands; the BENELUX edition; een bandcompetitie waarbij er gestreden wordt om beste en/of populairste coverband van de hele Benelux. Na een tal van rondes heeft Homemade Water de titel 'Beste Coverband van West-Nederland' in de wacht weten te slepen, en zich tevens te plaatsen bij de beste 18 van de Benelux.</p>
-        
-        <p class="clearfix">Inmiddels bestaat Homemade Water nu ongeveer 3 jaar, en is er een tijd aangebroken waar vooral de creativiteit van de band geuit wordt door het schrijven van eigen nummers. Zo ligt er een flinke stapel aan ideeën vanuit alle muzikanten, en wordt er tijdens de wekelijkse repetitie een hoop geschreven, bewerkt en uitgewerkt.</p>
+        <div class="readMore">
+            <div class="col-33 right skip-img-col">
+            	<img src="/images/logo.jpg" alt="Homemade Water logo" title="Het logo van Homemade Water" /> 
+            </div>
+            <p>Na een bewogen beginperiode, waarin er vooral veel werd gecovered, werd er wel voor gezorgd dat Homemade Water in no time een podium op kon. Het duurde dan ook niet lang voordat de bandleden op elkaar ingespeeld raakte en de band als geheel zich ontwikkelde. Begin 2013 werd besloten om deel te nemen aan the <span class="strong">Clash of the Cover bands; the BENELUX edition</span>; een bandcompetitie waarbij er gestreden wordt om beste en/of populairste coverband van de hele Benelux. Na een tal van rondes heeft Homemade Water de titel 'Beste Coverband van West-Nederland' in de wacht weten te slepen, en zich tevens te plaatsen bij de beste 18 coverbands van de Benelux.</p>
+            
+            <p class="clearfix">Inmiddels bestaat Homemade Water ongeveer 3 jaar, en is er een tijd aangebroken waar vooral de creativiteit van de band geuit wordt door het schrijven van eigen nummers. Zo ligt er een flinke stapel aan ideeën vanuit alle muzikanten, en wordt er tijdens de wekelijkse repetitie een hoop geschreven, bewerkt en uitgewerkt.</p>
+        </div>
         
         <h3> Wat anderen zeggen over Homemade Water</h3>
 		<p>Homemade Water is in staat om op een leuk niveau muziek te maken. Dit is hetgeen wat er over hen gezegd werd tijdens hun deelname aan de Clash of the Coverbands (2013/2014):</p>
-		<div class="col-33 right skip-img-col"><img src="/images/logo_TCotCB_BENELUX_smal.jpg" title="Het Homemade Water logo" alt="Het Homemade Water logo"/></div>
+		<div class="col-33 right skip-img-col"><a href="http://clashofthecoverbands.nl/" target="_blank"><img src="/images/logo_TCotCB_BENELUX_smal.jpg" title="Logo Clash of the Cover bands" alt="the Clash of the Cover bands; the BENELUx edition"/></a></div>
 		<p class="quote">"5-mans Pop coverband Homemade Water uit Delft is inmiddels uitgegroeid naar een band met een eigen geluid. De vijf topmuzikanten weten zowel oude als actuele nummers zo naar zich toe te trekken dat er een band op het podium staat met een eigen identiteit. Voeg daarbij het hoge niveau van zowel de muzikale inhoud alsook het entertainmentgehalte van de podiumpresentatie van de totale band en je hebt de coverband van de toekomst." Bron: <a href="http://www.theclashofthecoverbands.com/show/verslagen/item,712,Halve-Finale-Regio-West-2013-2014.html" target="_blank">Clash of the Cover bands</a></p>
 		
         <!--<p>en:</p>
@@ -44,7 +48,7 @@
          Maar wie is, of beter gezegd, zijn Homemade Water dan? Klik hieronder op een van de foto's om meer te weten te komen over de muzikanten.  
          
          <!-- member list -->
-         <div>
+         <div class="member-list">
          	<div class="col-20">
              	<label>Laurens</label><a href="#laurens"><img src="/images/band/laurens/HW_Clash_ronde3_14.jpg" alt="Laurens" /></a>
             </div>

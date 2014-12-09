@@ -33,8 +33,22 @@ $(document).ready(function(){
 	$("#prevMember").hide();
 	$("#nextMember").hide();
 	
+	$("#leden > div div.col-20 a").click(function(){
+		var id = $(this).attr('href');
+		event.preventDefault();
+		openMember(id);
+	});
+	
+	// Check if an ID was selected, otherwise open a random member
 	if(window.location.hash) {		
 		openMember(window.location.hash);
+	} else {
+		number = Math.floor(Math.random()*5);
+		element =$("div.member-list").children().first();
+		for (i=0;i<number;i++){
+			element = element.next();	
+		}
+		element.find('a').first().trigger("click");
 	}
 	
 	$("ul.previews li").click(function(){		
@@ -47,11 +61,7 @@ $(document).ready(function(){
 	
 	});
 	
-	$("#leden > div div.col-20 a").click(function(){
-		var id = $(this).attr('href');
-		event.preventDefault();
-		openMember(id);
-	});
+	
 	$("#prevMember").click(function(){
 		//open the previous member
 		member = $("#leden > div.member").not(".JS-hide");
