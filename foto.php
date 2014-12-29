@@ -34,7 +34,7 @@
 		$title = "Foto's";
 	}
 	// Import header
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/foto.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/foto-v1.1.css\" title=\"style\" />";
 	require_once 'header.php';
 ?>
 

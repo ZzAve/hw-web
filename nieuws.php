@@ -31,7 +31,7 @@
 		$title = "Nieuws";
 	}
 	//Import header
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuwsv1.2.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/nieuws-v1.3.css\" title=\"style\" />";
     require_once 'header.php';  
 ?>
 

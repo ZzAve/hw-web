@@ -1,7 +1,7 @@
 <?php 
 	require_once 'misc/miscfunctions.php';
-	$extra = "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/indexv1.2.css\" title=\"style\" />\n\t
-	<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agendav1.2.css\" title=\"style\" />\n";
+	$extra = "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/index-v1.3.css\" title=\"style\" />\n\t
+	<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda-v1.3.css\" title=\"style\" />\n";
 	require_once 'header.php'; 
 ?>
 

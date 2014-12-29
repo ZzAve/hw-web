@@ -64,7 +64,7 @@
 				language  : 'nl'
 				};  
 		</script> \n
-		<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/gastenboek.css\" title=\"style\" />";
+		<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/gastenboek-v1.css\" title=\"style\" />";
 	
 	$title = "Gastenboek";
 	require_once 'header.php'; 

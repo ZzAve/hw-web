@@ -42,10 +42,10 @@
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css' />
 
     <!-- stylesheets --> 
-    <link rel="stylesheet" type="text/css" href="/style/header1.1.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/mainv1.5.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/footer.css" title="style" />
-    <link rel="stylesheet" type="text/css" href="/style/lightbox1.7.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/header-v1.1.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/main-v1.6.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/footer-v1.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="/style/lightbox-v1.7.css" title="style" />
 
 <?php 
 	// Check if any extra settings were requested for this header

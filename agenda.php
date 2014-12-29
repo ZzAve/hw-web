@@ -23,7 +23,7 @@
 	$title = $pre_title."Agenda";
 	
 	// Additional constraints for this page - css etc
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agendav1.2.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/agenda-v1.3.css\" title=\"style\" />";
 	
 	// include the header
 	require_once 'header.php'; 

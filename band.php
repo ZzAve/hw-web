@@ -1,6 +1,6 @@
 <?php
 	$title="Band"; 
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/bandv1.css\" title=\"style\" />";
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/band-v1.1.css\" title=\"style\" />";
 	require_once  'header.php'; 
 	$fotolocation = "images/band/";
 ?>

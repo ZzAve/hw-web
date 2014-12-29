@@ -58,7 +58,8 @@ $(document).ready( function() {
 	$('a.readMore-closed').click(function(){
 		event.preventDefault();
 		$(this).toggle();
-		$(this).parent().nextAll(".readMore").first().toggle();
+		$(this).parent().nextAll(".readMore").first().toggle(40);
+		
 	});
 	$('a.readMore-open').click(function(){
 		event.preventDefault();				

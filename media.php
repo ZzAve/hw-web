@@ -1,8 +1,8 @@
 <?php 
 	require_once 'misc/miscfunctions.php';
 	$title= "Media";
-	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/foto.css\" title=\"style\" />\n 
-			  <link rel=\"stylesheet\" type=\"text/css\" href=\"/style/video1.css\" title=\"style\" />\n
+	$extra = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style/foto-v1.1.css\" title=\"style\" />\n 
+			  <link rel=\"stylesheet\" type=\"text/css\" href=\"/style/video-v1.2.css\" title=\"style\" />\n
 			  <style type=\"text/css\">@charset utf-8;
 				#audioList{height:auto}
 				#audioList iframe{height:166px;margin-bottom:5px;margin-top:5px;width:100%}
